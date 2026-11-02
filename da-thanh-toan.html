@@ -247,51 +247,58 @@
 <!-- Left Column (Order Steps, Destination, Payment Info & Items List) - 8 Cols -->
 <div class="lg:col-span-8 flex flex-col gap-space-lg">
 <!-- Tracking Timeline Visualizer -->
-<div class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-2xl p-4 sm:p-space-xl shadow-sm flex flex-col gap-space-md sm:gap-space-lg">
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-[24px]">route</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Hành Trình Đơn Hàng</h2>
+<span class="material-symbols-outlined text-primary text-[22px] sm:text-[24px]">route</span>
+<h2 class="font-headline-sm sm:font-headline-md text-headline-sm sm:text-headline-md text-on-surface">Hành Trình Đơn Hàng</h2>
 </div>
-<span class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-xs">
+<span class="px-2 sm:px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px] sm:text-label-sm flex items-center gap-space-xs shrink-0">
 <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
               Đang chuẩn bị hàng
             </span>
 </div>
-<!-- Timeline Steps Horizontal Flow -->
-<div class="grid grid-cols-1 sm:grid-cols-4 gap-space-md relative">
-<!-- Step 1 -->
-<div class="flex flex-col items-center sm:items-start text-center sm:text-left gap-space-xs">
-<div class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center shadow-sm">
-<span class="material-symbols-outlined text-[16px] font-bold">check</span>
-</div>
-<span class="font-label-md text-label-md text-on-surface">1. Đã Xác Nhận</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">14:30 - Hôm nay</span>
-</div>
-<!-- Step 2 -->
-<div class="flex flex-col items-center sm:items-start text-center sm:text-left gap-space-xs">
-<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-md">
-<span class="material-symbols-outlined text-[18px]">inventory_2</span>
-</div>
-<span class="font-label-md text-label-md text-on-surface">2. Đang Đóng Gói</span>
-<span class="font-body-sm text-body-sm text-primary font-medium">Kho Thủ Đức (Xử lý)</span>
-</div>
-<!-- Step 3 -->
-<div class="flex flex-col items-center sm:items-start text-center sm:text-left gap-space-xs opacity-60">
-<div class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center">
-<span class="material-symbols-outlined text-[18px]">electric_moped</span>
-</div>
-<span class="font-label-md text-label-md text-on-surface">3. Bàn Giao Vận Chuyển</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Hỏa Tốc nội thành</span>
-</div>
-<!-- Step 4 -->
-<div class="flex flex-col items-center sm:items-start text-center sm:text-left gap-space-xs opacity-60">
-<div class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center">
-<span class="material-symbols-outlined text-[18px]">home_pin</span>
-</div>
-<span class="font-label-md text-label-md text-on-surface">4. Giao Tận Nơi</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Dự kiến 19/10/2026</span>
-</div>
+<!-- Timeline Steps Horizontal Flow on all viewports -->
+<div class="relative w-full py-1">
+  <!-- Connecting Track Line -->
+  <div class="absolute top-4 sm:top-4 left-[12.5%] right-[12.5%] h-0.5 bg-surface-container -translate-y-1/2 z-0">
+    <div class="h-full bg-inverse-surface w-1/3"></div>
+  </div>
+
+  <div class="grid grid-cols-4 gap-1 sm:gap-space-md relative z-10">
+    <!-- Step 1 -->
+    <div class="flex flex-col items-center text-center gap-1 sm:gap-space-xs">
+      <div class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center shadow-sm shrink-0 ring-4 ring-surface-container-lowest">
+        <span class="material-symbols-outlined text-[15px] sm:text-[16px] font-bold">check</span>
+      </div>
+      <span class="font-label-sm sm:font-label-md text-[11px] sm:text-label-md text-on-surface font-bold leading-tight">1. Đã Xác Nhận</span>
+      <span class="font-body-xs sm:font-body-sm text-[10px] sm:text-body-sm text-on-surface-variant leading-tight">14:30 - Hôm nay</span>
+    </div>
+    <!-- Step 2 -->
+    <div class="flex flex-col items-center text-center gap-1 sm:gap-space-xs">
+      <div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-md shrink-0 ring-4 ring-surface-container-lowest ring-offset-1 ring-primary-container/40">
+        <span class="material-symbols-outlined text-[16px] sm:text-[18px]">inventory_2</span>
+      </div>
+      <span class="font-label-sm sm:font-label-md text-[11px] sm:text-label-md text-on-surface font-bold leading-tight">2. Đang Đóng Gói</span>
+      <span class="font-body-xs sm:font-body-sm text-[10px] sm:text-body-sm text-primary font-medium leading-tight">Kho Thủ Đức (Xử lý)</span>
+    </div>
+    <!-- Step 3 -->
+    <div class="flex flex-col items-center text-center gap-1 sm:gap-space-xs opacity-60">
+      <div class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center shrink-0 ring-4 ring-surface-container-lowest">
+        <span class="material-symbols-outlined text-[16px] sm:text-[18px]">electric_moped</span>
+      </div>
+      <span class="font-label-sm sm:font-label-md text-[11px] sm:text-label-md text-on-surface leading-tight">3. Bàn Giao Vận Chuyển</span>
+      <span class="font-body-xs sm:font-body-sm text-[10px] sm:text-body-sm text-on-surface-variant leading-tight">Hỏa Tốc nội thành</span>
+    </div>
+    <!-- Step 4 -->
+    <div class="flex flex-col items-center text-center gap-1 sm:gap-space-xs opacity-60">
+      <div class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center shrink-0 ring-4 ring-surface-container-lowest">
+        <span class="material-symbols-outlined text-[16px] sm:text-[18px]">home_pin</span>
+      </div>
+      <span class="font-label-sm sm:font-label-md text-[11px] sm:text-label-md text-on-surface leading-tight">4. Giao Tận Nơi</span>
+      <span class="font-body-xs sm:font-body-sm text-[10px] sm:text-body-sm text-on-surface-variant leading-tight">Dự kiến 19/10/2026</span>
+    </div>
+  </div>
 </div>
 </div>
 <!-- Recipient & Payment Specifications Bento Grid -->
