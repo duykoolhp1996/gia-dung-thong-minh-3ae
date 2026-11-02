@@ -309,6 +309,7 @@
 
     // 1. Flash product grid items on index.html
     document.querySelectorAll('.product-item, #flash-product-grid > div').forEach((card, index) => {
+      if (card.hasAttribute('onclick')) return;
       card.style.cursor = 'pointer';
       card.classList.add('hover:shadow-xl', 'hover:-translate-y-1', 'transition-all');
 
@@ -346,6 +347,7 @@
 
     // 2. Brand Spotlight cards (Mophie, Energizer, Maono, Hunonic)
     document.querySelectorAll('section .rounded-xl.bg-surface-container-lowest').forEach(card => {
+      if (card.hasAttribute('onclick')) return;
       const h4 = card.querySelector('h4, h3');
       if (h4) {
         const title = h4.textContent.trim();
@@ -371,6 +373,7 @@
 
     // 3. Cards in dai-tiec-khuyen-mai.html
     document.querySelectorAll('#flash-deals .bg-surface-container-lowest, section:has(#flash-deals) .bg-surface-container-lowest').forEach(card => {
+      if (card.hasAttribute('onclick')) return;
       const h3 = card.querySelector('h3, h4');
       if (h3) {
         const title = h3.textContent.trim();
@@ -393,6 +396,7 @@
 
     // 4. Cards in mobile-trang-chu.html
     document.querySelectorAll('.grid-cols-2 .bg-surface-container-lowest').forEach(card => {
+      if (card.hasAttribute('onclick')) return;
       const h3 = card.querySelector('h3, h4');
       if (h3) {
         const title = h3.textContent.trim();

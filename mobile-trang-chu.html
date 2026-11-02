@@ -80,7 +80,7 @@
 </section>
 <!-- QUICK CATEGORIES (Grid 4 bo tròn tinh tế) -->
 <section class="px-margin py-space-sm">
-<div class="bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm grid grid-cols-4 gap-2">
+<div class="bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm grid grid-cols-4 gap-2 cursor-pointer" onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=can-dien-tu-gaabor'">
 <!-- Item 1 -->
 <a class="flex flex-col items-center text-center gap-1.5 group" href="#">
 <div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center p-2.5 active:bg-secondary-container transition-colors shadow-sm">
@@ -177,150 +177,150 @@
 <!-- Product Grid 2 Columns -->
 <div class="grid grid-cols-2 gap-3">
 <!-- Product 1 -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=can-dien-tu-gaabor'" class="bg-surface-container-lowest cursor-pointer rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
 <span class="absolute top-2.5 left-2.5 z-10 bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold px-1.5 py-0.5 rounded-md">-22%</span>
-<button aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">favorite</span>
 </button>
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2 overflow-hidden">
-<img class="w-full h-full object-contain" data-alt="Gaabor GWS-M02A smart electronic digital weighing scale on minimalist white clean studio background, crisp sleek design, warm ambient morning light, high product fidelity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzhqFYeSWzu2GhQZUIFQfTDSoY_OqDCONJ3vNJpflbdkjiapXg6RWbB_JZwdH53zhYMv9m3SE1xK8TIbVylOia2Fh2S3eAET8Bf51SiL7R9q6NBXMh8PgCdWGDKEm6dzVt6nWcDJ9e4xm4tNwAF14l0NEloYgZa2p6eE9Qxsye0xvD1cX_8KE2qiyksOPonbKuNdltTcAMm3Hhmnf1Yw1AR9tIJsmiQ5mCJw1botc"/>
+<a href="mobile-san-pham.html?sp=can-dien-tu-gaabor" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Gaabor GWS-M02A smart electronic digital weighing scale on minimalist white clean studio background, crisp sleek design, warm ambient morning light, high product fidelity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzhqFYeSWzu2GhQZUIFQfTDSoY_OqDCONJ3vNJpflbdkjiapXg6RWbB_JZwdH53zhYMv9m3SE1xK8TIbVylOia2Fh2S3eAET8Bf51SiL7R9q6NBXMh8PgCdWGDKEm6dzVt6nWcDJ9e4xm4tNwAF14l0NEloYgZa2p6eE9Qxsye0xvD1cX_8KE2qiyksOPonbKuNdltTcAMm3Hhmnf1Yw1AR9tIJsmiQ5mCJw1botc"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Gaabor</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Cân Điện Tử Gaabor GWS-M02A</h3>
+<a href="mobile-san-pham.html?sp=can-dien-tu-gaabor" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Cân Điện Tử Gaabor GWS-M02A</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <div class="flex flex-col">
 <span class="font-body-sm text-[11px] text-outline line-through">270,000₫</span>
 <span class="font-price-hero text-[15px] font-extrabold text-tertiary leading-none">210,000₫</span>
 </div>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('can-dien-tu-gaabor', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Product 2 -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=may-xay-gaabor-fp03t'" class="bg-surface-container-lowest cursor-pointer rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
 <span class="absolute top-2.5 left-2.5 z-10 bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold px-1.5 py-0.5 rounded-md">-22%</span>
-<button aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">favorite</span>
 </button>
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2 overflow-hidden">
-<img class="w-full h-full object-contain" data-alt="Gaabor FP03T-WH01A handheld food processor and electric hand blender in glossy modern white finish isolated on neutral soft podium, studio commercial shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVmewCECLxtLDA7Hx1BiXUZyXzJbnG-j1T1lT6ymQUvictg8XGnoN6rBgxzL5DAJ_bOMk1W-YNX6voxDQq5Z9H-ipQBzWPvqZkRoy50ekUHr_u8Df5DqvXysDTfEV-KgN460FCFDvbPWRjQeSgoqvrSuVqf02pFgWAadE29AgqAVqO6CiSXZ_yox9EoL8EOrm5WW22OvlYRsAEuVOVhWaseH8NfcMJfrsArzUIRqM"/>
+<a href="mobile-san-pham.html?sp=may-xay-gaabor-fp03t" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Gaabor FP03T-WH01A handheld food processor and electric hand blender in glossy modern white finish isolated on neutral soft podium, studio commercial shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVmewCECLxtLDA7Hx1BiXUZyXzJbnG-j1T1lT6ymQUvictg8XGnoN6rBgxzL5DAJ_bOMk1W-YNX6voxDQq5Z9H-ipQBzWPvqZkRoy50ekUHr_u8Df5DqvXysDTfEV-KgN460FCFDvbPWRjQeSgoqvrSuVqf02pFgWAadE29AgqAVqO6CiSXZ_yox9EoL8EOrm5WW22OvlYRsAEuVOVhWaseH8NfcMJfrsArzUIRqM"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Gaabor</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Máy Xay Cầm Tay Gaabor FP03T-WH01A</h3>
+<a href="mobile-san-pham.html?sp=may-xay-gaabor-fp03t" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Máy Xay Cầm Tay Gaabor FP03T-WH01A</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <div class="flex flex-col">
 <span class="font-body-sm text-[11px] text-outline line-through">320,000₫</span>
 <span class="font-price-hero text-[15px] font-extrabold text-tertiary leading-none">250,000₫</span>
 </div>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('may-xay-gaabor-fp03t', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Product 3 -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=noi-da-nang-gaabor-ec15m01a'" class="bg-surface-container-lowest cursor-pointer rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
 <span class="absolute top-2.5 left-2.5 z-10 bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold px-1.5 py-0.5 rounded-md">-21%</span>
-<button aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">favorite</span>
 </button>
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2 overflow-hidden">
-<img class="w-full h-full object-contain" data-alt="Compact multifunctional electric cooking pot Gaabor EC-15M01A with glass lid and heat-resistant pastel handle in contemporary bright kitchen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdFjnQoWq983Zq107fPofO5JU8-RuABuqVyBpvcuLw-YQiddyerK65hELu4BDJ-rvJV-NF1IEJNPnrHjk8G4rd3o4ZiR801GR5t1W1ZWryuQNUfDoKH_GHw_uz2QyZN9q6BR32Z7J8qWyypRTuwV-u14vy2k_YERShxhgCwAm4fD_js7O4l-YgDF_D2Mp-H-9fnZSvqxLdXOF9HQSKvEXuDB_FHiDse668GoL7UUg"/>
+<a href="mobile-san-pham.html?sp=noi-da-nang-gaabor-ec15m01a" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Compact multifunctional electric cooking pot Gaabor EC-15M01A with glass lid and heat-resistant pastel handle in contemporary bright kitchen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdFjnQoWq983Zq107fPofO5JU8-RuABuqVyBpvcuLw-YQiddyerK65hELu4BDJ-rvJV-NF1IEJNPnrHjk8G4rd3o4ZiR801GR5t1W1ZWryuQNUfDoKH_GHw_uz2QyZN9q6BR32Z7J8qWyypRTuwV-u14vy2k_YERShxhgCwAm4fD_js7O4l-YgDF_D2Mp-H-9fnZSvqxLdXOF9HQSKvEXuDB_FHiDse668GoL7UUg"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Gaabor</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Nồi Đa Năng Gaabor EC-15M01A</h3>
+<a href="mobile-san-pham.html?sp=noi-da-nang-gaabor-ec15m01a" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Nồi Đa Năng Gaabor EC-15M01A</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <div class="flex flex-col">
 <span class="font-body-sm text-[11px] text-outline line-through">330,000₫</span>
 <span class="font-price-hero text-[15px] font-extrabold text-tertiary leading-none">260,000₫</span>
 </div>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('noi-da-nang-gaabor-ec15m01a', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Product 4 -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=may-xay-gaabor-jm-m01a'" class="bg-surface-container-lowest cursor-pointer rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
 <span class="absolute top-2.5 left-2.5 z-10 bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold px-1.5 py-0.5 rounded-md">-21%</span>
-<button aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">favorite</span>
 </button>
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2 overflow-hidden">
-<img class="w-full h-full object-contain" data-alt="Portable mini blender Gaabor JM-M01A with sharp stainless steel blades, fresh smoothie ingredients inside transparent jar, warm crisp photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtO35LoTiftIvKuX-_BQQ0L-EW-x7YmXRO3ZV_eN52WxxImKWCAm5rEtBp5UmPblekV05z2RMJww8z55bvbkMXxEJn9bj2wJs9WcBArXA_L-mQUQ9jtKVyNj4C6rg4x_fVm0NIexj133A7GjtV6gR0leNpw6U2UMyFVaI8L_9ksDaLf06J8ktf8oUPAXZIgCmRG2MYxFTfGhLVEvi50P7jx3e9KbsTfnsHvSVM8dQ"/>
+<a href="mobile-san-pham.html?sp=may-xay-gaabor-jm-m01a" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Portable mini blender Gaabor JM-M01A with sharp stainless steel blades, fresh smoothie ingredients inside transparent jar, warm crisp photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtO35LoTiftIvKuX-_BQQ0L-EW-x7YmXRO3ZV_eN52WxxImKWCAm5rEtBp5UmPblekV05z2RMJww8z55bvbkMXxEJn9bj2wJs9WcBArXA_L-mQUQ9jtKVyNj4C6rg4x_fVm0NIexj133A7GjtV6gR0leNpw6U2UMyFVaI8L_9ksDaLf06J8ktf8oUPAXZIgCmRG2MYxFTfGhLVEvi50P7jx3e9KbsTfnsHvSVM8dQ"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Gaabor</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Máy Xay Cầm Tay Gaabor JM-M01A</h3>
+<a href="mobile-san-pham.html?sp=may-xay-gaabor-jm-m01a" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Máy Xay Cầm Tay Gaabor JM-M01A</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <div class="flex flex-col">
 <span class="font-body-sm text-[11px] text-outline line-through">390,000₫</span>
 <span class="font-price-hero text-[15px] font-extrabold text-tertiary leading-none">310,000₫</span>
 </div>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('may-xay-gaabor-jm-m01a', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Product 5 -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=noi-da-nang-gaabor-ec20m01a'" class="bg-surface-container-lowest cursor-pointer rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
 <span class="absolute top-2.5 left-2.5 z-10 bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold px-1.5 py-0.5 rounded-md">-21%</span>
-<button aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">favorite</span>
 </button>
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2 overflow-hidden">
-<img class="w-full h-full object-contain" data-alt="Modern electric cooker pot Gaabor EC-20M01A high capacity 2L steamer layer, clean modern appliance photoshoot on marble countertop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUDcsJS3uajT4jG5PEh_PstR9NeqFtYApsygREOTe9gwmXfpAuy05lkWEoHY4LuzSmKCmkvFT9icLDokSFE29cXTl394nu2pKSMW7ooQbS6YVcUQNnelER3LZz83k7bQnLvLNdqque2UOeGWnRpDl3PsN5H6zfhv5cLo5sVxb57_-bEUG_BSGhU8G-DAxwvAvGsl29LAcaDxayLTq0nYYIwge3cFk_yjCOLPe59LE"/>
+<a href="mobile-san-pham.html?sp=noi-da-nang-gaabor-ec20m01a" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Modern electric cooker pot Gaabor EC-20M01A high capacity 2L steamer layer, clean modern appliance photoshoot on marble countertop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUDcsJS3uajT4jG5PEh_PstR9NeqFtYApsygREOTe9gwmXfpAuy05lkWEoHY4LuzSmKCmkvFT9icLDokSFE29cXTl394nu2pKSMW7ooQbS6YVcUQNnelER3LZz83k7bQnLvLNdqque2UOeGWnRpDl3PsN5H6zfhv5cLo5sVxb57_-bEUG_BSGhU8G-DAxwvAvGsl29LAcaDxayLTq0nYYIwge3cFk_yjCOLPe59LE"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Gaabor</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Nồi Đa Năng Gaabor EC-20M01A</h3>
+<a href="mobile-san-pham.html?sp=noi-da-nang-gaabor-ec20m01a" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Nồi Đa Năng Gaabor EC-20M01A</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <div class="flex flex-col">
 <span class="font-body-sm text-[11px] text-outline line-through">430,000₫</span>
 <span class="font-price-hero text-[15px] font-extrabold text-tertiary leading-none">340,000₫</span>
 </div>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('noi-da-nang-gaabor-ec20m01a', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Product 6 -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=am-sieu-toc-gaabor-ek20m01a'" class="bg-surface-container-lowest cursor-pointer rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative group">
 <span class="absolute top-2.5 left-2.5 z-10 bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold px-1.5 py-0.5 rounded-md">-20%</span>
-<button aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline active:text-tertiary cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">favorite</span>
 </button>
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2 overflow-hidden">
-<img class="w-full h-full object-contain" data-alt="Premium electric kettle Gaabor EK-20M01A matte finish, rapid boil ergonomic handle, studio illuminated shot on sleek light grey pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFS5m9rfRNKSafN9m_vGR5Z0e8DGyKVklIydrAUwiP41ulsUXmX8RNgPsCTYSuLLfMZPr11agGkGE5WJi44WFriSihGs8Dj5PYoZCl-kJANvCkJTwKsaqYubyeY3vO1xuVUpPg9wEiCrAoFy_asaSQxjOsOt8K14kIzPBLhldGSnhRWwg9ct5pIVGOX_4WTX0v2GjHIQJekFtZptNYbRLA3bd057k_T5N7aZgIUCg"/>
+<a href="mobile-san-pham.html?sp=am-sieu-toc-gaabor-ek20m01a" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Premium electric kettle Gaabor EK-20M01A matte finish, rapid boil ergonomic handle, studio illuminated shot on sleek light grey pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFS5m9rfRNKSafN9m_vGR5Z0e8DGyKVklIydrAUwiP41ulsUXmX8RNgPsCTYSuLLfMZPr11agGkGE5WJi44WFriSihGs8Dj5PYoZCl-kJANvCkJTwKsaqYubyeY3vO1xuVUpPg9wEiCrAoFy_asaSQxjOsOt8K14kIzPBLhldGSnhRWwg9ct5pIVGOX_4WTX0v2GjHIQJekFtZptNYbRLA3bd057k_T5N7aZgIUCg"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Gaabor</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Ấm Siêu Tốc Gaabor EK-20M01A</h3>
+<a href="mobile-san-pham.html?sp=am-sieu-toc-gaabor-ek20m01a" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Ấm Siêu Tốc Gaabor EK-20M01A</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <div class="flex flex-col">
 <span class="font-body-sm text-[11px] text-outline line-through">440,000₫</span>
 <span class="font-price-hero text-[15px] font-extrabold text-tertiary leading-none">350,000₫</span>
 </div>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('am-sieu-toc-gaabor-ek20m01a', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-inverse-surface text-primary-container flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
 </button>
 </div>
@@ -341,110 +341,110 @@
 </div>
 <div class="grid grid-cols-2 gap-3">
 <!-- Mophie Cable Kit -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between">
+<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between cursor-pointer" onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=bo-cap-mophie-kit'">
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2">
-<img class="w-full h-full object-contain" data-alt="Mophie cable kit travel case with 3 short woven durable cables arranged neatly inside, black ballistic nylon fabric, high-tech EDC gear shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU1Wv0fUWoEuF8-8diD_ClL5ARJF8zcnMLE-F4XSCjgoXTi5-HR04jt1ThzwsWU96ybeTHAJb29e4nqyVitf6fUyTWCcq_Cbye0KR-Lj3yS4pkzGtacxDbmBt-uB7rp9nYXnCJp7fXI-sP5ymFdeamkP7KlM623SwaPiIkRPYehjaXEtbQG98kKFr7QezqI0aQtT_CZ6NutF94Pg4caOfYu0YfzSWroQx93_h_l-Q"/>
+<a href="mobile-san-pham.html?sp=bo-cap-mophie-kit" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Mophie cable kit travel case with 3 short woven durable cables arranged neatly inside, black ballistic nylon fabric, high-tech EDC gear shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU1Wv0fUWoEuF8-8diD_ClL5ARJF8zcnMLE-F4XSCjgoXTi5-HR04jt1ThzwsWU96ybeTHAJb29e4nqyVitf6fUyTWCcq_Cbye0KR-Lj3yS4pkzGtacxDbmBt-uB7rp9nYXnCJp7fXI-sP5ymFdeamkP7KlM623SwaPiIkRPYehjaXEtbQG98kKFr7QezqI0aQtT_CZ6NutF94Pg4caOfYu0YfzSWroQx93_h_l-Q"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Mophie</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Bộ hộp 3 cáp ngắn 10cm Mophie cable kit</h3>
+<a href="mobile-san-pham.html?sp=bo-cap-mophie-kit" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Bộ hộp 3 cáp ngắn 10cm Mophie cable kit</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[15px] font-extrabold text-on-surface leading-none">1,100,000₫</span>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('bo-cap-mophie-kit', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Mophie Universal Hub -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between">
+<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between cursor-pointer" onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=hub-sac-mophie-universal'">
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2">
-<img class="w-full h-full object-contain" data-alt="Mophie Universal multi-device fast charging hub with wireless pad, USB-C Power Delivery ports, aerospace gray finish, high tech desktop setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR_FnY8T7WWMfo9YqmooMG6RWPBl6V9VCEXntFOHCWxjmq3Oa7B5FyIJm6k9BNNfPskAe57Sd-J80NEcm69w6dk2dIWz1mebsMz_UvXZC4_9DsJHdxY-dQM7osALG5gG6vjWwrVjVaIn-w0Zy_TMmE2rLkYnFqmNl9jWun9AElcFDX7bpjcN8p24djHvWAOdNA-_ozgDdW8S3EfvTUXosLK4DqXonBZU7YqB1_s7c"/>
+<a href="mobile-san-pham.html?sp=hub-sac-mophie-universal" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Mophie Universal multi-device fast charging hub with wireless pad, USB-C Power Delivery ports, aerospace gray finish, high tech desktop setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR_FnY8T7WWMfo9YqmooMG6RWPBl6V9VCEXntFOHCWxjmq3Oa7B5FyIJm6k9BNNfPskAe57Sd-J80NEcm69w6dk2dIWz1mebsMz_UvXZC4_9DsJHdxY-dQM7osALG5gG6vjWwrVjVaIn-w0Zy_TMmE2rLkYnFqmNl9jWun9AElcFDX7bpjcN8p24djHvWAOdNA-_ozgDdW8S3EfvTUXosLK4DqXonBZU7YqB1_s7c"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Mophie</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Bộ Hub sạc đa năng Mophie Universal</h3>
+<a href="mobile-san-pham.html?sp=hub-sac-mophie-universal" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Bộ Hub sạc đa năng Mophie Universal</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[15px] font-extrabold text-on-surface leading-none">1,800,000₫</span>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('hub-sac-mophie-universal', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Energizer Tire Inflator -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative">
+<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative cursor-pointer" onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=bom-dien-energizer-pac4000bk'">
 <span class="absolute top-2.5 left-2.5 z-10 bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold px-1.5 py-0.5 rounded-md">-20%</span>
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2">
-<img class="w-full h-full object-contain" data-alt="Energizer portable smart digital tire inflator and heavy-duty emergency power bank with digital LCD pressure display, rugged black yellow casing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIgfC5a-8gD_IV5ZGcS2-lBwFTZiC8IEEL__rhNqGlyMXtfyEBfHiDjRiEsR2Wfd6sm5cz-M3SNQLqc47umO1l4qMcqWxOf8pDLr8ZSDQCdtcpHAqSxNVnQ6Rikplmjs2WZEayAgtkGRdeU5X4hIun8uaYcc2shHOHlXQ7rfwLry-HuihUTEDY8kN-ajlhNdblfABnsfC_MArMeR1FFIhhlqAKR6hq62jqXaHVcIc"/>
+<a href="mobile-san-pham.html?sp=bom-dien-energizer-pac4000bk" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Energizer portable smart digital tire inflator and heavy-duty emergency power bank with digital LCD pressure display, rugged black yellow casing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIgfC5a-8gD_IV5ZGcS2-lBwFTZiC8IEEL__rhNqGlyMXtfyEBfHiDjRiEsR2Wfd6sm5cz-M3SNQLqc47umO1l4qMcqWxOf8pDLr8ZSDQCdtcpHAqSxNVnQ6Rikplmjs2WZEayAgtkGRdeU5X4hIun8uaYcc2shHOHlXQ7rfwLry-HuihUTEDY8kN-ajlhNdblfABnsfC_MArMeR1FFIhhlqAKR6hq62jqXaHVcIc"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Energizer</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Bơm hơi di động kiêm sạc dự phòng Energizer</h3>
+<a href="mobile-san-pham.html?sp=bom-dien-energizer-pac4000bk" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Bơm hơi di động kiêm sạc dự phòng Energizer</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[15px] font-extrabold text-tertiary leading-none">1,240,000₫</span>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('bom-dien-energizer-pac4000bk', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Mophie Lightning 1M -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between">
+<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between cursor-pointer" onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=cap-lightning-mophie-1m'">
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2">
-<img class="w-full h-full object-contain" data-alt="Premium braided nylon Mophie Lightning 1M cable coiled elegantly with durable metal connector heads on soft gradient gray surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_s9fe1_JoXoe7gEIG8avvKJibec_ioO7HSZDCVdzB1r4e7n-vMrZIIWM-QYCBQBUp8Et6pExZmqeJXXy2nN3LUbBtDi6-5L4LYCqpN8rD8-QKNI7IoER-T_BRS9Ngk9jHnTrT3PVWoDjqI9pn-g5CnrsilM0yuhrJI4VU3YAceMoHZyrmEMC_Q_EtSNCJVwMiqNkhmJV9VFAr_4Ko_93sCIqO8TtsEWd2WOfgX8w"/>
+<a href="mobile-san-pham.html?sp=cap-lightning-mophie-1m" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Premium braided nylon Mophie Lightning 1M cable coiled elegantly with durable metal connector heads on soft gradient gray surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_s9fe1_JoXoe7gEIG8avvKJibec_ioO7HSZDCVdzB1r4e7n-vMrZIIWM-QYCBQBUp8Et6pExZmqeJXXy2nN3LUbBtDi6-5L4LYCqpN8rD8-QKNI7IoER-T_BRS9Ngk9jHnTrT3PVWoDjqI9pn-g5CnrsilM0yuhrJI4VU3YAceMoHZyrmEMC_Q_EtSNCJVwMiqNkhmJV9VFAr_4Ko_93sCIqO8TtsEWd2WOfgX8w"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Mophie</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Cáp Lightning Mophie 1M chuẩn MFi</h3>
+<a href="mobile-san-pham.html?sp=cap-lightning-mophie-1m" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Cáp Lightning Mophie 1M chuẩn MFi</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[15px] font-extrabold text-on-surface leading-none">390,000₫</span>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('cap-lightning-mophie-1m', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
 </div>
 </div>
 <!-- MAONO Microphone -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between">
+<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between cursor-pointer" onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=micro-maono-rgb-pd100x'">
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2">
-<img class="w-full h-full object-contain" data-alt="MAONO RGB PD100X podcast dynamic microphone with custom RGB breathing halo ring on heavy-duty desk boom mount, audio creator studio setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0FC00YjuKBipbk2LLnE7eIj-I84qv5Ok4DOjbkGtIEap2AWsUhMwXxVX2_xTu-SjfIFAhGr79D4RZiOKb0QmwlfETxUTRmclrfuVbWWq1TsBEfiIKkdSmND0YeG5Krq4OE5nYNXTik3gg9GQso1a54pKXlEfki1RwTn_3WHZaLW5GDYfS7VgEZ6xxYyiMe2f7K99bSFe-iH3Vs9NWpBWC5kiBx_wm5AImFnR8zs"/>
+<a href="mobile-san-pham.html?sp=micro-maono-rgb-pd100x" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="MAONO RGB PD100X podcast dynamic microphone with custom RGB breathing halo ring on heavy-duty desk boom mount, audio creator studio setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0FC00YjuKBipbk2LLnE7eIj-I84qv5Ok4DOjbkGtIEap2AWsUhMwXxVX2_xTu-SjfIFAhGr79D4RZiOKb0QmwlfETxUTRmclrfuVbWWq1TsBEfiIKkdSmND0YeG5Krq4OE5nYNXTik3gg9GQso1a54pKXlEfki1RwTn_3WHZaLW5GDYfS7VgEZ6xxYyiMe2f7K99bSFe-iH3Vs9NWpBWC5kiBx_wm5AImFnR8zs"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Maono</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Micro thu âm MAONO RGB PD100X</h3>
+<a href="mobile-san-pham.html?sp=micro-maono-rgb-pd100x" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Micro thu âm MAONO RGB PD100X</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[15px] font-extrabold text-on-surface leading-none">1,349,000₫</span>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('micro-maono-rgb-pd100x', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Energizer Speaker -->
-<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative">
+<div class="bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col justify-between relative cursor-pointer" onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=loa-di-dong-bts121bk'">
 <span class="absolute top-2.5 left-2.5 z-10 bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold px-1.5 py-0.5 rounded-md">-20%</span>
 <div class="aspect-square bg-surface-container-low rounded-xl mb-2 flex items-center justify-center p-2">
-<img class="w-full h-full object-contain" data-alt="Energizer BTS121BK rugged portable bluetooth speaker with deep bass subwoofer mesh, carry strap, waterproof design on slate rock outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcmLiwjEpBWZJuQUfSM_GUljQQbG-u7EPCKUEYMaC2IvzkxG1M_9CSyqDWEBlrljh4YFFc9uQvy82cXkS4LDrIH_2mzT1uyTdWSuu4qnLGjJ-UmajlcLUdTaJn-gNRTX2NEILQi6Rx9HW7bzPRWTjcYOwLC3GezWNFWuQ0ymYZvCRMbCTXKqs0fn-C8o_vhhUAc9iF48U_UFfqd1kNJibZAgsZD0Yr53HzrzFqs2U"/>
+<a href="mobile-san-pham.html?sp=loa-di-dong-bts121bk" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-contain" data-alt="Energizer BTS121BK rugged portable bluetooth speaker with deep bass subwoofer mesh, carry strap, waterproof design on slate rock outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcmLiwjEpBWZJuQUfSM_GUljQQbG-u7EPCKUEYMaC2IvzkxG1M_9CSyqDWEBlrljh4YFFc9uQvy82cXkS4LDrIH_2mzT1uyTdWSuu4qnLGjJ-UmajlcLUdTaJn-gNRTX2NEILQi6Rx9HW7bzPRWTjcYOwLC3GezWNFWuQ0ymYZvCRMbCTXKqs0fn-C8o_vhhUAc9iF48U_UFfqd1kNJibZAgsZD0Yr53HzrzFqs2U"/></a>
 </div>
 <div class="flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-sm text-[10px] text-outline font-semibold uppercase">Energizer</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Loa di động Energizer BTS121BK</h3>
+<a href="mobile-san-pham.html?sp=loa-di-dong-bts121bk" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">Loa di động Energizer BTS121BK</h3></a>
 </div>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[15px] font-extrabold text-tertiary leading-none">900,000₫</span>
-<button aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm">
+<button onclick="event.stopPropagation(); addToCart('loa-di-dong-bts121bk', 1)" aria-label="Thêm vào giỏ" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center active:scale-95 shadow-sm cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
@@ -530,7 +530,7 @@
 <!-- TOP TRENDING & TIN TỨC CÔNG NGHỆ -->
 <section class="px-margin pt-space-lg flex flex-col gap-space-md">
 <!-- Top Trending Keywords Rail -->
-<div class="bg-surface-container-lowest p-3 rounded-2xl shadow-sm">
+<div class="bg-surface-container-lowest p-3 rounded-2xl shadow-sm cursor-pointer" onclick="if(!event.target.closest('button') && !event.target.closest('a')) window.location.href='mobile-san-pham.html?sp=noi-da-nang-gaabor-ec30t01a'">
 <div class="flex items-center gap-1.5 pb-2.5">
 <span class="material-symbols-outlined text-tertiary text-[18px]">trending_up</span>
 <span class="font-label-sm text-label-sm font-bold text-on-surface">Top tìm kiếm hàng đầu:</span>
@@ -554,13 +554,13 @@
 <!-- News Item 1 -->
 <article class="bg-surface-container-lowest rounded-2xl p-3 shadow-sm flex items-center gap-3">
 <div class="w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-surface-container">
-<img class="w-full h-full object-cover" data-alt="High tech professional audio recording setup featuring Maono Studio equipment, microphone, mixer, studio monitors in warm cozy ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuXLq-iDa_PN0lZR-fmvO4qHJFZGV-GJn0Cnc9kspmaUpABw1yIWZa-qdzcfgIk_hK6MGev8aH5fpR0BGqcY4s_0klovxRcViMOTnp_D0Pzq3RkAuM5h6p3bgOtSh-f7MVnJBjdvowsahSPKOWsnIesQUsgMD6yIjzZGd_3ERBagBCnUR2CrE9M1ahyAnNo91k7SUp-K1RBtAOdBVaP3tcWGik_R3cocs5XZlBUfo"/>
+<a href="mobile-san-pham.html?sp=noi-da-nang-gaabor-ec30t01a" class="w-full h-full block cursor-pointer"><img class="w-full h-full object-cover" data-alt="High tech professional audio recording setup featuring Maono Studio equipment, microphone, mixer, studio monitors in warm cozy ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuXLq-iDa_PN0lZR-fmvO4qHJFZGV-GJn0Cnc9kspmaUpABw1yIWZa-qdzcfgIk_hK6MGev8aH5fpR0BGqcY4s_0klovxRcViMOTnp_D0Pzq3RkAuM5h6p3bgOtSh-f7MVnJBjdvowsahSPKOWsnIesQUsgMD6yIjzZGd_3ERBagBCnUR2CrE9M1ahyAnNo91k7SUp-K1RBtAOdBVaP3tcWGik_R3cocs5XZlBUfo"/></a>
 </div>
 <div class="flex flex-col justify-between h-20 min-w-0">
 <span class="font-label-sm text-[10px] text-outline font-semibold">26/09/2026 • Tin thương hiệu</span>
-<h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">
+<a href="mobile-san-pham.html?sp=noi-da-nang-gaabor-ec30t01a" class="hover:text-primary transition-colors block cursor-pointer"><h3 class="font-label-lg text-[13px] font-bold text-on-surface line-clamp-2 leading-snug">
             Khám phá hệ sinh thái Maono Studio thế hệ mới dành cho Content Creators
-          </h3>
+          </h3></a>
 <span class="font-label-sm text-[11px] text-primary font-bold inline-flex items-center gap-0.5">
             Đọc tiếp <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
 </span>
@@ -747,7 +747,6 @@
   <a href="mobile-trang-chu.html" class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-bold hover:scale-105 transition-all">Mobile App View</a>
 </div>
 
-
-  <script src="products.js"></script>
-  <script src="store.js"></script>
+  <script src="products.js?v=3"></script>
+  <script src="store.js?v=3"></script>
 </body></html>
