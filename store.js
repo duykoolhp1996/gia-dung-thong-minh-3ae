@@ -152,12 +152,12 @@
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
 
     // Update badges
-    document.querySelectorAll('[data-path="gio-hang"] .bg-tertiary, #headerCartCount').forEach(badge => {
+    document.querySelectorAll('[data-path="gio-hang"] .bg-tertiary, #headerCartCount, a[href="gio-hang.html"] .bg-tertiary').forEach(badge => {
       badge.textContent = totalCount;
     });
 
     // Update subtotal text in header
-    document.querySelectorAll('[data-path="gio-hang"] .text-label-md').forEach(span => {
+    document.querySelectorAll('[data-path="gio-hang"] .text-label-md, a[href="gio-hang.html"] .font-label-md').forEach(span => {
       if (span.textContent.includes('₫') || span.textContent.includes('đ')) {
         span.textContent = formatVND(totalPrice);
       }
