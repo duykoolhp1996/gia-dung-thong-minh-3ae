@@ -240,7 +240,7 @@
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
 
     // Update badges
-    document.querySelectorAll('[data-path="gio-hang"] .bg-tertiary, #headerCartCount, #mobileCartBadge, #floating-cart-badge, a[href="gio-hang.html"] .bg-tertiary').forEach(badge => {
+    document.querySelectorAll('[data-path="gio-hang"] .bg-tertiary, #headerCartCount, #mobileCartBadge, #floating-cart-badge, #mobileBottomNavCartCount, a[href="gio-hang.html"] .bg-tertiary').forEach(badge => {
       badge.textContent = totalCount;
     });
 

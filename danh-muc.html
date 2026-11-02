@@ -304,30 +304,7 @@
   </main>
 
   <!-- MOBILE BOTTOM NAVIGATION -->
-  <nav class="block md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-surface-container-high/60 shadow-lg px-2 py-1">
-    <div class="grid grid-cols-5 items-center justify-around text-center">
-      <a href="index.html" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-on-surface transition-colors">
-        <span class="material-symbols-outlined text-[22px]">home</span>
-        <span class="text-[10px] mt-0.5 font-medium">Trang chủ</span>
-      </a>
-      <a href="danh-muc.html" class="flex flex-col items-center justify-center py-1 text-primary font-bold transition-colors">
-        <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">grid_view</span>
-        <span class="text-[10px] mt-0.5">Danh mục</span>
-      </a>
-      <a href="dai-tiec-khuyen-mai.html" class="flex flex-col items-center justify-center py-1 text-tertiary hover:text-tertiary transition-colors">
-        <span class="material-symbols-outlined text-[22px]">local_fire_department</span>
-        <span class="text-[10px] mt-0.5 font-medium">Ưu đãi</span>
-      </a>
-      <a href="tel:18006868" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-on-surface transition-colors">
-        <span class="material-symbols-outlined text-[22px]">support_agent</span>
-        <span class="text-[10px] mt-0.5 font-medium">Tư vấn</span>
-      </a>
-      <a href="gio-hang.html" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-on-surface transition-colors relative">
-        <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
-        <span class="text-[10px] mt-0.5 font-medium">Giỏ hàng</span>
-      </a>
-    </div>
-  </nav>
+  
 
   <!-- FOOTER -->
   <footer class="w-full bg-inverse-surface text-inverse-on-surface mt-space-xl">
@@ -412,7 +389,7 @@
 
   <!-- SCRIPTS -->
   <script src="products.js"></script>
-  <script src="store.js?v=7"></script>
+  <script src="store.js?v=8"></script>
   <script>
     // Category metadata map
     const CATEGORIES = {
@@ -787,5 +764,31 @@
       initCatalogFromUrl();
     });
   </script>
+<!-- Sticky Bottom Navigation Bar (Mobile only) -->
+  <nav class="block md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-surface-container-high/60 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-2 py-1">
+    <div class="grid grid-cols-5 items-center justify-around text-center">
+      <a href="index.html" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-on-surface transition-colors">
+        <span class="material-symbols-outlined text-[24px]" >home</span>
+        <span class="font-label-sm text-[10px] mt-0.5 font-medium">Trang chủ</span>
+      </a>
+      <a href="danh-muc.html" class="flex flex-col items-center justify-center py-1 text-primary font-bold transition-colors">
+        <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+        <span class="font-label-sm text-[10px] mt-0.5 font-bold text-primary">Danh mục</span>
+      </a>
+      <a href="dai-tiec-khuyen-mai.html" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-tertiary transition-colors">
+        <span class="material-symbols-outlined text-[24px] text-tertiary" >local_fire_department</span>
+        <span class="font-label-sm text-[10px] mt-0.5 font-medium">Ưu đãi</span>
+      </a>
+      <a href="tel:18006868" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-on-surface transition-colors">
+        <span class="material-symbols-outlined text-[24px]">support_agent</span>
+        <span class="font-label-sm text-[10px] mt-0.5 font-medium">Tư vấn</span>
+      </a>
+      <a href="gio-hang.html" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-on-surface transition-colors relative">
+        <span class="material-symbols-outlined text-[24px]" >shopping_bag</span>
+        <span class="font-label-sm text-[10px] mt-0.5 font-medium">Giỏ hàng</span>
+        <span class="absolute top-1 right-2 min-w-[16px] h-[16px] bg-tertiary text-on-tertiary rounded-full px-1 text-[9px] flex items-center justify-center leading-none font-bold" id="mobileBottomNavCartCount">2</span>
+      </a>
+    </div>
+  </nav>
 </body>
 </html>
