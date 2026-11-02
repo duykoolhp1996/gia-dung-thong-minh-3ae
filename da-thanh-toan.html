@@ -230,7 +230,7 @@
 <span class="font-label-sm text-label-sm text-inverse-on-surface/60 uppercase">Mã đơn hàng</span>
 <span class="font-price-hero text-price-hero text-primary-container tracking-wider" id="orderIdText">#GDTM-892419</span>
 </div>
-<button class="px-space-md py-space-xs rounded-xl bg-surface-container-high/20 hover:bg-primary-container hover:text-inverse-surface transition-all font-label-sm text-label-sm text-inverse-on-surface flex items-center gap-space-xs" id="copyOrderBtn" onclick="navigator.clipboard.writeText('GDTM-892419'); this.innerText='Đã sao chép!';">
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container-high/20 hover:bg-primary-container hover:text-inverse-surface transition-all font-label-sm text-label-sm text-inverse-on-surface flex items-center gap-space-xs cursor-pointer" id="copyOrderBtn" onclick="copyOrderId(this)">
 <span class="material-symbols-outlined text-[16px]">content_copy</span>
 <span>Sao chép</span>
 </button>
@@ -561,7 +561,7 @@
 </div>
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Gợi Ý Sản Phẩm Phù Hợp Với Bạn</h2>
 </div>
-<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" data-path="gia-dung-tien-ich" href="#">
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1 cursor-pointer" href="index.html#flash-product-grid">
 <span>Xem tất cả thiết bị</span>
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </a>
@@ -569,12 +569,12 @@
 <!-- 4-Product Horizontal Grid -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
 <!-- Recommended Product 1 -->
-<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div onclick="if(!event.target.closest('button')) window.location.href='chi-tiet-san-pham.html?sp=noi-da-nang-gaabor-ec30t01a'" class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group cursor-pointer">
 <div class="flex flex-col gap-space-sm">
 <div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden flex items-center justify-center">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Gaabor smart air fryer with glass viewing window and copper control dials in contemporary kitchen setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbIxSI6ibIjCL_O0pEWT8ABIq2MK0b62HUx_ih8fhDfBF-uYpDsvRzEuJQqSJm6H6kVyo6xec1jFyurgELz4ifW1DREEiTRCpJvo164mbLmdqsgN_I0BWZyjxefwC40DY-ZfpB18cJKB1oyDbNnLSs9oKiohbaGEoUsf7vO2jmKOD51XrbftdkXsaO6Z_vfzqMAIz39xP_wqmAhudzky1qNzoPwpDVzCal0_kAwvU"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-[10px] font-bold">-35%</span>
-<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-tertiary transition-colors">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-tertiary transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">favorite</span>
 </button>
 </div>
@@ -593,7 +593,7 @@
 <span class="font-price-hero text-headline-sm text-on-surface">690.000₫</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant line-through">1.090.000₫</span>
 </div>
-<button class="w-10 h-10 rounded-xl bg-inverse-surface hover:bg-on-surface text-primary-container flex items-center justify-center shadow-sm transition-transform active:scale-95">
+<button onclick="event.stopPropagation(); addToCart('noi-da-nang-gaabor-ec30t01a', 1);" class="w-10 h-10 rounded-xl bg-inverse-surface hover:bg-on-surface text-primary-container flex items-center justify-center shadow-sm transition-transform active:scale-95 cursor-pointer">
 <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
 </button>
 </div>
@@ -604,13 +604,13 @@
 <div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden flex items-center justify-center">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Smart high speed negative ionic hair dryer in luxury matte champagne finish on stone bathroom shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK6Hn0IRpecej6QnqTYDC03XJrTEUdi5pbQMezni2wF5d62g_Ek465Pt1AJadDnRJbMcu6V4f13MjwHJRbKa3IdeCxlpj0MK2lF027cNsExbHSgA4es0PT0B2mZWAZc4p5JvgBgfKBGVc-kDLpRWI0Vl5n5prMgklqf024370V6KWuTgIAaK0NkF3frLz6e4l-15QZNpQyRx7m9scqSZnmFwJ6lLEnpVCDgOCkbME"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">HOT DEAL</span>
-<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-tertiary transition-colors">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-tertiary transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">favorite</span>
 </button>
 </div>
 <div class="flex flex-col gap-1">
 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Dreame Tech</span>
-<h4 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Máy Sấy Tóc Ion Âm Tốc Độ Cao Glory</h4>
+<h4 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Máy Xay Thịt Gaabor MG20M-01 Thủy Tinh</h4>
 <div class="flex items-center gap-1 text-[12px] text-primary">
 <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="font-label-md font-bold text-on-surface">4.8</span>
@@ -623,7 +623,7 @@
 <span class="font-price-hero text-headline-sm text-on-surface">1.490.000₫</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant line-through">1.950.000₫</span>
 </div>
-<button class="w-10 h-10 rounded-xl bg-inverse-surface hover:bg-on-surface text-primary-container flex items-center justify-center shadow-sm transition-transform active:scale-95">
+<button onclick="event.stopPropagation(); addToCart('may-xay-thit-gaabor-mg20m01', 1);" class="w-10 h-10 rounded-xl bg-inverse-surface hover:bg-on-surface text-primary-container flex items-center justify-center shadow-sm transition-transform active:scale-95 cursor-pointer">
 <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
 </button>
 </div>
@@ -633,7 +633,7 @@
 <div class="flex flex-col gap-space-sm">
 <div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden flex items-center justify-center">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Smart wall switch with touchscreen interface and minimalist golden aluminum bevel in modern architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvTiypWChxZwApOc_tnPggJx4QJvFz1faYXL8j3QadgXSjJcjQytcUBP1iGFoV_Gf52KApMaVhHxpW1RAoJy9loSrdMa5dvd_HOu-Xq5wxh-hgNRsH3UFb0havDHEHT3sTPIJ-DxOKKD7lKZAbxcYE1Nb_l6MqUkPKy_g21H4wlB1AqyIVc0Z2kiDGGjSUWJS92kzEYz-Baxhxehu5DI-0jdvHI-4VlTw8MH1DfBU"/>
-<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-tertiary transition-colors">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-tertiary transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">favorite</span>
 </button>
 </div>
@@ -652,7 +652,7 @@
 <span class="font-price-hero text-headline-sm text-on-surface">325.000₫</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant line-through">450.000₫</span>
 </div>
-<button class="w-10 h-10 rounded-xl bg-inverse-surface hover:bg-on-surface text-primary-container flex items-center justify-center shadow-sm transition-transform active:scale-95">
+<button onclick="event.stopPropagation(); addToCart('cong-tac-hunonic-datic', 1);" class="w-10 h-10 rounded-xl bg-inverse-surface hover:bg-on-surface text-primary-container flex items-center justify-center shadow-sm transition-transform active:scale-95 cursor-pointer">
 <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
 </button>
 </div>
@@ -663,7 +663,7 @@
 <div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden flex items-center justify-center">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Magnetic 3-in-1 wireless charging pad station charging smartphone and earbuds with sleek LED indicator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGAvwpIVdxddVT7d03kJx-M2reAHyQgJmdfchA7XgLRIpW7VdsBGh9ZVRszN7PzTdhVj9v_bZRLarIMvsT7f7bimDzORXMNPHPjhpaLK_2-3uXRcCZHc5C8LyUKw8dOIoqPgkhvyc2R8S5_j1mWc6oresNsLWvDE0WrXWc1nMrlJakWHV-7dzAFWilKSSROLxdrq-RSHOOkE-kop6lGJwAXCSnxY_xBzl9teQthng"/>
 <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-[10px] font-bold">-20%</span>
-<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-tertiary transition-colors">
+<button onclick="event.stopPropagation(); this.classList.toggle('text-tertiary')" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center hover:text-tertiary transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">favorite</span>
 </button>
 </div>
@@ -682,7 +682,7 @@
 <span class="font-price-hero text-headline-sm text-on-surface">550.000₫</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant line-through">690.000₫</span>
 </div>
-<button class="w-10 h-10 rounded-xl bg-inverse-surface hover:bg-on-surface text-primary-container flex items-center justify-center shadow-sm transition-transform active:scale-95">
+<button onclick="event.stopPropagation(); addToCart('de-sac-khong-day-mophie-snap-plus', 1);" class="w-10 h-10 rounded-xl bg-inverse-surface hover:bg-on-surface text-primary-container flex items-center justify-center shadow-sm transition-transform active:scale-95 cursor-pointer">
 <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
 </button>
 </div>

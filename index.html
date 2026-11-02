@@ -700,11 +700,11 @@
 <h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold mt-0.5">Phụ Kiện &amp; Âm Thanh Cao Cấp</h2>
 </div>
 <!-- Filter Tabs -->
-<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-xl self-start md:self-auto">
-<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-bold shadow-sm">Tất cả</button>
-<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">Sạc - Cáp MFi</button>
-<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">Sạc Dự Phòng</button>
-<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">Đế Sạc Không Dây</button>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-xl self-start md:self-auto" id="brand-spotlight-tabs">
+<button onclick="filterBrandSpotlight(this, 'all')" class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-bold shadow-sm transition-all cursor-pointer">Tất cả</button>
+<button onclick="filterBrandSpotlight(this, 'cable')" class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all cursor-pointer">Sạc - Cáp MFi</button>
+<button onclick="filterBrandSpotlight(this, 'power')" class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all cursor-pointer">Sạc Dự Phòng</button>
+<button onclick="filterBrandSpotlight(this, 'audio')" class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all cursor-pointer">Đế Sạc Không Dây</button>
 </div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
@@ -721,7 +721,7 @@
 </div>
 <div class="mt-space-md pt-space-xs flex items-center justify-between">
 <span class="font-headline-md text-headline-md text-on-surface font-extrabold">1,100,000₫</span>
-<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors">
+<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors" onclick="event.stopPropagation(); addToCart('bo-cap-mophie-kit', 1);" cursor-pointer" title="Thêm vào giỏ">
 <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
 </button>
 </div>
@@ -739,7 +739,7 @@
 </div>
 <div class="mt-space-md pt-space-xs flex items-center justify-between">
 <span class="font-headline-md text-headline-md text-on-surface font-extrabold">1,800,000₫</span>
-<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors">
+<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors" onclick="event.stopPropagation(); addToCart('hub-sac-mophie-universal', 1);" cursor-pointer" title="Thêm vào giỏ">
 <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
 </button>
 </div>
@@ -760,7 +760,7 @@
 <span class="font-headline-md text-headline-md text-tertiary font-extrabold block">1,240,000₫</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant/60 line-through">1,550,000₫</span>
 </div>
-<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors">
+<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors" onclick="event.stopPropagation(); addToCart('bom-dien-energizer-pac4000bk', 1);" cursor-pointer" title="Thêm vào giỏ">
 <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
 </button>
 </div>
@@ -778,7 +778,7 @@
 </div>
 <div class="mt-space-md pt-space-xs flex items-center justify-between">
 <span class="font-headline-md text-headline-md text-on-surface font-extrabold">390,000₫</span>
-<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors">
+<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors" onclick="event.stopPropagation(); addToCart('cap-lightning-mophie-1m', 1);" cursor-pointer" title="Thêm vào giỏ">
 <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
 </button>
 </div>
@@ -796,7 +796,7 @@
 </div>
 <div class="mt-space-md pt-space-xs flex items-center justify-between">
 <span class="font-headline-md text-headline-md text-on-surface font-extrabold">1,349,000₫</span>
-<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors">
+<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors" onclick="event.stopPropagation(); addToCart('micro-maono-rgb-pd100x', 1);" cursor-pointer" title="Thêm vào giỏ">
 <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
 </button>
 </div>
@@ -817,7 +817,7 @@
 <span class="font-headline-md text-headline-md text-tertiary font-extrabold block">900,000₫</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant/60 line-through">1,125,000₫</span>
 </div>
-<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors">
+<button onclick="event.stopPropagation(); addToCart('tai-nghe-maono-au-mh601', 1);" class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors cursor-pointer" title="Thêm vào giỏ">
 <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
 </button>
 </div>
@@ -835,7 +835,7 @@
 </div>
 <div class="mt-space-md pt-space-xs flex items-center justify-between">
 <span class="font-headline-md text-headline-md text-on-surface font-extrabold">1,779,000₫</span>
-<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors">
+<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors" onclick="event.stopPropagation(); addToCart('micro-maono-pd200x', 1);" cursor-pointer" title="Thêm vào giỏ">
 <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
 </button>
 </div>
@@ -853,7 +853,7 @@
 </div>
 <div class="mt-space-md pt-space-xs flex items-center justify-between">
 <span class="font-headline-md text-headline-md text-on-surface font-extrabold">349,000₫</span>
-<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors">
+<button class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-primary-container text-on-surface flex items-center justify-center transition-colors" onclick="event.stopPropagation(); addToCart('cap-maono-xlr-18m', 1);" cursor-pointer" title="Thêm vào giỏ">
 <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
 </button>
 </div>
@@ -1317,18 +1317,18 @@
 </div>
 <!-- Bộ Tăng Giảm SL -->
 <div class="flex items-center bg-surface-container-lowest rounded-lg shadow-sm p-0.5">
-<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors">
+<button onclick="updateQuantity('noi-da-nang-gaabor-ec30t01a', -1)" class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">remove</span>
 </button>
 <span class="w-8 text-center font-label-md text-label-md text-on-surface">1</span>
-<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors">
+<button onclick="updateQuantity('noi-da-nang-gaabor-ec30t01a', 1)" class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">add</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Nút Xoá -->
-<button class="absolute top-space-md right-space-md text-on-surface-variant/50 hover:text-error transition-colors">
+<button onclick="removeFromCart(0)" class="absolute top-space-md right-space-md text-on-surface-variant/50 hover:text-error transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">delete</span>
 </button>
 </div>
@@ -1351,18 +1351,18 @@
 </div>
 <!-- Bộ Tăng Giảm SL -->
 <div class="flex items-center bg-surface-container-lowest rounded-lg shadow-sm p-0.5">
-<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors">
+<button onclick="updateQuantity('noi-da-nang-gaabor-ec30t01a', -1)" class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">remove</span>
 </button>
 <span class="w-8 text-center font-label-md text-label-md text-on-surface">1</span>
-<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors">
+<button onclick="updateQuantity('noi-da-nang-gaabor-ec30t01a', 1)" class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">add</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Nút Xoá -->
-<button class="absolute top-space-md right-space-md text-on-surface-variant/50 hover:text-error transition-colors">
+<button onclick="removeFromCart(0)" class="absolute top-space-md right-space-md text-on-surface-variant/50 hover:text-error transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">delete</span>
 </button>
 </div>
@@ -1384,18 +1384,18 @@
 </div>
 <!-- Bộ Tăng Giảm SL -->
 <div class="flex items-center bg-surface-container-lowest rounded-lg shadow-sm p-0.5">
-<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors">
+<button onclick="updateQuantity('noi-da-nang-gaabor-ec30t01a', -1)" class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">remove</span>
 </button>
 <span class="w-8 text-center font-label-md text-label-md text-on-surface">2</span>
-<button class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors">
+<button onclick="updateQuantity('noi-da-nang-gaabor-ec30t01a', 1)" class="w-7 h-7 flex items-center justify-center rounded text-on-surface hover:bg-surface-container-high transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">add</span>
 </button>
 </div>
 </div>
 </div>
 <!-- Nút Xoá -->
-<button class="absolute top-space-md right-space-md text-on-surface-variant/50 hover:text-error transition-colors">
+<button onclick="removeFromCart(0)" class="absolute top-space-md right-space-md text-on-surface-variant/50 hover:text-error transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">delete</span>
 </button>
 </div>
@@ -1438,7 +1438,7 @@
 <span class="font-body-sm text-body-sm text-on-surface-variant line-through text-[10px] block">160.000₫</span>
 </div>
 </div>
-<button class="mt-space-xs w-full py-1 rounded-lg bg-surface-container-lowest group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center gap-1 transition-all">
+<button onclick="addToCart('cu-sac-mophie-20w', 1)" class="mt-space-xs w-full py-1 rounded-lg bg-surface-container-lowest group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center gap-1 transition-all cursor-pointer">
 <span class="material-symbols-outlined text-[14px]">add</span>
 <span>Thêm ngay</span>
 </button>
@@ -1455,7 +1455,7 @@
 <span class="font-body-sm text-body-sm text-on-surface-variant line-through text-[10px] block">190.000₫</span>
 </div>
 </div>
-<button class="mt-space-xs w-full py-1 rounded-lg bg-surface-container-lowest group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center gap-1 transition-all">
+<button onclick="addToCart('cu-sac-mophie-20w', 1)" class="mt-space-xs w-full py-1 rounded-lg bg-surface-container-lowest group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center gap-1 transition-all cursor-pointer">
 <span class="material-symbols-outlined text-[14px]">add</span>
 <span>Thêm ngay</span>
 </button>
@@ -1493,11 +1493,11 @@
 <!-- Bộ 2 Nút Hành Động -->
 <div class="grid grid-cols-2 gap-space-md pt-space-xs">
 <!-- Nút 1: Xem chi tiết giỏ hàng -->
-<a class="h-12 px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center transition-all text-center group" data-path="gio-hang" href="javascript:void(0)">
+<a class="h-12 px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center transition-all text-center group cursor-pointer" href="gio-hang.html">
 <span class="group-hover:-translate-x-0.5 transition-transform">XEM GIỎ HÀNG</span>
 </a>
 <!-- Nút 2: Thanh toán ngay (Primary Gold) -->
-<a class="h-12 px-space-md rounded-xl bg-primary-container hover:bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-extrabold flex items-center justify-center gap-space-xs shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all text-center" href="thanh-toan.html" href="javascript:void(0)">
+<a class="h-12 px-space-md rounded-xl bg-primary-container hover:bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-extrabold flex items-center justify-center gap-space-xs shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all text-center cursor-pointer" href="thanh-toan.html">
 <span>THANH TOÁN NGAY</span>
 <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
 </a>

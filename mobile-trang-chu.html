@@ -27,7 +27,7 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
 
-</head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 flex flex-col justify-between px-margin pb-space-sm"><div class="bg-inverse-surface rounded-full py-1 px-3 flex items-center justify-between mt-1"><div class="flex items-center gap-1.5 overflow-hidden"><span class="material-symbols-outlined text-primary-container text-[14px]">local_fire_department</span><span class="font-label-sm text-label-sm text-inverse-on-surface truncate">Mua ngay nhận quà ưu đãi, đừng bỏ lỡ!</span></div><span class="font-label-sm text-label-sm text-primary-container font-bold shrink-0">Khám phá</span></div><div class="flex items-center justify-between gap-space-sm pt-space-xs"><div class="flex items-center gap-1.5 shrink-0"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-fixed text-[20px]">home_app_logo</span></div><div class="flex flex-col leading-tight"><span class="font-headline-sm text-[15px] font-extrabold tracking-tight text-on-surface uppercase">GiaDung</span><span class="font-label-sm text-[9px] text-outline font-bold tracking-widest uppercase">ThongMinh</span></div></div><div class="flex-1 flex items-center h-10 px-3 bg-surface-container rounded-full gap-2"><span class="material-symbols-outlined text-outline text-[18px]">search</span><span class="font-body-sm text-body-sm text-outline truncate">Bạn tìm gì hôm nay?</span></div><div class="flex items-center gap-1 shrink-0"><button aria-label="Danh sách yêu thích" class="w-11 h-11 flex items-center justify-center rounded-full active:bg-surface-container-high transition-colors text-on-surface"><span class="material-symbols-outlined text-[22px]">favorite</span></button><a href="gio-hang.html" aria-label="Giỏ hàng" class="relative w-11 h-11 flex items-center justify-center rounded-full active:bg-surface-container-high transition-colors text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1 right-1 min-w-[18px] h-[18px] bg-tertiary text-on-tertiary rounded-full px-1 font-label-sm text-[10px] flex items-center justify-center leading-none font-bold" id="mobileHeaderCartCount">2</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-0.5"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+</head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 flex flex-col justify-between px-margin pb-space-sm"><div class="bg-inverse-surface rounded-full py-1 px-3 flex items-center justify-between mt-1"><div class="flex items-center gap-1.5 overflow-hidden"><span class="material-symbols-outlined text-primary-container text-[14px]">local_fire_department</span><span class="font-label-sm text-label-sm text-inverse-on-surface truncate">Mua ngay nhận quà ưu đãi, đừng bỏ lỡ!</span></div><span class="font-label-sm text-label-sm text-primary-container font-bold shrink-0">Khám phá</span></div><div class="flex items-center justify-between gap-space-sm pt-space-xs"><div class="flex items-center gap-1.5 shrink-0"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-fixed text-[20px]">home_app_logo</span></div><div class="flex flex-col leading-tight"><span class="font-headline-sm text-[15px] font-extrabold tracking-tight text-on-surface uppercase">GiaDung</span><span class="font-label-sm text-[9px] text-outline font-bold tracking-widest uppercase">ThongMinh</span></div></div><div class="flex-1 flex items-center h-10 px-3 bg-surface-container rounded-full gap-2"><span class="material-symbols-outlined text-outline text-[18px]">search</span><span class="font-body-sm text-body-sm text-outline truncate">Bạn tìm gì hôm nay?</span></div><div class="flex items-center gap-1 shrink-0"><button onclick="showToast('Danh sách sản phẩm yêu thích của bạn đang được lưu trữ!', 'info')" aria-label="Danh sách yêu thích" class="w-11 h-11 flex items-center justify-center rounded-full active:bg-surface-container-high transition-colors text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[22px]">favorite</span></button><a href="gio-hang.html" aria-label="Giỏ hàng" class="relative w-11 h-11 flex items-center justify-center rounded-full active:bg-surface-container-high transition-colors text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1 right-1 min-w-[18px] h-[18px] bg-tertiary text-on-tertiary rounded-full px-1 font-label-sm text-[10px] flex items-center justify-center leading-none font-bold" id="mobileHeaderCartCount">2</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-0.5"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
 </div></div></div></header><main class="flex flex-col relative w-full pt-28 pb-28 bg-surface"><div class="flex flex-col w-full pb-10">
 <!-- TOP SLOGAN & RUNNING TICKER -->
 <section class="px-margin pt-space-sm pb-space-xs">
@@ -158,19 +158,19 @@
 </div>
 <!-- Category Filter Pills -->
 <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-0.5">
-<button class="bg-inverse-surface text-inverse-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-bold shrink-0 shadow-sm">
+<button onclick="filterMobileCategory(this, 'all')" class="bg-inverse-surface text-inverse-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-bold shrink-0 shadow-sm transition-all cursor-pointer">
           Tất cả
         </button>
-<button class="bg-surface-container-lowest text-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-semibold shrink-0">
+<button onclick="filterMobileCategory(this, 'gadget')" class="bg-surface-container-lowest text-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-semibold shrink-0 transition-all cursor-pointer">
           Gia Dụng Tiện Ích
         </button>
-<button class="bg-surface-container-lowest text-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-semibold shrink-0">
+<button onclick="filterMobileCategory(this, 'audio')" class="bg-surface-container-lowest text-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-semibold shrink-0 transition-all cursor-pointer">
           Âm Thanh
         </button>
-<button class="bg-surface-container-lowest text-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-semibold shrink-0">
+<button onclick="filterMobileCategory(this, 'electronics')" class="bg-surface-container-lowest text-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-semibold shrink-0 transition-all cursor-pointer">
           Điện - Điện Tử
         </button>
-<button class="bg-surface-container-lowest text-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-semibold shrink-0">
+<button onclick="filterMobileCategory(this, 'accessories')" class="bg-surface-container-lowest text-on-surface px-3 py-1 rounded-full font-label-sm text-[11px] font-semibold shrink-0 transition-all cursor-pointer">
           Phụ Kiện
         </button>
 </div>
@@ -478,7 +478,7 @@
 <h3 class="font-label-lg text-[12px] font-bold text-white line-clamp-2 leading-tight">Công Tắc Cảm Ứng Wifi Hunonic Datic</h3>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[14px] font-extrabold text-primary-container">375,000₫</span>
-<button aria-label="Mua" class="w-7 h-7 rounded-full bg-white text-slate-900 flex items-center justify-center active:scale-95">
+<button onclick="event.stopPropagation(); addToCart('cong-tac-hunonic-datic', 1);" aria-label="Mua" class="w-7 h-7 rounded-full bg-white text-slate-900 flex items-center justify-center active:scale-95 cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">shopping_cart</span>
 </button>
 </div>
@@ -492,7 +492,7 @@
 <h3 class="font-label-lg text-[12px] font-bold text-white line-clamp-2 leading-tight">Công Tắc 2 Nút 1 Ổ Hunonic</h3>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[14px] font-extrabold text-primary-container">495,000₫</span>
-<button aria-label="Mua" class="w-7 h-7 rounded-full bg-white text-slate-900 flex items-center justify-center active:scale-95">
+<button onclick="event.stopPropagation(); addToCart('cong-tac-hunonic-datic', 1);" aria-label="Mua" class="w-7 h-7 rounded-full bg-white text-slate-900 flex items-center justify-center active:scale-95 cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">shopping_cart</span>
 </button>
 </div>
@@ -506,7 +506,7 @@
 <h3 class="font-label-lg text-[12px] font-bold text-white line-clamp-2 leading-tight">Công Tắc Chống Giật Cao Cấp</h3>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[14px] font-extrabold text-primary-container">895,000₫</span>
-<button aria-label="Mua" class="w-7 h-7 rounded-full bg-white text-slate-900 flex items-center justify-center active:scale-95">
+<button onclick="event.stopPropagation(); addToCart('cong-tac-hunonic-datic', 1);" aria-label="Mua" class="w-7 h-7 rounded-full bg-white text-slate-900 flex items-center justify-center active:scale-95 cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">shopping_cart</span>
 </button>
 </div>
@@ -520,7 +520,7 @@
 <h3 class="font-label-lg text-[12px] font-bold text-white line-clamp-2 leading-tight">Công Tắc Cửa Cuốn Wifi Hunonic</h3>
 <div class="pt-2 flex items-center justify-between">
 <span class="font-price-hero text-[14px] font-extrabold text-primary-container">625,000₫</span>
-<button aria-label="Mua" class="w-7 h-7 rounded-full bg-white text-slate-900 flex items-center justify-center active:scale-95">
+<button onclick="event.stopPropagation(); addToCart('cong-tac-hunonic-datic', 1);" aria-label="Mua" class="w-7 h-7 rounded-full bg-white text-slate-900 flex items-center justify-center active:scale-95 cursor-pointer">
 <span class="material-symbols-outlined text-[16px]">shopping_cart</span>
 </button>
 </div>

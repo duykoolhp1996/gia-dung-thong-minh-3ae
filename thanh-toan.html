@@ -534,7 +534,7 @@
 <input class="w-full h-11 pl-9 pr-3 rounded-xl bg-surface-container-low text-on-surface uppercase font-label-md text-label-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none" id="coupon-code" placeholder="Nhập mã giảm giá..." type="text" value="GIADUNG30K"/>
 <span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-on-surface-variant">confirmation_number</span>
 </div>
-<button class="h-11 px-5 rounded-xl bg-inverse-surface text-on-primary font-label-md text-label-md hover:bg-on-surface transition-all flex items-center justify-center" type="button">
+<button onclick="applyVoucher()" class="h-11 px-5 rounded-xl bg-inverse-surface text-on-primary font-label-md text-label-md hover:bg-on-surface transition-all flex items-center justify-center cursor-pointer" type="button">
                 Áp Dụng
               </button>
 </div>
@@ -543,7 +543,7 @@
 <span class="material-symbols-outlined text-[15px]">check_circle</span>
                 Đã áp dụng mã GIADUNG30K (-30.000₫)
               </span>
-<button class="text-on-surface-variant hover:text-error underline" type="button">Gỡ bỏ</button>
+<button onclick="removeVoucher()" class="text-on-surface-variant hover:text-error underline cursor-pointer" type="button">Gỡ bỏ</button>
 </div>
 </div>
 <!-- Price Calculations Details -->
@@ -578,7 +578,7 @@
 </div>
 </div>
 <!-- Big Main CTA Button -->
-<button class="w-full py-4 px-6 rounded-2xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm uppercase tracking-wider font-extrabold shadow-lg shadow-primary-container/20 hover:bg-primary-fixed hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="button">
+<button id="btn-submit-order" onclick="handleOrderSubmit()" class="w-full py-4 px-6 rounded-2xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm uppercase tracking-wider font-extrabold shadow-lg shadow-primary-container/20 hover:bg-primary-fixed hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer" type="button">
 <span>ĐẶT HÀNG NGAY</span>
 <span class="material-symbols-outlined text-[24px]">arrow_forward</span>
 </button>
