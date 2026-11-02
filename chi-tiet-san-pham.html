@@ -243,7 +243,7 @@
 </div>
 <div class="flex items-center gap-space-xs font-label-sm text-label-sm">
 <span class="text-on-surface-variant">Chia sẻ:</span>
-<button onclick="if(navigator.share){navigator.share({title:document.title,url:window.location.href})}else{navigator.clipboard.writeText(window.location.href);showToast('Đã sao chép liên kết chia sẻ!')}" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:text-primary transition-colors cursor-pointer" title="Facebook">
+<button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank', 'width=620,height=520,toolbar=no,menubar=no'); showToast('Đang mở trang chia sẻ lên Facebook!');" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:text-primary transition-colors cursor-pointer" title="Chia sẻ lên Facebook">
 <span class="material-symbols-outlined text-[16px]">share</span>
 </button>
 <button onclick="navigator.clipboard.writeText(window.location.href);showToast('Đã sao chép liên kết sản phẩm!')" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:text-primary transition-colors cursor-pointer" title="Sao chép liên kết">
@@ -727,7 +727,7 @@
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface">
-                    Nồi xinh xỉu lu��n mn ơi! Màu trắng kem pastel nhìn sang lắm, để trên bàn ăn chụp ảnh sống ảo đỉnh chóp. Nấu nước sôi siêu nhanh tầm 5-6 phút là sôi sùng sục rồi. Xửng hấp inox rất dày dặn không bị ọp ẹp. Men gốm chống dính tốt, hôm qua mình thử rán cá không dính tí nào. Đóng gói 2 lớp hộp cẩn thận, shipper giao hỏa tốc 2h nhận liền. Rất đáng tiền!
+                    Nồi xinh xỉu luôn mn ơi! Màu trắng kem pastel nhìn sang lắm, để trên bàn ăn chụp ảnh sống ảo đỉnh chóp. Nấu nước sôi siêu nhanh tầm 5-6 phút là sôi sùng sục rồi. Xửng hấp inox rất dày dặn không bị ọp ẹp. Men gốm chống dính tốt, hôm qua mình thử rán cá không dính tí nào. Đóng gói 2 lớp hộp cẩn thận, shipper giao hỏa tốc 2h nhận liền. Rất đáng tiền!
                   </p>
 <div class="flex items-center gap-space-xs mt-1">
 <div class="w-20 h-20 rounded-lg overflow-hidden bg-surface-container-low shadow-sm">
@@ -1313,7 +1313,7 @@
 <div class="flex items-center justify-between mb-space-sm">
 <span class="font-label-lg text-label-lg text-on-surface flex items-center gap-space-xs">
 <span class="material-symbols-outlined text-[18px] text-primary">auto_fix_high</span>
-              Gợi ý ph��� kiện giá sốc từ 99k
+              Gợi ý phụ kiện giá sốc từ 99k
             </span>
 <span class="font-label-sm text-label-sm text-on-surface-variant">Ưu đãi kèm đơn</span>
 </div>

@@ -42,10 +42,10 @@
 <span class="font-label-sm text-label-sm text-primary font-bold">Nồi điện đa năng</span>
 </div>
 <div class="flex items-center gap-2">
-<button aria-label="Chia sẻ sản phẩm" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" id="btn-share">
+<button onclick="handleFacebookShare()" aria-label="Chia sẻ sản phẩm lên Facebook" class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-90 flex items-center justify-center text-on-surface transition-all cursor-pointer" id="btn-share" title="Chia sẻ lên Facebook">
 <span class="material-symbols-outlined text-[18px]">share</span>
 </button>
-<button aria-label="Thêm vào yêu thích" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-tertiary active:scale-95 transition-transform" id="btn-wishlist">
+<button onclick="handleToggleWishlist(this)" aria-label="Thêm vào yêu thích" class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-90 flex items-center justify-center text-tertiary transition-all cursor-pointer" id="btn-wishlist" title="Yêu thích">
 <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
 </button>
 </div>
@@ -327,7 +327,7 @@
 </div>
 <div class="flex items-center justify-between p-3 bg-surface-container-lowest">
 <span class="font-body-sm text-body-sm text-secondary">Chất liệu xửng hấp</span>
-<span class="font-label-sm text-label-sm font-bold text-on-surface">Inox 304 chu��n an toàn thực phẩm</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Inox 304 chuẩn an toàn thực phẩm</span>
 </div>
 <div class="flex items-center justify-between p-3 bg-surface-container-low/50">
 <span class="font-body-sm text-body-sm text-secondary">Điều khiển</span>
@@ -603,8 +603,90 @@
     updateGalleryUI(currentGalleryIndex - 1);
   }
 
+  // Facebook Share Handler
+  function handleFacebookShare() {
+    const currentUrl = encodeURIComponent(window.location.href);
+    const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+    window.open(fbShareUrl, '_blank', 'noopener,noreferrer,width=620,height=520,toolbar=no,menubar=no');
+    if (typeof showToast === 'function') {
+      showToast('Đang mở trang chia sẻ lên Facebook!');
+    }
+  }
+
+  // Wishlist Toggle Handler
+  function handleToggleWishlist(btn) {
+    if (!btn) btn = document.getElementById('btn-wishlist');
+    const spParam = new URLSearchParams(window.location.search).get('sp') || 'noi-da-nang-gaabor-ec30t01a';
+    let wishlist = [];
+    try {
+      wishlist = JSON.parse(localStorage.getItem('3ae_wishlist') || '[]');
+    } catch(e) {}
+
+    const icon = btn ? btn.querySelector('.material-symbols-outlined') : null;
+    const index = wishlist.indexOf(spParam);
+
+    if (index > -1) {
+      wishlist.splice(index, 1);
+      if (btn) {
+        btn.classList.remove('text-tertiary', 'bg-tertiary-container/30');
+        btn.classList.add('text-on-surface', 'bg-surface-container');
+      }
+      if (icon) {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        icon.classList.remove('text-tertiary');
+        icon.classList.add('text-outline');
+      }
+      if (typeof showToast === 'function') {
+        showToast('Đã xóa khỏi danh sách yêu thích!', 'info');
+      }
+    } else {
+      wishlist.push(spParam);
+      if (btn) {
+        btn.classList.add('text-tertiary', 'bg-tertiary-container/30');
+        btn.classList.remove('text-on-surface', 'bg-surface-container');
+      }
+      if (icon) {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        icon.classList.remove('text-outline');
+        icon.classList.add('text-tertiary');
+      }
+      if (typeof showToast === 'function') {
+        showToast('Đã thêm sản phẩm vào danh sách yêu thích!', 'success');
+      }
+    }
+    localStorage.setItem('3ae_wishlist', JSON.stringify(wishlist));
+  }
+
+  function initWishlistState() {
+    const btn = document.getElementById('btn-wishlist');
+    if (!btn) return;
+    const spParam = new URLSearchParams(window.location.search).get('sp') || 'noi-da-nang-gaabor-ec30t01a';
+    let wishlist = [];
+    try {
+      wishlist = JSON.parse(localStorage.getItem('3ae_wishlist') || '[]');
+    } catch(e) {}
+    
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (wishlist.includes(spParam)) {
+      btn.classList.add('text-tertiary', 'bg-tertiary-container/30');
+      btn.classList.remove('text-on-surface', 'bg-surface-container');
+      if (icon) {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        icon.classList.add('text-tertiary');
+      }
+    } else {
+      btn.classList.remove('text-tertiary', 'bg-tertiary-container/30');
+      btn.classList.add('text-on-surface', 'bg-surface-container');
+      if (icon) {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        icon.classList.remove('text-tertiary');
+      }
+    }
+  }
+
   // Swipe support on touch
   document.addEventListener('DOMContentLoaded', () => {
+    initWishlistState();
     const galleryEl = document.getElementById('main-product-gallery') || document.querySelector('.aspect-square');
     if (galleryEl) {
       let touchStartX = 0;
