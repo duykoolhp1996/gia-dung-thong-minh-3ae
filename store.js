@@ -347,7 +347,6 @@
             <!-- Thumbnail -->
             <div class="relative w-24 h-24 md:w-28 md:h-28 rounded-xl bg-surface-container-low overflow-hidden flex-shrink-0 cursor-pointer" onclick="window.location.href='chi-tiet-san-pham.html?sp=${item.id}'">
               <img alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="${item.image}">
-              <span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold tracking-tight z-10">-20%</span>
             </div>
             <!-- Product Details -->
             <div class="flex-1 min-w-0">
