@@ -178,9 +178,9 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
 <!-- LEFT COLUMN: IMAGE GALLERY (5 cols = ~42%) -->
 <div class="lg:col-span-5 flex flex-col gap-space-md">
-<div class="relative bg-surface-container-lowest rounded-2xl p-space-md shadow-sm overflow-hidden group">
+<div class="relative w-full aspect-square rounded-2xl bg-surface-container-low overflow-hidden shadow-sm group cursor-crosshair" id="main-product-gallery">
 <!-- Promotional Badges Overlaid -->
-<div class="absolute top-4 left-4 z-10 flex flex-col gap-space-xs">
+<div class="absolute top-4 left-4 z-10 flex flex-col gap-space-xs pointer-events-none">
 <span class="px-space-sm py-1 rounded-lg bg-tertiary text-on-tertiary font-label-sm text-label-sm tracking-wide shadow-sm flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">local_fire_department</span>
                 GIẢM 20%
@@ -195,12 +195,11 @@
               </span>
 </div>
 <!-- Wishlist Heart Floating Action -->
-<button aria-label="Yêu thích" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface shadow-sm hover:scale-105 flex items-center justify-center transition-all" id="wishlist-btn" onclick="toggleWishlist()">
+<button aria-label="Yêu thích" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur text-on-surface shadow-sm hover:scale-105 flex items-center justify-center transition-all cursor-pointer" id="wishlist-btn" onclick="toggleWishlist()">
 <span class="material-symbols-outlined text-[20px] text-tertiary" id="wishlist-icon">favorite_border</span>
 </button>
-<!-- Main Big Canvas Staging -->
-<div class="relative w-full aspect-square rounded-xl bg-surface-container-low/40 flex items-center justify-center overflow-hidden cursor-crosshair" id="main-product-gallery">
-<img class="w-full h-full object-contain p-space-lg transition-transform duration-300 hover:scale-110" data-alt="Nồi lẩu điện đa năng thông minh Gaabor EC-30T01A màu trắng kem sang trọng tích hợp xửng hấp inox cao cấp, nắp kính trong suốt nhìn rõ thức ăn đang sôi, thiết kế tối giản đặt trên mặt bàn bếp đá cẩm thạch phong cách Bắc Âu ấm cúng, studio lighting cao cấp, góc nhìn 45 độ sắc nét từng chi tiết nút bấm xoay điều khiển" id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkOLyOm7KAe47H5sWPq4OMzYHlBy6AKb-mXq1dQE3ZBfE4cnfbcm4BfTyJEFFfx2KByEzjAcMahNCIWNmk9A2wr2TO5WbQ3KeMm2L7O-vF9-_xVZK5fMdNffaCGWr25cc6VBbctF-_WLJdlzUTYF36YsKFiWym5fuL2YV_Hp1gBwKuivbHIx3L49Q__kG8O2_6oNjNObfOag4rXMyTHXZsr6AxBDiF6lZ-ni1SeIQ"/>
+<!-- Main Big Canvas Staging (Full Bleed Image) -->
+<img class="w-full h-full object-cover transition-transform duration-300 pointer-events-none select-none" data-alt="Nồi lẩu điện đa năng thông minh Gaabor EC-30T01A màu trắng kem sang trọng tích hợp xửng hấp inox cao cấp, nắp kính trong suốt nhìn rõ thức ăn đang sôi, thiết kế tối giản đặt trên mặt bàn bếp đá cẩm thạch phong cách Bắc Âu ấm cúng, studio lighting cao cấp, góc nhìn 45 độ sắc nét từng chi tiết nút bấm xoay điều khiển" id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkOLyOm7KAe47H5sWPq4OMzYHlBy6AKb-mXq1dQE3ZBfE4cnfbcm4BfTyJEFFfx2KByEzjAcMahNCIWNmk9A2wr2TO5WbQ3KeMm2L7O-vF9-_xVZK5fMdNffaCGWr25cc6VBbctF-_WLJdlzUTYF36YsKFiWym5fuL2YV_Hp1gBwKuivbHIx3L49Q__kG8O2_6oNjNObfOag4rXMyTHXZsr6AxBDiF6lZ-ni1SeIQ"/>
 <!-- Navigation Arrows (Previous / Next) -->
 <button onclick="prevGallery(event)" aria-label="Ảnh trước" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest active:scale-95 text-on-surface backdrop-blur-md shadow-md flex items-center justify-center z-20 transition-all cursor-pointer">
   <span class="material-symbols-outlined text-[24px]">chevron_left</span>
@@ -208,9 +207,8 @@
 <button onclick="nextGallery(event)" aria-label="Ảnh tiếp theo" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest active:scale-95 text-on-surface backdrop-blur-md shadow-md flex items-center justify-center z-20 transition-all cursor-pointer">
   <span class="material-symbols-outlined text-[24px]">chevron_right</span>
 </button>
-<div class="absolute bottom-3 right-3 bg-inverse-surface/75 text-inverse-on-surface text-[11px] font-label-sm px-2 py-1 rounded-md flex items-center gap-1 backdrop-blur pointer-events-none z-10">
+<div class="absolute bottom-3 right-3 bg-inverse-surface/75 text-inverse-on-surface text-[11px] font-label-sm px-2.5 py-1 rounded-md flex items-center gap-1 backdrop-blur pointer-events-none z-10">
 <span class="material-symbols-outlined text-[14px]">zoom_in</span> Rê chuột để phóng to
-              </div>
 </div>
 </div>
 <!-- Thumbnail Strip (6 angles) -->
@@ -772,8 +770,8 @@
 <!-- Mini Sticky Product Buy Box -->
 <div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-space-sm">
 <div class="flex items-center gap-space-sm">
-<div class="w-14 h-14 rounded-xl bg-surface-container-low p-1 flex-shrink-0">
-<img class="w-full h-full object-contain" data-alt="Ảnh thu nhỏ nồi lẩu điện Gaabor phục vụ widget mua nhanh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrAFvmJmA0UmZkroQyuRWyUHpywXgDJbRbDlTcTJ8qfoVAjU1bXXaBW068hMMRYjg37_-m4EhbBj6Dnt5f2K2cgx-QQzna5qaWXcQSWvom86kfxhc9jeF1BgKricimVyuWqMP9Z0kEGjE-lEOBarjvuAn2HdLWC8WcJA2h872c0JXz1ikfTrkBIem1SJvdHVnEmO79VhUSX5yPlIXUdHGN05V47ZHXvtnQApXzLNM"/>
+<div class="w-14 h-14 rounded-xl bg-surface-container-low overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Ảnh thu nhỏ nồi lẩu điện Gaabor phục vụ widget mua nhanh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrAFvmJmA0UmZkroQyuRWyUHpywXgDJbRbDlTcTJ8qfoVAjU1bXXaBW068hMMRYjg37_-m4EhbBj6Dnt5f2K2cgx-QQzna5qaWXcQSWvom86kfxhc9jeF1BgKricimVyuWqMP9Z0kEGjE-lEOBarjvuAn2HdLWC8WcJA2h872c0JXz1ikfTrkBIem1SJvdHVnEmO79VhUSX5yPlIXUdHGN05V47ZHXvtnQApXzLNM"/>
 </div>
 <div class="flex flex-col min-w-0">
 <span class="font-label-md text-label-md text-on-surface font-bold truncate">Nồi Lẩu Gaabor EC-30T01A</span>
@@ -825,8 +823,8 @@
 <div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
 <span class="font-label-lg text-label-lg text-on-surface font-bold">Top Gaabor Bán Chạy Khác</span>
 <a class="flex items-center gap-space-sm p-space-xs rounded-xl hover:bg-surface-container-low transition-colors" href="#">
-<div class="w-12 h-12 rounded-lg bg-surface-container-low p-1 flex-shrink-0">
-<img class="w-full h-full object-contain" data-alt="Nồi chiên không dầu điện tử Gaabor dung tích 5L" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv0snRw6611RCQdrSNbWejWa-r9X10ZWX7vlkByACmay_PRpl--SHZRbsTYOvYPboo6-xK2hdxWPUkJFKpmDFCagswCj8WwM_opwXqm8lTqE5Eyz71th39GvVFO1DKajLSx3MeUZWu-8iX1F0WC78wR3WbX0xELpYWe12pX8MWDYjTEAgVjAoTvdpzzwGFBF2d4cqw9xe0XfhKl745PKToqHRlLufAtR4A2XC2c_I"/>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Nồi chiên không dầu điện tử Gaabor dung tích 5L" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv0snRw6611RCQdrSNbWejWa-r9X10ZWX7vlkByACmay_PRpl--SHZRbsTYOvYPboo6-xK2hdxWPUkJFKpmDFCagswCj8WwM_opwXqm8lTqE5Eyz71th39GvVFO1DKajLSx3MeUZWu-8iX1F0WC78wR3WbX0xELpYWe12pX8MWDYjTEAgVjAoTvdpzzwGFBF2d4cqw9xe0XfhKl745PKToqHRlLufAtR4A2XC2c_I"/>
 </div>
 <div class="flex flex-col min-w-0">
 <span class="font-label-md text-label-md text-on-surface font-semibold truncate">Nồi Chiên Không Dầu Gaabor AF-40M</span>
@@ -834,8 +832,8 @@
 </div>
 </a>
 <a class="flex items-center gap-space-sm p-space-xs rounded-xl hover:bg-surface-container-low transition-colors" href="#">
-<div class="w-12 h-12 rounded-lg bg-surface-container-low p-1 flex-shrink-0">
-<img class="w-full h-full object-contain" data-alt="Máy vắt cam tự động Gaabor công nghệ ép kiệt bã" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bam7Kpbo-QmFjxoFFUmpsVm8jMBsnREs0UbVNnwdkZoNWClBkFiyoEDV1N0217b9bq1Zxs1ENTtOllwahAlVVXvkgaEM5f2M5Jt6sNOqBtuP22R1-USDg_3ZwTksixfimZybUWKoMtdhutIUMlz4Oh6ZmtyO3NLCE260spbcJBvRfYm9zwkTqhatilawLALM9Kpk_UhLpFQDSQGCckgBFhEfViFTGyjVcH35Jfo"/>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Máy vắt cam tự động Gaabor công nghệ ép kiệt bã" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bam7Kpbo-QmFjxoFFUmpsVm8jMBsnREs0UbVNnwdkZoNWClBkFiyoEDV1N0217b9bq1Zxs1ENTtOllwahAlVVXvkgaEM5f2M5Jt6sNOqBtuP22R1-USDg_3ZwTksixfimZybUWKoMtdhutIUMlz4Oh6ZmtyO3NLCE260spbcJBvRfYm9zwkTqhatilawLALM9Kpk_UhLpFQDSQGCckgBFhEfViFTGyjVcH35Jfo"/>
 </div>
 <div class="flex flex-col min-w-0">
 <span class="font-label-md text-label-md text-on-surface font-semibold truncate">Máy Vắt Cam Tự Động Gaabor CJ-01</span>
@@ -988,6 +986,25 @@
 
   // Gallery Image Thumbnail Switcher
   let currentGalleryIndex = 0;
+
+  
+  // Interactive Cursor Zoom on Main Product Image
+  const galleryEl = document.getElementById('main-product-gallery');
+  const mainImgEl = document.getElementById('main-product-img');
+  if (galleryEl && mainImgEl) {
+    galleryEl.addEventListener('mousemove', function(e) {
+      if (e.target.closest('button')) return;
+      const rect = galleryEl.getBoundingClientRect();
+      const x = Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
+      const y = Math.max(0, Math.min(100, ((e.clientY - rect.top) / rect.height) * 100));
+      mainImgEl.style.transformOrigin = x + '% ' + y + '%';
+      mainImgEl.style.transform = 'scale(1.4)';
+    });
+    galleryEl.addEventListener('mouseleave', function() {
+      mainImgEl.style.transformOrigin = 'center center';
+      mainImgEl.style.transform = 'scale(1)';
+    });
+  }
 
   function updateDesktopGallery(index) {
     const thumbs = document.querySelectorAll('.thumbnail-btn');
