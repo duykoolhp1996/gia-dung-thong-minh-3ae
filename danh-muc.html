@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Danh Mục Sản Phẩm - Gia Dụng Thông Minh</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container": "#eaedff",
+            "outline": "#7f7660",
+            "tertiary-fixed": "#ffdad7",
+            "secondary-fixed-dim": "#c0c6db",
+            "background": "#faf8ff",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#404758",
+            "on-primary-container": "#6c5700",
+            "primary-fixed": "#ffe083",
+            "error": "#ba1a1a",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#dae2fd",
+            "primary-fixed-dim": "#eec200",
+            "inverse-surface": "#283044",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#ffc2bd",
+            "on-secondary-fixed": "#141b2b",
+            "surface-variant": "#dae2fd",
+            "surface": "#faf8ff",
+            "surface-container-low": "#f2f3ff",
+            "on-secondary-container": "#5c6274",
+            "surface-tint": "#735c00",
+            "on-tertiary-container": "#b2131f",
+            "on-background": "#131b2e",
+            "on-tertiary-fixed-variant": "#930013",
+            "tertiary-fixed-dim": "#ffb3ad",
+            "primary": "#735c00",
+            "on-surface": "#131b2e",
+            "surface-dim": "#d2d9f4",
+            "surface-bright": "#faf8ff",
+            "on-error-container": "#93000a",
+            "primary-container": "#facc15",
+            "on-primary-fixed-variant": "#574500",
+            "secondary-fixed": "#dce2f7",
+            "surface-container-high": "#e2e7ff",
+            "secondary": "#575e70",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed": "#231b00",
+            "inverse-primary": "#eec200",
+            "tertiary": "#b91a24",
+            "on-tertiary-fixed": "#410004",
+            "inverse-on-surface": "#eef0ff",
+            "on-surface-variant": "#4d4632",
+            "outline-variant": "#d1c6ab",
+            "error-container": "#ffdad6",
+            "secondary-container": "#d9dff5",
+            "on-secondary": "#ffffff"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xl": "1.5rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1rem",
+            "space-md": "0.75rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "gutter-sm": "0.75rem",
+            "margin-md": "1.25rem"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KQYN3R3X2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9KQYN3R3X2');
+  </script>
+  <!-- Hotjar Tracking Code -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6791459,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+</head>
+<body class="bg-background font-sans text-on-surface antialiased pb-20 md:pb-0">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(15,23,42,0.06)]">
+    <!-- 1. Top Bar -->
+    <div class="hidden md:block bg-inverse-surface text-inverse-on-surface py-space-xs border-b border-inverse-on-surface/10">
+      <div class="max-w-7xl mx-auto px-margin flex items-center justify-between font-label-sm text-xs">
+        <div class="flex items-center gap-space-sm">
+          <span class="inline-block px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-bold text-[11px]">CATALOG CHÍNH HÃNG</span>
+          <span class="truncate">Hơn 1.000+ sản phẩm thiết bị thông minh công nghệ cao, giao nhanh 2h toàn quốc</span>
+        </div>
+        <div class="flex items-center gap-space-lg text-xs text-inverse-on-surface/90 shrink-0">
+          <div class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[16px] text-primary-container">call</span>
+            <span>Hotline: <strong class="text-primary-container">1800 6868</strong> (Miễn phí)</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[16px]">verified</span>
+            <span>Cam kết 100% Chính Hãng</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Main Header Bar -->
+    <div class="max-w-7xl mx-auto px-margin py-2 sm:py-space-md">
+      <div class="flex items-center justify-between gap-2 sm:gap-space-lg">
+        <!-- Logo Brand -->
+        <a class="flex items-center gap-2 shrink-0 group cursor-pointer" href="index.html" title="Giadungthongminh.com">
+          <img alt="Giadungthongminh.com" src="https://cdn.hstatic.net/files/200001184178/file/logo_751d9653c7c946c4bbcc2ae780c160ea.png" class="h-8 sm:h-9 md:h-10 w-auto max-w-[210px] sm:max-w-[260px] object-contain group-hover:opacity-90 transition-opacity" fetchpriority="high">
+        </a>
+
+        <!-- Desktop Search Bar -->
+        <div class="hidden md:flex flex-1 max-w-xl mx-2">
+          <div class="relative w-full flex items-center">
+            <input id="catalogSearchDesktop" oninput="handleCatalogSearch(this.value)" class="w-full h-10 sm:h-11 pl-space-lg pr-28 rounded-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all text-sm" placeholder="Tìm kiếm theo tên sản phẩm, thương hiệu..." type="text"/>
+            <button class="absolute right-1 top-1 bottom-1 px-4 rounded-full bg-inverse-surface text-on-primary flex items-center gap-1 hover:bg-on-surface transition-colors cursor-pointer">
+              <span class="material-symbols-outlined text-[18px] text-primary-container">search</span>
+              <span class="text-xs sm:text-sm">Tìm kiếm</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-1.5 sm:gap-space-md shrink-0">
+          <!-- Wishlist button -->
+          <a class="flex relative p-2 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors cursor-pointer" title="Danh sách yêu thích" href="#">
+            <span class="material-symbols-outlined text-[22px] sm:text-[24px]">favorite</span>
+            <span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-tertiary text-on-tertiary font-bold flex items-center justify-center text-[10px]" id="catalogWishlistCount">0</span>
+          </a>
+
+          <!-- Cart Button -->
+          <a class="flex items-center gap-2 p-2 sm:px-space-md sm:py-space-xs rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors relative group cursor-pointer" href="gio-hang.html">
+            <div class="relative flex items-center justify-center">
+              <span class="material-symbols-outlined text-[22px] sm:text-[24px] text-on-surface">shopping_cart</span>
+              <span class="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-tertiary text-on-tertiary font-bold flex items-center justify-center text-[10px]" id="headerCartCount">2</span>
+            </div>
+            <div class="hidden md:flex flex-col text-left">
+              <span class="text-[10px] text-on-surface-variant leading-none">Giỏ hàng</span>
+              <span class="text-xs font-bold text-on-surface leading-tight">350.000đ</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Search input row -->
+      <div class="md:hidden mt-2">
+        <div class="relative w-full flex items-center">
+          <input id="catalogSearchMobile" oninput="handleCatalogSearch(this.value)" class="w-full h-9 pl-3.5 pr-20 rounded-full bg-surface-container-low text-xs text-on-surface placeholder:text-on-surface-variant/60 focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all" placeholder="Tìm kiếm sản phẩm trong danh mục..." type="text"/>
+          <button class="absolute right-1 top-1 bottom-1 px-3 rounded-full bg-inverse-surface text-on-primary text-xs flex items-center gap-1 font-semibold cursor-pointer">
+            <span class="material-symbols-outlined text-[14px] text-primary-container">search</span>
+            <span>Tìm</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Subnav Bar: Horizontal Swipeable Category Row -->
+    <nav class="bg-surface-container-low border-b border-surface-container-high/40 shadow-xs">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="flex items-center gap-2 sm:gap-4 overflow-x-auto whitespace-nowrap py-2 no-scrollbar scroll-smooth" id="categorySubnavBar">
+          <button onclick="selectCategory('all')" data-cat="all" class="cat-subnav-btn px-3 py-1 rounded-full transition-all text-xs sm:text-sm font-semibold flex items-center gap-1 shrink-0 bg-primary-container text-on-primary-container shadow-xs">
+            <span class="material-symbols-outlined text-[15px]">grid_view</span>
+            <span>Tất Cả Sản Phẩm</span>
+          </button>
+          <button onclick="selectCategory('do-gia-dung')" data-cat="do-gia-dung" class="cat-subnav-btn px-3 py-1 rounded-full transition-all text-xs sm:text-sm font-medium flex items-center gap-1 shrink-0 text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest/80">
+            <span>Gia Dụng Tiện Ích</span>
+          </button>
+          <button onclick="selectCategory('thiet-bi-am-thanh')" data-cat="thiet-bi-am-thanh" class="cat-subnav-btn px-3 py-1 rounded-full transition-all text-xs sm:text-sm font-medium flex items-center gap-1 shrink-0 text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest/80">
+            <span>Âm Thanh - Giải Trí</span>
+          </button>
+          <button onclick="selectCategory('thiet-bi-dien')" data-cat="thiet-bi-dien" class="cat-subnav-btn px-3 py-1 rounded-full transition-all text-xs sm:text-sm font-medium flex items-center gap-1 shrink-0 text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest/80">
+            <span>Điện - Điện Tử</span>
+          </button>
+          <button onclick="selectCategory('phu-kien-dien-thoai')" data-cat="phu-kien-dien-thoai" class="cat-subnav-btn px-3 py-1 rounded-full transition-all text-xs sm:text-sm font-medium flex items-center gap-1 shrink-0 text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest/80">
+            <span>Phụ Kiện Điện Thoại</span>
+          </button>
+          <a class="text-tertiary font-bold hover:text-primary bg-tertiary-container/30 px-3 py-1 rounded-full transition-colors flex items-center gap-1 shrink-0 text-xs sm:text-sm" href="dai-tiec-khuyen-mai.html">
+            <span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+            <span>Khuyến Mãi Hot</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER (Padded for fixed header) -->
+  <main class="max-w-7xl mx-auto px-margin pt-32 sm:pt-36 lg:pt-36 pb-space-xl w-full">
+
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-1.5 text-xs text-on-surface-variant py-2 mb-2">
+      <a href="index.html" class="hover:text-primary transition-colors">Trang chủ</a>
+      <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+      <a href="danh-muc.html" class="hover:text-primary transition-colors">Catalog</a>
+      <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+      <span class="text-primary font-bold" id="breadcrumbCurrentCategory">Tất Cả Sản Phẩm</span>
+    </nav>
+
+    <!-- Category Hero Header Banner -->
+    <div class="relative rounded-2xl overflow-hidden bg-gradient-to-r from-inverse-surface via-inverse-surface/95 to-slate-800 text-inverse-on-surface p-4 sm:p-space-lg mb-space-lg shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div class="flex flex-col gap-1 max-w-2xl">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container text-[11px] font-bold uppercase tracking-wide" id="heroCategoryBadge">Catalog</span>
+          <span class="text-xs text-inverse-on-surface/70" id="heroProductCountText">Đang tải sản phẩm...</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white" id="heroCategoryTitle">Danh Mục Sản Phẩm</h1>
+        <p class="text-xs sm:text-sm text-inverse-on-surface/80 leading-relaxed" id="heroCategoryDesc">Hệ thống phân phối thiết bị gia dụng và điện tử công nghệ cao cấp hàng đầu Việt Nam.</p>
+      </div>
+
+      <!-- Quick Switch Pills -->
+      <div class="flex flex-wrap items-center gap-2 shrink-0">
+        <button onclick="selectCategory('all')" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs text-white font-medium transition-all">Tất cả</button>
+        <button onclick="selectCategory('do-gia-dung')" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs text-white font-medium transition-all">Gia Dụng</button>
+        <button onclick="selectCategory('thiet-bi-am-thanh')" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs text-white font-medium transition-all">Âm Thanh</button>
+        <button onclick="selectCategory('thiet-bi-dien')" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs text-white font-medium transition-all">Điện Tử</button>
+        <button onclick="selectCategory('phu-kien-dien-thoai')" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs text-white font-medium transition-all">Phụ Kiện</button>
+      </div>
+    </div>
+
+    <!-- Filter & Sort Toolbar -->
+    <div class="bg-surface-container-lowest rounded-xl p-3 sm:p-4 mb-space-md shadow-xs border border-surface-container-high/60 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+      <!-- Brand Pills -->
+      <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5" id="brandFilterBar">
+        <span class="text-xs text-on-surface-variant font-semibold shrink-0 pr-1">Hãng:</span>
+        <button onclick="filterBrand('all')" data-brand="all" class="brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-primary text-on-primary shrink-0 transition-all">Tất cả</button>
+        <button onclick="filterBrand('Gaabor')" data-brand="Gaabor" class="brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-medium bg-surface-container text-on-surface shrink-0 hover:bg-surface-container-high transition-all">Gaabor</button>
+        <button onclick="filterBrand('Hunonic')" data-brand="Hunonic" class="brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-medium bg-surface-container text-on-surface shrink-0 hover:bg-surface-container-high transition-all">Hunonic</button>
+        <button onclick="filterBrand('MAONO')" data-brand="MAONO" class="brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-medium bg-surface-container text-on-surface shrink-0 hover:bg-surface-container-high transition-all">Maono</button>
+        <button onclick="filterBrand('Mophie')" data-brand="Mophie" class="brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-medium bg-surface-container text-on-surface shrink-0 hover:bg-surface-container-high transition-all">Mophie</button>
+        <button onclick="filterBrand('Energizer')" data-brand="Energizer" class="brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-medium bg-surface-container text-on-surface shrink-0 hover:bg-surface-container-high transition-all">Energizer</button>
+        <button onclick="filterBrand('Masuto')" data-brand="Masuto" class="brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-medium bg-surface-container text-on-surface shrink-0 hover:bg-surface-container-high transition-all">Masuto</button>
+      </div>
+
+      <!-- Sorting Selector -->
+      <div class="flex items-center gap-2 shrink-0 justify-between md:justify-end">
+        <label for="sortSelect" class="text-xs text-on-surface-variant font-medium shrink-0">Sắp xếp:</label>
+        <select id="sortSelect" onchange="handleSortChange(this.value)" class="bg-surface-container-low text-on-surface text-xs rounded-lg px-2.5 py-1.5 border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+          <option value="default">Nổi bật nhất</option>
+          <option value="price-asc">Giá: Thấp đến Cao</option>
+          <option value="price-desc">Giá: Cao đến Thấp</option>
+          <option value="discount-desc">Khuyến mãi lớn nhất</option>
+          <option value="name-asc">Tên A - Z</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-space-lg" id="catalogProductGrid">
+      <!-- Dynamic Products Injected via JS -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden flex-col items-center justify-center py-16 text-center bg-surface-container-lowest rounded-2xl border border-surface-container-high/60 my-space-lg">
+      <span class="material-symbols-outlined text-[48px] text-on-surface-variant/40 mb-2">inventory_2</span>
+      <h3 class="text-base font-bold text-on-surface mb-1">Không tìm thấy sản phẩm phù hợp</h3>
+      <p class="text-xs text-on-surface-variant max-w-md mb-4">Vui lòng thử tìm kiếm với từ khóa khác hoặc chọn xem lại tất cả sản phẩm.</p>
+      <button onclick="resetFilters()" class="px-4 py-2 rounded-xl bg-primary text-on-primary text-xs font-semibold hover:bg-primary-tint transition-all">Xem tất cả sản phẩm</button>
+    </div>
+
+  </main>
+
+  <!-- MOBILE BOTTOM NAVIGATION -->
+  <nav class="block md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-surface-container-high/60 shadow-lg px-2 py-1">
+    <div class="grid grid-cols-5 items-center justify-around text-center">
+      <a href="index.html" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-on-surface transition-colors">
+        <span class="material-symbols-outlined text-[22px]">home</span>
+        <span class="text-[10px] mt-0.5 font-medium">Trang chủ</span>
+      </a>
+      <a href="danh-muc.html" class="flex flex-col items-center justify-center py-1 text-primary font-bold transition-colors">
+        <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+        <span class="text-[10px] mt-0.5">Danh mục</span>
+      </a>
+      <a href="dai-tiec-khuyen-mai.html" class="flex flex-col items-center justify-center py-1 text-tertiary hover:text-tertiary transition-colors">
+        <span class="material-symbols-outlined text-[22px]">local_fire_department</span>
+        <span class="text-[10px] mt-0.5 font-medium">Ưu đãi</span>
+      </a>
+      <a href="tel:18006868" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-on-surface transition-colors">
+        <span class="material-symbols-outlined text-[22px]">support_agent</span>
+        <span class="text-[10px] mt-0.5 font-medium">Tư vấn</span>
+      </a>
+      <a href="gio-hang.html" class="flex flex-col items-center justify-center py-1 text-secondary hover:text-on-surface transition-colors relative">
+        <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+        <span class="text-[10px] mt-0.5 font-medium">Giỏ hàng</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-inverse-surface text-inverse-on-surface mt-space-xl">
+    <div class="max-w-7xl mx-auto px-margin py-space-xl grid grid-cols-2 lg:grid-cols-4 gap-x-space-md sm:gap-x-space-lg lg:gap-x-space-xl gap-y-space-lg lg:gap-y-0">
+      <!-- Brand Info Block -->
+      <div class="col-span-2 lg:col-span-1 flex flex-col gap-space-md pb-space-md lg:pb-0 border-b border-inverse-on-surface/10 lg:border-b-0">
+        <div class="flex items-center gap-space-sm">
+          <a href="index.html" class="inline-block" title="Giadungthongminh.com">
+            <img alt="Giadungthongminh.com" src="https://cdn.hstatic.net/files/200001184178/file/logo_751d9653c7c946c4bbcc2ae780c160ea.png" class="h-8 md:h-9 w-auto max-w-[220px] object-contain brightness-0 invert" fetchpriority="high">
+          </a>
+        </div>
+        <p class="font-body-sm text-body-sm text-inverse-on-surface/80 leading-relaxed">Hệ thống phân phối thiết bị gia dụng và điện tử công nghệ cao cấp hàng đầu Việt Nam.</p>
+        <div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-inverse-on-surface/80">
+          <div class="flex items-start gap-space-xs">
+            <span class="material-symbols-outlined text-[18px] text-primary-container">location_on</span>
+            <span>The Global City, Đường Đỗ Xuân Hợp, Phường An Phú, TP. Thủ Đức, TP. Hồ Chí Minh</span>
+          </div>
+          <div class="flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-[18px] text-primary-container">call</span>
+            <span>1800 6868 (Bán hàng &amp; Khiếu nại)</span>
+          </div>
+          <div class="flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-[18px] text-primary-container">mail</span>
+            <span>support@giadungthongminh.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Hỗ Trợ Khách Hàng -->
+      <div class="col-span-1 flex flex-col gap-space-sm">
+        <h5 class="font-label-lg text-label-lg text-primary-container font-semibold">Hỗ Trợ Khách Hàng</h5>
+        <ul class="flex flex-col gap-space-xs text-xs text-inverse-on-surface/80">
+          <li><a class="hover:text-primary-container transition-colors" href="#">Hướng dẫn mua hàng</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#">Chính sách trả góp 0%</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#">Giao hàng &amp; lắp đặt</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#">Tra cứu tiến độ đơn hàng</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#">Khách hàng thân thiết</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Chính Sách & Bảo Hành -->
+      <div class="col-span-1 flex flex-col gap-space-sm">
+        <h5 class="font-label-lg text-label-lg text-primary-container font-semibold">Chính Sách &amp; Bảo Hành</h5>
+        <ul class="flex flex-col gap-space-xs text-xs text-inverse-on-surface/80">
+          <li><a class="hover:text-primary-container transition-colors" href="#">Đổi trả trong 30 ngày</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#">Bảo hành chính hãng</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#">Bảo mật thông tin KH</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#">Điều khoản giao dịch</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#">Giải quyết khiếu nại</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Thanh Toán & Tổng Đài -->
+      <div class="col-span-2 lg:col-span-1 flex flex-col gap-space-sm pt-space-md lg:pt-0 border-t border-inverse-on-surface/10 lg:border-t-0">
+        <h5 class="font-label-lg text-label-lg text-primary-container font-semibold">Thanh Toán &amp; Tổng Đài</h5>
+        <div class="flex flex-col gap-space-xs text-xs text-inverse-on-surface/80">
+          <p>Tư vấn mua hàng: <strong class="text-primary-container font-semibold">1800 6868</strong> (8:00 - 21:30)</p>
+          <p>Khiếu nại &amp; Bảo hành: <strong class="text-primary-container font-semibold">1800 6869</strong> (8:00 - 21:00)</p>
+          <p>Email đối tác: <span class="text-primary-container">b2b@giadungthongminh.com</span></p>
+        </div>
+        <div class="mt-space-xs">
+          <span class="text-[11px] text-inverse-on-surface/60 block mb-space-xs font-semibold">PHƯƠNG THỨC THANH TOÁN</span>
+          <div class="grid grid-cols-4 gap-space-xs">
+            <div class="h-8 rounded bg-surface-container-lowest text-on-surface text-xs flex items-center justify-center font-bold">VISA</div>
+            <div class="h-8 rounded bg-surface-container-lowest text-on-surface text-xs flex items-center justify-center font-bold">MC</div>
+            <div class="h-8 rounded bg-surface-container-lowest text-on-surface text-xs flex items-center justify-center font-bold">MOMO</div>
+            <div class="h-8 rounded bg-surface-container-lowest text-on-surface text-xs flex items-center justify-center font-bold">COD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-inverse-on-surface/10 py-space-md">
+      <div class="max-w-7xl mx-auto px-margin flex flex-col md:flex-row items-center justify-between text-inverse-on-surface/60 text-xs">
+        <p>© 2025 Công ty Cổ phần Bán lẻ Gia Dụng Thông Minh. All rights reserved.</p>
+        <p>Giấy phép kinh doanh số: 0318999888 do Sở KH&amp;ĐT TP.HCM cấp.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container" class="fixed bottom-20 md:bottom-8 right-4 md:right-8 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- SCRIPTS -->
+  <script src="products.js"></script>
+  <script src="store.js"></script>
+  <script>
+    // Category metadata map
+    const CATEGORIES = {
+      'all': {
+        title: 'Tất Cả Sản Phẩm',
+        badge: 'Toàn Bộ Hệ Sinh Thái',
+        desc: 'Khám phá hơn 1.000+ sản phẩm thiết bị thông minh, điện tử gia dụng chính hãng từ các thương hiệu hàng đầu thế giới.',
+        keys: ['all']
+      },
+      'do-gia-dung': {
+        title: 'Gia Dụng Tiện Ích',
+        badge: 'Nhà Cửa & Nhà Bếp',
+        desc: 'Nồi đa năng, ấm siêu tốc, máy xay cầm tay, cân sức khỏe và máy làm sữa hạt cao cấp cho gia đình tiện nghi.',
+        keys: ['gadget', 'do-gia-dung', 'gia-dung-tien-ich']
+      },
+      'thiet-bi-am-thanh': {
+        title: 'Âm Thanh - Giải Trí',
+        badge: 'Phòng Thu & Giải Trí',
+        desc: 'Micro thu âm livestream podcast chuyên nghiệp MAONO, loa Bluetooth chống nước di động Energizer đỉnh cao âm thanh.',
+        keys: ['audio', 'thiet-bi-am-thanh', 'am-thanh-giai-tri']
+      },
+      'thiet-bi-dien': {
+        title: 'Điện - Điện Tử & Smarthome',
+        badge: 'Công Nghệ Smarthome',
+        desc: 'Công tắc cảm ứng thông minh Hunonic, ổ cắm điều khiển từ xa qua WiFi, thiết bị chống giật an toàn chuẩn Châu Âu.',
+        keys: ['electronics', 'thiet-bi-dien', 'dien-dien-tu']
+      },
+      'phu-kien-dien-thoai': {
+        title: 'Phụ Kiện Điện Thoại & Di Động',
+        badge: 'Phụ Kiện Cao Cấp',
+        desc: 'Cáp sạc chuẩn MFi Apple, củ sạc nhanh GaN 100W, bơm điện đa năng tích hợp sạc dự phòng Mophie và Energizer.',
+        keys: ['accessories', 'phu-kien-dien-thoai', 'phu-kien']
+      }
+    };
+
+    let activeCategory = 'all';
+    let activeBrand = 'all';
+    let activeSort = 'default';
+    let searchQuery = '';
+
+    // Initialize from URL
+    function initCatalogFromUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('cat') || urlParams.get('danh-muc') || 'all';
+      const qParam = urlParams.get('q') || '';
+      
+      // Map parameter aliases
+      let matchedCat = 'all';
+      for (const [catKey, catData] of Object.entries(CATEGORIES)) {
+        if (catData.keys.includes(catParam.toLowerCase()) || catKey === catParam.toLowerCase()) {
+          matchedCat = catKey;
+          break;
+        }
+      }
+
+      activeCategory = matchedCat;
+      searchQuery = qParam;
+      if (qParam) {
+        const inpD = document.getElementById('catalogSearchDesktop');
+        const inpM = document.getElementById('catalogSearchMobile');
+        if (inpD) inpD.value = qParam;
+        if (inpM) inpM.value = qParam;
+      }
+
+      updateCategoryUI();
+      renderCatalogProducts();
+      updateWishlistCounter();
+    }
+
+    function selectCategory(catKey) {
+      if (!CATEGORIES[catKey]) catKey = 'all';
+      activeCategory = catKey;
+      activeBrand = 'all';
+      
+      // Update URL without reload
+      const newUrl = new URL(window.location.href);
+      if (catKey === 'all') {
+        newUrl.searchParams.delete('cat');
+      } else {
+        newUrl.searchParams.set('cat', catKey);
+      }
+      window.history.pushState({}, '', newUrl);
+
+      // Reset brand buttons
+      document.querySelectorAll('.brand-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-brand') === 'all') {
+          btn.className = 'brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-primary text-on-primary shrink-0 transition-all shadow-xs';
+        } else {
+          btn.className = 'brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-medium bg-surface-container text-on-surface shrink-0 hover:bg-surface-container-high transition-all';
+        }
+      });
+
+      updateCategoryUI();
+      renderCatalogProducts();
+    }
+
+    function filterBrand(brand) {
+      activeBrand = brand;
+      // Update brand buttons
+      document.querySelectorAll('.brand-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-brand') === brand) {
+          btn.className = 'brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-primary text-on-primary shrink-0 transition-all shadow-xs';
+        } else {
+          btn.className = 'brand-filter-btn px-2.5 py-1 rounded-lg text-xs font-medium bg-surface-container text-on-surface shrink-0 hover:bg-surface-container-high transition-all';
+        }
+      });
+      renderCatalogProducts();
+    }
+
+    function handleSortChange(sortVal) {
+      activeSort = sortVal;
+      renderCatalogProducts();
+    }
+
+    function handleCatalogSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      renderCatalogProducts();
+    }
+
+    function resetFilters() {
+      activeCategory = 'all';
+      activeBrand = 'all';
+      activeSort = 'default';
+      searchQuery = '';
+      const inpD = document.getElementById('catalogSearchDesktop');
+      const inpM = document.getElementById('catalogSearchMobile');
+      if (inpD) inpD.value = '';
+      if (inpM) inpM.value = '';
+      document.getElementById('sortSelect').value = 'default';
+      selectCategory('all');
+    }
+
+    function updateCategoryUI() {
+      const catData = CATEGORIES[activeCategory] || CATEGORIES['all'];
+
+      // Subnav pills
+      document.querySelectorAll('.cat-subnav-btn').forEach(btn => {
+        const cat = btn.getAttribute('data-cat');
+        if (cat === activeCategory) {
+          btn.className = 'cat-subnav-btn px-3 py-1 rounded-full transition-all text-xs sm:text-sm font-bold flex items-center gap-1 shrink-0 bg-primary-container text-on-primary-container shadow-xs';
+        } else {
+          btn.className = 'cat-subnav-btn px-3 py-1 rounded-full transition-all text-xs sm:text-sm font-medium flex items-center gap-1 shrink-0 text-on-surface-variant hover:text-primary hover:bg-surface-container-lowest/80';
+        }
+      });
+
+      // Breadcrumb & Hero
+      const breadcrumbEl = document.getElementById('breadcrumbCurrentCategory');
+      if (breadcrumbEl) breadcrumbEl.textContent = catData.title;
+
+      const heroTitleEl = document.getElementById('heroCategoryTitle');
+      if (heroTitleEl) heroTitleEl.textContent = catData.title;
+
+      const heroBadgeEl = document.getElementById('heroCategoryBadge');
+      if (heroBadgeEl) heroBadgeEl.textContent = catData.badge;
+
+      const heroDescEl = document.getElementById('heroCategoryDesc');
+      if (heroDescEl) heroDescEl.textContent = catData.desc;
+    }
+
+    function getFilteredProducts() {
+      if (typeof PRODUCTS_DB === 'undefined' || !Array.isArray(PRODUCTS_DB)) {
+        return [];
+      }
+
+      let list = [...PRODUCTS_DB];
+
+      // Category filter
+      if (activeCategory !== 'all') {
+        const targetKeys = CATEGORIES[activeCategory]?.keys || [];
+        list = list.filter(p => targetKeys.includes(p.category) || targetKeys.includes(p.id));
+      }
+
+      // Brand filter
+      if (activeBrand !== 'all') {
+        list = list.filter(p => (p.brand || '').toLowerCase() === activeBrand.toLowerCase());
+      }
+
+      // Search filter
+      if (searchQuery) {
+        list = list.filter(p => {
+          const matchName = (p.name || '').toLowerCase().includes(searchQuery);
+          const matchBrand = (p.brand || '').toLowerCase().includes(searchQuery);
+          const matchDesc = (p.description || '').toLowerCase().includes(searchQuery);
+          return matchName || matchBrand || matchDesc;
+        });
+      }
+
+      // Sorting
+      if (activeSort === 'price-asc') {
+        list.sort((a, b) => (a.price || 0) - (b.price || 0));
+      } else if (activeSort === 'price-desc') {
+        list.sort((a, b) => (b.price || 0) - (a.price || 0));
+      } else if (activeSort === 'discount-desc') {
+        const getDisc = (p) => parseInt((p.discount || '0').replace(/[^0-9]/g, '')) || 0;
+        list.sort((a, b) => getDisc(b) - getDisc(a));
+      } else if (activeSort === 'name-asc') {
+        list.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      }
+
+      return list;
+    }
+
+    function renderCatalogProducts() {
+      const grid = document.getElementById('catalogProductGrid');
+      const emptyState = document.getElementById('emptyState');
+      const countText = document.getElementById('heroProductCountText');
+      if (!grid) return;
+
+      const products = getFilteredProducts();
+      if (countText) {
+        countText.textContent = `${products.length} sản phẩm có sẵn`;
+      }
+
+      if (products.length === 0) {
+        grid.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+
+      if (emptyState) emptyState.classList.add('hidden');
+
+      const isMobile = window.innerWidth < 768;
+      const detailPage = isMobile ? 'mobile-san-pham.html' : 'chi-tiet-san-pham.html';
+
+      grid.innerHTML = products.map(p => {
+        const discountBadge = p.discount ? `<span class="absolute top-2.5 left-2.5 z-10 bg-tertiary text-on-tertiary text-[10px] font-bold px-1.5 py-0.5 rounded-md">${p.discount}</span>` : '';
+        const brandBadge = p.brand ? `<span class="text-[10px] text-outline font-semibold uppercase">${p.brand}</span>` : '';
+        const targetUrl = `${detailPage}?sp=${p.id || p.slug}`;
+
+        return `
+          <div onclick="if(!event.target.closest('button')) window.location.href='${targetUrl}'" class="bg-surface-container-lowest cursor-pointer rounded-2xl p-2.5 sm:p-3 shadow-xs hover:shadow-md transition-all flex flex-col justify-between relative group border border-surface-container-high/40 hover:-translate-y-1">
+            ${discountBadge}
+            <button onclick="event.stopPropagation(); toggleCatalogWishlist('${p.id}', this)" aria-label="Yêu thích" class="absolute top-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-tertiary transition-colors cursor-pointer" id="fav-btn-${p.id}">
+              <span class="material-symbols-outlined text-[16px]">favorite</span>
+            </button>
+            
+            <div class="aspect-square bg-surface-container-low rounded-xl mb-2.5 overflow-hidden relative">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="${p.image}" alt="${p.name}" loading="lazy"/>
+            </div>
+
+            <div class="flex flex-col flex-1 justify-between gap-2">
+              <div>
+                ${brandBadge}
+                <h3 class="text-xs sm:text-sm font-bold text-on-surface line-clamp-2 leading-snug group-hover:text-primary transition-colors mt-0.5" title="${p.name}">
+                  ${p.name}
+                </h3>
+              </div>
+
+              <div class="pt-1 border-t border-surface-container-high/40 flex items-center justify-between gap-1">
+                <div class="flex flex-col">
+                  ${p.originalPriceStr ? `<span class="text-[11px] text-outline line-through leading-none">${p.originalPriceStr}</span>` : ''}
+                  <span class="text-sm sm:text-base font-extrabold text-tertiary leading-tight mt-0.5">${p.priceStr || (p.price?.toLocaleString('vi-VN') + '₫')}</span>
+                </div>
+                <button onclick="event.stopPropagation(); addProductToCart('${p.id}')" title="Thêm vào giỏ hàng" class="w-8 h-8 rounded-full bg-inverse-surface hover:bg-primary-container text-primary-container hover:text-on-primary-container flex items-center justify-center transition-colors shadow-xs shrink-0 cursor-pointer">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function addProductToCart(productId) {
+      if (typeof PRODUCTS_DB === 'undefined') return;
+      const product = PRODUCTS_DB.find(p => p.id === productId || p.slug === productId);
+      if (!product) return;
+
+      if (window.Store && typeof window.Store.addToCart === 'function') {
+        window.Store.addToCart({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          priceStr: product.priceStr,
+          image: product.image,
+          quantity: 1
+        });
+      } else {
+        // Fallback localStorage cart
+        let cart = [];
+        try {
+          cart = JSON.parse(localStorage.getItem('3ae_cart') || '[]');
+        } catch(e) {}
+        const exist = cart.find(i => i.id === product.id);
+        if (exist) {
+          exist.quantity += 1;
+        } else {
+          cart.push({ ...product, quantity: 1 });
+        }
+        localStorage.setItem('3ae_cart', JSON.stringify(cart));
+      }
+
+      showToast(`Đã thêm ${product.name} vào giỏ hàng!`);
+      updateCartBadge();
+    }
+
+    function updateCartBadge() {
+      let count = 0;
+      try {
+        const cart = JSON.parse(localStorage.getItem('3ae_cart') || '[]');
+        count = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+      } catch(e) {}
+      const badge = document.getElementById('headerCartCount');
+      if (badge) badge.textContent = count > 0 ? count : '0';
+    }
+
+    function toggleCatalogWishlist(productId, btn) {
+      let wishlist = [];
+      try {
+        wishlist = JSON.parse(localStorage.getItem('3ae_wishlist') || '[]');
+      } catch(e) {}
+
+      const idx = wishlist.indexOf(productId);
+      const icon = btn ? btn.querySelector('.material-symbols-outlined') : null;
+
+      if (idx > -1) {
+        wishlist.splice(idx, 1);
+        if (btn) btn.classList.remove('text-tertiary');
+        if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+        showToast('Đã xóa khỏi danh sách yêu thích!');
+      } else {
+        wishlist.push(productId);
+        if (btn) btn.classList.add('text-tertiary');
+        if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+        showToast('Đã thêm vào danh sách yêu thích!');
+      }
+      localStorage.setItem('3ae_wishlist', JSON.stringify(wishlist));
+      updateWishlistCounter();
+    }
+
+    function updateWishlistCounter() {
+      let wishlist = [];
+      try {
+        wishlist = JSON.parse(localStorage.getItem('3ae_wishlist') || '[]');
+      } catch(e) {}
+      const counter = document.getElementById('catalogWishlistCount');
+      if (counter) counter.textContent = wishlist.length;
+
+      // Update icons state
+      wishlist.forEach(id => {
+        const btn = document.getElementById(`fav-btn-${id}`);
+        if (btn) {
+          btn.classList.add('text-tertiary');
+          const icon = btn.querySelector('.material-symbols-outlined');
+          if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+        }
+      });
+    }
+
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+      const toast = document.createElement('div');
+      toast.className = 'bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-xl text-xs font-semibold shadow-lg flex items-center gap-2 transform transition-all duration-300 translate-y-2 opacity-0 pointer-events-auto';
+      toast.innerHTML = `<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span><span>${message}</span>`;
+      container.appendChild(toast);
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initCatalogFromUrl();
+      updateCartBadge();
+    });
+
+    window.addEventListener('popstate', () => {
+      initCatalogFromUrl();
+    });
+  </script>
+</body>
+</html>
