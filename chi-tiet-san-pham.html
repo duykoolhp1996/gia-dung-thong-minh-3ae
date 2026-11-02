@@ -199,9 +199,16 @@
 <span class="material-symbols-outlined text-[20px] text-tertiary" id="wishlist-icon">favorite_border</span>
 </button>
 <!-- Main Big Canvas Staging -->
-<div class="relative w-full aspect-square rounded-xl bg-surface-container-low/40 flex items-center justify-center overflow-hidden cursor-crosshair">
+<div class="relative w-full aspect-square rounded-xl bg-surface-container-low/40 flex items-center justify-center overflow-hidden cursor-crosshair" id="main-product-gallery">
 <img class="w-full h-full object-contain p-space-lg transition-transform duration-300 hover:scale-110" data-alt="Nồi lẩu điện đa năng thông minh Gaabor EC-30T01A màu trắng kem sang trọng tích hợp xửng hấp inox cao cấp, nắp kính trong suốt nhìn rõ thức ăn đang sôi, thiết kế tối giản đặt trên mặt bàn bếp đá cẩm thạch phong cách Bắc Âu ấm cúng, studio lighting cao cấp, góc nhìn 45 độ sắc nét từng chi tiết nút bấm xoay điều khiển" id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkOLyOm7KAe47H5sWPq4OMzYHlBy6AKb-mXq1dQE3ZBfE4cnfbcm4BfTyJEFFfx2KByEzjAcMahNCIWNmk9A2wr2TO5WbQ3KeMm2L7O-vF9-_xVZK5fMdNffaCGWr25cc6VBbctF-_WLJdlzUTYF36YsKFiWym5fuL2YV_Hp1gBwKuivbHIx3L49Q__kG8O2_6oNjNObfOag4rXMyTHXZsr6AxBDiF6lZ-ni1SeIQ"/>
-<div class="absolute bottom-3 right-3 bg-inverse-surface/75 text-inverse-on-surface text-[11px] font-label-sm px-2 py-1 rounded-md flex items-center gap-1 backdrop-blur pointer-events-none">
+<!-- Navigation Arrows (Previous / Next) -->
+<button onclick="prevGallery(event)" aria-label="Ảnh trước" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest active:scale-95 text-on-surface backdrop-blur-md shadow-md flex items-center justify-center z-20 transition-all cursor-pointer">
+  <span class="material-symbols-outlined text-[24px]">chevron_left</span>
+</button>
+<button onclick="nextGallery(event)" aria-label="Ảnh tiếp theo" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest active:scale-95 text-on-surface backdrop-blur-md shadow-md flex items-center justify-center z-20 transition-all cursor-pointer">
+  <span class="material-symbols-outlined text-[24px]">chevron_right</span>
+</button>
+<div class="absolute bottom-3 right-3 bg-inverse-surface/75 text-inverse-on-surface text-[11px] font-label-sm px-2 py-1 rounded-md flex items-center gap-1 backdrop-blur pointer-events-none z-10">
 <span class="material-symbols-outlined text-[14px]">zoom_in</span> Rê chuột để phóng to
               </div>
 </div>
@@ -980,19 +987,46 @@
   setInterval(updateCountdown, 1000);
 
   // Gallery Image Thumbnail Switcher
-  function changeGallery(index, btnElement) {
+  let currentGalleryIndex = 0;
+
+  function updateDesktopGallery(index) {
+    const thumbs = document.querySelectorAll('.thumbnail-btn');
+    if (!thumbs || !thumbs.length) return;
+    currentGalleryIndex = (index + thumbs.length) % thumbs.length;
+    const activeBtn = thumbs[currentGalleryIndex];
+    const thumbImg = activeBtn ? activeBtn.querySelector('img') : null;
     const mainImg = document.getElementById('main-product-img');
-    const thumbImg = btnElement.querySelector('img');
     if (mainImg && thumbImg) {
+      mainImg.style.opacity = '0.4';
       mainImg.src = thumbImg.src;
-      mainImg.setAttribute('data-alt', thumbImg.getAttribute('data-alt'));
+      if (thumbImg.hasAttribute('data-alt')) {
+        mainImg.setAttribute('data-alt', thumbImg.getAttribute('data-alt'));
+      }
+      setTimeout(() => { mainImg.style.opacity = '1'; }, 80);
     }
-    document.querySelectorAll('.thumbnail-btn').forEach(btn => {
-      btn.classList.remove('opacity-100', 'ring-2', 'ring-primary-container');
-      btn.classList.add('opacity-70');
+    thumbs.forEach((btn, i) => {
+      if (i === currentGalleryIndex) {
+        btn.classList.add('opacity-100', 'ring-2', 'ring-primary-container');
+        btn.classList.remove('opacity-70');
+      } else {
+        btn.classList.remove('opacity-100', 'ring-2', 'ring-primary-container');
+        btn.classList.add('opacity-70');
+      }
     });
-    btnElement.classList.add('opacity-100', 'ring-2', 'ring-primary-container');
-    btnElement.classList.remove('opacity-70');
+  }
+
+  function changeGallery(index, btnElement) {
+    updateDesktopGallery(index);
+  }
+
+  function nextGallery(e) {
+    if (e) e.stopPropagation();
+    updateDesktopGallery(currentGalleryIndex + 1);
+  }
+
+  function prevGallery(e) {
+    if (e) e.stopPropagation();
+    updateDesktopGallery(currentGalleryIndex - 1);
   }
 
   // Color Selection

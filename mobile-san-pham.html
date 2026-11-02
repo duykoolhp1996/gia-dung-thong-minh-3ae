@@ -39,7 +39,7 @@
 <div class="flex items-center gap-1.5 text-secondary">
 <span class="font-label-sm text-label-sm">Thiết bị bếp</span>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span class="font-label-sm text-label-sm text-primary font-bold">Nồi điện đa n��ng</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Nồi điện đa năng</span>
 </div>
 <div class="flex items-center gap-2">
 <button aria-label="Chia sẻ sản phẩm" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" id="btn-share">
@@ -52,10 +52,10 @@
 </div>
 <!-- 1. PRODUCT GALLERY SECTION -->
 <section class="px-margin flex flex-col gap-space-sm">
-<div class="relative w-full aspect-square rounded-2xl bg-surface-container-low overflow-hidden shadow-sm flex items-center justify-center">
+<div class="relative w-full aspect-square rounded-2xl bg-surface-container-low overflow-hidden shadow-sm flex items-center justify-center" id="main-product-gallery">
 <img class="w-full h-full object-cover transition-opacity duration-300" data-alt="Modern premium Gaabor EC-30T01A multi-cooker in minimalist warm cream white color with stainless steel steamer rack, studio product photography, clean luxury kitchen marble background, soft ambient golden lighting, 8k resolution sharp focus" id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUVcoeh4k1usrcesnbG_mYW73OY8IEg54gEt0rkTHTSq2UK7UTMdpQo9VgFwJRpKqRyHGiBbcXl0gdeRjpmLWDz8t19h_wH15QqyJfu3TDVz19DqjKJnr-hEFIhniLa3aqVv0gK7HhdMFV8805hzNRCB7CyuwWSjMG2_d2gR1dzvT1ysfTRqAojrF7LKb8nfH9ZNtj5Wi2K50j7X5aj4hdmnWsg0H6HpZoLyQpa0g"/>
 <!-- Badges overlay -->
-<div class="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 items-start z-10 pointer-events-none">
 <span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">local_fire_department</span>
           GIẢM 20%
@@ -68,29 +68,36 @@
           Top 1 Bán Chạy
         </span>
 </div>
+<!-- Navigation Arrows (Previous / Next) -->
+<button onclick="prevGallery(event)" aria-label="Ảnh trước" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-container-lowest/85 hover:bg-surface-container-lowest active:scale-90 text-on-surface backdrop-blur-md shadow-md flex items-center justify-center z-20 transition-all cursor-pointer">
+  <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button onclick="nextGallery(event)" aria-label="Ảnh tiếp theo" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface-container-lowest/85 hover:bg-surface-container-lowest active:scale-90 text-on-surface backdrop-blur-md shadow-md flex items-center justify-center z-20 transition-all cursor-pointer">
+  <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
 <!-- Gallery Counter Indicator -->
-<div class="absolute bottom-3 right-3 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded-full">
+<div class="absolute bottom-3 right-3 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2.5 py-0.5 rounded-full z-10 pointer-events-none">
 <span id="gallery-counter">1/6</span>
 </div>
 </div>
 <!-- Thumbnails carousel -->
-<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
-<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container-highest" onclick="changeThumbnail(0, this)">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1" id="thumbnail-strip">
+<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container-highest ring-2 ring-primary ring-offset-2 transition-all cursor-pointer" onclick="changeThumbnail(0, this)">
 <img class="w-full h-full object-cover rounded-lg" data-alt="Front view of cream Gaabor electric cooker with transparent glass lid and gold knob accents, minimalist kitchen counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChCCnCqohaoPAo6tHeKhCI_XY9ndRrsavuwF_x7Cao1Av3uQMwTl6WgcUFE_qdcsAvQw1kpMQqyfRdwxhbzKMNdk83ctRtzkEvRcGu8DIeg7rfw8WMbqIsZr8WCDBccs69GRxASIN9-Dx3MocYRHvBNGOOsgLl8hGFTUfY0NG6RoExUSM-6wIm-2Iw2RfzoAJnnOemaEF6fFpwHA_CGSpM74gHv2mHNZYxfMVa1i0"/>
 </button>
-<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container" onclick="changeThumbnail(1, this)">
+<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container opacity-70 transition-all cursor-pointer" onclick="changeThumbnail(1, this)">
 <img class="w-full h-full object-cover rounded-lg" data-alt="Top-down view of Gaabor cooker steaming fresh dim sum and dumplings in 304 food-grade stainless steel tier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDzMJTgIA7R2LSn56YELw5IOoK4wvVsiUA4M_WjHSUde4XStCxmkxGPJY3CG15Wahn1ZBRNPTVZPxyEImaqruC8iZ2foHRIobCUSw-pdD2i8GP4awa4ZiHiU1OiPxPZHEHZZbb-ZUkWhdRJUfFwxnW5fvLZ35HJJv3vbfeqi6lIGBxqN6ibJZiz7sgnLNq9Z_cx7M4gUqGo5Sx6IlVs6pxgcnu6cphd2FApzgdDl4"/>
 </button>
-<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container" onclick="changeThumbnail(2, this)">
+<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container opacity-70 transition-all cursor-pointer" onclick="changeThumbnail(2, this)">
 <img class="w-full h-full object-cover rounded-lg" data-alt="Close up of Gaabor non-stick ceramic glaze surface with bubbling spicy hotpot soup and fresh ingredients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQA3hXRMWsEE-SeQyWF3ZQ1y-mnsequrFuKP6S42vyqD8nQDW4qigm45ZEQAVC5K1XkQx3UjJPcCJtr2xwqwSRqqhNuVqdtlXMHPau_mpeddI7N_rkLkioJqPKpqVfypanGP4YDFR79APPGQrcHYWZqGmRBKlgxKDAeSCgn18t-ZlZa3uzEGIhrbaf21z-TPsrDlMVOVA72DP-llEqUQbHuC3HXZp6PfvWuWs8tD4"/>
 </button>
-<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container" onclick="changeThumbnail(3, this)">
+<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container opacity-70 transition-all cursor-pointer" onclick="changeThumbnail(3, this)">
 <img class="w-full h-full object-cover rounded-lg" data-alt="Minimalist knob control panel with 2 gear power levels and warm golden indicator lights on Gaabor cooker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVGwU3kxSgoS-teBKk8GIh-kGvJcVA-X4u7h9EKyuJ3WBkOkv5z9mYCRbevMdIHUwPgwVNkRMDLS4OidmhY0k5ByGmOe19H7nq2dBvRBrDQff8MGG5fvteywoBL8OOYd-DfUsHybzLT9BK2abVeeX0DKxuTJqVL5XEVlJjKf4g1rItkcHIiiwboJ1uu2pHU6GX_Kr8wTmq12DlXGMRPBHs1-_8bTzRQpSjEHHkAsg"/>
 </button>
-<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container" onclick="changeThumbnail(4, this)">
+<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container opacity-70 transition-all cursor-pointer" onclick="changeThumbnail(4, this)">
 <img class="w-full h-full object-cover rounded-lg" data-alt="Gaabor cooker unboxing packaging with warranty card, wooden spatula, and steaming tier components on wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbycDVTKA89U1gxk7Dw1Wlb9IM1RQs3Kbquzkc66TsOWyyK1_keakTF33_63Qepk6dkRiW_0Ua1HZFhdWhwHfft9Q3wUuYkDxE2nlETVvvL5dBGQRW21ZHe_DxQnKPA_Sdsx3QlUbXJ-vNxM3KCzJnULWvNprBEleZlPhBxaGmTW_p7RBAE1_Gdbw0acsV8dKCJGD0NvP4PUNzpVk_0gN5ZdYdjza1MHSO6xLHdwk"/>
 </button>
-<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container" onclick="changeThumbnail(5, this)">
+<button class="thumbnail-btn shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-sm p-0.5 bg-surface-container opacity-70 transition-all cursor-pointer" onclick="changeThumbnail(5, this)">
 <img class="w-full h-full object-cover rounded-lg" data-alt="Lifestyle shot of a cozy family hotpot dinner around the stylish cream Gaabor electric pot in modern dining room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzup5F0i33EpmEFNo2WxnLaU8cRHFRcgmf9mBawrtiyRgnXGbKw8VGxrBif_dehPe8B-EFi3RFWz8ToxsuKe8hLRJlPRXJD-IYHMpGrmUxtjOKqGR4ksIc3OXUF85R79FRfd1IhFX1-W0jwEMjbGlYex1DkLLSmj6K8l00X1oUOg2Q_oWlGXYQKuSnEyFkrYV4i4mVRv6wVyZw46058z8mMcCUIaf40plesSOnoNE"/>
 </button>
 </div>
@@ -544,17 +551,75 @@
   let currentPrice = 550000;
   let cartCount = 3;
 
-  function changeThumbnail(index, element) {
-    document.querySelectorAll('.thumbnail-btn').forEach(btn => {
-      btn.classList.remove('bg-surface-container-highest');
-      btn.classList.add('bg-surface-container');
+  let currentGalleryIndex = 0;
+
+  function updateGalleryUI(index) {
+    const thumbs = document.querySelectorAll('.thumbnail-btn');
+    if (!thumbs || !thumbs.length) return;
+
+    currentGalleryIndex = (index + thumbs.length) % thumbs.length;
+    const activeBtn = thumbs[currentGalleryIndex];
+    const thumbImg = activeBtn ? activeBtn.querySelector('img') : null;
+    const mainImg = document.getElementById('main-product-img');
+
+    if (mainImg && thumbImg) {
+      mainImg.style.opacity = '0.3';
+      mainImg.src = thumbImg.src;
+      if (thumbImg.hasAttribute('data-alt')) {
+        mainImg.setAttribute('data-alt', thumbImg.getAttribute('data-alt'));
+      }
+      setTimeout(() => {
+        mainImg.style.opacity = '1';
+      }, 80);
+    }
+
+    thumbs.forEach((btn, i) => {
+      if (i === currentGalleryIndex) {
+        btn.classList.add('ring-2', 'ring-primary', 'ring-offset-2', 'scale-95');
+        btn.classList.remove('opacity-70', 'bg-surface-container');
+        btn.classList.add('bg-surface-container-highest');
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      } else {
+        btn.classList.remove('ring-2', 'ring-primary', 'ring-offset-2', 'scale-95', 'bg-surface-container-highest');
+        btn.classList.add('opacity-70', 'bg-surface-container');
+      }
     });
-    element.classList.remove('bg-surface-container');
-    element.classList.add('bg-surface-container-highest');
-    
+
     const counter = document.getElementById('gallery-counter');
-    if (counter) counter.innerText = (index + 1) + '/6';
+    if (counter) counter.innerText = (currentGalleryIndex + 1) + '/' + thumbs.length;
   }
+
+  function changeThumbnail(index, element) {
+    updateGalleryUI(index);
+  }
+
+  function nextGallery(e) {
+    if (e) e.stopPropagation();
+    updateGalleryUI(currentGalleryIndex + 1);
+  }
+
+  function prevGallery(e) {
+    if (e) e.stopPropagation();
+    updateGalleryUI(currentGalleryIndex - 1);
+  }
+
+  // Swipe support on touch
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryEl = document.getElementById('main-product-gallery') || document.querySelector('.aspect-square');
+    if (galleryEl) {
+      let touchStartX = 0;
+      galleryEl.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      galleryEl.addEventListener('touchend', e => {
+        const touchDiffX = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(touchDiffX) > 40) {
+          if (touchDiffX < 0) nextGallery();
+          else prevGallery();
+        }
+      }, { passive: true });
+    }
+  });
 
   function selectColor(btn, colorName) {
     document.querySelectorAll('.color-pill').forEach(el => {

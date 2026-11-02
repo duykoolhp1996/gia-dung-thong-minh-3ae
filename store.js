@@ -588,6 +588,31 @@
       mainImg.alt = product.name;
     }
 
+    // Keep 1st thumbnail in sync with the current product image
+    const firstThumbImg = document.querySelector('.thumbnail-btn img');
+    if (firstThumbImg && product.image) {
+      firstThumbImg.src = product.image;
+      firstThumbImg.alt = product.name;
+    }
+
+    // Update Mobile Breadcrumbs
+    const mobileCatBreadcrumb = document.querySelector('.px-margin.py-space-sm .text-secondary span:first-child');
+    if (mobileCatBreadcrumb && product.categoryName) {
+      mobileCatBreadcrumb.textContent = product.categoryName;
+    }
+    const mobileProdBreadcrumb = document.querySelector('.px-margin.py-space-sm .text-secondary span:last-child');
+    if (mobileProdBreadcrumb) {
+      mobileProdBreadcrumb.textContent = product.name;
+    }
+
+    // Reset Gallery selection to index 0
+    if (typeof updateGalleryUI === 'function') {
+      try { updateGalleryUI(0); } catch(e) {}
+    }
+    if (typeof updateDesktopGallery === 'function') {
+      try { updateDesktopGallery(0); } catch(e) {}
+    }
+
     // Color label
     const colorLabel = document.getElementById('selected-color-label');
     if (colorLabel && product.colors && product.colors[0]) {
