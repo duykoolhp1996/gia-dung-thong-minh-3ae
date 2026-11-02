@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3AE Design Studio - Website Gia Dụng Thông Minh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              gold: '#facc15',
+              dark: '#131b2e',
+              primary: '#735c00'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .device-screen { transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+
+  <!-- Top Studio Control Bar -->
+  <header class="h-16 bg-slate-900 border-b border-slate-800 px-6 flex items-center justify-between sticky top-0 z-50">
+    <!-- Brand & Project Info -->
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-amber-400 text-slate-950 font-extrabold flex items-center justify-center text-base shadow-lg shadow-amber-400/20">
+          3AE
+        </div>
+        <div>
+          <h1 class="text-sm font-bold leading-tight">Gia Dụng Thông Minh</h1>
+          <p class="text-[11px] text-slate-400">Stitch Redesign Studio (ID: 5786344139806112094)</p>
+        </div>
+      </div>
+      <div class="h-6 w-px bg-slate-800"></div>
+      <!-- Mode Tabs -->
+      <div class="flex items-center bg-slate-800/80 p-1 rounded-xl text-xs font-semibold">
+        <button id="btn-mode-live" onclick="setMode('live')" class="px-3 py-1.5 rounded-lg bg-amber-400 text-slate-950 shadow-sm transition-all flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">devices</span>
+          <span>Trải Nghiệm Live</span>
+        </button>
+        <button id="btn-mode-compare" onclick="setMode('compare')" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">compare</span>
+          <span>So Sánh Thiết Kế Stitch</span>
+        </button>
+        <button id="btn-mode-gallery" onclick="setMode('gallery')" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">collections</span>
+          <span>Thư Viện 12 Màn Hình</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Screen Selector -->
+    <div class="flex items-center gap-3">
+      <label class="text-xs text-slate-400 font-medium">Trang hiển thị:</label>
+      <select id="screen-select" onchange="changeScreen(this.value)" class="bg-slate-800 border border-slate-700 text-xs font-medium rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400">
+        <option value="index.html|04_trang_chu_desktop.png">Trang Chủ (Desktop)</option>
+        <option value="chi-tiet-san-pham.html|12_chi_tiet_san_pham_desktop.png">Chi Tiết Sản Phẩm (Desktop)</option>
+        <option value="gio-hang.html|10_gio_hang_desktop.png">Giỏ Hàng (Desktop)</option>
+        <option value="thanh-toan.html|09_thanh_toan_desktop.png">Thanh Toán (Desktop)</option>
+        <option value="da-thanh-toan.html|01_da_thanh_toan.png">Đã Thanh Toán (Desktop)</option>
+        <option value="dai-tiec-khuyen-mai.html|02_landing_page_dai_tiec_khuyen_mai.png">Đại Tiệc Khuyến Mãi (Desktop)</option>
+        <option value="gioi-thieu.html|11_gioi_thieu_desktop.png">Giới Thiệu - Về Chúng Tôi (Desktop)</option>
+        <option value="mobile-trang-chu.html|05_trang_chu_mobile.png">Trang Chủ Mobile</option>
+        <option value="mobile-san-pham.html|08_chi_tiet_san_pham_gaabor_mobile.png">Chi Tiết Sản Phẩm Mobile (Gaabor)</option>
+      </select>
+
+      <a id="btn-open-fullscreen" href="index.html" target="_blank" title="Mở trang trong tab mới" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors flex items-center">
+        <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+      </a>
+    </div>
+
+    <!-- Device Viewport Controls -->
+    <div class="flex items-center gap-1.5 bg-slate-800/80 p-1 rounded-xl text-xs" id="viewport-controls">
+      <button onclick="setViewport('100%')" id="vp-full" class="px-2.5 py-1.5 rounded-lg bg-slate-700 text-white font-semibold flex items-center gap-1" title="Toàn Màn Hình 100%">
+        <span class="material-symbols-outlined text-[16px]">desktop_windows</span>
+        <span>Full 100%</span>
+      </button>
+      <button onclick="setViewport('1280px')" id="vp-desktop" class="px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-white font-semibold flex items-center gap-1" title="Desktop 1280px">
+        <span class="material-symbols-outlined text-[16px]">laptop</span>
+        <span>1280px</span>
+      </button>
+      <button onclick="setViewport('768px')" id="vp-tablet" class="px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-white font-semibold flex items-center gap-1" title="Tablet 768px">
+        <span class="material-symbols-outlined text-[16px]">tablet</span>
+        <span>768px</span>
+      </button>
+      <button onclick="setViewport('412px')" id="vp-mobile" class="px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-white font-semibold flex items-center gap-1" title="Mobile 412px">
+        <span class="material-symbols-outlined text-[16px]">smartphone</span>
+        <span>Mobile</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main View Area -->
+  <main class="flex-1 bg-slate-950 flex flex-col items-center justify-start p-4 overflow-auto">
+
+    <!-- View 1: Interactive Live Frame -->
+    <div id="view-live" class="w-full flex-1 flex flex-col items-center justify-start">
+      <div id="frame-container" class="device-screen w-full h-[calc(100vh-100px)] bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-800 flex flex-col transition-all">
+        <div class="h-7 bg-slate-100 border-b border-slate-200 px-4 flex items-center justify-between text-slate-500 text-[11px] select-none">
+          <div class="flex items-center gap-1.5">
+            <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
+          </div>
+          <div id="url-bar" class="px-4 py-0.5 bg-white rounded-md border border-slate-200 text-slate-700 font-mono text-[10px] w-96 text-center truncate">
+            https://giadungthongminh.com/index.html
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] text-slate-400 font-mono" id="size-badge">100% Fluid</span>
+          </div>
+        </div>
+        <iframe id="main-iframe" src="index.html" class="w-full flex-1 border-0 bg-white"></iframe>
+      </div>
+    </div>
+
+    <!-- View 2: Side-by-Side Comparison (Live HTML vs Original Stitch Screenshot) -->
+    <div id="view-compare" class="w-full flex-1 hidden grid-cols-2 gap-4 h-[calc(100vh-100px)]">
+      <!-- Left: Live HTML -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col shadow-2xl">
+        <div class="h-10 bg-slate-800 px-4 flex items-center justify-between text-xs font-bold text-slate-200 border-b border-slate-700">
+          <div class="flex items-center gap-2 text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>Live Interactive HTML (Tailwind & Web Components)</span>
+          </div>
+        </div>
+        <iframe id="compare-iframe" src="index.html" class="w-full flex-1 border-0 bg-white"></iframe>
+      </div>
+
+      <!-- Right: Original Stitch Screenshot -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col shadow-2xl">
+        <div class="h-10 bg-slate-800 px-4 flex items-center justify-between text-xs font-bold text-slate-200 border-b border-slate-700">
+          <div class="flex items-center gap-2 text-amber-400">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            <span>Original Stitch Design Screenshot (2560px Hi-Res)</span>
+          </div>
+          <a id="compare-img-link" href="images/04_trang_chu_desktop.png" target="_blank" class="text-[11px] text-slate-400 hover:text-white flex items-center gap-1 font-normal">
+            <span>Mở ảnh gốc</span>
+            <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+          </a>
+        </div>
+        <div class="flex-1 overflow-auto bg-slate-950 p-4 flex items-start justify-center">
+          <img id="compare-img" src="images/04_trang_chu_desktop.png" class="max-w-full rounded-lg shadow-xl" alt="Stitch Design">
+        </div>
+      </div>
+    </div>
+
+    <!-- View 3: Complete 12 Screens Gallery -->
+    <div id="view-gallery" class="w-full flex-1 hidden max-w-7xl mx-auto py-6">
+      <div class="mb-6 flex items-center justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-white">Thư viện 12 màn hình từ Stitch Project</h2>
+          <p class="text-sm text-slate-400">Toàn bộ tài nguyên HTML, Markdown và hình ảnh độ phân giải cao đã được tải về dự án</p>
+        </div>
+        <div class="text-xs px-3 py-1.5 rounded-xl bg-amber-400/10 text-amber-300 border border-amber-400/20 font-bold">
+          12 / 12 Items Đồng Bộ
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/01_da_thanh_toan.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Đã Thanh Toán - Website Desktop">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/01_da_thanh_toan.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #1
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Đã Thanh Toán - Website Desktop</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: 0110ca66766048ab80c326803986636a</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="01_da_thanh_toan.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/02_landing_page_dai_tiec_khuyen_mai.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Landing Page Đại Tiệc Khuyến Mãi - Website Desktop">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/02_landing_page_dai_tiec_khuyen_mai.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #2
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Landing Page Đại Tiệc Khuyến Mãi - Website Desktop</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: 284e659f4ff64b81a5dc94eed1e5781f</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="02_landing_page_dai_tiec_khuyen_mai.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/03_modal_gio_hang_nhanh.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Modal Giỏ Hàng Nhanh - Website Desktop">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/03_modal_gio_hang_nhanh.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #3
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Modal Giỏ Hàng Nhanh - Website Desktop</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: 3527fe7842bf4f5ebd73a1689597399e</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="03_modal_gio_hang_nhanh.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/04_trang_chu_desktop.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Trang Chủ - Website Desktop">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/04_trang_chu_desktop.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #4
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Trang Chủ - Website Desktop</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: 4ff237fa6d2445bb93d9d4e0af4a25b0</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="04_trang_chu_desktop.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/05_trang_chu_mobile.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Trang Chủ - Gia Dụng Thông Minh (Mobile)">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/05_trang_chu_mobile.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #5
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Trang Chủ - Gia Dụng Thông Minh (Mobile)</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: 72cead1fc1a84862a79f980cb971f675</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="05_trang_chu_mobile.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/06_image.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="image.png">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/06_image.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #6
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">image.png</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: 15141470126461506971</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <span class="text-slate-500 italic">File asset tĩnh</span>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">image</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <div class="w-full h-full flex flex-col items-center justify-center text-slate-500 gap-2 p-4 text-center">
+                  <span class="material-symbols-outlined text-[32px] text-amber-400">description</span>
+                  <span class="text-xs font-medium">Bảng dữ liệu nội dung (Markdown)</span>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #7
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Extracted text from Google Sheets</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: 85f07c9f3e574d2f99df7f97380ae8d6</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="07_noi_dung_gioi_thieu_spreadsheet.md" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">markdown</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/08_chi_tiet_san_pham_gaabor_mobile.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Chi Tiết Sản Phẩm - Nồi Đa Năng Gaabor EC-30T01A (Mobile)">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/08_chi_tiet_san_pham_gaabor_mobile.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #8
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Chi Tiết Sản Phẩm - Nồi Đa Năng Gaabor EC-30T01A (Mobile)</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: 8aa40dab63494209a3bb675c30c405eb</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="08_chi_tiet_san_pham_gaabor_mobile.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/09_thanh_toan_desktop.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Thanh Toán - Website Desktop">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/09_thanh_toan_desktop.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #9
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Thanh Toán - Website Desktop</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: 8f567342cd044f5d941b8405d3d60643</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="09_thanh_toan_desktop.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/10_gio_hang_desktop.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Giỏ Hàng - Website Desktop">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/10_gio_hang_desktop.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #10
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Giỏ Hàng - Website Desktop</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: bd1c4e63006f4cf0a4121232a76a49ab</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="10_gio_hang_desktop.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/11_gioi_thieu_desktop.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Giới Thiệu - Website Desktop">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/11_gioi_thieu_desktop.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #11
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Giới Thiệu - Website Desktop</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: c2fd786e8a3a49c79e72752a96760c77</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="11_gioi_thieu_desktop.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-amber-400/40 transition-all flex flex-col">
+            <div class="h-48 bg-slate-950 overflow-hidden relative group">
+              
+                <img src="images/12_chi_tiet_san_pham_desktop.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" alt="Chi Tiết Sản Phẩm - Website Desktop">
+                <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                  <a href="images/12_chi_tiet_san_pham_desktop.png" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/90 text-slate-950 text-xs font-bold hover:bg-white flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">visibility</span> Xem ảnh full
+                  </a>
+                </div>
+              
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+                Màn #12
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-sm text-white line-clamp-1 mb-1">Chi Tiết Sản Phẩm - Website Desktop</h3>
+                <p class="text-[11px] font-mono text-slate-400 truncate mb-3">ID: f4a4218c5ac14591bf15be978b8af648</p>
+              </div>
+              <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                
+                  <a href="12_chi_tiet_san_pham_desktop.html" target="_blank" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                    <span>Mở trang HTML</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  </a>
+                
+                <span class="text-[11px] text-slate-500 uppercase font-semibold">html</span>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    let currentMode = 'live';
+    let currentScreenUrl = 'index.html';
+    let currentScreenImg = 'images/04_trang_chu_desktop.png';
+
+    function setMode(mode) {
+      currentMode = mode;
+      const btnLive = document.getElementById('btn-mode-live');
+      const btnCompare = document.getElementById('btn-mode-compare');
+      const btnGallery = document.getElementById('btn-mode-gallery');
+      const viewLive = document.getElementById('view-live');
+      const viewCompare = document.getElementById('view-compare');
+      const viewGallery = document.getElementById('view-gallery');
+      const vpControls = document.getElementById('viewport-controls');
+
+      [btnLive, btnCompare, btnGallery].forEach(b => {
+        b.className = 'px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition-all flex items-center gap-1.5';
+      });
+
+      viewLive.classList.add('hidden');
+      viewCompare.classList.remove('grid');
+      viewCompare.classList.add('hidden');
+      viewGallery.classList.add('hidden');
+
+      if (mode === 'live') {
+        btnLive.className = 'px-3 py-1.5 rounded-lg bg-amber-400 text-slate-950 shadow-sm transition-all flex items-center gap-1.5 font-bold';
+        viewLive.classList.remove('hidden');
+        vpControls.style.display = 'flex';
+      } else if (mode === 'compare') {
+        btnCompare.className = 'px-3 py-1.5 rounded-lg bg-amber-400 text-slate-950 shadow-sm transition-all flex items-center gap-1.5 font-bold';
+        viewCompare.classList.remove('hidden');
+        viewCompare.classList.add('grid');
+        vpControls.style.display = 'none';
+      } else if (mode === 'gallery') {
+        btnGallery.className = 'px-3 py-1.5 rounded-lg bg-amber-400 text-slate-950 shadow-sm transition-all flex items-center gap-1.5 font-bold';
+        viewGallery.classList.remove('hidden');
+        vpControls.style.display = 'none';
+      }
+    }
+
+    function changeScreen(val) {
+      const parts = val.split('|');
+      currentScreenUrl = parts[0];
+      currentScreenImg = 'images/' + parts[1];
+
+      document.getElementById('main-iframe').src = currentScreenUrl;
+      document.getElementById('compare-iframe').src = currentScreenUrl;
+      document.getElementById('compare-img').src = currentScreenImg;
+      document.getElementById('compare-img-link').href = currentScreenImg;
+      document.getElementById('btn-open-fullscreen').href = currentScreenUrl;
+      document.getElementById('url-bar').textContent = 'https://giadungthongminh.com/' + currentScreenUrl;
+
+      // Auto adjust viewport if mobile screen
+      if (currentScreenUrl.includes('mobile')) {
+        setViewport('412px');
+      } else {
+        setViewport('100%');
+      }
+    }
+
+    function setViewport(width) {
+      const container = document.getElementById('frame-container');
+      container.style.width = width;
+      const sizeBadge = document.getElementById('size-badge');
+      sizeBadge.textContent = width === '100%' ? '100% Fluid' : width;
+
+      ['vp-full', 'vp-desktop', 'vp-tablet', 'vp-mobile'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.className = 'px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-white font-semibold flex items-center gap-1';
+      });
+
+      if (width === '100%') document.getElementById('vp-full').className = 'px-2.5 py-1.5 rounded-lg bg-slate-700 text-white font-semibold flex items-center gap-1';
+      if (width === '1280px') document.getElementById('vp-desktop').className = 'px-2.5 py-1.5 rounded-lg bg-slate-700 text-white font-semibold flex items-center gap-1';
+      if (width === '768px') document.getElementById('vp-tablet').className = 'px-2.5 py-1.5 rounded-lg bg-slate-700 text-white font-semibold flex items-center gap-1';
+      if (width === '412px') document.getElementById('vp-mobile').className = 'px-2.5 py-1.5 rounded-lg bg-slate-700 text-white font-semibold flex items-center gap-1';
+    }
+  </script>
+</body>
+</html>
