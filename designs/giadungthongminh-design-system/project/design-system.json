@@ -1,0 +1,41 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-09T12:26:00Z"
+  },
+  "title": "Gia Dụng Thông Minh",
+  "namespace": "GiaDungThongMinh",
+  "libraries": [],
+  "sections": {},
+  "groups": [
+    "Logos",
+    "Icons"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [],
+      "files": {}
+    },
+    "Icons": {
+      "name": "Icons",
+      "tile": "m",
+      "order": [],
+      "files": {}
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "lastChange": {
+    "by": "User",
+    "at": "2026-11-09T12:26:00Z",
+    "via": "Antigravity Agent",
+    "note": "Complete design system created from brand reference image"
+  }
+}

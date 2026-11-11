@@ -1,0 +1,18 @@
+{
+  "type": "design",
+  "designSystems": [],
+  "primaryDesignSystem": null,
+  "assets": {
+    "Landing Page": {
+      "versions": [
+        {
+          "path": "Landing Page.html",
+          "createdAt": "2026-11-10T02:08:45.329Z",
+          "status": "needs-review"
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-11-10T02:08:45.335Z",
+  "updatedAt": "2026-11-10T02:08:45.335Z"
+}

@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gia Dụng Thông Minh 3AE — Nhẹ Gánh Việc Nhà, Nhờ Nhà Thông Minh</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- React 18 & Babel CDN with integrity -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --brand-primary: #FCD10C;
+      --brand-primary-hover: #E5BC0B;
+      --brand-primary-soft: #FEF9C3;
+      --brand-dark: #000000;
+      --brand-dark-card: #121826;
+      --surface: #F8FAFC;
+      --surface-raised: #FFFFFF;
+      --surface-subtle: #F1F5F9;
+      --line: #E2E8F0;
+      --line-strong: #CBD5E1;
+      --ink: #0F172A;
+      --ink-muted: #64748B;
+      --verified-green: #10B981;
+      --verified-green-soft: #D1FAE5;
+      --promo-red: #EF4444;
+      --promo-red-soft: #FEE2E2;
+      --tech-blue: #0284C7;
+      --tech-blue-soft: #E0F2FE;
+      --radius-pill: 9999px;
+      --radius-card: 16px;
+      --radius-md: 10px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.12), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
+      --shadow-xl: 0 20px 30px -8px rgba(0, 0, 0, 0.25);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--surface);
+      color: var(--ink);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, .font-heading {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    /* Top Announcement Bar */
+    .gdtm-topbar {
+      background-color: var(--brand-primary);
+      color: #000;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 7px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      letter-spacing: 0.2px;
+    }
+    .gdtm-topbar-chip {
+      background: #000;
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      margin-right: 8px;
+    }
+    .gdtm-topbar-right {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    /* Main Navbar */
+    .gdtm-navbar {
+      background-color: var(--brand-dark);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 12px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .gdtm-navbar-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .search-bar {
+      flex: 1;
+      max-width: 500px;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      background: #fff;
+      border: 1px solid transparent;
+      border-radius: var(--radius-pill);
+      padding: 10px 44px 10px 20px;
+      font-size: 13.5px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 3px rgba(252, 209, 12, 0.35);
+    }
+    .search-icon-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--ink-muted);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nav-btn {
+      background: transparent;
+      color: #fff;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: var(--radius-md);
+      transition: all 0.2s;
+    }
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .cart-btn {
+      background: var(--brand-primary);
+      color: #000;
+      font-weight: 800;
+      border-radius: var(--radius-pill);
+      padding: 8px 18px;
+    }
+    .cart-btn:hover {
+      background: var(--brand-primary-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(145deg, #090D16 0%, #000000 60%, #171E2E 100%);
+      color: #fff;
+      padding: 70px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(252, 209, 12, 0.18) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+    }
+    .hero-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(252, 209, 12, 0.15);
+      border: 1px solid var(--brand-primary);
+      color: var(--brand-primary);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.18;
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+    }
+    .hero-title span {
+      color: var(--brand-primary);
+      background: linear-gradient(90deg, #FCD10C 0%, #FFE266 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 17px;
+      color: #94A3B8;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+    .hero-cta-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .btn-primary {
+      background: var(--brand-primary);
+      color: #000;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(252, 209, 12, 0.3);
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background: var(--brand-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(252, 209, 12, 0.4);
+    }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: #fff;
+    }
+    .hero-trust-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 24px;
+    }
+    .trust-item-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--brand-primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .trust-item-sub {
+      font-size: 12px;
+      color: #94A3B8;
+    }
+
+    /* Hero Interactive Device Card */
+    .hero-preview-box {
+      background: rgba(18, 24, 38, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(252, 209, 12, 0.3);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    .device-screen-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 18px;
+    }
+
+    /* Container Standard */
+    .site-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    /* Section Headers */
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 14px;
+      background: var(--brand-primary-soft);
+      color: #854D0E;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section-main-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--ink-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Interactive Smarthome Simulator Widget */
+    .simulator-container {
+      background: linear-gradient(135deg, #090D16 0%, #111827 100%);
+      color: #fff;
+      border-radius: var(--radius-card);
+      padding: 36px;
+      border: 1px solid rgba(252, 209, 12, 0.25);
+      box-shadow: var(--shadow-xl);
+      margin-bottom: 60px;
+    }
+    .simulator-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .room-canvas {
+      height: 320px;
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      transition: all 0.5s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .room-status-badge {
+      align-self: flex-start;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sim-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .control-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .control-card.active {
+      background: rgba(252, 209, 12, 0.15);
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 15px rgba(252, 209, 12, 0.2);
+    }
+    .control-card:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Product Cards & Filter Tabs */
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .filter-tab-btn {
+      background: var(--surface-raised);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 13.5px;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-tab-btn.active {
+      background: var(--brand-dark);
+      color: var(--brand-primary);
+      border-color: var(--brand-dark);
+      box-shadow: var(--shadow-sm);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .product-card {
+      background: var(--surface-raised);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--line-strong);
+    }
+    .card-img-wrap {
+      background: #F8FAFC;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      border-bottom: 1px solid var(--line);
+    }
+    .card-badge-verified {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--verified-green-soft);
+      color: #065F46;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .card-badge-discount {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--promo-red);
+      color: #fff;
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+    }
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-brand {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--tech-blue);
+      margin-bottom: 4px;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+      line-height: 1.35;
+      min-height: 44px;
+    }
+    .card-specs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .spec-tag {
+      font-size: 11px;
+      background: var(--surface-subtle);
+      color: var(--ink-muted);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .card-pricing {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px dashed var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 16px;
+    }
+    .price-current {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--promo-red);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .price-old {
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      text-decoration: line-through;
+    }
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .btn-quick-view {
+      background: var(--surface-subtle);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-quick-view:hover {
+      background: #E2E8F0;
+    }
+    .btn-add-cart {
+      background: var(--brand-primary);
+      border: none;
+      color: #000;
+      font-size: 12.5px;
+      font-weight: 800;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    .btn-add-cart:hover {
+      background: var(--brand-primary-hover);
+    }
+
+    /* Estimator Tool */
+    .estimator-box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-card);
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+      margin-top: 40px;
+    }
+    .estimator-options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 18px 0 28px 0;
+    }
+    .choice-card {
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .choice-card.selected {
+      border-color: var(--brand-primary);
+      background: var(--brand-primary-soft);
+      font-weight: 700;
+    }
+
+    /* Cart Drawer */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      display: flex;
+      justify-content: flex-end;
+      animation: fadeIn 0.2s ease;
+    }
+    .drawer-panel {
+      width: 100%;
+      max-width: 440px;
+      background: #fff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.25);
+      animation: slideLeft 0.3s ease;
+    }
+    .drawer-header {
+      padding: 20px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .drawer-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+    .drawer-footer {
+      padding: 20px;
+      border-top: 1px solid var(--line);
+      background: var(--surface-subtle);
+    }
+
+    /* Modal Quick View */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(5px);
+      z-index: 2100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeIn 0.2s ease;
+    }
+    .modal-box {
+      background: #fff;
+      border-radius: var(--radius-card);
+      width: 100%;
+      max-width: 720px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 32px;
+      position: relative;
+      box-shadow: var(--shadow-xl);
+      animation: scaleUp 0.25s ease;
+    }
+
+    /* Toast Notification */
+    .toast-pill {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--brand-dark);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      border-left: 4px solid var(--brand-primary);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 3000;
+      animation: toastIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--brand-dark);
+      color: #94A3B8;
+      padding: 60px 24px 30px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .footer-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-heading {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13.5px;
+    }
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--brand-primary);
+    }
+    .footer-bottom {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12.5px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideLeft { from { transform: translateX(100%); } to { transform: translateX(0); } }
+    @keyframes scaleUp { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes toastIn { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    @media (max-width: 900px) {
+      .hero-container { grid-template-columns: 1fr; }
+      .simulator-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    // DATA DEFINITION: CATALOG SẢN PHẨM CHUẨN GIA DỤNG THÔNG MINH 3AE
+    const INITIAL_PRODUCTS = [
+      {
+        id: "SKU-HN-01",
+        name: "Công Tắc Thông Minh Cửa Cuốn Hunonic WiFi Door",
+        brand: "Hunonic",
+        category: "smarthome",
+        price: 580000,
+        oldPrice: 750000,
+        discount: "-23%",
+        rating: 4.9,
+        sold: 1420,
+        specs: ["WiFi 2.4GHz", "Mặt kính cường lực", "Báo trạng thái mở/đóng", "BH 24 Tháng"],
+        desc: "Kiểm soát đóng/mở cửa cuốn từ xa qua điện thoại mọi lúc mọi nơi. Tự động cảnh báo khi có người cạy cửa hoặc quên đóng cửa.",
+        imageBg: "#F1F5F9",
+        featured: true
+      },
+      {
+        id: "SKU-HN-02",
+        name: "Cảm Biến Hiện Diện Con Người Radar Hunonic HPR",
+        brand: "Hunonic",
+        category: "smarthome",
+        price: 450000,
+        oldPrice: 590000,
+        discount: "-24%",
+        rating: 5.0,
+        sold: 890,
+        specs: ["Sóng Radar Milimet", "Nhận diện cả khi thở/ngồi yên", "Chống báo giả", "BH 24 Tháng"],
+        desc: "Đột phá công nghệ radar siêu nhạy, phát hiện chính xác sự hiện diện ngay cả khi ngồi yên đọc sách hoặc ngủ say, tự động bật tắt đèn.",
+        imageBg: "#F8FAFC",
+        featured: true
+      },
+      {
+        id: "SKU-HN-03",
+        name: "Bộ Điều Khiển Hồng Ngoại Thông Minh Hunonic IR Smart",
+        brand: "Hunonic",
+        category: "smarthome",
+        price: 245000,
+        oldPrice: 350000,
+        discount: "-30%",
+        rating: 4.8,
+        sold: 2150,
+        specs: ["Thay thế 100% remote", "Hẹn giờ điều hòa/TV", "Học lệnh thông minh", "BH 24 Tháng"],
+        desc: "Biến toàn bộ điều hòa, tivi, quạt thường trong nhà thành thiết bị thông minh điều khiển qua điện thoại và giọng nói tiếng Việt.",
+        imageBg: "#F1F5F9",
+        featured: false
+      },
+      {
+        id: "SKU-MS-01",
+        name: "Máy Nấu Sữa Hạt Đa Năng Vi Áp Suất Masuto MS-99",
+        brand: "Masuto",
+        category: "kitchen",
+        price: 1390000,
+        oldPrice: 1950000,
+        discount: "-29%",
+        rating: 4.95,
+        sold: 3200,
+        specs: ["Vi áp suất chống trào", "Lưỡi dao 8 cánh 3D", "Dung tích 1.2L", "BH 12 Tháng"],
+        desc: "Sữa hạt sánh mịn không cần lọc bã chỉ trong 18 phút. Công nghệ vi áp suất giữ trọn 99% dưỡng chất và vitamin tự nhiên cho cả gia đình.",
+        imageBg: "#FFFBEB",
+        featured: true
+      },
+      {
+        id: "SKU-GB-01",
+        name: "Nồi Điện Đa Năng Chống Dính Cao Cấp Gaabor GR-N18A",
+        brand: "Gaabor",
+        category: "kitchen",
+        price: 369000,
+        oldPrice: 590000,
+        discount: "-37%",
+        rating: 4.85,
+        sold: 4890,
+        specs: ["Lòng nồi tráng gốm", "2 mức nhiệt 300W/600W", "Tự ngắt an toàn", "BH 12 Tháng"],
+        desc: "Trợ thủ nấu nướng nhỏ gọn cho căn hộ hiện đại: Nấu lẩu, xào nấu, hấp bánh tiện lợi, lau chùi siêu nhanh không bám dầu mỡ.",
+        imageBg: "#FEF2F2",
+        featured: true
+      },
+      {
+        id: "SKU-MS-02",
+        name: "Máy Hút Bụi Giường Nệm Diệt Khuẩn UV Masuto M10",
+        brand: "Masuto",
+        category: "care",
+        price: 690000,
+        oldPrice: 990000,
+        discount: "-30%",
+        rating: 4.9,
+        sold: 1750,
+        specs: ["Đèn UV diệt khuẩn 99.9%", "Lực hút 13.000Pa", "Đập rung 8000 lần/phút", "BH 12 Tháng"],
+        desc: "Bảo vệ giấc ngủ cho bé và gia đình: Hút sạch bụi mịn, mạt bụi bọ ve và vi khuẩn ẩn sâu trong nệm, sofa và ga gối.",
+        imageBg: "#F0FDF4",
+        featured: false
+      },
+      {
+        id: "SKU-GB-02",
+        name: "Máy Hút Bụi Cầm Tay Không Dây Gaabor GVCW-M15A",
+        brand: "Gaabor",
+        category: "cleaning",
+        price: 490000,
+        oldPrice: 790000,
+        discount: "-38%",
+        rating: 4.8,
+        sold: 2310,
+        specs: ["Pin sạc Type-C", "Lực hút lốc xoáy", "Đa đầu hút 3-in-1", "BH 12 Tháng"],
+        desc: "Hút sạch khe cửa sổ, bàn phím máy tính, lông thú cưng và nội thất xe hơi trong tích tắc mà không vướng dây điện rườm rà.",
+        imageBg: "#F8FAFC",
+        featured: false
+      },
+      {
+        id: "SKU-MS-03",
+        name: "Bàn Chải Điện Sóng Âm Siêu Âm Masuto Hyper UVSonic",
+        brand: "Masuto",
+        category: "care",
+        price: 499000,
+        oldPrice: 750000,
+        discount: "-33%",
+        rating: 4.9,
+        sold: 1980,
+        specs: ["42.000 rung/phút", "Hộp sệt UV khử khuẩn", "Pin dùng 45 ngày", "BH 12 Tháng"],
+        desc: "Làm sạch chuẩn nha khoa tại gia: Công nghệ sóng âm đánh bay mảng bám ố vàng gấp 10 lần bàn chải thông thường, 5 chế độ chăm sóc nướu.",
+        imageBg: "#F0F9FF",
+        featured: false
+      }
+    ];
+
+    function App() {
+      // States
+      const [category, setCategory] = useState("all");
+      const [searchQuery, setSearchQuery] = useState("");
+      const [cart, setCart] = useState([]);
+      const [isCartOpen, setIsCartOpen] = useState(false);
+      const [selectedProduct, setSelectedProduct] = useState(null);
+      const [toastMsg, setToastMsg] = useState(null);
+      const [checkoutSuccess, setCheckoutSuccess] = useState(false);
+
+      // Simulator States (Smart Home Playground)
+      const [simLight, setSimLight] = useState(true);
+      const [simDoor, setSimDoor] = useState(false); // false = Đóng, true = Mở
+      const [simAC, setSimAC] = useState(true);
+      const [simPresence, setSimPresence] = useState(true);
+
+      // Estimator States
+      const [houseType, setHouseType] = useState("condo_2br");
+      const [estLighting, setEstLighting] = useState(true);
+      const [estDoor, setEstDoor] = useState(true);
+      const [estWaterHeater, setEstWaterHeater] = useState(true);
+      const [estIR, setEstIR] = useState(true);
+
+      // Format currency
+      const formatVND = (num) => new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(num);
+
+      // Toast trigger
+      const triggerToast = (msg) => {
+        setToastMsg(msg);
+        setTimeout(() => setToastMsg(null), 3500);
+      };
+
+      // Add to Cart
+      const addToCart = (product) => {
+        setCart(prev => {
+          const exist = prev.find(item => item.id === product.id);
+          if (exist) {
+            return prev.map(item => item.id === product.id ? { ...item, qty: item.qty + 1 } : item);
+          } else {
+            return [...prev, { ...product, qty: 1 }];
+          }
+        });
+        triggerToast(`Đã thêm "${product.name.slice(0, 30)}..." vào giỏ hàng!`);
+      };
+
+      // Cart Calculations
+      const cartSubtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
+
+      // Smart Home Estimator Calculation
+      const calculateEstimate = () => {
+        let base = 0;
+        if (houseType === "condo_1br") base = 1200000;
+        else if (houseType === "condo_2br") base = 2400000;
+        else if (houseType === "condo_3br") base = 3600000;
+        else base = 5200000; // Nhà phố
+
+        let addons = 0;
+        if (estLighting) addons += 1160000;
+        if (estDoor) addons += 580000;
+        if (estWaterHeater) addons += 395000;
+        if (estIR) addons += 490000;
+
+        return {
+          total: base + addons,
+          save: Math.round((base + addons) * 0.25)
+        };
+      };
+
+      const estimate = calculateEstimate();
+
+      // Filtered products
+      const filteredProducts = INITIAL_PRODUCTS.filter(p => {
+        const matchesCategory = category === "all" || p.category === category;
+        const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                              p.brand.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      return (
+        <div>
+          
+          {/* 1. TOP ANNOUNCEMENT BAR */}
+          <div className="gdtm-topbar">
+            <div>
+              <span className="gdtm-topbar-chip">● CHÍNH HÃNG</span>
+              <span>CAM KẾT 100% CHÍNH HÃNG — XUẤT HÓA ĐƠN VAT ĐẦY ĐỦ — BẢO HÀNH TOÀN DIỆN</span>
+            </div>
+            <div className="gdtm-topbar-right">
+              <span>Hotline Kỹ thuật: <strong>1900.3398 (8:00 - 21:30)</strong></span>
+              <span>|</span>
+              <span style={{ cursor: 'pointer' }} onClick={() => triggerToast("Hệ thống tra cứu bảo hành điện tử theo số điện thoại mua hàng.")}>🔍 Tra Cứu Bảo Hành</span>
+            </div>
+          </div>
+
+          {/* 2. MAIN NAVBAR */}
+          <nav className="gdtm-navbar">
+            <div className="gdtm-navbar-inner">
+              
+              {/* Brand Logo */}
+              <div className="logo-container" onClick={() => { setCategory("all"); setSearchQuery(""); }}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 44" style={{ height: '36px', width: 'auto' }} fill="none">
+                  <g transform="translate(0, 2)">
+                    <path d="M4 14L18 4L32 14" stroke="#FCD10C" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M26 9V7H29V11.5" stroke="#FCD10C" strokeWidth="2" strokeLinecap="round"/>
+                    <rect x="6.5" y="14" width="23" height="19" rx="2.5" stroke="#FCD10C" strokeWidth="2.5" fill="#000000"/>
+                    <text x="9.5" y="23" fontFamily="'Plus Jakarta Sans', sans-serif" fontSize="7.5" fontWeight="900" fill="#FCD10C">GĐ</text>
+                    <text x="9.5" y="30" fontFamily="'Plus Jakarta Sans', sans-serif" fontSize="7.5" fontWeight="900" fill="#FCD10C">TM</text>
+                  </g>
+                  <text x="42" y="27" fontFamily="'Plus Jakarta Sans', sans-serif" fontSize="20" fontWeight="800" fill="#FCD10C">giadungthongminh</text>
+                </svg>
+              </div>
+
+              {/* Live Search Input */}
+              <div className="search-bar">
+                <input 
+                  type="text" 
+                  className="search-input" 
+                  placeholder="Bạn tìm gì hôm nay? (Cửa cuốn Hunonic, Gaabor, Máy sữa hạt...)"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <button className="search-icon-btn">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                </button>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="nav-actions">
+                <a href="#simulator" className="nav-btn">
+                  <span>📱 Demo Smarthome</span>
+                </a>
+                <a href="#estimator" className="nav-btn">
+                  <span>📊 Dự Toán Chi Phí</span>
+                </a>
+                <button className="nav-btn cart-btn" onClick={() => setIsCartOpen(true)}>
+                  <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                  <span>Giỏ Hàng ({cartCount})</span>
+                </button>
+              </div>
+
+            </div>
+          </nav>
+
+          {/* 3. HERO SECTION */}
+          <section className="hero-section">
+            <div className="hero-container">
+              
+              <div>
+                <div className="hero-badge">
+                  <span>⚡ THIẾT BỊ ĐIỆN & GIA DỤNG CÔNG NGHỆ CAO 2026</span>
+                </div>
+                <h1 className="hero-title">
+                  Nhẹ Gánh Việc Nhà,<br/>
+                  <span>Nhờ Nhà Thông Minh</span>
+                </h1>
+                <p className="hero-desc">
+                  Giải phóng sức lao động, nâng niu sức khỏe và tối ưu an toàn điện cho tổ ấm. 
+                  Trọn bộ giải pháp nhà thông minh Hunonic và thiết bị gia dụng dinh dưỡng Gaabor & Masuto — 100% chính hãng, đầy đủ VAT, hướng dẫn lắp đặt tận tâm.
+                </p>
+
+                <div className="hero-cta-group">
+                  <a href="#products" className="btn-primary">
+                    Khám Phá Sản Phẩm Hot
+                    <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                  </a>
+                  <a href="#simulator" className="btn-outline">
+                    Trải Nghiệm Thử Phòng Ảo
+                  </a>
+                </div>
+
+                <div className="hero-trust-bar">
+                  <div>
+                    <div className="trust-item-title">100%</div>
+                    <div className="trust-item-sub">Chính Hãng & Hóa Đơn VAT</div>
+                  </div>
+                  <div>
+                    <div className="trust-item-title">1 ĐỔI 1</div>
+                    <div className="trust-item-sub">30 Ngày Lỗi Nhà Sản Xuất</div>
+                  </div>
+                  <div>
+                    <div className="trust-item-title">&gt; 50.000+</div>
+                    <div className="trust-item-sub">Gia Đình Việt Đang Tin Dùng</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Live Status Mini Card in Hero */}
+              <div className="hero-preview-box">
+                <div className="device-screen-header">
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10B981' }}></div>
+                    <span style={{ fontSize: '13px', fontWeight: 600, color: '#FCD10C' }}>HUNONIC SMART CONTROL</span>
+                  </div>
+                  <span style={{ fontSize: '11px', background: 'rgba(255,255,255,0.1)', padding: '2px 8px', borderRadius: '9999px' }}>WiFi 2.4G Online</span>
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
+                  <div style={{ background: 'rgba(255,255,255,0.06)', padding: '14px', borderRadius: '10px' }}>
+                    <div style={{ fontSize: '12px', color: '#94A3B8' }}>Cửa cuốn phòng khách</div>
+                    <div style={{ fontSize: '16px', fontWeight: 700, color: '#10B981', marginTop: '4px' }}>🔒 Đã Khóa An Toàn</div>
+                  </div>
+                  <div style={{ background: 'rgba(255,255,255,0.06)', padding: '14px', borderRadius: '10px' }}>
+                    <div style={{ fontSize: '12px', color: '#94A3B8' }}>Cảm biến radar HPR</div>
+                    <div style={{ fontSize: '16px', fontWeight: 700, color: '#FCD10C', marginTop: '4px' }}>👤 Đang Có Người</div>
+                  </div>
+                </div>
+
+                <div style={{ background: 'rgba(0,0,0,0.4)', padding: '14px', borderRadius: '10px', borderLeft: '3px solid #FCD10C' }}>
+                  <div style={{ fontSize: '12px', color: '#CBD5E1' }}>Kịch bản đang chạy: <strong>"Gia Đình Về Nhà"</strong></div>
+                  <div style={{ fontSize: '11px', color: '#94A3B8', marginTop: '2px' }}>Tự động bật đèn chùm ấm, mở điều hòa 25°C & bật bình nước nóng.</div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          {/* 4. INTERACTIVE SMARTHOME SIMULATOR (Surprise the user feature) */}
+          <section id="simulator" className="site-container" style={{ paddingBottom: '20px' }}>
+            <div className="section-title-wrap">
+              <span className="section-badge">MÔ PHỎNG TRỰC QUAN</span>
+              <h2 className="section-main-title">Trải Nghiệm Hệ Sinh Thái Nhà Thông Minh 3AE</h2>
+              <p className="section-subtitle">Bấm vào các công tắc bên dưới để điều khiển căn phòng mô phỏng theo thời gian thực.</p>
+            </div>
+
+            <div className="simulator-container">
+              <div className="simulator-grid">
+                
+                {/* Visual Room Canvas */}
+                <div 
+                  className="room-canvas" 
+                  style={{
+                    backgroundColor: simLight ? '#2A2412' : '#0F131D',
+                    boxShadow: simLight ? 'inset 0 0 80px rgba(252, 209, 12, 0.25)' : 'inset 0 0 50px rgba(0,0,0,0.8)'
+                  }}
+                >
+                  <div className="room-status-badge">
+                    <span style={{ color: simLight ? '#FCD10C' : '#94A3B8' }}>
+                      {simLight ? "💡 ĐÈN SÁNG ẤM CÚNG (3000K)" : "🌑 ĐÈN TẮT TIẾT KIỆM"}
+                    </span>
+                    <span>•</span>
+                    <span style={{ color: simDoor ? '#EF4444' : '#10B981' }}>
+                      {simDoor ? "🚪 CỬA ĐANG MỞ" : "🔒 CỬA KHÓA CHẶT"}
+                    </span>
+                  </div>
+
+                  <div style={{ textAlign: 'center', margin: 'auto 0' }}>
+                    <div style={{ fontSize: '48px', marginBottom: '8px' }}>
+                      {simLight ? '🛋️ ✨' : '🛋️ 🌙'}
+                    </div>
+                    <div style={{ fontSize: '18px', fontWeight: 700, color: simLight ? '#FCD10C' : '#CBD5E1' }}>
+                      Căn Hộ Mẫu 3AE Smart Living
+                    </div>
+                    <div style={{ fontSize: '12.5px', color: '#94A3B8', marginTop: '4px' }}>
+                      {simAC ? '❄️ Điều hòa đang bật 24°C — Gió mát êm ái' : '⏹️ Điều hòa đang tắt'}
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '12px', color: '#94A3B8' }}>
+                    <span>Radar HPR: {simPresence ? '🟢 Nhận diện cử động nhỏ' : '⚪ Không phát hiện'}</span>
+                    <span>Nguồn điện: 220V Ổn định</span>
+                  </div>
+                </div>
+
+                {/* Control Toggles */}
+                <div>
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, marginBottom: '16px', color: '#FCD10C' }}>
+                    Bảng Điều Khiển Cảm Ứng Mô Phỏng:
+                  </h3>
+                  
+                  <div className="sim-controls">
+                    
+                    {/* Control 1: Đèn */}
+                    <div 
+                      className={`control-card ${simLight ? 'active' : ''}`}
+                      onClick={() => setSimLight(!simLight)}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <span style={{ fontSize: '20px' }}>💡</span>
+                        <span style={{ fontSize: '11px', fontWeight: 800, color: simLight ? '#FCD10C' : '#94A3B8' }}>
+                          {simLight ? 'BẬT' : 'TẮT'}
+                        </span>
+                      </div>
+                      <div style={{ marginTop: '12px' }}>
+                        <div style={{ fontSize: '13px', fontWeight: 700 }}>Hệ Thống Chiếu Sáng</div>
+                        <div style={{ fontSize: '11px', color: '#94A3B8' }}>Công tắc Datic Hunonic</div>
+                      </div>
+                    </div>
+
+                    {/* Control 2: Cửa Cuốn */}
+                    <div 
+                      className={`control-card ${simDoor ? 'active' : ''}`}
+                      onClick={() => setSimDoor(!simDoor)}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <span style={{ fontSize: '20px' }}>🚪</span>
+                        <span style={{ fontSize: '11px', fontWeight: 800, color: simDoor ? '#EF4444' : '#10B981' }}>
+                          {simDoor ? 'ĐANG MỞ' : 'ĐÃ ĐÓNG'}
+                        </span>
+                      </div>
+                      <div style={{ marginTop: '12px' }}>
+                        <div style={{ fontSize: '13px', fontWeight: 700 }}>Cửa Cuốn An Toàn</div>
+                        <div style={{ fontSize: '11px', color: '#94A3B8' }}>WiFi Door Hunonic</div>
+                      </div>
+                    </div>
+
+                    {/* Control 3: Điều Hòa */}
+                    <div 
+                      className={`control-card ${simAC ? 'active' : ''}`}
+                      onClick={() => setSimAC(!simAC)}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <span style={{ fontSize: '20px' }}>❄️</span>
+                        <span style={{ fontSize: '11px', fontWeight: 800, color: simAC ? '#38BDF8' : '#94A3B8' }}>
+                          {simAC ? '24°C LẠNH' : 'OFF'}
+                        </span>
+                      </div>
+                      <div style={{ marginTop: '12px' }}>
+                        <div style={{ fontSize: '13px', fontWeight: 700 }}>Điều Hòa Trung Tâm</div>
+                        <div style={{ fontSize: '11px', color: '#94A3B8' }}>Bộ Hồng Ngoại IR Smart</div>
+                      </div>
+                    </div>
+
+                    {/* Control 4: Cảm biến Radar */}
+                    <div 
+                      className={`control-card ${simPresence ? 'active' : ''}`}
+                      onClick={() => setSimPresence(!simPresence)}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <span style={{ fontSize: '20px' }}>📡</span>
+                        <span style={{ fontSize: '11px', fontWeight: 800, color: simPresence ? '#10B981' : '#94A3B8' }}>
+                          {simPresence ? 'CÓ NGƯỜI' : 'VẮNG'}
+                        </span>
+                      </div>
+                      <div style={{ marginTop: '12px' }}>
+                        <div style={{ fontSize: '13px', fontWeight: 700 }}>Radar Hiện Diện</div>
+                        <div style={{ fontSize: '11px', color: '#94A3B8' }}>Hunonic HPR Milimet</div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Kịch bản 1 chạm */}
+                  <div style={{ marginTop: '18px', display: 'flex', gap: '10px' }}>
+                    <button 
+                      style={{ flex: 1, padding: '10px', background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '8px', cursor: 'pointer', fontSize: '12.5px', fontWeight: 600 }}
+                      onClick={() => { setSimLight(true); setSimAC(true); setSimDoor(false); setSimPresence(true); triggerToast("Kích hoạt chế độ: 'Gia Đình Về Nhà'!"); }}
+                    >
+                      🏠 Kịch Bản: "Về Nhà"
+                    </button>
+                    <button 
+                      style={{ flex: 1, padding: '10px', background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '8px', cursor: 'pointer', fontSize: '12.5px', fontWeight: 600 }}
+                      onClick={() => { setSimLight(false); setSimAC(false); setSimDoor(false); setSimPresence(false); triggerToast("Kích hoạt chế độ: 'Rời Nhà Tắt Hết Điện'!"); }}
+                    >
+                      🚶 Kịch Bản: "Rời Nhà"
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* 5. CATALOG SẢN PHẨM & FILTER TABS */}
+          <section id="products" className="site-container">
+            <div className="section-title-wrap">
+              <span className="section-badge">DANH MỤC THIẾT BỊ CHÍNH HÃNG</span>
+              <h2 className="section-main-title">Gia Dụng & Smarthome Tuyển Chọn</h2>
+              <p className="section-subtitle">Đầy đủ tem nhãn bảo hành điện tử, hóa đơn VAT và dịch vụ tư vấn kỹ thuật trọn đời.</p>
+            </div>
+
+            {/* Filter Buttons */}
+            <div className="filter-tabs">
+              <button className={`filter-tab-btn ${category === 'all' ? 'active' : ''}`} onClick={() => setCategory('all')}>Tất Cả Sản Phẩm ({INITIAL_PRODUCTS.length})</button>
+              <button className={`filter-tab-btn ${category === 'smarthome' ? 'active' : ''}`} onClick={() => setCategory('smarthome')}>Smarthome Hunonic</button>
+              <button className={`filter-tab-btn ${category === 'kitchen' ? 'active' : ''}`} onClick={() => setCategory('kitchen')}>Gia Dụng Bếp Dinh Dưỡng</button>
+              <button className={`filter-tab-btn ${category === 'care' ? 'active' : ''}`} onClick={() => setCategory('care')}>Chăm Sóc Cá Nhân & Giường Nệm</button>
+              <button className={`filter-tab-btn ${category === 'cleaning' ? 'active' : ''}`} onClick={() => setCategory('cleaning')}>Vệ Sinh Tiện Ích</button>
+            </div>
+
+            {/* Product Cards Grid */}
+            <div className="product-grid">
+              {filteredProducts.map(product => (
+                <div key={product.id} className="product-card">
+                  
+                  {/* Image Wrap with Badges */}
+                  <div className="card-img-wrap" style={{ backgroundColor: product.imageBg }}>
+                    <span className="card-badge-verified">✓ Chính Hãng VAT</span>
+                    <span className="card-badge-discount">{product.discount}</span>
+                    
+                    {/* SVG Product Representative Illustration */}
+                    <div style={{ textAlign: 'center' }}>
+                      <div style={{ fontSize: '54px', marginBottom: '4px' }}>
+                        {product.category === 'smarthome' ? '🎛️' : 
+                         product.category === 'kitchen' ? '🍲' : 
+                         product.category === 'care' ? '🪥' : '🧹'}
+                      </div>
+                      <span style={{ fontSize: '11px', color: '#64748B', fontWeight: 600 }}>{product.brand} Official</span>
+                    </div>
+                  </div>
+
+                  {/* Body Content */}
+                  <div className="card-body">
+                    <div className="card-brand">{product.brand} • {product.id}</div>
+                    <div className="card-title">{product.name}</div>
+                    
+                    <div className="card-specs">
+                      {product.specs.slice(0, 3).map((spec, i) => (
+                        <span key={i} className="spec-tag">{spec}</span>
+                      ))}
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#EAB308', marginBottom: '8px' }}>
+                      <span>★ {product.rating}</span>
+                      <span style={{ color: '#94A3B8' }}>({product.sold} đã bán)</span>
+                    </div>
+
+                    <div className="card-pricing">
+                      <div>
+                        <div className="price-old">{formatVND(product.oldPrice)}</div>
+                        <div className="price-current">{formatVND(product.price)}</div>
+                      </div>
+                      <span style={{ fontSize: '11px', color: '#10B981', fontWeight: 700 }}>Đã gồm 8% VAT</span>
+                    </div>
+
+                    <div className="card-actions">
+                      <button className="btn-quick-view" onClick={() => setSelectedProduct(product)}>
+                        Xem Chi Tiết
+                      </button>
+                      <button className="btn-add-cart" onClick={() => addToCart(product)}>
+                        + Giỏ Hàng
+                      </button>
+                    </div>
+
+                  </div>
+
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* 6. INTERACTIVE SMARTHOME COST ESTIMATOR */}
+          <section id="estimator" className="site-container" style={{ background: '#F8FAFC', borderRadius: '24px' }}>
+            <div className="section-title-wrap">
+              <span className="section-badge">CÔNG CỤ DỰ TOÁN NHANH</span>
+              <h2 className="section-main-title">Dự Toán Chi Phí Lắp Đặt Nhà Thông Minh</h2>
+              <p className="section-subtitle">Chỉ mất 2 phút để biết chính xác chi phí trang bị Smarthome Hunonic cho căn hộ của bạn.</p>
+            </div>
+
+            <div className="estimator-box">
+              <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '8px' }}>
+                BƯỚC 1: CHỌN MÔ HÌNH NHÀ Ở CỦA BẠN
+              </div>
+
+              <div className="estimator-options-grid">
+                <div 
+                  className={`choice-card ${houseType === 'condo_1br' ? 'selected' : ''}`}
+                  onClick={() => setHouseType('condo_1br')}
+                >
+                  <div style={{ fontSize: '24px' }}>🏢</div>
+                  <div style={{ marginTop: '8px', fontSize: '14px' }}>Chung cư 1 Phòng Ngủ</div>
+                  <div style={{ fontSize: '12px', color: '#64748B' }}>Diện tích 35 - 55m²</div>
+                </div>
+
+                <div 
+                  className={`choice-card ${houseType === 'condo_2br' ? 'selected' : ''}`}
+                  onClick={() => setHouseType('condo_2br')}
+                >
+                  <div style={{ fontSize: '24px' }}>🏙️</div>
+                  <div style={{ marginTop: '8px', fontSize: '14px' }}>Chung cư 2 Phòng Ngủ</div>
+                  <div style={{ fontSize: '12px', color: '#64748B' }}>Diện tích 60 - 85m²</div>
+                </div>
+
+                <div 
+                  className={`choice-card ${houseType === 'condo_3br' ? 'selected' : ''}`}
+                  onClick={() => setHouseType('condo_3br')}
+                >
+                  <div style={{ fontSize: '24px' }}>🏰</div>
+                  <div style={{ marginTop: '8px', fontSize: '14px' }}>Căn Hộ 3PN / Penthouse</div>
+                  <div style={{ fontSize: '12px', color: '#64748B' }}>Diện tích 90 - 140m²</div>
+                </div>
+
+                <div 
+                  className={`choice-card ${houseType === 'townhouse' ? 'selected' : ''}`}
+                  onClick={() => setHouseType('townhouse')}
+                >
+                  <div style={{ fontSize: '24px' }}>🏡</div>
+                  <div style={{ marginTop: '8px', fontSize: '14px' }}>Nhà Phố 3-4 Tầng</div>
+                  <div style={{ fontSize: '12px', color: '#64748B' }}>Diện tích &gt; 150m²</div>
+                </div>
+              </div>
+
+              <div style={{ fontSize: '14px', fontWeight: 700, color: '#0F172A', marginBottom: '8px' }}>
+                BƯỚC 2: CHỌN CÁC TÍNH NĂNG TỰ ĐỘNG HÓA MONG MUỐN
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px', marginBottom: '28px' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px', background: '#F1F5F9', borderRadius: '8px', cursor: 'pointer' }}>
+                  <input type="checkbox" checked={estLighting} onChange={(e) => setEstLighting(e.target.checked)} style={{ width: '18px', height: '18px' }} />
+                  <div>
+                    <div style={{ fontSize: '13px', fontWeight: 700 }}>Hệ thống công tắc đèn thông minh</div>
+                    <div style={{ fontSize: '11px', color: '#64748B' }}>Bật tắt từ xa, hẹn giờ, điều khiển giọng nói</div>
+                  </div>
+                </label>
+
+                <label style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px', background: '#F1F5F9', borderRadius: '8px', cursor: 'pointer' }}>
+                  <input type="checkbox" checked={estDoor} onChange={(e) => setEstDoor(e.target.checked)} style={{ width: '18px', height: '18px' }} />
+                  <div>
+                    <div style={{ fontSize: '13px', fontWeight: 700 }}>Điều khiển Cửa Cuốn WiFi Hunonic</div>
+                    <div style={{ fontSize: '11px', color: '#64748B' }}>Báo cạy cửa, chống trộm, quên đóng cửa</div>
+                  </div>
+                </label>
+
+                <label style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px', background: '#F1F5F9', borderRadius: '8px', cursor: 'pointer' }}>
+                  <input type="checkbox" checked={estWaterHeater} onChange={(e) => setEstWaterHeater(e.target.checked)} style={{ width: '18px', height: '18px' }} />
+                  <div>
+                    <div style={{ fontSize: '13px', fontWeight: 700 }}>Công tắc Bình Nước Nóng 3000W</div>
+                    <div style={{ fontSize: '11px', color: '#64748B' }}>Tự ngắt chống giật, hẹn giờ tắm</div>
+                  </div>
+                </label>
+
+                <label style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px', background: '#F1F5F9', borderRadius: '8px', cursor: 'pointer' }}>
+                  <input type="checkbox" checked={estIR} onChange={(e) => setEstIR(e.target.checked)} style={{ width: '18px', height: '18px' }} />
+                  <div>
+                    <div style={{ fontSize: '13px', fontWeight: 700 }}>Bộ điều khiển Tivi & Điều hòa IR</div>
+                    <div style={{ fontSize: '11px', color: '#64748B' }}>Thay thế remote, chỉnh nhiệt độ thông minh</div>
+                  </div>
+                </label>
+              </div>
+
+              {/* Estimate Result Box */}
+              <div style={{ background: '#0F172A', color: '#fff', padding: '24px', borderRadius: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
+                <div>
+                  <div style={{ fontSize: '13px', color: '#94A3B8' }}>TỔNG CHI PHÍ THIẾT BỊ DỰ KIẾN (TRỌN GÓI)</div>
+                  <div style={{ fontSize: '32px', fontWeight: 900, color: '#FCD10C', fontFamily: 'Plus Jakarta Sans', marginTop: '4px' }}>
+                    {formatVND(estimate.total)}
+                  </div>
+                  <div style={{ fontSize: '12px', color: '#10B981', marginTop: '2px' }}>
+                    ✓ Tiết kiệm {formatVND(estimate.save)} so với giá thị trường • Thi công chỉ 2-4 tiếng không đục tường
+                  </div>
+                </div>
+
+                <button 
+                  className="btn-primary" 
+                  onClick={() => triggerToast(`Đã nhận yêu cầu tư vấn gói Smarthome (${formatVND(estimate.total)})! Kỹ thuật viên 3AE sẽ liên hệ trong 15 phút.`)}
+                >
+                  Nhận Báo Giá Chi Tiết & Khảo Sát Miễn Phí
+                </button>
+              </div>
+
+            </div>
+          </section>
+
+          {/* 7. CART DRAWER (Interactive Slide-Out) */}
+          {isCartOpen && (
+            <div className="drawer-overlay" onClick={() => setIsCartOpen(false)}>
+              <div className="drawer-panel" onClick={(e) => e.stopPropagation()}>
+                
+                <div className="drawer-header">
+                  <div style={{ fontSize: '16px', fontWeight: 800 }}>
+                    🛒 Giỏ Hàng Của Bạn ({cartCount})
+                  </div>
+                  <button 
+                    style={{ background: 'none', border: 'none', fontSize: '20px', cursor: 'pointer' }}
+                    onClick={() => setIsCartOpen(false)}
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <div className="drawer-content">
+                  {cart.length === 0 ? (
+                    <div style={{ textAlign: 'center', padding: '40px 20px', color: '#64748B' }}>
+                      <div style={{ fontSize: '48px', marginBottom: '12px' }}>🛒</div>
+                      <div style={{ fontSize: '15px', fontWeight: 700, color: '#0F172A' }}>Giỏ hàng đang trống</div>
+                      <p style={{ fontSize: '13px', marginTop: '6px' }}>Hãy chọn cho ngôi nhà của bạn những thiết bị gia dụng và smarthome ưng ý nhé!</p>
+                    </div>
+                  ) : (
+                    <div>
+                      {cart.map(item => (
+                        <div key={item.id} style={{ display: 'flex', gap: '14px', padding: '12px 0', borderBottom: '1px solid #E2E8F0', alignItems: 'center' }}>
+                          <div style={{ width: '60px', height: '60px', background: item.imageBg, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px' }}>
+                            {item.category === 'smarthome' ? '🎛️' : '🍲'}
+                          </div>
+                          <div style={{ flex: 1 }}>
+                            <div style={{ fontSize: '13px', fontWeight: 700, color: '#0F172A' }}>{item.name}</div>
+                            <div style={{ fontSize: '13px', fontWeight: 800, color: '#EF4444', marginTop: '4px' }}>{formatVND(item.price)}</div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '6px' }}>
+                              <button 
+                                style={{ width: '24px', height: '24px', borderRadius: '4px', border: '1px solid #CBD5E1', background: '#fff', cursor: 'pointer' }}
+                                onClick={() => setCart(prev => prev.map(p => p.id === item.id ? { ...p, qty: Math.max(1, p.qty - 1) } : p))}
+                              >-</button>
+                              <span style={{ fontSize: '13px', fontWeight: 700 }}>{item.qty}</span>
+                              <button 
+                                style={{ width: '24px', height: '24px', borderRadius: '4px', border: '1px solid #CBD5E1', background: '#fff', cursor: 'pointer' }}
+                                onClick={() => setCart(prev => prev.map(p => p.id === item.id ? { ...p, qty: p.qty + 1 } : p))}
+                              >+</button>
+                              <span 
+                                style={{ fontSize: '11px', color: '#EF4444', cursor: 'pointer', marginLeft: 'auto' }}
+                                onClick={() => setCart(prev => prev.filter(p => p.id !== item.id))}
+                              >Xóa</span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {cart.length > 0 && (
+                  <div className="drawer-footer">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '13px', color: '#64748B' }}>
+                      <span>Tạm tính hàng:</span>
+                      <span>{formatVND(cartSubtotal)}</span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '13px', color: '#10B981' }}>
+                      <span>Phí giao hàng:</span>
+                      <span>Miễn phí toàn quốc (Freeship)</span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '16px', fontSize: '16px', fontWeight: 800, color: '#0F172A' }}>
+                      <span>Tổng thanh toán:</span>
+                      <span style={{ color: '#EF4444', fontSize: '18px' }}>{formatVND(cartSubtotal)}</span>
+                    </div>
+
+                    <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#0F172A', marginBottom: '14px', cursor: 'pointer' }}>
+                      <input type="checkbox" defaultChecked />
+                      <span>Yêu cầu xuất hóa đơn điện tử VAT cho công ty</span>
+                    </label>
+
+                    <button 
+                      className="btn-primary" 
+                      style={{ width: '100%', justifyContent: 'center' }}
+                      onClick={() => {
+                        setCheckoutSuccess(true);
+                        setIsCartOpen(false);
+                        setCart([]);
+                      }}
+                    >
+                      Tiến Hành Đặt Hàng Ngay
+                    </button>
+                  </div>
+                )}
+
+              </div>
+            </div>
+          )}
+
+          {/* 8. MODAL QUICK VIEW SẢN PHẨM */}
+          {selectedProduct && (
+            <div className="modal-overlay" onClick={() => setSelectedProduct(null)}>
+              <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+                <button 
+                  style={{ position: 'absolute', top: '16px', right: '16px', background: 'none', border: 'none', fontSize: '22px', cursor: 'pointer' }}
+                  onClick={() => setSelectedProduct(null)}
+                >
+                  ✕
+                </button>
+
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '24px' }}>
+                  <div style={{ background: selectedProduct.imageBg, borderRadius: '12px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '30px' }}>
+                    <div style={{ fontSize: '72px', marginBottom: '12px' }}>
+                      {selectedProduct.category === 'smarthome' ? '🎛️' : '🍲'}
+                    </div>
+                    <span className="card-badge-verified">✓ 100% Chính Hãng — Xuất VAT</span>
+                  </div>
+
+                  <div>
+                    <div style={{ fontSize: '12px', fontWeight: 700, color: '#0284C7', textTransform: 'uppercase' }}>
+                      {selectedProduct.brand} Official
+                    </div>
+                    <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#0F172A', margin: '6px 0 12px 0' }}>
+                      {selectedProduct.name}
+                    </h3>
+                    <p style={{ fontSize: '13px', color: '#64748B', lineHeight: '1.6', marginBottom: '16px' }}>
+                      {selectedProduct.desc}
+                    </p>
+
+                    <div style={{ background: '#F8FAFC', padding: '14px', borderRadius: '10px', marginBottom: '16px' }}>
+                      <div style={{ fontSize: '12px', fontWeight: 700, color: '#0F172A', marginBottom: '8px' }}>
+                        Thông Số Kỹ Thuật Nổi Bật:
+                      </div>
+                      <ul style={{ paddingLeft: '18px', fontSize: '12.5px', color: '#475569', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                        {selectedProduct.specs.map((s, idx) => (
+                          <li key={idx}>{s}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', marginBottom: '20px' }}>
+                      <span style={{ fontSize: '24px', fontWeight: 900, color: '#EF4444', fontFamily: 'Plus Jakarta Sans' }}>
+                        {formatVND(selectedProduct.price)}
+                      </span>
+                      <span style={{ fontSize: '14px', color: '#94A3B8', textDecoration: 'line-through' }}>
+                        {formatVND(selectedProduct.oldPrice)}
+                      </span>
+                      <span style={{ fontSize: '12px', color: '#10B981', fontWeight: 700 }}>
+                        (Tiết kiệm {selectedProduct.discount})
+                      </span>
+                    </div>
+
+                    <div style={{ display: 'flex', gap: '12px' }}>
+                      <button 
+                        className="btn-primary" 
+                        style={{ flex: 1, justifyContent: 'center' }}
+                        onClick={() => {
+                          addToCart(selectedProduct);
+                          setSelectedProduct(null);
+                        }}
+                      >
+                        Thêm Vào Giỏ Hàng
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          )}
+
+          {/* 9. CHECKOUT SUCCESS MODAL */}
+          {checkoutSuccess && (
+            <div className="modal-overlay" onClick={() => setCheckoutSuccess(false)}>
+              <div className="modal-box" style={{ maxWidth: '480px', textAlign: 'center', padding: '40px' }} onClick={(e) => e.stopPropagation()}>
+                <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: '#D1FAE5', color: '#10B981', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '36px', margin: '0 auto 16px auto' }}>
+                  ✓
+                </div>
+                <h3 style={{ fontSize: '22px', fontWeight: 800, color: '#0F172A', marginBottom: '8px' }}>Đặt Hàng Thành Công!</h3>
+                <p style={{ fontSize: '13.5px', color: '#64748B', lineHeight: '1.6', marginBottom: '20px' }}>
+                  Cảm ơn quý khách đã tin tưởng <strong>Gia Dụng Thông Minh 3AE</strong>. Mã đơn hàng của bạn là <strong>#3AE-9824</strong>. Kỹ thuật viên sẽ gọi xác nhận giao hàng và xuất hóa đơn VAT trong ít phút!
+                </p>
+                <button className="btn-primary" style={{ width: '100%', justifyContent: 'center' }} onClick={() => setCheckoutSuccess(false)}>
+                  Tiếp Tục Mua Sắm
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* 10. TOAST NOTIFICATION */}
+          {toastMsg && (
+            <div className="toast-pill">
+              <span style={{ color: '#FCD10C', fontSize: '16px' }}>●</span>
+              <span>{toastMsg}</span>
+            </div>
+          )}
+
+          {/* 11. SITE FOOTER */}
+          <footer className="site-footer">
+            <div className="footer-grid">
+              
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 44" style={{ height: '36px', width: 'auto', marginBottom: '14px' }} fill="none">
+                  <g transform="translate(0, 2)">
+                    <path d="M4 14L18 4L32 14" stroke="#FCD10C" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M26 9V7H29V11.5" stroke="#FCD10C" strokeWidth="2" strokeLinecap="round"/>
+                    <rect x="6.5" y="14" width="23" height="19" rx="2.5" stroke="#FCD10C" strokeWidth="2.5" fill="#000000"/>
+                    <text x="9.5" y="23" fontFamily="'Plus Jakarta Sans', sans-serif" fontSize="7.5" fontWeight="900" fill="#FCD10C">GĐ</text>
+                    <text x="9.5" y="30" fontFamily="'Plus Jakarta Sans', sans-serif" fontSize="7.5" fontWeight="900" fill="#FCD10C">TM</text>
+                  </g>
+                  <text x="42" y="27" fontFamily="'Plus Jakarta Sans', sans-serif" fontSize="20" fontWeight="800" fill="#FCD10C">giadungthongminh</text>
+                </svg>
+                <p style={{ fontSize: '13px', lineHeight: '1.6', marginBottom: '14px' }}>
+                  Hệ thống phân phối thiết bị gia dụng và điện thông minh chính hãng hàng đầu tại Việt Nam. Đồng hành nâng tầm chất lượng sống cho mọi gia đình.
+                </p>
+                <div style={{ fontSize: '12.5px', color: '#CBD5E1' }}>
+                  ĐKKD: 0109823489 • Cấp bởi Sở KH&ĐT TP. Hà Nội
+                </div>
+              </div>
+
+              <div>
+                <div className="footer-heading">Thương Hiệu Hợp Tác</div>
+                <ul className="footer-links">
+                  <li><a href="#products">Hunonic Smart Home</a></li>
+                  <li><a href="#products">Gaabor Germany Tech</a></li>
+                  <li><a href="#products">Masuto Japan Living</a></li>
+                  <li><a href="#products">Kostcor Inox 5 Đáy</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div className="footer-heading">Chính Sách & Hỗ Trợ</div>
+                <ul className="footer-links">
+                  <li><a href="#products">Chính sách bảo hành 1 đổi 1</a></li>
+                  <li><a href="#products">Quy định xuất hóa đơn điện tử VAT</a></li>
+                  <li><a href="#estimator">Dịch vụ lắp đặt tại nhà 24/7</a></li>
+                  <li><a href="#simulator">Hướng dẫn kích hoạt bảo hành QR</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div className="footer-heading">Tổng Đài Hỗ Trợ 3AE</div>
+                <div style={{ fontSize: '13px', lineHeight: '1.8' }}>
+                  <div>📞 Bán hàng: <strong>0988.333.3AE</strong></div>
+                  <div>🔧 Kỹ thuật: <strong>1900.3398</strong></div>
+                  <div>🏢 Showroom: Tòa nhà 3AE, TP. Hà Nội & TP. Hồ Chí Minh</div>
+                  <div style={{ marginTop: '10px' }}>
+                    <span style={{ background: '#10B981', color: '#000', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 800 }}>
+                      ✓ ĐÃ ĐĂNG KÝ BỘ CÔNG THƯƠNG
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="footer-bottom">
+              <div>© 2026 GIA DỤNG THÔNG MINH 3AE. All rights reserved. Tuân thủ Brand Guidelines 1.0.</div>
+              <div style={{ display: 'flex', gap: '16px' }}>
+                <span>Điều khoản sử dụng</span>
+                <span>Chính sách bảo mật</span>
+                <span>Chứng nhận VAT</span>
+              </div>
+            </div>
+          </footer>
+
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

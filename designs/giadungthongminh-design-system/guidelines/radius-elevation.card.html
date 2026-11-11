@@ -1,0 +1,44 @@
+<!-- @dsCard group="Foundations" viewport="700x150" subtitle="Pill 9999px, Card 16px, Button 10px & Box Shadows" name="Bo Góc & Đổ Bóng" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-display); background:var(--surface-raised); padding:16px 20px; box-sizing:border-box; color:var(--ink); }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .shape-box { border:1px solid var(--line); padding:12px 10px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; background:#fff; transition:all var(--transition-fast); }
+  .shape-box:hover { box-shadow:var(--shadow-md); transform:translateY(-2px); border-color:var(--brand-primary); }
+  .shape-label { font-size:11px; font-weight:800; color:var(--ink); margin-top:6px; }
+  .shape-token { font-family:var(--font-mono); font-size:9.5px; color:var(--ink-muted); }
+  .pill-shape { width:100%; height:28px; background:var(--brand-primary-soft); border-radius:var(--radius-pill); border:1px solid #FCD10C; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#854D0E; }
+  .card-shape { width:48px; height:32px; background:var(--surface-subtle); border-radius:var(--radius-lg); border:1px solid var(--line-strong); }
+  .btn-shape { width:56px; height:26px; background:var(--brand-dark); border-radius:var(--radius-md); }
+  .badge-shape { width:40px; height:20px; background:#D1FAE5; border-radius:var(--radius-xs); }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="shape-box">
+    <div class="pill-shape">Pill Search / Tag</div>
+    <div class="shape-label">Radius Full</div>
+    <div class="shape-token">9999px (Search & Chip)</div>
+  </div>
+  <div class="shape-box">
+    <div class="card-shape"></div>
+    <div class="shape-label">Radius Large</div>
+    <div class="shape-token">16px (Product Card)</div>
+  </div>
+  <div class="shape-box">
+    <div class="btn-shape"></div>
+    <div class="shape-label">Radius Medium</div>
+    <div class="shape-token">10px (Buttons & Inputs)</div>
+  </div>
+  <div class="shape-box">
+    <div class="badge-shape"></div>
+    <div class="shape-label">Radius Small</div>
+    <div class="shape-token">4px - 6px (Badges)</div>
+  </div>
+</div>
+</body>
+</html>

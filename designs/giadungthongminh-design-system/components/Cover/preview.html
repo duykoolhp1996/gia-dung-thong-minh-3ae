@@ -1,0 +1,47 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Gia Dụng Thông Minh</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:#000000; color:#FFFFFF; font-family:"Plus Jakarta Sans", system-ui, sans-serif; overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; background:linear-gradient(135deg, #000000 0%, #121212 100%); }
+  .art { position:absolute; top:0; right:0; width:520px; height:288px; overflow:hidden; }
+  .gold-block { fill:#FCD10C; }
+  .gold-soft { fill:#FEF9C3; }
+  .dark-accent { fill:#1E1E1E; }
+  .accent-circle { fill:none; stroke:#FCD10C; stroke-width:3; stroke-dasharray:6 4; }
+  .words { position:absolute; left:48px; bottom:40px; max-width:480px; z-index:2; }
+  .badge-chip { display:inline-flex; align-items:center; gap:8px; padding:4px 12px; background:#FCD10C; color:#000000; font-size:12px; font-weight:700; border-radius:9999px; margin-bottom:16px; text-transform:uppercase; letter-spacing:0.05em; }
+  .badge-dot { width:6px; height:6px; background:#000000; border-radius:50%; }
+  .name { margin:0; font-size:42px; line-height:1.1; font-weight:800; letter-spacing:-0.02em; color:#FFFFFF; }
+  .name span { color:#FCD10C; }
+  .tag { margin:10px 0 0 0; font-size:15px; line-height:22px; color:#A1A1AA; font-weight:400; }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 520 288" width="520" height="288">
+      <rect class="gold-block" x="180" y="-40" width="380" height="180" rx="24" transform="rotate(15 280 60)" opacity="0.9"/>
+      <rect class="dark-accent" x="240" y="80" width="300" height="240" rx="20" transform="rotate(-5 360 160)"/>
+      <circle class="accent-circle" cx="220" cy="180" r="70"/>
+      <!-- Smart house icon art in background -->
+      <path d="M380 90L430 50L480 90V140H380Z" fill="#FCD10C" opacity="0.3"/>
+      <rect class="gold-block" x="120" y="220" width="160" height="12" rx="6"/>
+      <circle cx="100" cy="226" r="6" fill="#FCD10C"/>
+    </svg>
+  </div>
+  <div class="words">
+    <div class="badge-chip">
+      <span class="badge-dot"></span>
+      Chính hãng · Xuất VAT đầy đủ
+    </div>
+    <h1 class="name">giadung<span>thongminh</span></h1>
+    <p class="tag">Hệ thống thiết bị gia dụng thông minh & công nghệ tiện ích cho ngôi nhà hiện đại.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 44" fill="none">
+  <!-- Mark -->
+  <g transform="translate(0, 2)">
+    <path d="M4 14L18 4L32 14" stroke="#FCD10C" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26 9V7H29V11.5" stroke="#FCD10C" stroke-width="2" stroke-linecap="round"/>
+    <rect x="6.5" y="14" width="23" height="19" rx="2.5" stroke="#FCD10C" stroke-width="2.5" fill="#000000"/>
+    <text x="9.5" y="23" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.5" font-weight="900" fill="#FCD10C" letter-spacing="0.5">GĐ</text>
+    <text x="9.5" y="30" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.5" font-weight="900" fill="#FCD10C" letter-spacing="0.5">TM</text>
+  </g>
+  <!-- Wordmark: giadungthongminh in bold yellow -->
+  <text x="42" y="27" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#FCD10C" letter-spacing="-0.02em">giadungthongminh</text>
+</svg>

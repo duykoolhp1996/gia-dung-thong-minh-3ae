@@ -1,0 +1,45 @@
+<!-- @dsCard group="Colors" viewport="700x150" subtitle="Chính hãng, Flash sale, Xuất VAT & Cảnh báo" name="Semantic Status Colors" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-display); background:var(--surface-raised); padding:14px 18px; box-sizing:border-box; color:var(--ink); }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .sem-card { border:1px solid var(--line); border-radius:var(--radius-sm); padding:10px 14px; display:flex; align-items:center; gap:12px; }
+  .dot { width:32px; height:32px; border-radius:var(--radius-full); flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px; font-weight:700; }
+  .name { font-size:12px; font-weight:700; color:var(--ink); }
+  .hex { font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); }
+  .role { font-family:var(--font-body); font-size:10.5px; color:var(--ink-muted); margin-top:2px; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="sem-card">
+    <div class="dot" style="background:#10B981;">✓</div>
+    <div>
+      <div class="name">Verified Green</div>
+      <div class="hex">#10B981</div>
+      <div class="role">Chính hãng 100%, Sẵn kho, Bảo hành</div>
+    </div>
+  </div>
+  <div class="sem-card">
+    <div class="dot" style="background:#EF4444;">%</div>
+    <div>
+      <div class="name">Promo Alert Red</div>
+      <div class="hex">#EF4444</div>
+      <div class="role">Flash Sale, Giảm sốc, Cảnh báo điện</div>
+    </div>
+  </div>
+  <div class="sem-card">
+    <div class="dot" style="background:#0284C7;">i</div>
+    <div>
+      <div class="name">Tech VAT Blue</div>
+      <div class="hex">#0284C7</div>
+      <div class="role">Xuất VAT, WiFi IoT, HDSD kỹ thuật</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

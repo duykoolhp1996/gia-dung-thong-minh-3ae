@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gia Dụng Thông Minh 3AE — Brand & Design System (Designer Workspace)</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Brand Core */
+      --brand-primary: #FCD10C;
+      --brand-primary-hover: #E5BC0B;
+      --brand-primary-soft: #FEF9C3;
+      --brand-dark: #000000;
+      --brand-dark-neutral: #0F172A;
+
+      /* Surfaces */
+      --surface: #F8FAFC;
+      --surface-raised: #FFFFFF;
+      --surface-subtle: #F1F5F9;
+      --surface-sidebar: #FFFFFF;
+      --surface-border: #E2E8F0;
+      --surface-border-strong: #CBD5E1;
+
+      /* Typography */
+      --ink: #0F172A;
+      --ink-secondary: #334155;
+      --ink-muted: #64748B;
+      --ink-subtle: #94A3B8;
+
+      /* Semantic Status */
+      --status-success: #10B981;
+      --status-success-soft: #D1FAE5;
+      --status-danger: #EF4444;
+      --status-danger-soft: #FEE2E2;
+      --status-info: #0284C7;
+      --status-info-soft: #E0F2FE;
+
+      /* Radii */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-pill: 9999px;
+
+      /* Shadows */
+      --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1);
+
+      /* Fonts */
+      --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    [data-theme="dark"] {
+      --surface: #090D16;
+      --surface-raised: #111726;
+      --surface-subtle: #192238;
+      --surface-sidebar: #0D121E;
+      --surface-border: #1E293B;
+      --surface-border-strong: #334155;
+      --ink: #F8FAFC;
+      --ink-secondary: #E2E8F0;
+      --ink-muted: #94A3B8;
+      --ink-subtle: #64748B;
+      --brand-primary-soft: #393005;
+      --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.75);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--surface);
+      color: var(--ink);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    /* Top Designer Toolbar */
+    .designer-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10000;
+      background: #000000;
+      border-bottom: 2px solid var(--brand-primary);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: #FFFFFF;
+      font-size: 13px;
+    }
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .designer-badge {
+      background: var(--brand-primary);
+      color: #000;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .toolbar-tools {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .color-picker-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #CBD5E1;
+      font-weight: 600;
+    }
+    .color-picker-input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      background: transparent;
+      padding: 0;
+    }
+    .color-picker-input::-webkit-color-swatch-wrapper { padding: 0; }
+    .color-picker-input::-webkit-color-swatch { border: none; border-radius: 3px; }
+
+    .tool-btn {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .tool-btn:hover { background: rgba(255, 255, 255, 0.22); }
+    .tool-btn.active {
+      background: var(--brand-primary);
+      color: #000000;
+      border-color: var(--brand-primary);
+    }
+
+    /* Layout Structure */
+    .app-root { display: flex; min-height: calc(100vh - 48px); }
+    
+    /* Sidebar */
+    .app-sidebar {
+      width: 280px;
+      background: var(--surface-sidebar);
+      border-right: 1px solid var(--surface-border);
+      position: sticky;
+      top: 48px;
+      height: calc(100vh - 48px);
+      overflow-y: auto;
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .brand-text-header {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--surface-border);
+      color: var(--ink);
+    }
+    .brand-text-header span { color: var(--brand-primary); }
+
+    .nav-section-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      margin: 16px 0 6px;
+      padding-left: 6px;
+    }
+    .nav-link-item {
+      display: block;
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      color: var(--ink-secondary);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      transition: all 0.15s;
+    }
+    .nav-link-item:hover, .nav-link-item.active {
+      background: var(--brand-primary-soft);
+      color: #854D0E;
+    }
+    [data-theme="dark"] .nav-link-item:hover, [data-theme="dark"] .nav-link-item.active {
+      color: var(--brand-primary);
+    }
+
+    /* Main Workspace */
+    .app-main {
+      flex: 1;
+      padding: 36px 44px;
+      max-width: 1260px;
+      overflow-x: hidden;
+    }
+
+    /* Editable Styling when Edit Mode is active */
+    body.edit-mode-active [contenteditable="true"] {
+      outline: 1.5px dashed var(--brand-primary) !important;
+      outline-offset: 3px;
+      cursor: text;
+    }
+    body.edit-mode-active [contenteditable="true"]:hover {
+      background: rgba(252, 209, 12, 0.08);
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: var(--brand-dark);
+      border: 1px solid rgba(252, 209, 12, 0.3);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      margin-bottom: 36px;
+      color: #FFFFFF;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .hero-title span { color: var(--brand-primary); }
+    .hero-sub {
+      font-size: 15px;
+      color: #94A3B8;
+      max-width: 720px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .hero-tagline {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--brand-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    /* Spec Section */
+    .spec-section {
+      background: var(--surface-raised);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .section-header-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--surface-border);
+      margin-bottom: 22px;
+    }
+    .section-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--status-info);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+    .designer-hint {
+      font-size: 11.5px;
+      color: var(--ink-muted);
+      font-weight: 600;
+    }
+
+    /* Grids */
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+
+    /* Swatches */
+    .color-swatch-card {
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--surface-raised);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .color-swatch-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand-primary);
+    }
+    .swatch-fill {
+      height: 72px;
+      width: 100%;
+      position: relative;
+    }
+    .swatch-body { padding: 12px 14px; }
+    .swatch-title {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .swatch-hex {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+    .swatch-role {
+      font-size: 11px;
+      color: var(--ink-subtle);
+      margin-top: 4px;
+    }
+
+    /* Buttons */
+    .gdtm-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s;
+      text-decoration: none;
+      line-height: 1.2;
+    }
+    .gdtm-btn-primary {
+      background: var(--brand-primary);
+      color: #000000;
+      font-weight: 800;
+    }
+    .gdtm-btn-primary:hover {
+      background: var(--brand-primary-hover);
+      transform: translateY(-1px);
+    }
+    .gdtm-btn-dark {
+      background: var(--brand-dark);
+      color: #FFFFFF;
+    }
+    .gdtm-btn-dark:hover { background: #1E293B; }
+    .gdtm-btn-outline {
+      background: transparent;
+      border-color: var(--surface-border-strong);
+      color: var(--ink);
+    }
+    .gdtm-btn-outline:hover {
+      border-color: var(--brand-primary);
+      background: var(--brand-primary-soft);
+      color: #854D0E;
+    }
+    .gdtm-btn-soft {
+      background: var(--brand-primary-soft);
+      color: #854D0E;
+    }
+    .gdtm-btn-sm { padding: 6px 12px; font-size: 12px; }
+    .gdtm-btn-lg { padding: 12px 24px; font-size: 15px; font-weight: 800; }
+    .gdtm-btn-block { width: 100%; }
+
+    /* Badges */
+    .gdtm-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .gdtm-badge-success { background: var(--status-success-soft); color: var(--status-success); }
+    .gdtm-badge-danger { background: var(--status-danger-soft); color: var(--status-danger); }
+    .gdtm-badge-info { background: var(--status-info-soft); color: var(--status-info); }
+    .gdtm-badge-brand { background: var(--brand-primary-soft); color: #854D0E; }
+    .gdtm-badge-dark { background: #000; color: #fff; }
+
+    /* Live Header Mockup */
+    .header-mockup-frame {
+      border: 1px solid #000;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-md);
+    }
+    .mock-topbar {
+      background: var(--brand-primary);
+      color: #000000;
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 6px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mock-navbar {
+      background: var(--brand-dark);
+      color: #FFFFFF;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .mock-logo {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--brand-primary);
+      letter-spacing: -0.02em;
+    }
+    .mock-search-pill {
+      flex: 1;
+      max-width: 440px;
+      background: #FFFFFF;
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      color: #64748B;
+      font-size: 12.5px;
+    }
+    .mock-nav-actions {
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      align-items: center;
+    }
+
+    /* Product Cards */
+    .pro-card {
+      background: var(--surface-raised);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .pro-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand-primary);
+    }
+    .pro-image-placeholder {
+      height: 200px;
+      background: var(--surface-subtle);
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      text-align: center;
+      position: relative;
+    }
+    .pro-image-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ink-muted);
+      border: 1px dashed var(--surface-border-strong);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-raised);
+    }
+    .pro-image-sub {
+      font-size: 10.5px;
+      color: var(--ink-subtle);
+      margin-top: 6px;
+    }
+    .pro-card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .pro-meta-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--status-info);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .pro-title {
+      font-family: var(--font-display);
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .pro-rating-text {
+      font-size: 11.5px;
+      color: var(--ink-muted);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .pro-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .pro-price-now {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--status-danger);
+    }
+    .pro-price-was {
+      font-size: 12.5px;
+      color: var(--ink-subtle);
+      text-decoration: line-through;
+    }
+
+    /* Co-Branding */
+    .cobrand-box {
+      background: var(--surface-subtle);
+      border: 1px dashed var(--surface-border-strong);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .cobrand-name {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+    }
+    .cobrand-divider {
+      width: 1px;
+      height: 28px;
+      background: var(--surface-border-strong);
+    }
+
+    /* Toast */
+    #copy-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #000;
+      color: var(--brand-primary);
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 700;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.2s ease;
+      z-index: 99999;
+      border: 1px solid var(--brand-primary);
+    }
+    #copy-toast.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- TOP DESIGNER TOOLBAR -->
+  <header class="designer-toolbar">
+    <div class="toolbar-left">
+      <span class="designer-badge">Graphic Design Mode</span>
+      <span style="font-weight: 700;">Gia Dụng Thông Minh 3AE</span>
+    </div>
+
+    <div class="toolbar-tools">
+      <!-- Edit Mode Toggle -->
+      <button class="tool-btn active" id="btn-toggle-edit" onclick="toggleEditMode()">
+        Chế độ sửa chữ: BẬT
+      </button>
+
+      <!-- Live Color Pickers -->
+      <div class="color-picker-wrap">
+        <span>Vàng Primary:</span>
+        <input type="color" class="color-picker-input" id="picker-primary" value="#FCD10C" onchange="updateBrandColor('primary', this.value)">
+      </div>
+
+      <div class="color-picker-wrap">
+        <span>Đen Dark:</span>
+        <input type="color" class="color-picker-input" id="picker-dark" value="#000000" onchange="updateBrandColor('dark', this.value)">
+      </div>
+
+      <!-- Theme Switch -->
+      <button class="tool-btn" onclick="toggleTheme()" id="btn-theme">
+        Giao diện: Tối / Sáng
+      </button>
+
+      <!-- Reset & Save -->
+      <button class="tool-btn" onclick="saveDesignerChanges()">
+        Lưu thay đổi
+      </button>
+      <button class="tool-btn" onclick="resetDesignerChanges()" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4);">
+        Đặt lại mặc định
+      </button>
+    </div>
+  </header>
+
+  <div class="app-root">
+
+    <!-- SIDEBAR NAV -->
+    <aside class="app-sidebar">
+      <div class="brand-text-header">
+        GIA DỤNG <span>THÔNG MINH</span>
+        <div style="font-size: 10px; font-weight: 700; color: var(--ink-muted); margin-top: 2px;">WORKSPACE CHO GRAPHIC DESIGN</div>
+      </div>
+
+      <nav>
+        <div class="nav-section-title">01. Chiến Lược</div>
+        <a href="#strategy" class="nav-link-item active">Slogan & Định Vị Cốt Lõi</a>
+        <a href="#voice" class="nav-link-item">Tone Giọng Điệu & Từ Khóa</a>
+
+        <div class="nav-section-title">02. Nền Tảng Thiết Kế</div>
+        <a href="#colors" class="nav-link-item">Bảng Màu Chuẩn (60-30-10)</a>
+        <a href="#typography" class="nav-link-item">Quy Chuẩn Typography</a>
+        <a href="#radii" class="nav-link-item">Bo Góc & Đổ Bóng</a>
+
+        <div class="nav-section-title">03. Linh Kiện Giao Diện</div>
+        <a href="#header-block" class="nav-link-item">Thanh Header TMĐT</a>
+        <a href="#buttons-block" class="nav-link-item">Hệ Thống Nút Bấm</a>
+        <a href="#badges-block" class="nav-link-item">Hệ Thống Nhãn / Badge</a>
+        <a href="#cards-block" class="nav-link-item">Thẻ Sản Phẩm (SKU Card)</a>
+
+        <div class="nav-section-title">04. Điểm Chạm Thực Tế</div>
+        <a href="#cobranding" class="nav-link-item">Co-Branding Đối Tác</a>
+        <a href="#touchpoints" class="nav-link-item">Bao Bì, Tem QR & Đồng Phục</a>
+      </nav>
+
+      <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--surface-border); font-size: 11.5px; color: var(--ink-muted);">
+        *Bấm trực tiếp vào bất kỳ đoạn chữ nào trên màn hình để gõ nội dung mới.*
+      </div>
+    </aside>
+
+    <!-- MAIN CANVAS -->
+    <main class="app-main">
+
+      <!-- HERO BANNER -->
+      <section class="hero-banner" id="strategy">
+        <div class="hero-tagline editable" contenteditable="true">
+          GIA DỤNG THÔNG MINH 3AE — BRAND GUIDELINES & WORKSPACE
+        </div>
+        <h1 class="hero-title editable" contenteditable="true">
+          Nhẹ Gánh Việc Nhà,<br><span>Nhờ Nhà Thông Minh</span>
+        </h1>
+        <p class="hero-sub editable" contenteditable="true">
+          Hệ sinh thái thiết bị điện thông minh và gia dụng đời sống tiện ích chính hãng. Mang đến giải pháp tự động hóa an toàn, dễ tiếp cận và bền bỉ cho hàng triệu gia đình Việt.
+        </p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <span class="gdtm-badge gdtm-badge-brand editable" contenteditable="true">Chính Hãng 100%</span>
+          <span class="gdtm-badge gdtm-badge-info editable" contenteditable="true">Xuất VAT Đầy Đủ</span>
+          <span class="gdtm-badge gdtm-badge-success editable" contenteditable="true">Bảo Hành 1 Đổi 1 Trong 30 Ngày</span>
+        </div>
+      </section>
+
+      <!-- SECTION 1: STRATEGY & VALUES -->
+      <section class="spec-section" id="voice">
+        <div class="section-header-wrap">
+          <div>
+            <div class="section-tag">01. CHIẾN LƯỢC & GIÁ TRỊ CỐT LÕI</div>
+            <h2 class="section-heading editable" contenteditable="true">4 Trụ Cột Giá Trị Thương Hiệu</h2>
+          </div>
+          <span class="designer-hint">(Graphic Designer có thể bấm sửa trực tiếp)</span>
+        </div>
+
+        <div class="grid-4">
+          <div style="border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 18px; background: var(--surface-raised);">
+            <div style="font-family: var(--font-display); font-size: 20px; font-weight: 900; color: var(--brand-primary); margin-bottom: 4px;">01</div>
+            <div class="editable" contenteditable="true" style="font-family: var(--font-display); font-size: 14px; font-weight: 800; margin-bottom: 4px;">Thông Minh</div>
+            <p class="editable" contenteditable="true" style="font-size: 12px; color: var(--ink-muted); line-height: 1.5;">Thao tác 1 chạm, tự động hóa qua điện thoại, thân thiện với cả người lớn tuổi và trẻ nhỏ.</p>
+          </div>
+
+          <div style="border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 18px; background: var(--surface-raised);">
+            <div style="font-family: var(--font-display); font-size: 20px; font-weight: 900; color: var(--status-success); margin-bottom: 4px;">02</div>
+            <div class="editable" contenteditable="true" style="font-family: var(--font-display); font-size: 14px; font-weight: 800; margin-bottom: 4px;">Minh Bạch</div>
+            <p class="editable" contenteditable="true" style="font-size: 12px; color: var(--ink-muted); line-height: 1.5;">100% hàng chính hãng, hóa đơn VAT đầy đủ cho mọi đơn hàng, thông số chuẩn xác.</p>
+          </div>
+
+          <div style="border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 18px; background: var(--surface-raised);">
+            <div style="font-family: var(--font-display); font-size: 20px; font-weight: 900; color: var(--status-info); margin-bottom: 4px;">03</div>
+            <div class="editable" contenteditable="true" style="font-family: var(--font-display); font-size: 14px; font-weight: 800; margin-bottom: 4px;">Tin Cậy</div>
+            <p class="editable" contenteditable="true" style="font-size: 12px; color: var(--ink-muted); line-height: 1.5;">Đối tác chính thức của Hunonic, Gaabor, Masuto, Kostcor. Bảo hành 1 đổi 1 nhanh chóng.</p>
+          </div>
+
+          <div style="border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 18px; background: var(--surface-raised);">
+            <div style="font-family: var(--font-display); font-size: 20px; font-weight: 900; color: var(--status-danger); margin-bottom: 4px;">04</div>
+            <div class="editable" contenteditable="true" style="font-family: var(--font-display); font-size: 14px; font-weight: 800; margin-bottom: 4px;">Tận Tâm</div>
+            <p class="editable" contenteditable="true" style="font-size: 12px; color: var(--ink-muted); line-height: 1.5;">Kỹ thuật viên tư vấn Video Call qua Zalo OA, đồng hành trọn vòng đời sử dụng sản phẩm.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: COLOR PALETTE -->
+      <section class="spec-section" id="colors">
+        <div class="section-header-wrap">
+          <div>
+            <div class="section-tag">02. BẢNG MÀU CHUẨN</div>
+            <h2 class="section-heading editable" contenteditable="true">Bảng Màu Nhận Diện & Tỷ Lệ 60 - 30 - 10</h2>
+          </div>
+          <span class="designer-hint">(Nhấp thẻ để copy mã HEX)</span>
+        </div>
+
+        <div class="grid-4" style="margin-bottom: 20px;">
+          <!-- Primary -->
+          <div class="color-swatch-card" onclick="copyToken(getComputedStyle(document.documentElement).getPropertyValue('--brand-primary').trim(), 'Brand Primary')">
+            <div class="swatch-fill" id="swatch-primary" style="background: var(--brand-primary);"></div>
+            <div class="swatch-body">
+              <div class="swatch-title editable" contenteditable="true">Brand Primary (10%)</div>
+              <div class="swatch-hex" id="hex-label-primary">#FCD10C</div>
+              <div class="swatch-role editable" contenteditable="true">Top bar, Logo, Nút Mua ngay</div>
+            </div>
+          </div>
+
+          <!-- Dark -->
+          <div class="color-swatch-card" onclick="copyToken(getComputedStyle(document.documentElement).getPropertyValue('--brand-dark').trim(), 'Brand Dark')">
+            <div class="swatch-fill" id="swatch-dark" style="background: var(--brand-dark);"></div>
+            <div class="swatch-body">
+              <div class="swatch-title editable" contenteditable="true">Brand Dark (30%)</div>
+              <div class="swatch-hex" id="hex-label-dark">#000000</div>
+              <div class="swatch-role editable" contenteditable="true">Navbar chính, Chân trang, Đồng phục</div>
+            </div>
+          </div>
+
+          <!-- Surface Canvas -->
+          <div class="color-swatch-card" onclick="copyToken('#F8FAFC', 'Surface Canvas')">
+            <div class="swatch-fill" style="background: #F8FAFC; border-bottom: 1px solid var(--surface-border);"></div>
+            <div class="swatch-body">
+              <div class="swatch-title editable" contenteditable="true">Surface Canvas (60%)</div>
+              <div class="swatch-hex">#F8FAFC</div>
+              <div class="swatch-role editable" contenteditable="true">Nền tổng thể trang web</div>
+            </div>
+          </div>
+
+          <!-- Surface Raised -->
+          <div class="color-swatch-card" onclick="copyToken('#FFFFFF', 'Surface Raised')">
+            <div class="swatch-fill" style="background: #FFFFFF; border-bottom: 1px solid var(--surface-border);"></div>
+            <div class="swatch-body">
+              <div class="swatch-title editable" contenteditable="true">Surface Raised</div>
+              <div class="swatch-hex">#FFFFFF</div>
+              <div class="swatch-role editable" contenteditable="true">Khung thẻ sản phẩm, Modal</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="color-swatch-card" onclick="copyToken('#10B981', 'Verified Green')">
+            <div class="swatch-fill" style="background: #10B981; height: 44px;"></div>
+            <div class="swatch-body">
+              <div class="swatch-title editable" contenteditable="true">Verified Green (#10B981)</div>
+              <div class="swatch-role editable" contenteditable="true">Chính hãng 100%, Sẵn kho, Bảo hành</div>
+            </div>
+          </div>
+
+          <div class="color-swatch-card" onclick="copyToken('#EF4444', 'Promo Red')">
+            <div class="swatch-fill" style="background: #EF4444; height: 44px;"></div>
+            <div class="swatch-body">
+              <div class="swatch-title editable" contenteditable="true">Promo Red (#EF4444)</div>
+              <div class="swatch-role editable" contenteditable="true">Flash Sale, Giảm sốc, Cảnh báo</div>
+            </div>
+          </div>
+
+          <div class="color-swatch-card" onclick="copyToken('#0284C7', 'Tech Blue')">
+            <div class="swatch-fill" style="background: #0284C7; height: 44px;"></div>
+            <div class="swatch-body">
+              <div class="swatch-title editable" contenteditable="true">Tech VAT Blue (#0284C7)</div>
+              <div class="swatch-role editable" contenteditable="true">Xuất VAT, WiFi IoT, HDSD kỹ thuật</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: TYPOGRAPHY -->
+      <section class="spec-section" id="typography">
+        <div class="section-header-wrap">
+          <div>
+            <div class="section-tag">03. PHÔNG CHỮ & CẤP BẬC</div>
+            <h2 class="section-heading editable" contenteditable="true">Hệ Thống Kiểu Chữ (Typography Hierarchy)</h2>
+          </div>
+          <span class="designer-hint">Plus Jakarta Sans & Inter</span>
+        </div>
+
+        <div style="background: var(--surface-subtle); padding: 22px; border-radius: var(--radius-md); margin-bottom: 16px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); margin-bottom: 6px;">DISPLAY HERO (40px/800)</div>
+          <div class="editable" contenteditable="true" style="font-family: var(--font-display); font-size: 32px; font-weight: 900; color: var(--ink); line-height: 1.2;">
+            Nhẹ gánh việc nhà, Nhờ nhà thông minh
+          </div>
+        </div>
+
+        <div style="background: var(--surface-subtle); padding: 18px; border-radius: var(--radius-md); margin-bottom: 16px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); margin-bottom: 6px;">HEADING 1 (24px/700)</div>
+          <div class="editable" contenteditable="true" style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--ink);">
+            Thiết Bị Nhà Thông Minh & Gia Dụng Đời Sống Tiện Ích
+          </div>
+        </div>
+
+        <div style="background: var(--surface-subtle); padding: 18px; border-radius: var(--radius-md);">
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); margin-bottom: 6px;">BODY REGULAR (14px/400)</div>
+          <p class="editable" contenteditable="true" style="font-size: 14px; color: var(--ink-secondary); line-height: 1.6;">
+            Sản phẩm được bảo hành chính hãng từ 12 đến 24 tháng theo tiêu chuẩn nhà sản xuất. Lỗi 1 đổi 1 trong 30 ngày đầu tiên nếu phát sinh sự cố kỹ thuật. Hỗ trợ kích hoạt bảo hành điện tử nhanh chóng.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 4: HEADER BLOCK -->
+      <section class="spec-section" id="header-block">
+        <div class="section-header-wrap">
+          <div>
+            <div class="section-tag">04. THÀNH PHẦN GIAO DIỆN</div>
+            <h2 class="section-heading editable" contenteditable="true">Thanh Header Chuẩn Thương Mại Điện Tử</h2>
+          </div>
+          <span class="designer-hint">(Có thể sửa chữ thanh Header bên dưới)</span>
+        </div>
+
+        <div class="header-mockup-frame">
+          <div class="mock-topbar">
+            <div class="editable" contenteditable="true">
+              SẢN PHẨM CHÍNH HÃNG — XUẤT VAT ĐẦY ĐỦ — BẢO HÀNH TOÀN DIỆN
+            </div>
+            <div class="editable" contenteditable="true" style="font-family: var(--font-mono);">
+              Hotline: 1900.xxxx
+            </div>
+          </div>
+
+          <div class="mock-navbar">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div class="mock-logo editable" contenteditable="true">
+                giadungthongminh
+              </div>
+              <button class="gdtm-btn gdtm-btn-dark gdtm-btn-sm" style="border: 1px solid rgba(255,255,255,0.25);">
+                <span class="editable" contenteditable="true">Danh mục</span>
+              </button>
+            </div>
+
+            <div class="mock-search-pill editable" contenteditable="true">
+              Bạn tìm gì hôm nay? (Nồi chiên, Gaabor, Hunonic...)
+            </div>
+
+            <div class="mock-nav-actions">
+              <span class="editable" contenteditable="true" style="cursor: pointer;">Yêu thích</span>
+              <span class="editable" contenteditable="true" style="cursor: pointer;">Tài khoản</span>
+              <button class="gdtm-btn gdtm-btn-primary gdtm-btn-sm">
+                <span class="editable" contenteditable="true">Giỏ hàng (2)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: BUTTONS -->
+      <section class="spec-section" id="buttons-block">
+        <div class="section-header-wrap">
+          <div>
+            <div class="section-tag">05. HỆ THỐNG NÚT BẤM</div>
+            <h2 class="section-heading editable" contenteditable="true">Các Biến Thể Nút Bấm (Button Styles)</h2>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
+          <button class="gdtm-btn gdtm-btn-primary">
+            <span class="editable" contenteditable="true">Primary Gold (Mua ngay)</span>
+          </button>
+          <button class="gdtm-btn gdtm-btn-dark">
+            <span class="editable" contenteditable="true">Dark Tech (Thêm vào giỏ)</span>
+          </button>
+          <button class="gdtm-btn gdtm-btn-outline">
+            <span class="editable" contenteditable="true">Outline (Xem chi tiết)</span>
+          </button>
+          <button class="gdtm-btn gdtm-btn-soft">
+            <span class="editable" contenteditable="true">Soft Gold (Trả góp 0%)</span>
+          </button>
+        </div>
+
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+          <button class="gdtm-btn gdtm-btn-primary gdtm-btn-sm">
+            <span class="editable" contenteditable="true">Cỡ nhỏ (sm)</span>
+          </button>
+          <button class="gdtm-btn gdtm-btn-primary">
+            <span class="editable" contenteditable="true">Cỡ vừa (md)</span>
+          </button>
+          <button class="gdtm-btn gdtm-btn-primary gdtm-btn-lg">
+            <span class="editable" contenteditable="true">Cỡ lớn CTA (lg)</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- SECTION 6: BADGES -->
+      <section class="spec-section" id="badges-block">
+        <div class="section-header-wrap">
+          <div>
+            <div class="section-tag">06. NHÃN & CAM KẾT</div>
+            <h2 class="section-heading editable" contenteditable="true">Huy Hiệu Nhận Diện (Badge System)</h2>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <span class="gdtm-badge gdtm-badge-success editable" contenteditable="true">Chính Hãng 100%</span>
+          <span class="gdtm-badge gdtm-badge-danger editable" contenteditable="true">-35% Flash Sale</span>
+          <span class="gdtm-badge gdtm-badge-info editable" contenteditable="true">Xuất VAT Đầy Đủ</span>
+          <span class="gdtm-badge gdtm-badge-brand editable" contenteditable="true">Bảo Hành 24 Tháng</span>
+          <span class="gdtm-badge gdtm-badge-dark editable" contenteditable="true">Đổi Mới 30 Ngày</span>
+        </div>
+      </section>
+
+      <!-- SECTION 7: PRODUCT CARDS FOR GRAPHIC DESIGNER -->
+      <section class="spec-section" id="cards-block">
+        <div class="section-header-wrap">
+          <div>
+            <div class="section-tag">07. THẺ SẢN PHẨM SKU</div>
+            <h2 class="section-heading editable" contenteditable="true">Thẻ Sản Phẩm Chuẩn (Graphic Designer Sửa Copy & Ảnh)</h2>
+          </div>
+          <span class="designer-hint">(Bấm trực tiếp vào tên, giá, ảnh để sửa)</span>
+        </div>
+
+        <div class="grid-3">
+          <!-- Card 1 -->
+          <div class="pro-card">
+            <div class="pro-image-placeholder">
+              <div class="pro-image-tag editable" contenteditable="true">[KHUNG ẢNH THIẾT KẾ SKU 1:1]</div>
+              <div class="pro-image-sub editable" contenteditable="true">Kích thước chuẩn: 800 x 800 px</div>
+            </div>
+            <div class="pro-card-body">
+              <div class="pro-meta-tag editable" contenteditable="true">XUẤT VAT ĐẦY ĐỦ • HUNONIC VIỆT NAM</div>
+              <h3 class="pro-title editable" contenteditable="true">Công Tắc Cửa Cuốn WiFi Hunonic Door Thông Minh</h3>
+              <div class="pro-rating-text editable" contenteditable="true">Đánh giá: 4.9 / 5.0 (128 phản hồi)</div>
+              <div class="pro-price-row">
+                <span class="pro-price-now editable" contenteditable="true">650.000 ₫</span>
+                <span class="pro-price-was editable" contenteditable="true">890.000 ₫</span>
+                <span class="gdtm-badge gdtm-badge-danger editable" contenteditable="true">-27%</span>
+              </div>
+              <button class="gdtm-btn gdtm-btn-primary gdtm-btn-block">
+                <span class="editable" contenteditable="true">Thêm vào giỏ</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="pro-card">
+            <div class="pro-image-placeholder">
+              <div class="pro-image-tag editable" contenteditable="true">[KHUNG ẢNH THIẾT KẾ SKU 1:1]</div>
+              <div class="pro-image-sub editable" contenteditable="true">Kích thước chuẩn: 800 x 800 px</div>
+            </div>
+            <div class="pro-card-body">
+              <div class="pro-meta-tag editable" contenteditable="true">XUẤT VAT ĐẦY ĐỦ • MASUTO CHÍNH HÃNG</div>
+              <h3 class="pro-title editable" contenteditable="true">Máy Nấu Sữa Hạt Vi Áp Suất Masuto 1.2L Chống Trào</h3>
+              <div class="pro-rating-text editable" contenteditable="true">Đánh giá: 5.0 / 5.0 (245 phản hồi)</div>
+              <div class="pro-price-row">
+                <span class="pro-price-now editable" contenteditable="true">1.490.000 ₫</span>
+                <span class="pro-price-was editable" contenteditable="true">2.290.000 ₫</span>
+                <span class="gdtm-badge gdtm-badge-danger editable" contenteditable="true">-35%</span>
+              </div>
+              <button class="gdtm-btn gdtm-btn-primary gdtm-btn-block">
+                <span class="editable" contenteditable="true">Thêm vào giỏ</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="pro-card">
+            <div class="pro-image-placeholder">
+              <div class="pro-image-tag editable" contenteditable="true">[KHUNG ẢNH THIẾT KẾ SKU 1:1]</div>
+              <div class="pro-image-sub editable" contenteditable="true">Kích thước chuẩn: 800 x 800 px</div>
+            </div>
+            <div class="pro-card-body">
+              <div class="pro-meta-tag editable" contenteditable="true">XUẤT VAT ĐẦY ĐỦ • GAABOR TIỆN ÍCH</div>
+              <h3 class="pro-title editable" contenteditable="true">Nồi Chiên Không Dầu Gaabor 6.0L Lớp Phủ Ceramic</h3>
+              <div class="pro-rating-text editable" contenteditable="true">Đánh giá: 4.8 / 5.0 (189 phản hồi)</div>
+              <div class="pro-price-row">
+                <span class="pro-price-now editable" contenteditable="true">890.000 ₫</span>
+                <span class="pro-price-was editable" contenteditable="true">1.150.000 ₫</span>
+                <span class="gdtm-badge gdtm-badge-danger editable" contenteditable="true">-22%</span>
+              </div>
+              <button class="gdtm-btn gdtm-btn-primary gdtm-btn-block">
+                <span class="editable" contenteditable="true">Thêm vào giỏ</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: CO-BRANDING -->
+      <section class="spec-section" id="cobranding">
+        <div class="section-header-wrap">
+          <div>
+            <div class="section-tag">08. QUY CHUẨN LIÊN KẾT</div>
+            <h2 class="section-heading editable" contenteditable="true">Co-Branding Với Nhãn Hàng Đối Tác</h2>
+          </div>
+          <span class="designer-hint">Tỷ lệ diện tích thị giác 1:1</span>
+        </div>
+
+        <div class="cobrand-box">
+          <div class="cobrand-name editable" contenteditable="true" style="color: var(--ink);">GIA DỤNG THÔNG MINH 3AE</div>
+          <div class="cobrand-divider"></div>
+          <div class="cobrand-name editable" contenteditable="true" style="color: #0284C7;">HUNONIC</div>
+          <div class="cobrand-divider"></div>
+          <div class="cobrand-name editable" contenteditable="true" style="color: #EA580C;">GAABOR</div>
+          <div class="cobrand-divider"></div>
+          <div class="cobrand-name editable" contenteditable="true" style="color: #059669;">MASUTO</div>
+          <div class="cobrand-divider"></div>
+          <div class="cobrand-name editable" contenteditable="true" style="color: #7C3AED;">KOSTCOR</div>
+        </div>
+
+        <p class="editable" contenteditable="true" style="font-size: 12px; color: var(--ink-muted); text-align: center; margin-top: 14px;">
+          Quy chuẩn hiển thị: Vạch phân cách xám cao 60% logo, diện tích thị giác cân bằng 1:1, bảo chứng phân phối chính hãng.
+        </p>
+      </section>
+
+      <!-- SECTION 9: TOUCHPOINTS -->
+      <section class="spec-section" id="touchpoints">
+        <div class="section-header-wrap">
+          <div>
+            <div class="section-tag">09. ĐIỂM CHẠM VẬT LÝ</div>
+            <h2 class="section-heading editable" contenteditable="true">Bao Bì, Tem Bảo Hành & Đồng Phục</h2>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div style="border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 20px; background: var(--surface-raised);">
+            <div class="editable" contenteditable="true" style="font-family: var(--font-display); font-size: 14.5px; font-weight: 800; margin-bottom: 6px;">1. Thùng Carton Đóng Hàng</div>
+            <p class="editable" contenteditable="true" style="font-size: 12px; color: var(--ink-muted); line-height: 1.5; margin-bottom: 12px;">
+              Thùng carton Kraft mộc in mực đen đơn sắc tiết kiệm chi phí & thân thiện môi trường. Băng dính vàng in logo đen chống tráo hàng khi vận chuyển.
+            </p>
+            <div class="editable" contenteditable="true" style="background: var(--brand-primary-soft); color: #854D0E; font-size: 11px; font-weight: 800; padding: 6px 10px; border-radius: var(--radius-sm); text-align: center;">
+              BĂNG DÍNH VÀNG NIÊM PHONG CHỐNG TRÁO
+            </div>
+          </div>
+
+          <div style="border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 20px; background: var(--surface-raised);">
+            <div class="editable" contenteditable="true" style="font-family: var(--font-display); font-size: 14.5px; font-weight: 800; margin-bottom: 6px;">2. Thẻ Cảm Ơn & QR Bảo Hành</div>
+            <p class="editable" contenteditable="true" style="font-size: 12px; color: var(--ink-muted); line-height: 1.5; margin-bottom: 12px;">
+              Kích thước 90x54mm Bristol 300gsm cán mờ. Quét QR kích hoạt bảo hành điện tử chính hãng trong 10 giây và kết nối Zalo OA kỹ thuật.
+            </p>
+            <div class="editable" contenteditable="true" style="background: var(--status-success-soft); color: var(--status-success); font-size: 11px; font-weight: 800; padding: 6px 10px; border-radius: var(--radius-sm); text-align: center;">
+              MÃ QR KÍCH HOẠT BẢO HÀNH ĐIỆN TỬ 10 GIÂY
+            </div>
+          </div>
+
+          <div style="border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 20px; background: var(--surface-raised);">
+            <div class="editable" contenteditable="true" style="font-family: var(--font-display); font-size: 14.5px; font-weight: 800; margin-bottom: 6px;">3. Đồng Phục Kỹ Thuật 3AE</div>
+            <p class="editable" contenteditable="true" style="font-size: 12px; color: var(--ink-muted); line-height: 1.5; margin-bottom: 12px;">
+              Áo polo đen cotton 100% thoáng mát, bo cổ và bo tay viền vàng #FCD10C. Thêu logo ngực trái 7cm, sau lưng in tên thương hiệu.
+            </p>
+            <div class="editable" contenteditable="true" style="background: #000; color: #FCD10C; font-size: 11px; font-weight: 800; padding: 6px 10px; border-radius: var(--radius-sm); text-align: center;">
+              ÁO POLO ĐEN VIỀN VÀNG 3AE
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="copy-toast">Đã sao chép!</div>
+
+  <script>
+    // Toggle Edit Mode
+    let isEditMode = true;
+    document.body.classList.add('edit-mode-active');
+
+    function toggleEditMode() {
+      isEditMode = !isEditMode;
+      const btn = document.getElementById('btn-toggle-edit');
+      const editables = document.querySelectorAll('.editable');
+
+      if (isEditMode) {
+        document.body.classList.add('edit-mode-active');
+        btn.classList.add('active');
+        btn.textContent = 'Chế độ sửa chữ: BẬT';
+        editables.forEach(el => el.setAttribute('contenteditable', 'true'));
+        showToast('Chế độ chỉnh sửa: BẬT (Bấm vào chữ bất kỳ để sửa)');
+      } else {
+        document.body.classList.remove('edit-mode-active');
+        btn.classList.remove('active');
+        btn.textContent = 'Chế độ sửa chữ: TẮT';
+        editables.forEach(el => el.removeAttribute('contenteditable'));
+        showToast('Chế độ xem tĩnh: Đã khóa chỉnh sửa');
+      }
+    }
+
+    // Live Color Picker update
+    function updateBrandColor(type, hex) {
+      if (type === 'primary') {
+        document.documentElement.style.setProperty('--brand-primary', hex);
+        document.getElementById('hex-label-primary').textContent = hex;
+        document.getElementById('swatch-primary').style.background = hex;
+        showToast('Đã cập nhật màu Vàng Primary: ' + hex);
+      } else if (type === 'dark') {
+        document.documentElement.style.setProperty('--brand-dark', hex);
+        document.getElementById('hex-label-dark').textContent = hex;
+        document.getElementById('swatch-dark').style.background = hex;
+        showToast('Đã cập nhật màu Đen Dark: ' + hex);
+      }
+    }
+
+    // Copy color token
+    function copyToken(val, name) {
+      navigator.clipboard.writeText(val).then(() => {
+        showToast('Đã sao chép ' + name + ': ' + val);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('copy-toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    // Save changes into localStorage
+    function saveDesignerChanges() {
+      const state = {
+        primaryColor: document.getElementById('picker-primary').value,
+        darkColor: document.getElementById('picker-dark').value,
+        htmlContent: document.querySelector('.app-main').innerHTML
+      };
+      localStorage.setItem('gdtm_designer_state', JSON.stringify(state));
+      showToast('Đã lưu nội dung & màu sắc của bạn vào máy!');
+    }
+
+    // Reset to defaults
+    function resetDesignerChanges() {
+      if (confirm('Bạn có muốn đặt lại toàn bộ nội dung & màu sắc mặc định?')) {
+        localStorage.removeItem('gdtm_designer_state');
+        window.location.reload();
+      }
+    }
+
+    // Theme toggle
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      if (current === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        showToast('Đã chuyển sang Giao diện Sáng');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        showToast('Đã chuyển sang Giao diện Tối');
+      }
+    }
+
+    // Restore saved state if exists
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('gdtm_designer_state');
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (parsed.primaryColor) {
+            document.getElementById('picker-primary').value = parsed.primaryColor;
+            updateBrandColor('primary', parsed.primaryColor);
+          }
+          if (parsed.darkColor) {
+            document.getElementById('picker-dark').value = parsed.darkColor;
+            updateBrandColor('dark', parsed.darkColor);
+          }
+        } catch(e) {}
+      }
+    });
+  </script>
+
+</body>
+</html>

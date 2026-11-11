@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Guidelines — Gia Dụng Thông Minh 3AE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-primary: #FCD10C;
+      --brand-primary-hover: #E5BC0B;
+      --brand-primary-soft: #FEF9C3;
+      --brand-dark: #000000;
+      --brand-dark-neutral: #0F172A;
+      --surface: #F8FAFC;
+      --surface-raised: #FFFFFF;
+      --surface-subtle: #F1F5F9;
+      --line: #E2E8F0;
+      --ink: #0F172A;
+      --ink-muted: #64748B;
+      --verified-green: #10B981;
+      --promo-red: #EF4444;
+      --tech-blue: #0284C7;
+      --radius-pill: 9999px;
+      --radius-card: 16px;
+      --radius-md: 10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--surface);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Top Navigation bar for Brand Guide */
+    .guide-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding: 12px 20px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .guide-nav-links {
+      display: flex;
+      gap: 16px;
+      list-style: none;
+    }
+    .guide-nav-links a {
+      color: var(--ink-muted);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .guide-nav-links a:hover {
+      color: #000;
+    }
+
+    /* Header Presentation */
+    .brand-hero {
+      background: linear-gradient(135deg, #000000 0%, #171717 100%);
+      color: #fff;
+      padding: 56px 44px;
+      border-radius: var(--radius-card);
+      margin-bottom: 40px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(252, 209, 12, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(252, 209, 12, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      background-color: var(--brand-primary);
+      color: var(--brand-dark);
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 44px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .hero-title span { color: var(--brand-primary); }
+    .hero-subtitle {
+      font-size: 17px;
+      color: #94A3B8;
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    /* Section Styling */
+    .section-card {
+      background: var(--surface-raised);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-card);
+      padding: 36px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    }
+    .section-header {
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .section-tag {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--tech-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    /* Grid Layouts */
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+    /* Color Swatches */
+    .color-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .color-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+    }
+    .swatch {
+      height: 100px;
+      width: 100%;
+      position: relative;
+    }
+    .swatch-copy-hint {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .color-card:hover .swatch-copy-hint { opacity: 1; }
+    .swatch-info {
+      padding: 14px 16px;
+    }
+    .swatch-name {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+    .swatch-meta {
+      font-size: 12px;
+      color: var(--ink-muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      line-height: 1.5;
+    }
+
+    /* Live Header Mockup */
+    .header-mockup {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #111;
+      box-shadow: 0 12px 28px -5px rgba(0,0,0,0.15);
+      margin-bottom: 24px;
+    }
+    .top-announcement {
+      background: var(--brand-primary);
+      color: #000;
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+      padding: 7px 16px;
+      letter-spacing: 0.3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+    .main-nav {
+      background: var(--brand-dark);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .nav-search {
+      background: #fff;
+      border-radius: var(--radius-pill);
+      padding: 9px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      max-width: 480px;
+      color: var(--ink-muted);
+      font-size: 13px;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.08);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* Typography Showcase */
+    .type-sample {
+      padding: 16px 20px;
+      background: var(--surface-subtle);
+      border-radius: 10px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .type-label {
+      font-size: 11px;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      font-weight: 700;
+      min-width: 140px;
+    }
+    .type-text {
+      flex: 1;
+    }
+
+    /* Buttons & Components */
+    .btn-brand {
+      background-color: var(--brand-primary);
+      color: var(--brand-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-brand:hover {
+      background-color: var(--brand-primary-hover);
+      transform: translateY(-1px);
+    }
+    .btn-dark {
+      background-color: var(--brand-dark);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* Badge Pills */
+    .tag-verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .tag-sale {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      background: rgba(239, 68, 68, 0.12);
+      color: var(--promo-red);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .tag-blue {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      background: rgba(2, 132, 199, 0.12);
+      color: var(--tech-blue);
+      border: 1px solid rgba(2, 132, 199, 0.25);
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Value Pillars */
+    .pillar-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px;
+      background: var(--surface-raised);
+    }
+    .pillar-num {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--brand-primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin-bottom: 8px;
+    }
+    .pillar-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .pillar-desc {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    /* Comparison Box */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .rule-box {
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .rule-do {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      color: #166534;
+    }
+    .rule-dont {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #991B1B;
+    }
+    .rule-title {
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Toast notification */
+    #copy-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #000;
+      color: #FCD10C;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 9999;
+    }
+    #copy-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Quick Nav -->
+    <div class="guide-nav">
+      <div style="font-weight: 800; font-family: 'Plus Jakarta Sans', sans-serif;">
+        <span style="color: #E5BC0B;">★</span> GIA DỤNG THÔNG MINH 3AE
+      </div>
+      <div class="guide-nav-links">
+        <a href="#chien-luoc">Chiến lược</a>
+        <a href="#logo">Logo</a>
+        <a href="#mau-sac">Bảng màu</a>
+        <a href="#typography">Kiểu chữ</a>
+        <a href="#giao-dien">Giao diện số</a>
+        <a href="#bao-bi">Bao bì & POSM</a>
+      </div>
+    </div>
+
+    <!-- Hero Branding -->
+    <div class="brand-hero">
+      <div class="badge-pill">● BRAND GUIDELINES 2.0</div>
+      <h1 class="hero-title">Gia Dụng Thông Minh <span>3AE</span></h1>
+      <p class="hero-subtitle">Hệ thống quy chuẩn nhận diện thương hiệu số & thực tế: Đơn giản hóa việc nhà, bảo vệ sức khỏe và nâng tầm chuẩn sống cho hàng triệu gia đình Việt.</p>
+      
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+        <button class="btn-brand">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          Sản phẩm chính hãng
+        </button>
+        <button class="btn-dark" style="border: 1px solid #333;">Xuất VAT Đầy Đủ</button>
+        <span class="tag-verified">● Bảo hành điện tử toàn diện</span>
+        <span class="tag-sale">● Lỗi 1 đổi 1 trong 30 ngày</span>
+      </div>
+    </div>
+
+    <!-- Section 1: Cốt Lõi Thương Hiệu -->
+    <div class="section-card" id="chien-luoc">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">01. CHIẾN LƯỢC CỐT LÕI</div>
+          <div class="section-title">Thông Điệp & Giá Trị Thương Hiệu</div>
+        </div>
+      </div>
+
+      <div style="background: var(--surface-subtle); padding: 24px; border-radius: 12px; margin-bottom: 24px; border-left: 5px solid var(--brand-primary);">
+        <div style="font-size: 12px; font-weight: 800; color: var(--ink-muted); text-transform: uppercase; margin-bottom: 6px;">Slogan Chủ Đạo (Master Slogan)</div>
+        <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 28px; font-weight: 800; color: var(--ink);">
+          "Nhẹ gánh việc nhà, Nhờ nhà thông minh"
+        </div>
+        <div style="font-size: 14px; color: var(--ink-muted); margin-top: 8px;">
+          Cam kết bảo chứng dịch vụ: <strong>Sản phẩm chính hãng — Xuất VAT đầy đủ — Bảo hành toàn diện</strong>
+        </div>
+      </div>
+
+      <div class="grid-4">
+        <div class="pillar-card">
+          <div class="pillar-num">01</div>
+          <div class="pillar-title">Thông Minh (Smart)</div>
+          <div class="pillar-desc">Tối giản hóa thao tác "1 chạm", tích hợp tự động hóa qua điện thoại, thân thiện với người lớn tuổi và trẻ nhỏ.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">02</div>
+          <div class="pillar-title">Minh Bạch (Transparent)</div>
+          <div class="pillar-desc">100% hàng chính hãng, đầy đủ hóa đơn VAT và bảo hành điện tử. Thông số công bố chuẩn xác và trung thực.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">03</div>
+          <div class="pillar-title">Tin Cậy (Reliable)</div>
+          <div class="pillar-desc">Đối tác chiến lược của các nhãn hàng hàng đầu (Hunonic, Gaabor, Masuto...). Chính sách 1 đổi 1 nhanh chóng.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">04</div>
+          <div class="pillar-title">Tận Tâm (Caring)</div>
+          <div class="pillar-desc">Đồng hành trọn đời thiết bị với đội ngũ kỹ thuật tư vấn Video Call qua Zalo OA, chăm sóc bảo dưỡng định kỳ.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Logo Nhận Diện -->
+    <div class="section-card" id="logo">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">02. NHẬN DIỆN THỊ GIÁC</div>
+          <div class="section-title">Biểu Trưng Thương Hiệu (Logo System)</div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 24px;">
+        <!-- Logo trên nền tối -->
+        <div style="background: #000; padding: 44px 32px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; border: 1px solid #222;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 44" style="height: 48px; width: auto;" fill="none">
+            <g transform="translate(0, 2)">
+              <path d="M4 14L18 4L32 14" stroke="#FCD10C" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26 9V7H29V11.5" stroke="#FCD10C" stroke-width="2" stroke-linecap="round"/>
+              <rect x="6.5" y="14" width="23" height="19" rx="2.5" stroke="#FCD10C" stroke-width="2.5" fill="#000000"/>
+              <text x="9.5" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="900" fill="#FCD10C">GĐ</text>
+              <text x="9.5" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="900" fill="#FCD10C">TM</text>
+            </g>
+            <text x="42" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#FCD10C">giadungthongminh</text>
+          </svg>
+          <div style="color: #94A3B8; font-size: 12px; text-align: center;">
+            <strong>Phiên bản Ưu tiên Số 1: Master Dark</strong><br>Dùng cho Header Web, Biển hiệu LED, Áo thun đen, Intro Video
+          </div>
+        </div>
+
+        <!-- Logo trên nền sáng -->
+        <div style="background: #fff; border: 1px solid var(--line); padding: 44px 32px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 44" style="height: 48px; width: auto;" fill="none">
+            <g transform="translate(0, 2)">
+              <path d="M4 14L18 4L32 14" stroke="#0F172A" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26 9V7H29V11.5" stroke="#FCD10C" stroke-width="2.5" stroke-linecap="round"/>
+              <rect x="6.5" y="14" width="23" height="19" rx="2.5" stroke="#0F172A" stroke-width="2.5" fill="#FCD10C"/>
+              <text x="9.5" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="900" fill="#0F172A">GĐ</text>
+              <text x="9.5" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="900" fill="#0F172A">TM</text>
+            </g>
+            <text x="42" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#0F172A">giadungthongminh</text>
+          </svg>
+          <div style="color: var(--ink-muted); font-size: 12px; text-align: center;">
+            <strong>Phiên bản Sáng: Light Surface</strong><br>Dùng cho Thùng carton, Hóa đơn VAT, Catalogue, Namecard
+          </div>
+        </div>
+      </div>
+
+      <!-- Co-Branding Showcase -->
+      <div style="background: var(--surface-subtle); padding: 20px; border-radius: 12px; margin-bottom: 24px;">
+        <div style="font-size: 13px; font-weight: 700; margin-bottom: 12px; color: var(--ink);">Quy chuẩn Co-Branding với Đối tác phân phối (Hunonic, Gaabor, Masuto):</div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; background: #fff; padding: 20px; border-radius: 8px; border: 1px dashed var(--line);">
+          <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 16px;">GIA DỤNG THÔNG MINH</span>
+          <span style="color: #94A3B8; font-size: 20px;">|</span>
+          <span style="font-weight: 800; color: #0284C7; letter-spacing: 1px;">HUNONIC</span>
+          <span style="color: #94A3B8; font-size: 20px;">|</span>
+          <span style="font-weight: 800; color: #EA580C; letter-spacing: 1px;">GAABOR</span>
+          <span style="color: #94A3B8; font-size: 20px;">|</span>
+          <span style="font-weight: 800; color: #059669; letter-spacing: 1px;">MASUTO</span>
+        </div>
+      </div>
+
+      <!-- Do's and Don'ts -->
+      <div class="rules-grid">
+        <div class="rule-box rule-do">
+          <div class="rule-title">✔ NGUYÊN TẮC BẮT BUỘC</div>
+          • Giữ đúng tỷ lệ khung hình chuẩn của logo khi phóng to thu nhỏ.<br>
+          • Đảm bảo vùng an toàn X xung quanh 4 cạnh của logo.<br>
+          • Đặt logo trên nền có độ tương phản cao, rõ ràng sắc nét.
+        </div>
+        <div class="rule-box rule-dont">
+          <div class="rule-title">✖ ĐIỀU CẤM KỴ TUYỆT ĐỐI</div>
+          • Không kéo giãn tỷ lệ ngang/dọc làm méo mó biểu tượng.<br>
+          • Không tự ý thay đổi phông chữ hoặc viết hoa chữ "giadungthongminh".<br>
+          • Không đổ bóng đậm 3D, áp viền neon hoặc xoay nghiêng logo.
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Bảng Màu Chuẩn -->
+    <div class="section-card" id="mau-sac">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">03. HỆ THỐNG MÀU SẮC</div>
+          <div class="section-title">Color Palette Chuẩn Mực (Click to copy)</div>
+        </div>
+        <div style="font-size: 12px; color: var(--ink-muted); font-weight: 600;">Quy tắc phân bổ 60 - 30 - 10</div>
+      </div>
+
+      <div class="grid-4" style="margin-bottom: 24px;">
+        <div class="color-card" onclick="copyHex('#FCD10C')">
+          <div class="swatch" style="background: #FCD10C;">
+            <span class="swatch-copy-hint">Click sao chép</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Brand Primary</div>
+            <div class="swatch-meta">HEX: #FCD10C<br>RGB: 252, 209, 12<br>Top bar, Logo, CTA</div>
+          </div>
+        </div>
+        <div class="color-card" onclick="copyHex('#000000')">
+          <div class="swatch" style="background: #000000;">
+            <span class="swatch-copy-hint">Click sao chép</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Brand Dark</div>
+            <div class="swatch-meta">HEX: #000000<br>RGB: 0, 0, 0<br>Navbar, Footer, Đồng phục</div>
+          </div>
+        </div>
+        <div class="color-card" onclick="copyHex('#F8FAFC')">
+          <div class="swatch" style="background: #F8FAFC; border-bottom: 1px solid var(--line);">
+            <span class="swatch-copy-hint">Click sao chép</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Surface Canvas</div>
+            <div class="swatch-meta">HEX: #F8FAFC<br>RGB: 248, 250, 252<br>Nền trang dịu mắt</div>
+          </div>
+        </div>
+        <div class="color-card" onclick="copyHex('#FFFFFF')">
+          <div class="swatch" style="background: #FFFFFF; border-bottom: 1px solid var(--line);">
+            <span class="swatch-copy-hint">Click sao chép</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Surface Raised</div>
+            <div class="swatch-meta">HEX: #FFFFFF<br>RGB: 255, 255, 255<br>Card sản phẩm, Popup</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="color-card" onclick="copyHex('#10B981')">
+          <div class="swatch" style="background: #10B981; height: 60px;">
+            <span class="swatch-copy-hint">Click sao chép</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Verified Green (#10B981)</div>
+            <div class="swatch-meta">Bảo chứng chính hãng 100%, Còn hàng, Bảo hành OK</div>
+          </div>
+        </div>
+        <div class="color-card" onclick="copyHex('#EF4444')">
+          <div class="swatch" style="background: #EF4444; height: 60px;">
+            <span class="swatch-copy-hint">Click sao chép</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Promo Alert Red (#EF4444)</div>
+            <div class="swatch-meta">Flash Sale, Giảm giá %, Cảnh báo an toàn điện</div>
+          </div>
+        </div>
+        <div class="color-card" onclick="copyHex('#0284C7')">
+          <div class="swatch" style="background: #0284C7; height: 60px;">
+            <span class="swatch-copy-hint">Click sao chép</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Tech Blue (#0284C7)</div>
+            <div class="swatch-meta">Hóa đơn VAT, Kết nối WiFi, Hướng dẫn kỹ thuật</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Typography -->
+    <div class="section-card" id="typography">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">04. HỆ THỐNG KIỂU CHỮ</div>
+          <div class="section-title">Typography Hierarchy</div>
+        </div>
+        <div style="font-size: 13px; font-weight: 700; color: var(--tech-blue);">Plus Jakarta Sans + Inter</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-label">Display Hero (40px/800)</div>
+        <div class="type-text" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 32px; font-weight: 800;">
+          Nhẹ gánh việc nhà, Nhờ nhà thông minh
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-label">Heading 1 (28px/700)</div>
+        <div class="type-text" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 24px; font-weight: 700;">
+          Giải Pháp Thiết Bị Điện & Gia Dụng Thông Minh Chính Hãng
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-label">Heading 2 (20px/700)</div>
+        <div class="type-text" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 700;">
+          Công Tắc Cửa Cuốn WiFi Hunonic Door — Đóng Mở Từ Xa Qua Điện Thoại
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-label">Body Regular (14px/400)</div>
+        <div class="type-text" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--ink);">
+          Sản phẩm bảo hành chính hãng 24 tháng, đổi mới trong 30 ngày đầu tiên nếu phát sinh lỗi kỹ thuật. Hỗ trợ cài đặt từ xa qua Video Call Zalo 24/7.
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-label">Price & Badges</div>
+        <div class="type-text" style="display: flex; gap: 12px; align-items: center;">
+          <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 800; color: var(--promo-red);">
+            1.490.000 ₫
+          </span>
+          <span style="font-size: 13px; color: var(--ink-muted); text-decoration: line-through;">
+            2.190.000 ₫
+          </span>
+          <span class="tag-sale">-32% FLASH SALE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5: Header Chuẩn Ecommerce -->
+    <div class="section-card" id="giao-dien">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">05. GIAO DIỆN SỐ CHUẨN</div>
+          <div class="section-title">Header Thương Mại Điện Tử & Gian Hàng Số</div>
+        </div>
+      </div>
+
+      <!-- Live Mockup -->
+      <div class="header-mockup">
+        <!-- Top Bar -->
+        <div class="top-announcement">
+          <span style="background: #000; color: #fff; padding: 2px 10px; border-radius: 9999px; font-size: 11px;">● CHÍNH HÃNG</span>
+          <span>SẢN PHẨM CHÍNH HÃNG — XUẤT VAT ĐẦY ĐỦ — BẢO HÀNH TOÀN DIỆN</span>
+          <span style="font-weight: 800; margin-left: 12px;">📞 Hotline: 1900.xxxx</span>
+        </div>
+        <!-- Main Navbar -->
+        <div class="main-nav">
+          <div style="display: flex; align-items: center; gap: 18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 44" style="height: 32px; width: auto;" fill="none">
+              <g transform="translate(0, 2)">
+                <path d="M4 14L18 4L32 14" stroke="#FCD10C" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26 9V7H29V11.5" stroke="#FCD10C" stroke-width="2" stroke-linecap="round"/>
+                <rect x="6.5" y="14" width="23" height="19" rx="2.5" stroke="#FCD10C" stroke-width="2.5" fill="#000000"/>
+                <text x="9.5" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="900" fill="#FCD10C">GĐ</text>
+                <text x="9.5" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="900" fill="#FCD10C">TM</text>
+              </g>
+              <text x="42" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#FCD10C">giadungthongminh</text>
+            </svg>
+            <span style="color: #fff; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+              Danh mục
+            </span>
+          </div>
+
+          <div class="nav-search">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <span>Bạn tìm gì hôm nay? (Nồi chiên, Gaabor, Hunonic...)</span>
+          </div>
+
+          <div class="nav-actions">
+            <span style="cursor: pointer;">♡ Yêu thích</span>
+            <span style="cursor: pointer;">👤 Tài khoản</span>
+            <button style="background: var(--brand-primary); color: #000; border: none; padding: 7px 16px; border-radius: var(--radius-pill); font-weight: 700; font-size: 12px; cursor: pointer;">
+              🛒 Giỏ hàng (0)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6: Bao bì, Thẻ cảm ơn & POSM -->
+    <div class="section-card" id="bao-bi">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">06. ĐIỂM CHẠM VẬT LÝ & HẬU MÃI</div>
+          <div class="section-title">Bao Bì, Tem Bảo Hành & Đồng Phục</div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <!-- Packaging Box -->
+        <div style="border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: #fff;">
+          <div style="font-weight: 700; font-size: 15px; margin-bottom: 8px;">📦 Thùng Đóng Hàng Carton</div>
+          <p style="font-size: 13px; color: var(--ink-muted); margin-bottom: 12px;">In mực đen đơn sắc trên nền giấy kraft mộc mạc, kèm biểu tượng hàng dễ vỡ & chống ẩm.</p>
+          <div style="background: #FDF6E2; border: 1px dashed #D97706; padding: 12px; border-radius: 8px; font-size: 12px; color: #92400E; text-align: center;">
+            Băng keo vàng in Logo chữ đen niêm phong nắp thùng
+          </div>
+        </div>
+
+        <!-- Thank you card -->
+        <div style="border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: #fff;">
+          <div style="font-weight: 700; font-size: 15px; margin-bottom: 8px;">💌 Thẻ Cảm Ơn & QR Bảo Hành</div>
+          <p style="font-size: 13px; color: var(--ink-muted); margin-bottom: 12px;">Chuẩn kích thước 90x54mm, giấy Bristol 300gsm cán mờ. Quét QR kích hoạt bảo hành điện tử trong 10s.</p>
+          <div style="background: #ECFDF5; border: 1px dashed #059669; padding: 12px; border-radius: 8px; font-size: 12px; color: #065F46; text-align: center;">
+            QR kích hoạt bảo hành + Zalo OA hỗ trợ kỹ thuật
+          </div>
+        </div>
+
+        <!-- Uniform Polo -->
+        <div style="border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: #fff;">
+          <div style="font-weight: 700; font-size: 15px; margin-bottom: 8px;">👕 Đồng Phục Kỹ Thuật & Sales</div>
+          <p style="font-size: 13px; color: var(--ink-muted); margin-bottom: 12px;">Áo polo đen cotton 100%, bo cổ và bo tay viền vàng #FCD10C. Logo GĐTM thêu ngực trái 7cm.</p>
+          <div style="background: #000; color: #FCD10C; padding: 12px; border-radius: 8px; font-size: 12px; font-weight: 700; text-align: center;">
+            Sau lưng: GIA DỤNG THÔNG MINH 3AE
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="copy-toast">Đã sao chép mã màu thành công!</div>
+
+  <script>
+    function copyHex(hex) {
+      navigator.clipboard.writeText(hex).then(() => {
+        const toast = document.getElementById('copy-toast');
+        toast.textContent = 'Đã sao chép: ' + hex;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2200);
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- @dsCard group="Colors" viewport="700x170" subtitle="Vàng công nghệ, Đen tuyền, Surface canvas và tỷ lệ 60-30-10" name="Core Brand Colors" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family:var(--font-display); background:var(--surface-raised); padding:14px 18px; box-sizing:border-box; color:var(--ink); }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  .swatch-card { border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden; background:#fff; }
+  .color-bar { height:64px; width:100%; position:relative; }
+  .meta { padding:8px 10px; font-size:11px; }
+  .name { font-weight:700; color:var(--ink); }
+  .code { font-family:var(--font-mono); color:var(--ink-muted); font-size:10px; margin-top:2px; }
+  .usage { font-size:9.5px; color:var(--ink-muted); font-family:var(--font-body); margin-top:2px; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="swatch-card">
+    <div class="color-bar" style="background:#FCD10C;"></div>
+    <div class="meta">
+      <div class="name">Brand Primary (10%)</div>
+      <div class="code">#FCD10C • PMS 109C</div>
+      <div class="usage">Top bar, Logo, Nút Mua ngay</div>
+    </div>
+  </div>
+  <div class="swatch-card">
+    <div class="color-bar" style="background:#000000;"></div>
+    <div class="meta">
+      <div class="name">Brand Dark (30%)</div>
+      <div class="code">#000000 • Rich Black</div>
+      <div class="usage">Navbar, Chân trang, Đồng phục</div>
+    </div>
+  </div>
+  <div class="swatch-card">
+    <div class="color-bar" style="background:#F8FAFC; border-bottom:1px solid #E2E8F0;"></div>
+    <div class="meta">
+      <div class="name">Surface Canvas (60%)</div>
+      <div class="code">#F8FAFC • Slate 50</div>
+      <div class="usage">Nền toàn trang, studio chụp ảnh</div>
+    </div>
+  </div>
+  <div class="swatch-card">
+    <div class="color-bar" style="background:#FFFFFF; border-bottom:1px solid #E2E8F0;"></div>
+    <div class="meta">
+      <div class="name">Surface Raised</div>
+      <div class="code">#FFFFFF • Pure White</div>
+      <div class="usage">Thẻ sản phẩm, Dropdown, Search</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

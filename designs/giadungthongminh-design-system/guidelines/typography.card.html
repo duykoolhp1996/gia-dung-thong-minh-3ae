@@ -1,0 +1,41 @@
+<!-- @dsCard group="Type" viewport="700x170" subtitle="Plus Jakarta Sans cho Display & Inter cho Body" name="Typography Specimen" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--surface-raised); padding:14px 18px; box-sizing:border-box; color:var(--ink); }
+  .row { display:flex; justify-content:space-between; align-items:baseline; padding:6px 0; border-bottom:1px solid var(--line); }
+  .row:last-child { border-bottom:none; }
+  .label { font-family:var(--font-mono); font-size:10px; color:var(--ink-muted); width:130px; text-transform:uppercase; font-weight:700; }
+  .sample { flex:1; }
+  .display { font-family:var(--font-display); font-size:20px; font-weight:800; color:var(--ink); }
+  .h2 { font-family:var(--font-display); font-size:15px; font-weight:700; color:var(--ink); }
+  .body { font-family:var(--font-body); font-size:12px; color:var(--ink-secondary); }
+  .price { font-family:var(--font-display); font-size:16px; font-weight:800; color:var(--status-danger); }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="label">Display Hero</div>
+  <div class="sample display">Nhẹ gánh việc nhà, Nhờ nhà thông minh</div>
+</div>
+<div class="row">
+  <div class="label">Heading 2</div>
+  <div class="sample h2">Công Tắc Cửa Cuốn Thông Minh Hunonic Door</div>
+</div>
+<div class="row">
+  <div class="label">Body / Spec</div>
+  <div class="sample body">Cam kết 100% hàng chính hãng, đổi mới trong 30 ngày, bảo hành điện tử 24 tháng.</div>
+</div>
+<div class="row">
+  <div class="label">Price & Badge</div>
+  <div class="sample" style="display:flex; gap:10px; align-items:center;">
+    <span class="price">1.290.000 ₫</span>
+    <span style="font-size:11px; color:#94A3B8; text-decoration:line-through;">1.890.000 ₫</span>
+    <span style="background:rgba(239,68,68,0.12); color:#DC2626; font-size:10px; font-weight:800; padding:2px 6px; border-radius:4px;">-31% FLASH SALE</span>
+  </div>
+</div>
+</body>
+</html>
