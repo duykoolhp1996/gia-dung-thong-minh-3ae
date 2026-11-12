@@ -1,7 +1,7 @@
 // Auto-synced from Google Sheets Database: 1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac
-// Synced At: 12/11/2026 17:15:59
+// Synced At: 12/11/2026 17:20:39
 const LARK_BASE_ALL_TABLES = {
-    "syncedAt":  "2026-11-12 17:15:59",
+    "syncedAt":  "2026-11-12 17:20:38",
     "spreadsheetId":  "1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac",
     "spreadsheetUrl":  "https://docs.google.com/spreadsheets/d/1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac/edit",
     "personnel":  {
