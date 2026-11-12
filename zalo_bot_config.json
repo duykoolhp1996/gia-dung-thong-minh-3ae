@@ -1,0 +1,28 @@
+{
+  "bot_name": "Marcom 3AE Bot",
+  "team_name": "Phòng Marcom - Gia Dụng Thông Minh 3AE",
+  "company": "Gia Dụng Thông Minh 3AE",
+  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac",
+  "lark_base_url": "https://fjpi19m2k0lg.jp.larksuite.com/base/OKYabla1iabZezs9HXljL2mtpch",
+  "schedules": {
+    "morning": {
+      "time": "08:30",
+      "title": "BÁO CÁO ĐẦU NGÀY - PHÂN BỔ CÔNG VIỆC & NHẬN TASK"
+    },
+    "evening": {
+      "time": "17:30",
+      "title": "BÁO CÁO CUỐI NGÀY - TỔNG KẾT TIẾN ĐỘ & KPI"
+    }
+  },
+  "zalo_connection": {
+    "bot_token": "3153359854443286675:xjllrOtuEwnyHLRibfGqWaQIuOrZfmnPMdjdftkkOZsZlkBnbWfCNHdfUpuGpRbc",
+    "chat_id": "fe4d0d0d2659cf079648",
+    "group_chat_id": "zgr-323efe35775a9e04c74b",
+    "send_to_group": true,
+    "webhook_url": "",
+    "oa_access_token": "",
+    "oa_recipient_id": "fe4d0d0d2659cf079648",
+    "save_to_file": true,
+    "log_dir": "zalo_bot_logs"
+  }
+}

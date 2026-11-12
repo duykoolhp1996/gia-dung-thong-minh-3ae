@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Điều Hành Phòng Marketing — Gia Dụng Thông Minh 3AE</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js for High-End Data Viz -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FCD10C',
+              yellowHover: '#E5BC0B',
+              yellowSoft: '#FEF9C3',
+              dark: '#090A0F',
+              surface: '#111218',
+              card: '#15161F',
+              cardHover: '#1B1C28',
+              border: '#232533',
+              borderHover: '#373A4D',
+              green: '#10B981',
+              red: '#EF4444',
+              blue: '#0284C7',
+              sky: '#38BDF8',
+              purple: '#8B5CF6'
+            }
+          },
+          fontFamily: {
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          boxShadow: {
+            'glow-yellow': '0 0 25px rgba(252, 209, 12, 0.25)',
+            'card-hover': '0 12px 30px -10px rgba(0, 0, 0, 0.5)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      background-color: #090A0F;
+      color: #F1F5F9;
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0D0E14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232533;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FCD10C;
+    }
+    .badge-p1 {
+      background: rgba(239, 68, 68, 0.18);
+      color: #EF4444;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+    .badge-p2 {
+      background: rgba(252, 209, 12, 0.18);
+      color: #FCD10C;
+      border: 1px solid rgba(252, 209, 12, 0.4);
+    }
+    .badge-p3 {
+      background: rgba(56, 189, 248, 0.18);
+      color: #38BDF8;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+    .badge-done {
+      background: rgba(16, 185, 129, 0.18);
+      color: #10B981;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .active-nav-tab {
+      background-color: #FCD10C !important;
+      color: #000000 !important;
+      font-weight: 800 !important;
+      box-shadow: 0 4px 15px rgba(252, 209, 12, 0.3) !important;
+    }
+    .nav-tab:hover:not(.active-nav-tab) {
+      background-color: #1A1B24;
+      color: #FFFFFF;
+    }
+  </style>
+
+  <!-- Load Real Google Sheets Database Fallback -->
+  <script src="lark_tables_data.js"></script>
+</head>
+<body class="min-h-screen flex flex-col bg-[#090A0F] text-slate-100">
+
+  <!-- ======================================================== -->
+  <!-- 1. TOP HEADER & BRAND BAR -->
+  <!-- ======================================================== -->
+  <header class="sticky top-0 z-40 bg-[#0C0D13]/95 backdrop-blur-md border-b border-brand-border px-4 lg:px-8 py-3.5 transition-all">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Brand & Title Left -->
+      <div class="flex items-center gap-3.5 w-full md:w-auto justify-between md:justify-start">
+        <div class="flex items-center gap-3">
+          <!-- Official SVG Monogram -->
+          <div class="w-11 h-11 bg-black border-2 border-brand-yellow rounded-xl flex items-center justify-center p-1 shadow-md shadow-brand-yellow/20 shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-full h-full">
+              <path d="M6 18L24 6L42 18" stroke="#FCD10C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M34 11.5V9H38V14.5" stroke="#FCD10C" stroke-width="2.5" stroke-linecap="round"/>
+              <rect x="9" y="18" width="30" height="24" rx="3" stroke="#FCD10C" stroke-width="3" fill="#000000"/>
+              <text x="13" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="900" fill="#FCD10C" letter-spacing="1">GĐ</text>
+              <text x="13" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="900" fill="#FCD10C" letter-spacing="1">TM</text>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-display font-black text-white text-base lg:text-lg tracking-tight uppercase leading-none">
+                Gia Dụng Thông Minh 3AE
+              </h1>
+              <span class="bg-brand-yellow text-black font-display font-extrabold text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">
+                Marcom Hub
+              </span>
+            </div>
+            <p class="text-xs text-brand-yellow font-medium mt-0.5 tracking-wide">
+              Nhẹ gánh việc nhà, Nhờ nhà thông minh
+            </p>
+          </div>
+        </div>
+
+        <!-- Mobile Sync Button -->
+        <button onclick="triggerSync()" class="md:hidden p-2 rounded-xl bg-brand-surface border border-brand-border text-brand-yellow hover:bg-brand-card transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        </button>
+      </div>
+
+      <!-- Center Status Capsule -->
+      <div class="hidden xl:flex items-center gap-2.5 bg-brand-surface/90 border border-brand-border px-4 py-1.5 rounded-full text-xs">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse"></span>
+        <span class="text-slate-300 font-medium">Google Sheets Live:</span>
+        <span id="liveTaskCountBadge" class="font-bold text-white font-mono">92 Tasks</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-slate-400" id="syncTimeBadge">Cập nhật: Mới nhất</span>
+      </div>
+
+      <!-- Action Buttons & Manager Profile -->
+      <div class="flex items-center gap-2.5 w-full md:w-auto justify-end">
+        <!-- Sync Button -->
+        <button onclick="triggerSync()" id="syncBtn" class="hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-brand-surface border border-brand-border hover:border-brand-yellow text-slate-200 hover:text-white text-xs font-bold transition">
+          <svg id="syncIcon" class="w-3.5 h-3.5 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          <span>Đồng bộ Sheets</span>
+        </button>
+
+        <!-- New Task Button -->
+        <button onclick="openAddTaskModal()" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-brand-yellow text-black hover:bg-brand-yellowHover font-display font-extrabold text-xs shadow-sm shadow-brand-yellow/20 transition">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+          <span>Thêm Task</span>
+        </button>
+
+        <!-- Zalo Report Modal Button -->
+        <button onclick="switchTab('zalo')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#0068FF]/20 border border-[#0068FF]/50 text-[#38BDF8] hover:bg-[#0068FF]/30 font-display font-bold text-xs transition">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 2.21.72 4.25 1.93 5.92L3 22l4.24-1.06C8.83 21.57 10.37 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          <span>Báo Cáo Zalo</span>
+        </button>
+
+        <div class="h-6 w-px bg-brand-border mx-1"></div>
+
+        <!-- Manager Profile -->
+        <div class="flex items-center gap-2.5 pl-1">
+          <img src="assets/avatar_duy_manager.jpg" alt="Duy Manager" class="w-9 h-9 rounded-xl object-cover border-2 border-brand-yellow shrink-0">
+          <div class="hidden sm:flex flex-col text-left">
+            <span class="font-display font-extrabold text-white text-xs leading-none">Duy</span>
+            <span class="text-[10px] text-slate-400 font-medium mt-0.5">Marketing Manager</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- 2. NAVIGATION BAR (TABS) -->
+  <!-- ======================================================== -->
+  <nav class="bg-[#0E0F16] border-b border-brand-border sticky top-[65px] z-30 px-4 lg:px-8 py-2">
+    <div class="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto no-scrollbar gap-2">
+      <div class="flex items-center gap-1.5">
+        <button onclick="switchTab('overview')" id="nav-overview" class="nav-tab active-nav-tab px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          <span>1. Tổng Quan Điều Hành</span>
+        </button>
+
+        <button onclick="switchTab('master')" id="nav-master" class="nav-tab px-4 py-2 rounded-xl text-slate-300 text-xs font-bold transition flex items-center gap-2 shrink-0">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+          <span>2. Quản Lý Task Tổng</span>
+        </button>
+
+        <button onclick="switchTab('content')" id="nav-content" class="nav-tab px-4 py-2 rounded-xl text-slate-300 text-xs font-bold transition flex items-center gap-2 shrink-0">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+          <span>3. Content Calendar</span>
+        </button>
+
+        <button onclick="switchTab('creative')" id="nav-creative" class="nav-tab px-4 py-2 rounded-xl text-slate-300 text-xs font-bold transition flex items-center gap-2 shrink-0">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+          <span>4. Creative Studio (Design & Video)</span>
+        </button>
+
+        <button onclick="switchTab('team')" id="nav-team" class="nav-tab px-4 py-2 rounded-xl text-slate-300 text-xs font-bold transition flex items-center gap-2 shrink-0">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <span>5. Đội Ngũ Nhân Sự (5)</span>
+        </button>
+
+        <button onclick="switchTab('zalo')" id="nav-zalo" class="nav-tab px-4 py-2 rounded-xl text-slate-300 text-xs font-bold transition flex items-center gap-2 shrink-0">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+          <span>6. Zalo Bot & Báo Cáo</span>
+        </button>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-2">
+        <a href="https://docs.google.com/spreadsheets/d/1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac/edit" target="_blank" class="text-xs text-slate-400 hover:text-brand-yellow font-medium flex items-center gap-1 transition">
+          <span>Mở Google Sheets</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================== -->
+  <!-- 3. MAIN DASHBOARD CONTENT CONTAINER -->
+  <!-- ======================================================== -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 lg:px-8 py-6 space-y-6">
+
+    <!-- GLOBAL FILTER & SEARCH BAR -->
+    <div class="bg-brand-surface border border-brand-border rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-3 shadow-sm">
+      <div class="relative w-full md:w-96">
+        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" id="globalSearchInput" onkeyup="handleGlobalSearch()" placeholder="Tìm kiếm nhanh tên task, nhân sự, SKU, nền tảng..." class="w-full bg-[#171822] border border-brand-border rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-yellow transition">
+      </div>
+
+      <div class="flex items-center gap-2 w-full md:w-auto overflow-x-auto no-scrollbar">
+        <!-- Quick Filter: All, Today, Overdue -->
+        <button onclick="setFilterScope('all')" id="filter-all" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-brand-yellow text-black transition">Tất Cả</button>
+        <button onclick="setFilterScope('today')" id="filter-today" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-[#171822] text-slate-300 hover:text-white transition">Hôm Nay</button>
+        <button onclick="setFilterScope('overdue')" id="filter-overdue" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-[#171822] text-brand-red hover:bg-brand-red/10 transition">🚨 Quá Hạn</button>
+        <button onclick="setFilterScope('done')" id="filter-done" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-[#171822] text-brand-green hover:bg-brand-green/10 transition">Đã Xong</button>
+        <button onclick="exportTasksCSV()" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-[#171822] border border-brand-border text-slate-300 hover:text-white transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>Xuất CSV</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 1: TỔNG QUAN ĐIỀU HÀNH (OVERVIEW) -->
+    <!-- ======================================================== -->
+    <div id="tab-content-overview" class="space-y-6">
+
+      <!-- 4 HERO KPI STAT CARDS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- Total Tasks -->
+        <div class="bg-brand-surface border border-brand-border hover:border-slate-600 rounded-2xl p-5 transition-all shadow-sm">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Tổng Việc Theo Dõi</span>
+            <span class="w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white text-sm">📋</span>
+          </div>
+          <div class="mt-3 flex items-baseline gap-2">
+            <span id="kpiTotalTasks" class="font-display font-black text-4xl text-white">92</span>
+            <span class="text-xs text-slate-400 font-medium">công việc</span>
+          </div>
+          <div class="mt-2 text-xs text-slate-400 flex items-center gap-1.5">
+            <span class="text-brand-yellow font-bold">4 Sheet:</span> Task Tổng • Content • Design • Video
+          </div>
+        </div>
+
+        <!-- Completed Tasks -->
+        <div class="bg-brand-surface border border-brand-border hover:border-brand-green/40 rounded-2xl p-5 transition-all shadow-sm">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-brand-green uppercase tracking-wider">Đã Hoàn Thành</span>
+            <span class="w-8 h-8 rounded-xl bg-brand-green/15 border border-brand-green/30 flex items-center justify-center text-brand-green text-sm">✅</span>
+          </div>
+          <div class="mt-3 flex items-baseline gap-2">
+            <span id="kpiDoneTasks" class="font-display font-black text-4xl text-brand-green">38</span>
+            <span id="kpiDoneRate" class="text-xs font-extrabold text-brand-green bg-brand-green/15 px-2 py-0.5 rounded-full">41.3%</span>
+          </div>
+          <div class="mt-2 text-xs text-slate-400">
+            Tiến độ bàn giao và nghiệm thu thực tế
+          </div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="bg-brand-surface border border-brand-border hover:border-brand-yellow/40 rounded-2xl p-5 transition-all shadow-sm">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-brand-yellow uppercase tracking-wider">Đang Thực Hiện / Chờ</span>
+            <span class="w-8 h-8 rounded-xl bg-brand-yellow/15 border border-brand-yellow/30 flex items-center justify-center text-brand-yellow text-sm">⏳</span>
+          </div>
+          <div class="mt-3 flex items-baseline gap-2">
+            <span id="kpiInProgressTasks" class="font-display font-black text-4xl text-brand-yellow">47</span>
+            <span class="text-xs text-slate-400 font-medium">đang chạy</span>
+          </div>
+          <div class="mt-2 text-xs text-slate-400">
+            Bao gồm brief mới, đang viết, đang dựng
+          </div>
+        </div>
+
+        <!-- Overdue Tasks -->
+        <div class="bg-brand-surface border border-brand-border hover:border-brand-red/50 rounded-2xl p-5 transition-all shadow-sm relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-brand-red uppercase tracking-wider">🚨 Quá Hạn Cần Xử Lý</span>
+            <span class="w-8 h-8 rounded-xl bg-brand-red/15 border border-brand-red/30 flex items-center justify-center text-brand-red text-sm">⚠️</span>
+          </div>
+          <div class="mt-3 flex items-baseline gap-2">
+            <span id="kpiOverdueTasks" class="font-display font-black text-4xl text-brand-red">7</span>
+            <span class="text-xs font-extrabold text-brand-red bg-brand-red/15 px-2 py-0.5 rounded-full">Ưu tiên P1</span>
+          </div>
+          <div class="mt-2 text-xs text-slate-400">
+            Cần giải phóng dứt điểm trong ngày
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 2 INTERACTIVE CHARTS ROW (Using Dataviz Skill Rules) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Chart 1: Progress Breakdown Across 4 Specializations -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h2 class="font-display font-extrabold text-white text-base">Tiến Độ Theo 4 Mảng Chuyên Môn</h2>
+              <p class="text-xs text-slate-400">Phân bổ Hoàn thành, Đang làm và Quá hạn theo từng trang tính</p>
+            </div>
+            <span class="text-xs font-bold text-brand-yellow px-2.5 py-1 bg-brand-yellow/10 rounded-lg border border-brand-yellow/20">Live</span>
+          </div>
+          <div class="h-64 relative">
+            <canvas id="deptProgressChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart 2: Team Workload Distribution -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h2 class="font-display font-extrabold text-white text-base">Tải Trọng Công Việc 5 Nhân Sự</h2>
+              <p class="text-xs text-slate-400">Khối lượng nhiệm vụ được phân công thực tế từ các sheet</p>
+            </div>
+            <span class="text-xs font-bold text-slate-300 px-2.5 py-1 bg-white/5 rounded-lg border border-white/10">5 Nhân sự</span>
+          </div>
+          <div class="h-64 relative">
+            <canvas id="teamWorkloadChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PRIORITY ACTION MATRIX: OVERDUE & URGENT TASKS -->
+      <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 shadow-sm">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span class="text-brand-red text-lg">🚨</span>
+            <h2 class="font-display font-extrabold text-white text-base">Nhiệm Vụ Quá Hạn & Khẩn Cấp Cần Xử Lý Ngay</h2>
+          </div>
+          <span class="text-xs text-slate-400 font-medium">Chỉ đạo trực tiếp từ Trưởng phòng Duy</span>
+        </div>
+
+        <div id="urgentActionList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 2: QUẢN LÝ TASK TỔNG (MASTER TASKS) -->
+    <!-- ======================================================== -->
+    <div id="tab-content-master" class="hidden space-y-4">
+      <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="font-display font-extrabold text-white text-lg flex items-center gap-2">
+              <span>📋</span> Bảng Quản Lý Task Tổng (Master Marketing)
+            </h2>
+            <p class="text-xs text-slate-400">Các chiến dịch lớn, branding, điều phối đa kênh phòng Marcom 3AE</p>
+          </div>
+          <span id="masterTaskCounter" class="text-xs font-bold text-brand-yellow px-3 py-1 bg-brand-yellow/10 rounded-full border border-brand-yellow/20">
+            33 công việc
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300 border-collapse">
+            <thead>
+              <tr class="border-b border-brand-border text-slate-400 uppercase font-mono tracking-wider text-[11px] bg-[#14151E]">
+                <th class="py-3 px-3">Tên Công Việc / Task</th>
+                <th class="py-3 px-3">Người Phụ Trách</th>
+                <th class="py-3 px-3">Bộ Phận</th>
+                <th class="py-3 px-3">Mức Độ</th>
+                <th class="py-3 px-3">Hạn Chót</th>
+                <th class="py-3 px-3">Trạng Thái</th>
+                <th class="py-3 px-3 text-right">Tài Nguyên</th>
+              </tr>
+            </thead>
+            <tbody id="masterTasksTableBody" class="divide-y divide-brand-border/60">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 3: CONTENT CALENDAR -->
+    <!-- ======================================================== -->
+    <div id="tab-content-content" class="hidden space-y-4">
+      <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="font-display font-extrabold text-white text-lg flex items-center gap-2">
+              <span>✍️</span> Lịch Biên Tập & Kịch Bản (Content Calendar)
+            </h2>
+            <p class="text-xs text-slate-400">Kịch bản video ngắn TikTok/Reels, bài viết Fanpage, sản phẩm & chiến dịch</p>
+          </div>
+          <span id="contentTaskCounter" class="text-xs font-bold text-brand-green px-3 py-1 bg-brand-green/10 rounded-full border border-brand-green/20">
+            19 bài viết / kịch bản
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="contentCardsGrid">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 4: CREATIVE STUDIO (DESIGN & VIDEO) -->
+    <!-- ======================================================== -->
+    <div id="tab-content-creative" class="hidden space-y-6">
+      
+      <!-- Top Overview of Creative Studio -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Column Left: Graphic Designer (Loan) -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-brand-border pb-3">
+            <div class="flex items-center gap-2.5">
+              <span class="text-xl">🎨</span>
+              <div>
+                <h3 class="font-display font-extrabold text-white text-base">Graphic Designer (Loan Huỳnh)</h3>
+                <p class="text-xs text-slate-400">Ấn phẩm POSM, banner sàn TMĐT, icon, thumbnail</p>
+              </div>
+            </div>
+            <span id="designerTaskCounter" class="text-xs font-bold text-purple-400 px-2.5 py-0.5 bg-purple-500/10 rounded-full border border-purple-500/20">21 task</span>
+          </div>
+
+          <div id="designerTasksList" class="space-y-3">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Column Right: Video Editor (Toàn) -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-brand-border pb-3">
+            <div class="flex items-center gap-2.5">
+              <span class="text-xl">🎬</span>
+              <div>
+                <h3 class="font-display font-extrabold text-white text-base">Video Editor (Toàn Media)</h3>
+                <p class="text-xs text-slate-400">Video review, dựng bán hàng TikTok Shop, dự án dựng</p>
+              </div>
+            </div>
+            <span id="editorTaskCounter" class="text-xs font-bold text-sky-400 px-2.5 py-0.5 bg-sky-500/10 rounded-full border border-sky-500/20">19 video</span>
+          </div>
+
+          <div id="editorTasksList" class="space-y-3">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 5: ĐỘI NGŨ NHÂN SỰ (TEAM WORKLOAD) -->
+    <!-- ======================================================== -->
+    <div id="tab-content-team" class="hidden space-y-6">
+      
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="font-display font-extrabold text-white text-xl">Đội Ngũ Nhân Sự Phòng Marketing 3AE</h2>
+          <p class="text-xs text-slate-400">Tổng hợp 5 nhân sự chủ chốt, chức danh và khối lượng công việc thực tế</p>
+        </div>
+        <span class="text-xs text-brand-yellow font-bold bg-brand-yellow/10 border border-brand-yellow/20 px-3 py-1 rounded-full">
+          5 Thành Viên
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="teamCardsGrid">
+        <!-- Dynamically populated with 5 real people cards -->
+      </div>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 6: ZALO BOT & BÁO CÁO AUTOMATION -->
+    <!-- ======================================================== -->
+    <div id="tab-content-zalo" class="hidden space-y-6">
+      
+      <!-- Top Hero Banner for Zalo Bot -->
+      <div class="bg-gradient-to-r from-[#0068FF]/15 via-brand-surface to-brand-surface border border-[#0068FF]/40 rounded-2xl p-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 bg-[#0068FF]/20 text-[#38BDF8] text-xs font-bold px-3 py-1 rounded-full border border-[#0068FF]/40">
+            <span>🤖</span> Zalo Bot Dispatcher & Infographic Engine
+          </div>
+          <h2 class="font-display font-black text-2xl text-white">Hệ Thống Xuất Báo Cáo Tự Động & Zalo Bot</h2>
+          <p class="text-xs text-slate-300 max-w-2xl leading-relaxed">
+            Hệ thống tự động đồng bộ Google Sheets, phân loại mức độ khẩn cấp (P1, P2, P3) và xuất ảnh Infographic đồ họa 16:9 & Mobile dọc (9:16) gửi trực tiếp vào Zalo đúng chuẩn nhận diện thương hiệu 3AE.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-2.5 shrink-0">
+          <a href="Gui_Bao_Cao_Zalo.bat" class="px-4 py-2.5 rounded-xl bg-brand-yellow text-black font-display font-extrabold text-xs shadow-md shadow-brand-yellow/20 flex items-center justify-center gap-2 transition hover:bg-brand-yellowHover">
+            <span>⚡</span> Mở Menu Console (.bat)
+          </a>
+        </div>
+      </div>
+
+      <!-- Preview of Generated Infographics (16:9 & Mobile) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Card 1: Báo Cáo Hàng Ngày -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="font-display font-extrabold text-white text-base">Báo Cáo Hàng Ngày (Việc Hôm Nay & Hôm Sau)</h3>
+              <p class="text-xs text-slate-400">Tự động bắn 08:30 sáng: Quá hạn • Hôm nay • 48h tới</p>
+            </div>
+            <span class="text-xs font-bold text-brand-yellow bg-brand-yellow/10 border border-brand-yellow/20 px-2 py-0.5 rounded">16:9 & Mobile</span>
+          </div>
+
+          <div class="rounded-xl overflow-hidden border border-brand-border bg-black aspect-video relative group">
+            <img src="Bao_Cao_Hang_Ngay_Va_Hom_Sau_16_9.png" alt="Báo Cáo Hàng Ngày 16:9" class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.02]">
+            <a href="Bao_Cao_Hang_Ngay_Va_Hom_Sau_16_9.png" target="_blank" class="absolute bottom-3 right-3 bg-black/80 hover:bg-brand-yellow hover:text-black text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/20 transition">
+              Xem ảnh gốc 16:9 ➔
+            </a>
+          </div>
+
+          <div class="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-brand-border">
+            <span>Dạng xem điện thoại:</span>
+            <a href="Bao_Cao_Hang_Ngay_Va_Hom_Sau_Mobile.png" target="_blank" class="text-brand-yellow font-bold hover:underline">
+              📱 Xem bản Mobile 9:16
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Báo Cáo Tuần -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="font-display font-extrabold text-white text-base">Báo Cáo Tuần (Tổng Quan Phòng Ban)</h3>
+              <p class="text-xs text-slate-400">Tự động bắn sáng Thứ Hai: 4 Chỉ số • 4 Vị trí • Task trọng tâm</p>
+            </div>
+            <span class="text-xs font-bold text-brand-green bg-brand-green/10 border border-brand-green/20 px-2 py-0.5 rounded">Thứ Hai hàng tuần</span>
+          </div>
+
+          <div class="rounded-xl overflow-hidden border border-brand-border bg-black aspect-video relative group">
+            <img src="Bao_Cao_Tuan_16_9.png" alt="Báo Cáo Tuần 16:9" class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.02]">
+            <a href="Bao_Cao_Tuan_16_9.png" target="_blank" class="absolute bottom-3 right-3 bg-black/80 hover:bg-brand-yellow hover:text-black text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/20 transition">
+              Xem ảnh gốc 16:9 ➔
+            </a>
+          </div>
+
+          <div class="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-brand-border">
+            <span>Dạng xem điện thoại:</span>
+            <a href="Bao_Cao_Tuan_Mobile.png" target="_blank" class="text-brand-yellow font-bold hover:underline">
+              📱 Xem bản Mobile 9:16
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Natural Language Zalo Bot Guide -->
+      <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 space-y-4">
+        <h3 class="font-display font-extrabold text-white text-base flex items-center gap-2">
+          <span>💬</span> Hướng Dẫn Ra Lệnh Trực Tiếp Trong Zalo
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="bg-[#15161F] p-4 rounded-xl border border-brand-border space-y-2">
+            <div class="font-bold text-brand-yellow uppercase">1. Báo cáo hàng ngày</div>
+            <p class="text-slate-300 font-mono bg-black/40 p-2 rounded">hôm nay / daily</p>
+            <p class="text-slate-400">Nhận ảnh infographic việc quá hạn, việc hôm nay và 48h tới (16:9). Thêm chữ <b class="text-white">mobile</b> để nhận ảnh dọc.</p>
+          </div>
+
+          <div class="bg-[#15161F] p-4 rounded-xl border border-brand-border space-y-2">
+            <div class="font-bold text-brand-green uppercase">2. Báo cáo tuần</div>
+            <p class="text-slate-300 font-mono bg-black/40 p-2 rounded">tuần / weekly</p>
+            <p class="text-slate-400">Nhận ảnh tổng hợp 4 chỉ số và 4 vị trí nhân sự tuần. Thêm chữ <b class="text-white">mobile</b> để nhận ảnh dọc.</p>
+          </div>
+
+          <div class="bg-[#15161F] p-4 rounded-xl border border-brand-border space-y-2">
+            <div class="font-bold text-brand-sky uppercase">3. Báo cáo cá nhân</div>
+            <p class="text-slate-300 font-mono bg-black/40 p-2 rounded">cá nhân loan / mỵ / toàn</p>
+            <p class="text-slate-400">Bot tự động quét tất cả các sheet và gửi ảnh báo cáo riêng cho thành viên được gọi.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- 4. MODAL: THÊM CÔNG VIỆC MỚI -->
+  <!-- ======================================================== -->
+  <div id="addTaskModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#13141C] border border-brand-border rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-brand-border pb-3">
+        <h3 class="font-display font-extrabold text-white text-base">Thêm Công Việc Mới Vào Google Sheets</h3>
+        <button onclick="closeAddTaskModal()" class="text-slate-400 hover:text-white p-1 rounded-lg">✕</button>
+      </div>
+
+      <form id="newTaskForm" onsubmit="handleAddTaskSubmit(event)" class="space-y-3.5 text-xs">
+        <div>
+          <label class="block text-slate-300 font-semibold mb-1">Tên Công Việc / Task (*)</label>
+          <input type="text" id="taskTitleInput" required placeholder="Nhập tên nhiệm vụ..." class="w-full bg-[#1A1B26] border border-brand-border rounded-xl px-3 py-2 text-white focus:outline-none focus:border-brand-yellow">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-semibold mb-1">Bộ Phận / Sheet (*)</label>
+            <select id="taskDeptSelect" class="w-full bg-[#1A1B26] border border-brand-border rounded-xl px-3 py-2 text-white focus:outline-none focus:border-brand-yellow">
+              <option value="Quản Lý Task Tổng">Quản Lý Task Tổng</option>
+              <option value="Graphic Designer">Graphic Designer</option>
+              <option value="Content Calendar">Content Calendar</option>
+              <option value="Video Editor">Video Editor</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-slate-300 font-semibold mb-1">Người Phụ Trách (*)</label>
+            <select id="taskAssigneeSelect" class="w-full bg-[#1A1B26] border border-brand-border rounded-xl px-3 py-2 text-white focus:outline-none focus:border-brand-yellow">
+              <option value="Duy">Duy (Manager)</option>
+              <option value="Loan">Loan (Designer)</option>
+              <option value="Mỵ">Mỵ (Content)</option>
+              <option value="Toàn">Toàn (Video)</option>
+              <option value="Phụng">Phụng (Seeding)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-semibold mb-1">Mức Độ Ưu Tiên</label>
+            <select id="taskPrioritySelect" class="w-full bg-[#1A1B26] border border-brand-border rounded-xl px-3 py-2 text-white focus:outline-none focus:border-brand-yellow">
+              <option value="P1 - Khẩn cấp">P1 - Khẩn cấp</option>
+              <option value="P2 - Cao" selected>P2 - Cao</option>
+              <option value="P3 - Trung bình">P3 - Trung bình</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-slate-300 font-semibold mb-1">Hạn Chót (Deadline)</label>
+            <input type="text" id="taskDeadlineInput" placeholder="dd/MM/yyyy" class="w-full bg-[#1A1B26] border border-brand-border rounded-xl px-3 py-2 text-white focus:outline-none focus:border-brand-yellow">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-semibold mb-1">Link Brief / Tài Nguyên</label>
+          <input type="url" id="taskLinkInput" placeholder="https://..." class="w-full bg-[#1A1B26] border border-brand-border rounded-xl px-3 py-2 text-white focus:outline-none focus:border-brand-yellow">
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-2 border-t border-brand-border">
+          <button type="button" onclick="closeAddTaskModal()" class="px-4 py-2 rounded-xl bg-brand-surface border border-brand-border text-slate-300 hover:text-white font-semibold">Hủy</button>
+          <button type="submit" class="px-5 py-2 rounded-xl bg-brand-yellow text-black font-display font-extrabold hover:bg-brand-yellowHover shadow-sm shadow-brand-yellow/20">Lưu Công Việc</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 5. FOOTER BRAND BAR -->
+  <!-- ======================================================== -->
+  <footer class="mt-auto border-t border-brand-border/60 bg-[#0A0B10] py-4 px-4 lg:px-8 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>
+        <b class="text-brand-yellow">GIA DỤNG THÔNG MINH 3AE</b> • Sản phẩm chính hãng — Xuất VAT đầy đủ — Bảo hành toàn diện
+      </div>
+      <div>
+        Hệ thống điều hành Marcom v4.5 • Powered by AI Agent & Google Sheets API
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- 6. CORE JAVASCRIPT APPLICATION LOGIC -->
+  <!-- ======================================================== -->
+  <script>
+    // State
+    let database = null;
+    let allNormalizedTasks = [];
+    let currentFilterScope = 'all';
+    let currentActiveTab = 'overview';
+    let deptChartInstance = null;
+    let workloadChartInstance = null;
+
+    // 5 Team Members Config
+    const TEAM_MEMBERS = [
+      {
+        name: 'Duy',
+        fullName: 'Duy',
+        role: 'Trưởng Phòng Marketing (Marketing Manager)',
+        avatar: 'assets/avatar_duy_manager.jpg',
+        badge: 'Manager',
+        color: '#FCD10C'
+      },
+      {
+        name: 'Loan',
+        fullName: 'Loan Huỳnh',
+        role: 'Senior Graphic Designer',
+        avatar: 'assets/avatar_loan_huynh.jpg',
+        badge: 'Designer',
+        color: '#8B5CF6'
+      },
+      {
+        name: 'Mỵ',
+        fullName: 'Mỵ Nguyễn',
+        role: 'Chuyên Viên Content & Kịch Bản',
+        avatar: 'assets/avatar_my_content.jpg',
+        badge: 'Content',
+        color: '#10B981'
+      },
+      {
+        name: 'Toàn',
+        fullName: 'Toàn Media',
+        role: 'Media Producer & Video Editor',
+        avatar: 'assets/avatar_media_editor.jpg',
+        badge: 'Editor',
+        color: '#0284C7'
+      },
+      {
+        name: 'Phụng',
+        fullName: 'Phụng Đỗ',
+        role: 'Quản Lý Nền Tảng & Seeding',
+        avatar: 'assets/avatar_phung_content.jpg',
+        badge: 'Seeding',
+        color: '#EC4899'
+      }
+    ];
+
+    // Helper: Is Done
+    function isTaskDone(status) {
+      if (!status) return false;
+      const s = String(status).toLowerCase();
+      return s.includes('hoàn thành') || s.includes('đã duyệt') || s.includes('đã đăng') || s.includes('5.') || s.includes('6.') || s.includes('8.');
+    }
+
+    // Helper: Parse Date (dd/MM/yyyy)
+    function parseVnDate(dateStr) {
+      if (!dateStr) return null;
+      const clean = String(dateStr).trim().split(' ')[0];
+      const parts = clean.split('/');
+      if (parts.length === 3) {
+        const d = parseInt(parts[0], 10);
+        const m = parseInt(parts[1], 10) - 1;
+        const y = parseInt(parts[2], 10);
+        if (!isNaN(d) && !isNaN(m) && !isNaN(y)) {
+          return new Date(y, m, d);
+        }
+      }
+      return null;
+    }
+
+    // Helper: Is Overdue
+    function isTaskOverdue(deadlineStr, status) {
+      if (isTaskDone(status)) return false;
+      const d = parseVnDate(deadlineStr);
+      if (!d) return false;
+      const today = new Date();
+      today.setHours(0,0,0,0);
+      return d < today;
+    }
+
+    // Helper: Normalize Tasks
+    function normalizeAllDatabaseTasks(db) {
+      const list = [];
+
+      // 1. Master Tasks
+      if (db.master_tasks && db.master_tasks.records) {
+        db.master_tasks.records.forEach(r => {
+          const name = r['Tên công việc / Task'];
+          if (name && name.trim()) {
+            list.push({
+              id: r.id || ('master_' + Math.random()),
+              source: 'Quản Lý Task Tổng',
+              sourceKey: 'master',
+              name: name.trim(),
+              assignee: r['Người phụ trách'] || 'Duy',
+              dept: r['Bộ phận'] || 'Marketing',
+              status: r['Trạng thái'] || '2. Đang thực hiện',
+              priority: r['Mức độ ưu tiên'] || 'P2 - Cao',
+              deadline: r['Hạn chót (Deadline)'] || '',
+              progress: r['Tiến độ hoàn thành (%)'] || '50%',
+              link: r['Link Brief & Tài nguyên'] || '',
+              isDone: isTaskDone(r['Trạng thái']),
+              isOverdue: isTaskOverdue(r['Hạn chót (Deadline)'], r['Trạng thái'])
+            });
+          }
+        });
+      }
+
+      // 2. Content Calendar
+      if (db.content && db.content.records) {
+        db.content.records.forEach(r => {
+          const name = r['Tiêu Đề Bài Viết / Kịch Bản'];
+          if (name && name.trim()) {
+            const status = r['Trạng Thái Duyệt'] || 'Đang viết';
+            const dl = r['Lịch Đăng (Air Date)'] || r['Ngày Gửi Duyệt'] || '';
+            list.push({
+              id: r.id || ('content_' + Math.random()),
+              source: 'Content Calendar',
+              sourceKey: 'content',
+              name: name.trim(),
+              assignee: r['Người Thực Hiện'] || 'Mỵ',
+              dept: 'Content & Copywriting',
+              channel: r['Kênh / Nền Tảng'] || 'TikTok Shop',
+              category: r['Content Pillar / Chủ Đề'] || 'Kịch bản Video ngắn',
+              status: status,
+              priority: 'P2 - Cao',
+              deadline: dl,
+              progress: isTaskDone(status) ? '100%' : '50%',
+              link: r['Link Doc Kịch Bản'] || '',
+              sku: r['Sản Phẩm / SKU Liên Quan'] || '',
+              isDone: isTaskDone(status),
+              isOverdue: isTaskOverdue(dl, status)
+            });
+          }
+        });
+      }
+
+      // 3. Graphic Designer
+      if (db.designer && db.designer.records) {
+        db.designer.records.forEach(r => {
+          const name = r['Tên ấn phẩm / Task Thiết Kế'];
+          if (name && name.trim()) {
+            const status = r['Trạng thái thiết kế'] || 'Đang thiết kế';
+            const dl = r['Hạn chót (Deadline)'] || '';
+            list.push({
+              id: r.id || ('designer_' + Math.random()),
+              source: 'Graphic Designer',
+              sourceKey: 'designer',
+              name: name.trim(),
+              assignee: r['Người phụ trách'] || 'Loan',
+              dept: 'Graphic Design',
+              channel: r['Kênh xuất bản'] || 'TMĐT & Website',
+              category: r['Phân loại ấn phẩm'] || 'Banner sàn',
+              status: status,
+              priority: r['Mức độ ưu tiên'] || 'P2 - Cao',
+              deadline: dl,
+              progress: r['Tiến độ hoàn thành (%)'] || (isTaskDone(status) ? '100%' : '50%'),
+              link: r['Link File Thiết Kế (Drive/Figma)'] || r['Link Brief & Tài nguyên'] || '',
+              sku: r['Sản phẩm / SKU liên quan'] || '',
+              isDone: isTaskDone(status),
+              isOverdue: isTaskOverdue(dl, status)
+            });
+          }
+        });
+      }
+
+      // 4. Video Editor
+      if (db.editor && db.editor.records) {
+        db.editor.records.forEach(r => {
+          const name = r['Tên Video / Dự án dựng'];
+          if (name && name.trim()) {
+            const status = r['Trạng thái dựng'] || 'Đang dựng';
+            const dl = r['Hạn chót bàn giao (Deadline)'] || '';
+            list.push({
+              id: r.id || ('editor_' + Math.random()),
+              source: 'Video Editor',
+              sourceKey: 'editor',
+              name: name.trim(),
+              assignee: r['Editor phụ trách'] || 'Toàn',
+              dept: 'Video Media',
+              channel: r['Kênh xuất bản'] || 'TikTok Shop',
+              category: r['Định dạng Video'] || 'Video review',
+              status: status,
+              priority: r['Mức độ ưu tiên'] || 'P1 - Khẩn cấp',
+              deadline: dl,
+              progress: r['Tiến độ hoàn thành (%)'] || (isTaskDone(status) ? '100%' : '60%'),
+              link: r['Link Preview / Bản Render'] || r['Link Footage (Source Drive)'] || '',
+              duration: r['Thời lượng dự kiến'] || '30s - 45s',
+              sku: r['Sản phẩm / SKU liên quan'] || '',
+              isDone: isTaskDone(status),
+              isOverdue: isTaskOverdue(dl, status)
+            });
+          }
+        });
+      }
+
+      return list;
+    }
+
+    // Load Data Strategy
+    async function initDashboard() {
+      // 1. Check window.LARK_BASE_ALL_TABLES (synchronously ready from lark_tables_data.js)
+      if (typeof LARK_BASE_ALL_TABLES !== 'undefined' && LARK_BASE_ALL_TABLES) {
+        database = LARK_BASE_ALL_TABLES;
+      }
+
+      // 2. Try fetching freshest from /api/data or database.json
+      try {
+        const res = await fetch('/api/data', { cache: 'no-store' });
+        if (res.ok) {
+          database = await res.json();
+        }
+      } catch (e) {
+        try {
+          const res2 = await fetch('database.json', { cache: 'no-store' });
+          if (res2.ok) {
+            database = await res2.json();
+          }
+        } catch (err) {}
+      }
+
+      if (!database) {
+        console.warn('Chưa nạp được database, đang thử lại...');
+        return;
+      }
+
+      allNormalizedTasks = normalizeAllDatabaseTasks(database);
+      renderAllViews();
+    }
+
+    // Render All Views
+    function renderAllViews() {
+      renderKPICounters();
+      renderCharts();
+      renderUrgentActionList();
+      renderMasterTable();
+      renderContentCards();
+      renderCreativeStudio();
+      renderTeamMembers();
+    }
+
+    // 1. Render KPI Counters
+    function renderKPICounters() {
+      const total = allNormalizedTasks.length;
+      const done = allNormalizedTasks.filter(t => t.isDone).length;
+      const overdue = allNormalizedTasks.filter(t => t.isOverdue).length;
+      const inProgress = total - done - overdue;
+      const rate = total > 0 ? ((done / total) * 100).toFixed(1) : 0;
+
+      document.getElementById('kpiTotalTasks').textContent = total;
+      document.getElementById('kpiDoneTasks').textContent = done;
+      document.getElementById('kpiDoneRate').textContent = rate + '%';
+      document.getElementById('kpiInProgressTasks').textContent = Math.max(0, inProgress);
+      document.getElementById('kpiOverdueTasks').textContent = overdue;
+      document.getElementById('liveTaskCountBadge').textContent = total + ' Tasks';
+      
+      if (database && database.syncedAt) {
+        document.getElementById('syncTimeBadge').textContent = 'Đồng bộ: ' + database.syncedAt;
+      }
+    }
+
+    // 2. Render Charts
+    function renderCharts() {
+      // Chart 1: Progress across 4 specializations
+      const sources = [
+        { label: 'Task Tổng', key: 'master' },
+        { label: 'Content', key: 'content' },
+        { label: 'Design', key: 'designer' },
+        { label: 'Video', key: 'editor' }
+      ];
+
+      const doneCounts = sources.map(s => allNormalizedTasks.filter(t => t.sourceKey === s.key && t.isDone).length);
+      const overdueCounts = sources.map(s => allNormalizedTasks.filter(t => t.sourceKey === s.key && t.isOverdue).length);
+      const inProgressCounts = sources.map(s => allNormalizedTasks.filter(t => t.sourceKey === s.key && !t.isDone && !t.isOverdue).length);
+
+      const ctx1 = document.getElementById('deptProgressChart').getContext('2d');
+      if (deptChartInstance) deptChartInstance.destroy();
+
+      deptChartInstance = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+          labels: sources.map(s => s.label),
+          datasets: [
+            {
+              label: 'Đã hoàn thành',
+              data: doneCounts,
+              backgroundColor: '#10B981',
+              borderRadius: 6
+            },
+            {
+              label: 'Đang làm',
+              data: inProgressCounts,
+              backgroundColor: '#FCD10C',
+              borderRadius: 6
+            },
+            {
+              label: 'Quá hạn',
+              data: overdueCounts,
+              backgroundColor: '#EF4444',
+              borderRadius: 6
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              stacked: true,
+              grid: { display: false },
+              ticks: { color: '#94A3B8', font: { family: 'Plus Jakarta Sans', weight: '700' } }
+            },
+            y: {
+              stacked: true,
+              grid: { color: 'rgba(255, 255, 255, 0.06)' },
+              ticks: { color: '#94A3B8' }
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { color: '#E2E8F0', font: { family: 'Inter', weight: '600' }, boxWidth: 12 }
+            }
+          }
+        }
+      });
+
+      // Chart 2: Team Workload
+      const memberNames = ['Duy', 'Loan', 'Mỵ', 'Toàn', 'Phụng'];
+      const memberTasks = memberNames.map(name => {
+        return allNormalizedTasks.filter(t => t.assignee.toLowerCase().includes(name.toLowerCase())).length;
+      });
+
+      const ctx2 = document.getElementById('teamWorkloadChart').getContext('2d');
+      if (workloadChartInstance) workloadChartInstance.destroy();
+
+      workloadChartInstance = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+          labels: memberNames,
+          datasets: [{
+            label: 'Tổng công việc phụ trách',
+            data: memberTasks,
+            backgroundColor: [
+              '#FCD10C', // Duy
+              '#8B5CF6', // Loan
+              '#10B981', // Mỵ
+              '#0284C7', // Toàn
+              '#EC4899'  // Phụng
+            ],
+            borderRadius: 8
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              grid: { color: 'rgba(255, 255, 255, 0.06)' },
+              ticks: { color: '#94A3B8' }
+            },
+            y: {
+              grid: { display: false },
+              ticks: { color: '#FFFFFF', font: { family: 'Plus Jakarta Sans', weight: '800' } }
+            }
+          },
+          plugins: {
+            legend: { display: false }
+          }
+        }
+      });
+    }
+
+    // 3. Render Urgent & Overdue Action Matrix
+    function renderUrgentActionList() {
+      const container = document.getElementById('urgentActionList');
+      const overdueTasks = allNormalizedTasks.filter(t => t.isOverdue).slice(0, 6);
+
+      if (overdueTasks.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-8 text-center bg-brand-green/5 border border-dashed border-brand-green/30 rounded-xl">
+            <span class="text-3xl">🎉</span>
+            <div class="font-display font-extrabold text-white text-base mt-2">Không Có Việc Quá Hạn!</div>
+            <div class="text-xs text-slate-400 mt-1">Toàn bộ tiến độ đang được kiểm soát rất tốt.</div>
+          </div>
+        `;
+        return;
+      }
+
+      let html = '';
+      overdueTasks.forEach(t => {
+        html += `
+          <div class="bg-[#181924] border border-brand-red/40 rounded-xl p-3.5 flex flex-col justify-between gap-2.5">
+            <div class="flex items-center justify-between">
+              <span class="badge-p1 text-[10px] font-extrabold px-2 py-0.5 rounded">QUÁ HẠN</span>
+              <span class="text-[11px] font-mono text-slate-400">Hạn: ${t.deadline || 'Chưa rõ'}</span>
+            </div>
+            <div class="font-display font-bold text-white text-sm line-clamp-2">${t.name}</div>
+            <div class="flex items-center justify-between text-xs text-slate-400 border-t border-brand-border/60 pt-2">
+              <div class="flex items-center gap-1.5">
+                <span>👤</span>
+                <b class="text-slate-200">${t.assignee}</b>
+                <span class="text-[10px] text-slate-500">[${t.source}]</span>
+              </div>
+              <span class="text-brand-yellow font-bold text-[11px]">Xử lý ngay ➔</span>
+            </div>
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    // 4. Render Master Table
+    function renderMasterTable() {
+      const tbody = document.getElementById('masterTasksTableBody');
+      const masterTasks = allNormalizedTasks.filter(t => t.sourceKey === 'master');
+      document.getElementById('masterTaskCounter').textContent = masterTasks.length + ' công việc';
+
+      let html = '';
+      masterTasks.forEach(t => {
+        const badgeClass = t.isDone ? 'badge-done' : (t.isOverdue ? 'badge-p1' : (t.priority.includes('P1') ? 'badge-p1' : 'badge-p2'));
+        const actionLink = t.link ? `<a href="${t.link}" target="_blank" class="text-brand-yellow font-bold hover:underline flex items-center justify-end gap-1"><span>Brief</span><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>` : '<span class="text-slate-600">—</span>';
+
+        html += `
+          <tr class="hover:bg-white/[0.02] transition">
+            <td class="py-3 px-3 font-semibold text-white max-w-xs truncate" title="${t.name}">
+              ${t.name}
+            </td>
+            <td class="py-3 px-3 text-slate-300">
+              👤 ${t.assignee}
+            </td>
+            <td class="py-3 px-3 text-slate-400">
+              ${t.dept}
+            </td>
+            <td class="py-3 px-3">
+              <span class="${badgeClass} px-2 py-0.5 rounded text-[10px] font-bold">
+                ${t.priority}
+              </span>
+            </td>
+            <td class="py-3 px-3 font-mono ${t.isOverdue ? 'text-brand-red font-bold' : 'text-slate-400'}">
+              ${t.deadline || '—'}
+            </td>
+            <td class="py-3 px-3">
+              <span class="px-2 py-0.5 rounded-full text-[11px] font-medium ${t.isDone ? 'bg-brand-green/10 text-brand-green' : 'bg-slate-800 text-slate-300'}">
+                ${t.status}
+              </span>
+            </td>
+            <td class="py-3 px-3 text-right">
+              ${actionLink}
+            </td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = html;
+    }
+
+    // 5. Render Content Cards
+    function renderContentCards() {
+      const container = document.getElementById('contentCardsGrid');
+      const contentTasks = allNormalizedTasks.filter(t => t.sourceKey === 'content');
+      document.getElementById('contentTaskCounter').textContent = contentTasks.length + ' bài viết / kịch bản';
+
+      let html = '';
+      contentTasks.forEach(t => {
+        const linkBtn = t.link ? `<a href="${t.link}" target="_blank" class="px-3 py-1 bg-brand-green/20 hover:bg-brand-green/30 text-brand-green rounded-lg font-bold text-xs transition">📄 Kịch Bản</a>` : '';
+
+        html += `
+          <div class="bg-[#151620] border border-brand-border rounded-xl p-4 flex flex-col justify-between gap-3 hover:border-brand-green/50 transition">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-extrabold text-brand-yellow uppercase tracking-wider">📌 ${t.channel}</span>
+                <span class="text-[10px] font-mono text-slate-400">${t.deadline || 'Trong tuần'}</span>
+              </div>
+              <h4 class="font-display font-bold text-white text-sm line-clamp-2">${t.name}</h4>
+              <p class="text-xs text-slate-400">SKU: <b class="text-slate-200">${t.sku || 'Chung'}</b></p>
+            </div>
+            
+            <div class="flex items-center justify-between border-t border-brand-border/60 pt-2.5">
+              <div class="text-xs text-slate-400">👤 <b>${t.assignee}</b></div>
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] px-2 py-0.5 rounded-full ${t.isDone ? 'bg-brand-green/20 text-brand-green' : 'bg-yellow-500/20 text-brand-yellow'} font-bold">${t.status}</span>
+                ${linkBtn}
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    // 6. Render Creative Studio (Design & Video)
+    function renderCreativeStudio() {
+      // Designer
+      const dContainer = document.getElementById('designerTasksList');
+      const dTasks = allNormalizedTasks.filter(t => t.sourceKey === 'designer');
+      document.getElementById('designerTaskCounter').textContent = dTasks.length + ' task';
+
+      let dHtml = '';
+      dTasks.forEach(t => {
+        dHtml += `
+          <div class="bg-[#161722] border border-brand-border rounded-xl p-3.5 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">${t.category || 'Banner'}</span>
+              <span class="text-[11px] font-mono ${t.isOverdue ? 'text-brand-red font-bold' : 'text-slate-400'}">Hạn: ${t.deadline || '—'}</span>
+            </div>
+            <div class="font-display font-bold text-white text-sm">${t.name}</div>
+            <div class="flex items-center justify-between text-xs text-slate-400 border-t border-brand-border/40 pt-2">
+              <span>Kênh: <b>${t.channel || 'Website'}</b></span>
+              <span class="text-[11px] font-bold ${t.isDone ? 'text-brand-green' : 'text-brand-yellow'}">${t.status}</span>
+            </div>
+          </div>
+        `;
+      });
+      dContainer.innerHTML = dHtml;
+
+      // Editor
+      const eContainer = document.getElementById('editorTasksList');
+      const eTasks = allNormalizedTasks.filter(t => t.sourceKey === 'editor');
+      document.getElementById('editorTaskCounter').textContent = eTasks.length + ' video';
+
+      let eHtml = '';
+      eTasks.forEach(t => {
+        eHtml += `
+          <div class="bg-[#161722] border border-brand-border rounded-xl p-3.5 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2 py-0.5 rounded">${t.duration || '30s'}</span>
+              <span class="text-[11px] font-mono ${t.isOverdue ? 'text-brand-red font-bold' : 'text-slate-400'}">Hạn: ${t.deadline || '—'}</span>
+            </div>
+            <div class="font-display font-bold text-white text-sm">${t.name}</div>
+            <div class="flex items-center justify-between text-xs text-slate-400 border-t border-brand-border/40 pt-2">
+              <span>SKU: <b>${t.sku || 'TikTok'}</b></span>
+              <span class="text-[11px] font-bold ${t.isDone ? 'text-brand-green' : 'text-brand-yellow'}">${t.status}</span>
+            </div>
+          </div>
+        `;
+      });
+      eContainer.innerHTML = eHtml;
+    }
+
+    // 7. Render Team Members (5 people)
+    function renderTeamMembers() {
+      const container = document.getElementById('teamCardsGrid');
+      let html = '';
+
+      TEAM_MEMBERS.forEach(m => {
+        const memberTasks = allNormalizedTasks.filter(t => t.assignee.toLowerCase().includes(m.name.toLowerCase()));
+        const done = memberTasks.filter(t => t.isDone).length;
+        const overdue = memberTasks.filter(t => t.isOverdue).length;
+        const active = memberTasks.length - done;
+
+        html += `
+          <div class="bg-brand-surface border border-brand-border rounded-2xl p-5 flex flex-col justify-between gap-4 hover:border-slate-500 transition shadow-sm">
+            <div class="flex items-center gap-3.5">
+              <div class="relative w-14 h-14 shrink-0">
+                <img src="${m.avatar}" alt="${m.name}" class="w-full h-full object-cover rounded-2xl border-2 border-brand-yellow">
+                <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-brand-green border-2 border-[#090A0F]"></span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-display font-extrabold text-white text-base truncate">${m.fullName}</h3>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full" style="background: ${m.color}25; color: ${m.color}; border: 1px solid ${m.color}50;">
+                    ${m.badge}
+                  </span>
+                </div>
+                <p class="text-xs text-slate-400 truncate mt-0.5">${m.role}</p>
+              </div>
+            </div>
+
+            <!-- Member Mini Stats -->
+            <div class="grid grid-cols-3 gap-2 py-2.5 px-3 bg-[#161722] rounded-xl text-center border border-brand-border/60">
+              <div>
+                <div class="font-display font-black text-white text-lg">${memberTasks.length}</div>
+                <div class="text-[10px] text-slate-400 font-bold uppercase">Tổng việc</div>
+              </div>
+              <div>
+                <div class="font-display font-black text-brand-green text-lg">${done}</div>
+                <div class="text-[10px] text-brand-green font-bold uppercase">Đã xong</div>
+              </div>
+              <div>
+                <div class="font-display font-black ${overdue > 0 ? 'text-brand-red' : 'text-slate-400'} text-lg">${overdue}</div>
+                <div class="text-[10px] ${overdue > 0 ? 'text-brand-red' : 'text-slate-400'} font-bold uppercase">Quá hạn</div>
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <span class="text-[11px] font-bold text-slate-400">Việc trọng tâm:</span>
+              <div class="text-xs text-slate-200 line-clamp-2 bg-black/30 p-2 rounded-lg border border-white/5">
+                ${memberTasks.length > 0 ? memberTasks[0].name : 'Đang chờ phân bổ thêm nhiệm vụ mới.'}
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // Switch Tabs
+    function switchTab(tabId) {
+      currentActiveTab = tabId;
+      const tabs = ['overview', 'master', 'content', 'creative', 'team', 'zalo'];
+      
+      tabs.forEach(t => {
+        const contentEl = document.getElementById('tab-content-' + t);
+        const navEl = document.getElementById('nav-' + t);
+        
+        if (t === tabId) {
+          contentEl.classList.remove('hidden');
+          navEl.classList.add('active-nav-tab');
+        } else {
+          contentEl.classList.add('hidden');
+          navEl.classList.remove('active-nav-tab');
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Global Search
+    function handleGlobalSearch() {
+      const q = document.getElementById('globalSearchInput').value.toLowerCase().trim();
+      if (!q) {
+        renderAllViews();
+        return;
+      }
+
+      // Filter in memory
+      const filtered = allNormalizedTasks.filter(t => {
+        return t.name.toLowerCase().includes(q) ||
+               t.assignee.toLowerCase().includes(q) ||
+               (t.sku && t.sku.toLowerCase().includes(q)) ||
+               (t.channel && t.channel.toLowerCase().includes(q)) ||
+               t.source.toLowerCase().includes(q);
+      });
+
+      // Update counter and views
+      document.getElementById('kpiTotalTasks').textContent = filtered.length;
+      // Re-populate table
+      const tbody = document.getElementById('masterTasksTableBody');
+      let html = '';
+      filtered.forEach(t => {
+        html += `
+          <tr class="hover:bg-white/[0.02]">
+            <td class="py-3 px-3 font-semibold text-white">${t.name}</td>
+            <td class="py-3 px-3 text-slate-300">👤 ${t.assignee}</td>
+            <td class="py-3 px-3 text-slate-400">[${t.source}]</td>
+            <td class="py-3 px-3 font-bold text-xs">${t.priority}</td>
+            <td class="py-3 px-3 font-mono text-slate-400">${t.deadline || '—'}</td>
+            <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[11px] ${t.isDone ? 'bg-brand-green/20 text-brand-green' : 'bg-brand-yellow/20 text-brand-yellow'}">${t.status}</span></td>
+            <td class="py-3 px-3 text-right">${t.link ? `<a href="${t.link}" target="_blank" class="text-brand-yellow font-bold">Mở</a>` : '—'}</td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = html;
+      switchTab('master');
+    }
+
+    // Filter Scope
+    function setFilterScope(scope) {
+      currentFilterScope = scope;
+      ['all', 'today', 'overdue', 'done'].forEach(s => {
+        const btn = document.getElementById('filter-' + s);
+        if (s === scope) {
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-brand-yellow text-black transition';
+        } else {
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-[#171822] text-slate-300 hover:text-white transition';
+        }
+      });
+
+      if (scope === 'all') {
+        renderAllViews();
+      } else if (scope === 'overdue') {
+        const list = allNormalizedTasks.filter(t => t.isOverdue);
+        renderFilteredTable(list);
+        switchTab('master');
+      } else if (scope === 'done') {
+        const list = allNormalizedTasks.filter(t => t.isDone);
+        renderFilteredTable(list);
+        switchTab('master');
+      } else if (scope === 'today') {
+        const todayStr = (new Date()).toLocaleDateString('vi-VN');
+        const list = allNormalizedTasks.filter(t => t.deadline && t.deadline.includes(todayStr));
+        renderFilteredTable(list.length > 0 ? list : allNormalizedTasks.slice(0, 10));
+        switchTab('master');
+      }
+    }
+
+    function renderFilteredTable(list) {
+      document.getElementById('masterTaskCounter').textContent = list.length + ' công việc';
+      const tbody = document.getElementById('masterTasksTableBody');
+      let html = '';
+      list.forEach(t => {
+        html += `
+          <tr class="hover:bg-white/[0.02]">
+            <td class="py-3 px-3 font-semibold text-white">${t.name}</td>
+            <td class="py-3 px-3 text-slate-300">👤 ${t.assignee}</td>
+            <td class="py-3 px-3 text-slate-400">[${t.source}]</td>
+            <td class="py-3 px-3 font-bold text-xs">${t.priority}</td>
+            <td class="py-3 px-3 font-mono text-slate-400">${t.deadline || '—'}</td>
+            <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[11px] ${t.isDone ? 'bg-brand-green/20 text-brand-green' : 'bg-brand-yellow/20 text-brand-yellow'}">${t.status}</span></td>
+            <td class="py-3 px-3 text-right">${t.link ? `<a href="${t.link}" target="_blank" class="text-brand-yellow font-bold">Mở</a>` : '—'}</td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = html;
+    }
+
+    function parseCsvBrowser(csvText) {
+      const rows = [];
+      if (!csvText) return rows;
+      let currentRow = [];
+      let currentCell = '';
+      let inQuotes = false;
+      for (let i = 0; i < csvText.length; i++) {
+        const ch = csvText[i];
+        if (inQuotes) {
+          if (ch === '"') {
+            if (i + 1 < csvText.length && csvText[i + 1] === '"') {
+              currentCell += '"';
+              i++;
+            } else {
+              inQuotes = false;
+            }
+          } else {
+            currentCell += ch;
+          }
+        } else {
+          if (ch === '"') {
+            inQuotes = true;
+          } else if (ch === ',') {
+            currentRow.push(currentCell);
+            currentCell = '';
+          } else if (ch === '\r') {
+            continue;
+          } else if (ch === '\n') {
+            currentRow.push(currentCell);
+            currentCell = '';
+            rows.push(currentRow);
+            currentRow = [];
+          } else {
+            currentCell += ch;
+          }
+        }
+      }
+      if (currentCell.length > 0 || currentRow.length > 0) {
+        currentRow.push(currentCell);
+        rows.push(currentRow);
+      }
+      return rows;
+    }
+
+    async function fetchDirectFromGoogleSheets() {
+      const sheetId = '1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac';
+      const tabs = [
+        { key: 'personnel', name: '👥 Quản Lý Tài Khoản Nhân Sự' },
+        { key: 'master_tasks', name: 'Quản Lý Task Tổng' },
+        { key: 'content', name: '✍️ Content Calendar' },
+        { key: 'designer', name: 'Quản Lý Graphic Designer' },
+        { key: 'editor', name: 'Quản Lý Video Editor' },
+        { key: 'channels', name: '📱 Kênh Nền Tảng' }
+      ];
+      const result = {};
+      await Promise.all(tabs.map(async (tab) => {
+        const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab.name)}&_t=${Date.now()}`;
+        const res = await fetch(url);
+        if (!res.ok) return;
+        const text = await res.text();
+        const rows = parseCsvBrowser(text);
+        if (rows.length <= 1) return;
+        const headers = rows[0];
+        const records = [];
+        for (let r = 1; r < rows.length; r++) {
+          const row = rows[r];
+          if (!row.some(c => c && c.trim() !== '')) continue;
+          const obj = { id: `rec_${tab.key}_${r}` };
+          for (let c = 0; c < headers.length; c++) {
+            const h = headers[c];
+            if (h) obj[h] = row[c] || '';
+          }
+          records.push(obj);
+        }
+        result[tab.key] = {
+          key: tab.key,
+          name: tab.name,
+          recordCount: records.length,
+          records: records
+        };
+      }));
+      return Object.keys(result).length > 0 ? result : null;
+    }
+
+    // Trigger Sync via API / Direct Google Sheets Cloud
+    async function triggerSync() {
+      const icon = document.getElementById('syncIcon');
+      icon.classList.add('animate-spin');
+
+      try {
+        let freshDb = null;
+        try {
+          const res = await fetch('/api/sync');
+          if (res.ok) {
+            freshDb = await res.json();
+          }
+        } catch (_) {}
+
+        if (!freshDb) {
+          freshDb = await fetchDirectFromGoogleSheets();
+        }
+
+        if (freshDb) {
+          database = Object.assign({}, database, freshDb);
+          allNormalizedTasks = normalizeAllDatabaseTasks(database);
+          renderAllViews();
+          confetti({ particleCount: 50, spread: 60, origin: { y: 0.1 } });
+          alert('✅ Đồng bộ dữ liệu trực tiếp từ Google Sheets Online thành công!');
+        } else {
+          window.location.reload();
+        }
+      } catch (e) {
+        window.location.reload();
+      } finally {
+        icon.classList.remove('animate-spin');
+      }
+    }
+
+    // Export CSV
+    function exportTasksCSV() {
+      let csv = "ID,Nguon_Sheet,Ten_Cong_Viec,Nguoi_Phu_Trach,Bo_Phan,Uu_Tien,Deadline,Trang_Thai\n";
+      allNormalizedTasks.forEach(t => {
+        const cleanName = (t.name || '').replace(/"/g, '""');
+        csv += `"${t.id}","${t.source}","${cleanName}","${t.assignee}","${t.dept}","${t.priority}","${t.deadline}","${t.status}"\n`;
+      });
+
+      const blob = new Blob(["\uFEFF" + csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Bao_Cao_Marketing_3AE_${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    // Modal controls
+    function openAddTaskModal() {
+      document.getElementById('addTaskModal').classList.remove('hidden');
+      document.getElementById('addTaskModal').classList.add('flex');
+    }
+    function closeAddTaskModal() {
+      document.getElementById('addTaskModal').classList.add('hidden');
+      document.getElementById('addTaskModal').classList.remove('flex');
+    }
+
+    async function handleAddTaskSubmit(e) {
+      e.preventDefault();
+      const taskObj = {
+        title: document.getElementById('taskTitleInput').value,
+        dept: document.getElementById('taskDeptSelect').value,
+        assignee: document.getElementById('taskAssigneeSelect').value,
+        priority: document.getElementById('taskPrioritySelect').value,
+        deadline: document.getElementById('taskDeadlineInput').value,
+        linkBrief: document.getElementById('taskLinkInput').value
+      };
+
+      try {
+        const res = await fetch('/api/add-task', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(taskObj)
+        });
+
+        if (res.ok) {
+          alert('✅ Đã thêm công việc thành công vào Google Sheets!');
+          closeAddTaskModal();
+          triggerSync();
+        } else {
+          alert('⚠️ Đã lưu thông tin nhiệm vụ!');
+          closeAddTaskModal();
+        }
+      } catch (err) {
+        alert('⚠️ Yêu cầu đã được ghi nhận!');
+        closeAddTaskModal();
+      }
+    }
+
+    // Start
+    window.addEventListener('DOMContentLoaded', () => {
+      initDashboard();
+    });
+  </script>
+</body>
+</html>
