@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Hub — 3AE Marketing</title>
+  
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              900: '#4c1d95',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Marked.js for Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    .dark ::-webkit-scrollbar-thumb { background: #334155; }
+    
+    .chat-bubble-user {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    }
+    
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+    }
+    .dark .glass-nav {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Markdown prose styles */
+    .prose-custom p { margin-bottom: 0.75rem; line-height: 1.6; }
+    .prose-custom h1, .prose-custom h2, .prose-custom h3 { font-weight: 700; margin-top: 1rem; margin-bottom: 0.5rem; color: #0f172a; }
+    .dark .prose-custom h1, .dark .prose-custom h2, .dark .prose-custom h3 { color: #f8fafc; }
+    .prose-custom ul, .prose-custom ol { margin-left: 1.25rem; margin-bottom: 0.75rem; list-style-type: disc; }
+    .prose-custom table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.85rem; }
+    .prose-custom th, .prose-custom td { border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; text-align: left; }
+    .dark .prose-custom th, .dark .prose-custom td { border-color: #334155; }
+    .prose-custom th { background-color: #f8fafc; font-weight: 600; }
+    .dark .prose-custom th { background-color: #1e293b; }
+    .prose-custom blockquote { border-left: 3px solid #7c3aed; padding-left: 0.75rem; margin: 0.75rem 0; font-style: italic; color: #475569; }
+    .dark .prose-custom blockquote { color: #94a3b8; }
+    .prose-custom code { background: #f1f5f9; padding: 0.15rem 0.35rem; border-radius: 0.25rem; font-family: monospace; font-size: 0.85em; }
+    .dark .prose-custom code { background: #1e293b; color: #a5b4fc; }
+  </style>
+</head>
+<body class="h-full bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased flex flex-col font-sans transition-colors duration-200">
+
+  <!-- TOP HEADER (MODULAR NAVIGATION) -->
+  <header class="h-14 border-b border-slate-200 dark:border-slate-800 glass-nav shrink-0 flex items-center justify-between px-4 z-30">
+    <div class="flex items-center space-x-3">
+      <!-- Toggle Sidebar -->
+      <button onclick="toggleSidebar()" class="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Thu gọn / Mở rộng Sidebar">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Brand & Module Identity -->
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-violet-600 to-indigo-600 flex items-center justify-center text-white font-black text-sm shadow-sm">
+          3AE
+        </div>
+        <div class="hidden sm:block">
+          <div class="flex items-center space-x-2">
+            <span class="font-bold text-sm text-slate-900 dark:text-white">Marketing Hub</span>
+            <span class="text-slate-300 dark:text-slate-700">/</span>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 border border-rose-200 dark:border-rose-800 flex items-center space-x-1">
+              <i data-lucide="share-2" class="w-3 h-3 inline mr-1"></i>
+              <span>Social Media Hub</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions & User Switcher -->
+    <div class="flex items-center space-x-2 sm:space-x-3">
+      <!-- Return to Marketing Hub Main Dashboard -->
+      <a href="/" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold flex items-center space-x-1.5 border border-slate-300/80 dark:border-slate-700 transition shadow-2xs">
+        <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
+        <span>Dashboard Hub</span>
+      </a>
+
+      <!-- New Chat Button -->
+      <button onclick="startNewConversation()" class="px-3 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-xs font-semibold flex items-center space-x-1.5 transition shadow-sm">
+        <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+        <span class="hidden sm:inline">Hội thoại mới</span>
+      </button>
+
+      <!-- Right Panel Inspector Toggle -->
+      <button onclick="toggleRightPanel()" class="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Mở Panel Thông Tin Context">
+        <i data-lucide="panel-right" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Active User Profile Dropdown -->
+      <div class="relative" id="userMenuWrapper">
+        <button onclick="toggleUserDropdown()" class="flex items-center space-x-2 p-1 pl-2 pr-2.5 rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <div id="currentUserAvatar" class="w-6 h-6 rounded-full bg-gradient-to-br from-violet-600 to-indigo-800 text-white flex items-center justify-center text-xs font-bold">
+            D
+          </div>
+          <span id="currentUserName" class="text-xs font-bold text-slate-800 dark:text-slate-200 hidden md:inline">Duy (Super Admin)</span>
+          <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div id="userDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 py-2 z-50">
+          <div class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">
+            <div class="text-xs font-bold text-slate-900 dark:text-white">Chuyển Tài Khoản Nhân Sự</div>
+            <div class="text-[11px] text-slate-500">Phân quyền theo vai trò phòng Marcom 3AE</div>
+          </div>
+          <div id="userListOptions" class="py-1">
+            <!-- Populated via JS -->
+          </div>
+          <div class="px-3 py-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] text-slate-500">Giao diện tối</span>
+            <button onclick="toggleDarkMode()" class="text-slate-500 hover:text-slate-900 dark:hover:text-white">
+              <i data-lucide="moon" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN 3-PANEL APPLICATION LAYOUT -->
+  <div class="flex-1 flex overflow-hidden">
+    
+    <!-- PANEL 1: LEFT SIDEBAR -->
+    <aside id="mainSidebar" class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col shrink-0 transition-all duration-300 z-20">
+      
+      <!-- Primary Navigation Links -->
+      <div class="p-3 space-y-1">
+        <button onclick="switchView('chat')" id="nav_chat" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-xl text-xs font-semibold bg-violet-50 text-violet-700 dark:bg-violet-950/60 dark:text-violet-300 transition">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Trò Chuyện AI (Workspace)</span>
+        </button>
+        
+        <button onclick="switchView('agents')" id="nav_agents" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition">
+          <i data-lucide="bot" class="w-4 h-4"></i>
+          <span>Agent Library (Thư Viện AI)</span>
+        </button>
+
+        <button onclick="switchView('files')" id="nav_files" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition">
+          <i data-lucide="folder-kanban" class="w-4 h-4"></i>
+          <span>File Storage & Tài Liệu</span>
+        </button>
+
+        <button onclick="switchView('knowledge')" id="nav_knowledge" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition">
+          <i data-lucide="database" class="w-4 h-4"></i>
+          <span>Knowledge Base (RAG)</span>
+        </button>
+
+        <button onclick="switchView('dashboard')" id="nav_dashboard" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition">
+          <i data-lucide="bar-chart-2" class="w-4 h-4"></i>
+          <span>Thống Kê & Audit Log</span>
+        </button>
+
+        <button onclick="switchView('trash')" id="nav_trash" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition">
+          <i data-lucide="trash-2" class="w-4 h-4"></i>
+          <span>Thùng Rác</span>
+        </button>
+      </div>
+
+      <!-- Quick Folder Tree Section -->
+      <div class="px-4 py-2 border-t border-slate-100 dark:border-slate-800">
+        <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">
+          <span>Thư Mục Chính</span>
+          <button onclick="openNewFolderModal()" class="hover:text-violet-600" title="Tạo thư mục mới">
+            <i data-lucide="folder-plus" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+        <div id="quickFolderList" class="space-y-0.5 text-xs">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Recent Conversations History List -->
+      <div class="flex-1 flex flex-col min-h-0 border-t border-slate-100 dark:border-slate-800 px-3 py-2">
+        <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-slate-400 px-1 mb-1.5">
+          <span>Hội Thoại Gần Đây</span>
+          <span id="convCountBadge" class="text-[10px] bg-slate-100 dark:bg-slate-800 px-1.5 py-0.2 rounded-full">2</span>
+        </div>
+        <div id="recentConvList" class="flex-1 overflow-y-auto space-y-1 pr-1">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Sidebar Footer (Storage Meter) -->
+      <div class="p-3 border-t border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
+        <div class="flex items-center justify-between text-[11px] text-slate-500 font-medium mb-1">
+          <span>Dung Lượng Đã Dùng</span>
+          <span id="storageUsageLabel" class="font-bold text-slate-700 dark:text-slate-300">245 KB / 10 GB</span>
+        </div>
+        <div class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+          <div id="storageProgressBar" class="bg-violet-600 h-full rounded-full" style="width: 2.5%"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- PANEL 2: MAIN CENTRAL WORKSPACE -->
+    <main class="flex-1 flex flex-col min-w-0 bg-white dark:bg-slate-900 overflow-hidden relative">
+
+      <!-- ================= VIEW A: CHAT WORKSPACE ================= -->
+      <div id="view_chat" class="flex-1 flex flex-col h-full overflow-hidden">
+        
+        <!-- Welcome Screen (Shown when no conversation is actively loaded) -->
+        <div id="chatWelcomeState" class="flex-1 overflow-y-auto p-4 sm:p-8 flex flex-col items-center justify-center max-w-4xl mx-auto w-full">
+          
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-violet-600 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-violet-500/20 mb-4">
+            <i data-lucide="sparkles" class="w-7 h-7"></i>
+          </div>
+
+          <h1 id="welcomeUserHeading" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight text-center mb-2">
+            Xin chào Duy, bạn muốn thực hiện công việc gì hôm nay?
+          </h1>
+          <p class="text-sm text-slate-500 text-center max-w-xl mb-8">
+            Hệ điều hành sáng tạo nội dung & kịch bản video ngắn cho Hệ sinh thái 5 Kênh Social Media 3AE (TikTok, Reels, Shorts).
+          </p>
+
+          <!-- PROMINENT CENTRAL AI INPUT BOX -->
+          <div class="w-full surface-card rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl p-4 bg-white dark:bg-slate-800/90 mb-8">
+            <div class="flex items-center justify-between gap-2 pb-3 mb-3 border-b border-slate-100 dark:border-slate-700 text-xs">
+              <div class="flex items-center space-x-2">
+                <span class="text-slate-400 font-medium">Chỉ định Agent Social:</span>
+                <select id="welcomeAgentSelect" class="bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg px-2.5 py-1 font-semibold text-slate-800 dark:text-slate-200 focus:outline-hidden focus:ring-1 focus:ring-violet-500">
+                  <!-- Populated by JS -->
+                </select>
+              </div>
+
+              <div class="flex items-center space-x-2">
+                <span class="text-slate-400 font-medium hidden sm:inline">Model:</span>
+                <select id="welcomeModelSelect" class="bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg px-2 py-1 text-slate-700 dark:text-slate-300 text-xs focus:outline-hidden">
+                  <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+                  <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+                  <option value="claude-3-5-sonnet">Claude 3.5 Sonnet</option>
+                  <option value="gpt-4o">GPT-4o</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Attached File Pills Container -->
+            <div id="welcomeAttachedFiles" class="flex flex-wrap gap-1.5 mb-2 empty:hidden"></div>
+
+            <textarea id="welcomePromptInput" rows="3" placeholder="Nhập yêu cầu kịch bản video TikTok/Reels, bắt trend âm thanh, lên lịch đăng 5 kênh hoặc soạn comment seeding..." class="w-full resize-none bg-transparent border-0 focus:ring-0 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-hidden"></textarea>
+
+            <div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-700/80 mt-2">
+              <div class="flex items-center space-x-1.5 text-xs text-slate-500">
+                <button type="button" onclick="openAttachFileModal()" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center space-x-1 transition cursor-pointer">
+                  <i data-lucide="paperclip" class="w-4 h-4"></i>
+                  <span>Đính kèm file</span>
+                </button>
+                <button type="button" onclick="openKnowledgeModal()" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center space-x-1 transition cursor-pointer">
+                  <i data-lucide="database" class="w-4 h-4"></i>
+                  <span>Nguồn tri thức</span>
+                </button>
+              </div>
+
+              <button id="welcomeSendBtn" onclick="sendWelcomePrompt()" class="px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-semibold text-xs flex items-center space-x-1.5 shadow-md shadow-violet-500/20 transition cursor-pointer">
+                <span>Gửi yêu cầu</span>
+                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Action Prompts Cards -->
+          <div class="w-full">
+            <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Tác Vụ Social Media Nổi Bật Gợi Ý</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+              <div onclick="applyQuickPrompt(0)" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-600 bg-white dark:bg-slate-900/60 hover:shadow-sm cursor-pointer transition group">
+                <div class="flex items-center space-x-2 text-amber-600 dark:text-amber-400 text-xs font-bold mb-1">
+                  <span>🍳 Kênh Bếp Dinh Dưỡng</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition"></i>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 font-medium">Viết kịch bản TikTok 30s unbox Nồi nấu đa năng MASUTO chuẩn H-P-S-A (Retention > 65%)</p>
+              </div>
+
+              <div onclick="applyQuickPrompt(1)" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-yellow-400 dark:hover:border-yellow-600 bg-white dark:bg-slate-900/60 hover:shadow-sm cursor-pointer transition group">
+                <div class="flex items-center space-x-2 text-yellow-600 dark:text-yellow-400 text-xs font-bold mb-1">
+                  <span>🍋 Kênh Chanh Quất Test Đồ</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition"></i>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 font-medium">Kịch bản bóc phốt so kèo công tắc thông minh trôi nổi 80k vs Hunonic chính hãng 3AE</p>
+              </div>
+
+              <div onclick="applyQuickPrompt(2)" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-violet-400 dark:hover:border-violet-600 bg-white dark:bg-slate-900/60 hover:shadow-sm cursor-pointer transition group">
+                <div class="flex items-center space-x-2 text-violet-600 dark:text-violet-400 text-xs font-bold mb-1">
+                  <span>📱 Kế Hoạch 5 Kênh Social</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition"></i>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 font-medium">Lập lịch sản xuất tuần 24 video ngắn phân bổ đều cho 1 Master Brand + 4 Affiliate</p>
+              </div>
+
+              <div onclick="applyQuickPrompt(3)" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-pink-400 dark:hover:border-pink-600 bg-white dark:bg-slate-900/60 hover:shadow-sm cursor-pointer transition group">
+                <div class="flex items-center space-x-2 text-pink-600 dark:text-pink-400 text-xs font-bold mb-1">
+                  <span>💬 Seeding & Đề Xuất TikTok</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition"></i>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 font-medium">Soạn bộ 5 comment mồi trong 1 giờ đầu tiên để kích nổ đề xuất & xử lý câu hỏi hóc búa</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Agents Strip -->
+          <div class="w-full">
+            <div class="flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+              <span>Danh Sách AI Agent</span>
+              <button onclick="switchView('agents')" class="text-violet-600 dark:text-violet-400 hover:underline">Quản lý thư viện →</button>
+            </div>
+            <div id="welcomeAgentsList" class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Active Conversation Chat Stream (Shown when a chat is open) -->
+        <div id="chatActiveState" class="hidden flex-1 flex flex-col h-full overflow-hidden">
+          
+          <!-- Chat Top Bar -->
+          <div class="h-12 border-b border-slate-200 dark:border-slate-800 px-4 flex items-center justify-between shrink-0 bg-slate-50/50 dark:bg-slate-900/50">
+            <div class="flex items-center space-x-2.5 min-w-0">
+              <span id="activeAgentAvatarBadge" class="w-7 h-7 rounded-lg bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-200 flex items-center justify-center text-sm font-bold shrink-0">
+                🎯
+              </span>
+              <div class="min-w-0">
+                <div id="activeConvTitle" class="text-xs font-bold text-slate-900 dark:text-white truncate">Phân bổ ngân sách chiến dịch Black Friday 2026</div>
+                <div id="activeAgentSubtext" class="text-[10px] text-slate-500 truncate">Marketing Strategy Agent • Model: Gemini 1.5 Pro</div>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-1.5">
+              <button onclick="renameActiveConversation()" class="p-1.5 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Đổi tên hội thoại">
+                <i data-lucide="edit-3" class="w-4 h-4"></i>
+              </button>
+              <button onclick="deleteActiveConversation()" class="p-1.5 rounded-lg text-slate-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/40 transition" title="Xóa cuộc hội thoại này">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Message Stream Container -->
+          <div id="chatMessageStream" class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-5">
+            <!-- Messages rendered via JS -->
+          </div>
+
+          <!-- Chat Bottom Input Bar -->
+          <div class="p-3 sm:p-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shrink-0">
+            <div class="max-w-4xl mx-auto">
+              
+              <!-- Attached File Pills Container -->
+              <div id="activeAttachedFiles" class="flex flex-wrap gap-1.5 mb-2 empty:hidden"></div>
+
+              <div class="relative surface-card rounded-2xl border border-slate-300 dark:border-slate-700 focus-within:border-violet-500 focus-within:ring-2 focus-within:ring-violet-500/20 p-2.5 transition">
+                <textarea id="activePromptInput" rows="2" placeholder="Gửi câu hỏi hoặc yêu cầu xử lý tiếp theo..." class="w-full resize-none bg-transparent border-0 focus:ring-0 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-hidden"></textarea>
+                
+                <div class="flex items-center justify-between pt-1 border-t border-slate-100 dark:border-slate-800">
+                  <div class="flex items-center space-x-1">
+                    <button type="button" onclick="openAttachFileModal()" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white transition cursor-pointer" title="Đính kèm file tài liệu">
+                      <i data-lucide="paperclip" class="w-4 h-4"></i>
+                    </button>
+                    <button type="button" onclick="openKnowledgeModal()" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white transition cursor-pointer" title="Chọn nguồn tri thức">
+                      <i data-lucide="database" class="w-4 h-4"></i>
+                    </button>
+                  </div>
+
+                  <button id="activeSendBtn" onclick="sendActivePrompt()" class="px-3.5 py-1.5 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-semibold text-xs flex items-center space-x-1.5 shadow-sm transition cursor-pointer">
+                    <span>Gửi</span>
+                    <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ================= VIEW B: AGENT LIBRARY & STUDIO ================= -->
+      <div id="view_agents" class="hidden flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 max-w-6xl mx-auto w-full">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div>
+            <h2 class="text-xl font-black text-slate-900 dark:text-white">AI Agent Library & Studio</h2>
+            <p class="text-xs text-slate-500">Quản lý, tùy chỉnh và khởi tạo các AI Agent chuyên biệt theo nhu cầu công việc của bạn</p>
+          </div>
+          <button onclick="openCreateAgentModal()" class="px-3.5 py-2 rounded-xl bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold flex items-center space-x-1.5 shadow-sm transition">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span>Tạo Agent Mới</span>
+          </button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-1.5" id="agentFilterTabs">
+          <button onclick="filterAgents('all')" id="tab_all_agents" class="agent-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300">Tất cả</button>
+          <button onclick="filterAgents('custom')" class="agent-tab px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800">Agent Tự Tạo</button>
+        </div>
+
+        <!-- Agents Grid -->
+        <div id="agentsGridContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- ================= VIEW C: FILE STORAGE & MANAGER ================= -->
+      <div id="view_files" class="hidden flex-1 flex flex-col h-full overflow-hidden">
+        
+        <!-- File Manager Header -->
+        <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0">
+          <div>
+            <div class="flex items-center space-x-2 text-xs font-semibold text-slate-500 mb-1" id="fileBreadcrumbs">
+              <span>Marketing Hub</span>
+              <span>/</span>
+              <span class="text-slate-900 dark:text-white font-bold">Tất Cả Tệp</span>
+            </div>
+            <h2 class="text-lg font-black text-slate-900 dark:text-white">Kho Tệp & Quản Lý Dữ Liệu</h2>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <!-- Search Files Input -->
+            <div class="relative">
+              <i data-lucide="search" class="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-slate-400"></i>
+              <input type="text" id="fileSearchInput" oninput="handleFileSearch(this.value)" placeholder="Tìm tệp hoặc tag..." class="pl-8 pr-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-200 focus:outline-hidden focus:ring-1 focus:ring-violet-500 w-44 sm:w-56">
+            </div>
+
+            <button onclick="openNewFolderModal()" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center space-x-1 shadow-2xs">
+              <i data-lucide="folder-plus" class="w-3.5 h-3.5"></i>
+              <span class="hidden sm:inline">Thư mục mới</span>
+            </button>
+
+            <button onclick="triggerFileUpload()" class="px-3 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-xs font-semibold flex items-center space-x-1 shadow-sm">
+              <i data-lucide="upload" class="w-3.5 h-3.5"></i>
+              <span>Tải tệp lên</span>
+            </button>
+            <input type="file" id="hiddenFileInput" multiple onchange="handleNativeFileSelect(event)" class="hidden">
+          </div>
+        </div>
+
+        <!-- File Drag & Drop Dropzone + File Table/Grid -->
+        <div class="flex-1 flex overflow-hidden">
+          
+          <!-- Folder Sidebar Tree -->
+          <div class="w-56 border-r border-slate-200 dark:border-slate-800 p-3 overflow-y-auto hidden md:block shrink-0 bg-slate-50/30 dark:bg-slate-900/30">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 px-1">Cấu Trúc Thư Mục</div>
+            <div id="fileManagerFolderTree" class="space-y-0.5 text-xs">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Files List Container -->
+          <div id="fileDropZone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)" class="flex-1 overflow-y-auto p-4 relative">
+            
+            <!-- Drag Over Overlay -->
+            <div id="dropOverlay" class="hidden absolute inset-0 bg-violet-500/10 border-2 border-dashed border-violet-500 rounded-xl flex items-center justify-center z-20 backdrop-blur-2xs">
+              <div class="text-center">
+                <i data-lucide="upload-cloud" class="w-12 h-12 text-violet-600 mx-auto mb-2 animate-bounce"></i>
+                <div class="text-sm font-bold text-violet-900 dark:text-violet-200">Thả tệp vào đây để tải lên kho tài liệu 3AE</div>
+              </div>
+            </div>
+
+            <!-- Format Filter Pills -->
+            <div class="flex flex-wrap items-center gap-1.5 mb-4 text-xs">
+              <button onclick="filterFileType('all')" class="file-type-pill px-2.5 py-1 rounded-md bg-violet-100 text-violet-800 font-bold dark:bg-violet-950 dark:text-violet-300">Tất cả</button>
+              <button onclick="filterFileType('md')" class="file-type-pill px-2.5 py-1 rounded-md text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 font-medium">Văn bản (MD, PDF)</button>
+              <button onclick="filterFileType('csv')" class="file-type-pill px-2.5 py-1 rounded-md text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 font-medium">Bảng tính (CSV, XLSX)</button>
+              <button onclick="filterFileType('img')" class="file-type-pill px-2.5 py-1 rounded-md text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 font-medium">Hình ảnh</button>
+              <button onclick="filterFileType('video')" class="file-type-pill px-2.5 py-1 rounded-md text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 font-medium">Video / Audio</button>
+            </div>
+
+            <!-- Files Table -->
+            <div class="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-2xs">
+              <table class="w-full text-xs text-left">
+                <thead class="bg-slate-50 dark:bg-slate-800/80 text-slate-500 font-bold border-b border-slate-200 dark:border-slate-800">
+                  <tr>
+                    <th class="py-2.5 px-3">Tên Tệp</th>
+                    <th class="py-2.5 px-3">Thư Mục</th>
+                    <th class="py-2.5 px-3">Định Dạng</th>
+                    <th class="py-2.5 px-3">Dung Lượng</th>
+                    <th class="py-2.5 px-3">Người Tải Lên</th>
+                    <th class="py-2.5 px-3">Ngày Cập Nhật</th>
+                    <th class="py-2.5 px-3 text-right">Thao Tác</th>
+                  </tr>
+                </thead>
+                <tbody id="fileTableBody" class="divide-y divide-slate-100 dark:divide-slate-800">
+                  <!-- Populated by JS -->
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ================= VIEW D: KNOWLEDGE BASE (RAG) ================= -->
+      <div id="view_knowledge" class="hidden flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 max-w-6xl mx-auto w-full">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div>
+            <h2 class="text-xl font-black text-slate-900 dark:text-white">Knowledge Base — Kho Tri Thức RAG</h2>
+            <p class="text-xs text-slate-500">Toàn bộ 11 tài liệu thực tế của 3AE đã được phân đoạn thành 356 chunks tri thức phục vụ tìm kiếm ngữ nghĩa cho AI Agent</p>
+          </div>
+          <button onclick="reindexKnowledgeBase()" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center space-x-1.5 shadow-sm transition">
+            <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+            <span>Lập Chỉ Mục Lại (Re-Index)</span>
+          </button>
+        </div>
+
+        <!-- 5 Knowledge Base Collections Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3" id="knowledgeBasesGrid">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Interactive Semantic RAG Search Box -->
+        <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 space-y-3">
+          <div class="text-xs font-bold text-slate-900 dark:text-white flex items-center space-x-1.5">
+            <i data-lucide="sparkles" class="w-4 h-4 text-violet-600"></i>
+            <span>Thử Nghiệm Truy Vấn Ngữ Nghĩa (Semantic & Keyword Search Engine)</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <input type="text" id="ragQueryInput" placeholder="Nhập từ khóa hoặc câu hỏi cần tra cứu trong kho tri thức..." class="flex-1 px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-xs bg-white dark:bg-slate-900 focus:outline-hidden focus:ring-1 focus:ring-violet-500">
+            <button onclick="executeRagSearch()" class="px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold transition">
+              Tìm kiếm
+            </button>
+          </div>
+        </div>
+
+        <!-- Chunks Inspector Container -->
+        <div>
+          <div class="flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+            <span>Danh Sách Phân Đoạn Tri Thức (Document Chunks)</span>
+            <span id="chunksCountBadge" class="text-xs text-slate-500">Hiển thị 356 đoạn</span>
+          </div>
+          <div id="chunksListContainer" class="space-y-2">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW E: DASHBOARD & AUDIT LOG ================= -->
+      <div id="view_dashboard" class="hidden flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 max-w-6xl mx-auto w-full">
+        <div>
+          <h2 class="text-xl font-black text-slate-900 dark:text-white">Thống Kê Hoạt Động & Kiểm Toán (Audit Logs)</h2>
+          <p class="text-xs text-slate-500">Số liệu thực tế được ghi nhận trực tiếp từ cơ sở dữ liệu hệ thống Marketing Hub</p>
+        </div>
+
+        <!-- KPI Metrics Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+          <div class="surface-card p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="text-[11px] font-bold text-slate-500 uppercase">Tổng Số AI Agent</div>
+            <div class="text-2xl font-black text-violet-600 mt-1" id="statTotalAgents">10</div>
+            <div class="text-[10px] text-slate-400 mt-1">Đầy đủ 10 chuyên môn</div>
+          </div>
+          <div class="surface-card p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="text-[11px] font-bold text-slate-500 uppercase">Tổng Tệp Lưu Trữ</div>
+            <div class="text-2xl font-black text-blue-600 mt-1" id="statTotalFiles">11</div>
+            <div class="text-[10px] text-slate-400 mt-1">100% tài liệu thật 3AE</div>
+          </div>
+          <div class="surface-card p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="text-[11px] font-bold text-slate-500 uppercase">Dung Lượng Sử Dụng</div>
+            <div class="text-2xl font-black text-emerald-600 mt-1" id="statTotalSize">245 KB</div>
+            <div class="text-[10px] text-slate-400 mt-1">Giới hạn định mức 10 GB</div>
+          </div>
+          <div class="surface-card p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="text-[11px] font-bold text-slate-500 uppercase">Kho Tri Thức (RAG)</div>
+            <div class="text-2xl font-black text-amber-600 mt-1" id="statTotalKb">5</div>
+            <div class="text-[10px] text-slate-400 mt-1">356 Chunks đã lập chỉ mục</div>
+          </div>
+          <div class="surface-card p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="text-[11px] font-bold text-slate-500 uppercase">Tổng Cuộc Hội Thoại</div>
+            <div class="text-2xl font-black text-rose-600 mt-1" id="statTotalConv">2</div>
+            <div class="text-[10px] text-slate-400 mt-1">Lưu trữ lịch sử đầy đủ</div>
+          </div>
+        </div>
+
+        <!-- Audit Log Timeline Table -->
+        <div class="surface-card rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+          <div class="flex items-center justify-between mb-3">
+            <div class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Lịch Sử Kiểm Toán Hoạt Động (Audit Trail)</div>
+            <span class="text-[11px] text-slate-400">Ghi nhận mọi thao tác nhân sự & AI</span>
+          </div>
+          <div class="rounded-lg border border-slate-100 dark:border-slate-800 overflow-hidden">
+            <table class="w-full text-xs text-left">
+              <thead class="bg-slate-50 dark:bg-slate-800 text-slate-500 font-bold border-b border-slate-200 dark:border-slate-800">
+                <tr>
+                  <th class="py-2 px-3">Thời Gian</th>
+                  <th class="py-2 px-3">Hành Động</th>
+                  <th class="py-2 px-3">Đối Tượng</th>
+                  <th class="py-2 px-3">Nhân Sự Thực Hiện</th>
+                  <th class="py-2 px-3">Chi Tiết</th>
+                </tr>
+              </thead>
+              <tbody id="auditLogTableBody" class="divide-y divide-slate-100 dark:divide-slate-800">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= VIEW F: TRASH (THÙNG RÁC) ================= -->
+      <div id="view_trash" class="hidden flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 max-w-6xl mx-auto w-full">
+        <div>
+          <h2 class="text-xl font-black text-slate-900 dark:text-white">Thùng Rác (Trash)</h2>
+          <p class="text-xs text-slate-500">Các tệp đã xóa tạm thời. Bạn có thể khôi phục hoặc xóa vĩnh viễn.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-2xs">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-50 dark:bg-slate-800/80 text-slate-500 font-bold border-b border-slate-200 dark:border-slate-800">
+              <tr>
+                <th class="py-2.5 px-3">Tên Tệp Đã Xóa</th>
+                <th class="py-2.5 px-3">Định Dạng</th>
+                <th class="py-2.5 px-3">Dung Lượng</th>
+                <th class="py-2.5 px-3">Ngày Xóa</th>
+                <th class="py-2.5 px-3 text-right">Hành Động</th>
+              </tr>
+            </thead>
+            <tbody id="trashTableBody" class="divide-y divide-slate-100 dark:divide-slate-800">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- PANEL 3: RIGHT COLLAPSIBLE INSPECTOR -->
+    <aside id="rightInspector" class="w-72 border-l border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col shrink-0 transition-all duration-300 z-10 overflow-y-auto">
+      
+      <div class="p-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+        <span class="text-xs font-bold text-slate-900 dark:text-white flex items-center space-x-1.5">
+          <i data-lucide="info" class="w-3.5 h-3.5 text-violet-600"></i>
+          <span>Context & Agent Info</span>
+        </span>
+        <button onclick="toggleRightPanel()" class="text-slate-400 hover:text-slate-700 dark:hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Agent Profile Card -->
+      <div class="p-4 border-b border-slate-100 dark:border-slate-800 space-y-3">
+        <div class="flex items-center space-x-3">
+          <div id="inspectorAgentAvatar" class="w-10 h-10 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center text-xl shrink-0">
+            🎯
+          </div>
+          <div class="min-w-0">
+            <div id="inspectorAgentName" class="text-xs font-black text-slate-900 dark:text-white truncate">Marketing Strategy Agent</div>
+            <div id="inspectorAgentRole" class="text-[11px] text-slate-500 truncate">Trưởng Ban Kế Hoạch Chiến Lược</div>
+          </div>
+        </div>
+
+        <div class="text-[11px] text-slate-600 dark:text-slate-400" id="inspectorAgentTagline">
+          Xây dựng chiến lược tiếp thị tổng thể, phân bổ ngân sách & mục tiêu tăng trưởng
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs space-y-1.5">
+          <div class="flex items-center justify-between">
+            <span class="text-slate-400">Model:</span>
+            <span id="inspectorAgentModel" class="font-bold text-slate-800 dark:text-slate-200">Gemini 1.5 Pro</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-slate-400">Nhiệt độ (Temp):</span>
+            <span id="inspectorAgentTemp" class="font-mono font-bold text-slate-800 dark:text-slate-200">0.4</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-slate-400">Lượt kích hoạt:</span>
+            <span id="inspectorAgentRuns" class="font-bold text-violet-600">142 runs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Attached Files Section -->
+      <div class="p-4 border-b border-slate-100 dark:border-slate-800 space-y-2">
+        <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300">
+          <span>Tệp Đang Đính Kèm</span>
+          <button onclick="openAttachFileModal()" class="text-violet-600 text-[11px] hover:underline">+ Thêm</button>
+        </div>
+        <div id="inspectorAttachedFilesList" class="space-y-1 text-xs">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Knowledge Sources Assigned -->
+      <div class="p-4 border-b border-slate-100 dark:border-slate-800 space-y-2">
+        <div class="text-xs font-bold text-slate-700 dark:text-slate-300">Nguồn Tri Thức Đã Gán</div>
+        <div id="inspectorKnowledgeSourcesList" class="space-y-1.5 text-xs">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- System Instructions Preview -->
+      <div class="p-4 space-y-2">
+        <div class="text-xs font-bold text-slate-700 dark:text-slate-300">System Instructions</div>
+        <div id="inspectorSystemPrompt" class="text-[11px] text-slate-500 bg-slate-50 dark:bg-slate-800 p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 leading-relaxed font-mono">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- POPUP MODAL 1: FILE PREVIEW MODAL -->
+  <div id="filePreviewModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 max-w-4xl w-full max-h-[85vh] flex flex-col overflow-hidden">
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+        <div class="flex items-center space-x-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-violet-600"></i>
+          <div>
+            <div id="previewFileName" class="text-sm font-bold text-slate-900 dark:text-white">BRAND_GUIDELINES_3AE.md</div>
+            <div id="previewFileMeta" class="text-[11px] text-slate-500">38.2 KB • text/markdown • Cập nhật lúc: 2026-11-12 10:15</div>
+          </div>
+        </div>
+        <button onclick="closeFilePreviewModal()" class="p-1 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="previewFileContent" class="flex-1 overflow-y-auto p-4 text-xs font-mono bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 whitespace-pre-wrap leading-relaxed">
+        <!-- Text content loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP MODAL 2: ATTACH FILE TO CHAT MODAL -->
+  <div id="attachFileModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 max-w-lg w-full max-h-[80vh] flex flex-col overflow-hidden">
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+        <div class="text-sm font-bold text-slate-900 dark:text-white">Chọn Tệp Đính Kèm Làm Ngữ Cảnh</div>
+        <button onclick="closeAttachFileModal()" class="p-1 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="attachFileListContainer" class="flex-1 overflow-y-auto p-3 space-y-1 text-xs">
+        <!-- Populated by JS -->
+      </div>
+      <div class="p-3 border-t border-slate-200 dark:border-slate-800 flex justify-end">
+        <button onclick="confirmAttachFiles()" class="px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-semibold text-xs">Xác nhận đính kèm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP MODAL 3: CREATE / EDIT AGENT MODAL -->
+  <div id="agentStudioModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 max-w-xl w-full max-h-[90vh] flex flex-col overflow-hidden">
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+        <div class="text-sm font-bold text-slate-900 dark:text-white" id="agentStudioModalTitle">Tạo AI Agent Chuyên Môn Mới</div>
+        <button onclick="closeAgentStudioModal()" class="p-1 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto p-4 space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Tên Agent</label>
+          <input type="text" id="studioAgentName" placeholder="Ví dụ: TikTok Ads Optimizer Agent" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-hidden focus:ring-1 focus:ring-violet-500">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Vai trò</label>
+            <input type="text" id="studioAgentRole" placeholder="Ví dụ: Chuyên Viên Tối Ưu Ads" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-hidden">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Avatar Emoji</label>
+            <input type="text" id="studioAgentAvatar" value="🤖" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-hidden text-center text-base">
+          </div>
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Khẩu hiệu / Mô tả ngắn</label>
+          <input type="text" id="studioAgentTagline" placeholder="Mô tả tóm tắt năng lực cốt lõi..." class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-hidden">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Model Provider</label>
+            <select id="studioAgentModel" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-hidden">
+              <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+              <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+              <option value="claude-3-5-sonnet">Claude 3.5 Sonnet</option>
+              <option value="gpt-4o">GPT-4o</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">Temperature: <span id="studioTempDisplay">0.5</span></label>
+            <input type="range" id="studioAgentTemp" min="0" max="1" step="0.1" value="0.5" oninput="document.getElementById('studioTempDisplay').textContent=this.value" class="w-full mt-2">
+          </div>
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 dark:text-slate-300 mb-1">System Instructions (Prompt Hệ Thống)</label>
+          <textarea id="studioAgentSystemPrompt" rows="4" placeholder="Quy định vai trò, nhiệm vụ, phong cách trả lời và quy chuẩn chuyên môn..." class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-hidden resize-none font-mono text-[11px]"></textarea>
+        </div>
+      </div>
+      <div class="p-3 border-t border-slate-200 dark:border-slate-800 flex justify-end space-x-2">
+        <button onclick="closeAgentStudioModal()" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-semibold">Hủy</button>
+        <button onclick="saveCustomAgent()" class="px-4 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold">Lưu Agent</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP MODAL 4: NEW FOLDER MODAL -->
+  <div id="newFolderModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 max-w-sm w-full p-4 space-y-3">
+      <div class="text-sm font-bold text-slate-900 dark:text-white">Tạo Thư Mục Mới</div>
+      <input type="text" id="newFolderNameInput" placeholder="Tên thư mục (ví dụ: Q4 Campaign Assets)" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-xs bg-slate-50 dark:bg-slate-800 focus:outline-hidden focus:ring-1 focus:ring-violet-500">
+      <div class="flex justify-end space-x-2 pt-2">
+        <button onclick="closeNewFolderModal()" class="px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold">Hủy</button>
+        <button onclick="submitNewFolder()" class="px-4 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold">Tạo thư mục</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-xl flex items-center space-x-2 border border-slate-700 transition">
+    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toastMsg">Thao tác thành công</span>
+  </div>
+
+  <!-- APPLICATION SCRIPT -->
+  <script src="/agent_workspace/app.js"></script>
+</body>
+</html>

@@ -7,15 +7,10 @@ echo ========================================================
 echo [1/2] Dang kiem tra may chu noi bo...
 
 :: Chay server an trong background neu chua chay
-powershell -WindowStyle Hidden -Command "if (-not (Get-NetTCPConnection -LocalPort 8080 -ErrorAction SilentlyContinue)) { Start-Process powershell -ArgumentList '-ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden -File \"\"%~dp0server.ps1\"\"' -WindowStyle Hidden }"
+powershell -WindowStyle Hidden -Command "if (-not (Get-NetTCPConnection -LocalPort 8888 -ErrorAction SilentlyContinue)) { Start-Process powershell -ArgumentList '-ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden -File \"\"%~dp0server.ps1\"\"' -WindowStyle Hidden }"
 
-timeout /t 1 /nobreak >nul
+timeout /t 2 /nobreak >nul
 
-echo [2/2] Dang mo ung dung tren trinh duyet...
-start http://localhost:8080/
-
-echo ========================================================
-echo Ung dung da mo tai dia chi: http://localhost:8080/
-echo Ban co the bat dau lam viec ngay!
-echo ========================================================
+echo [2/2] Dang mo ung dung...
+call "%~dp0Mo_App_3AE_Marketing_Hub.bat"
 exit

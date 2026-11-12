@@ -236,4 +236,24 @@ if (Test-Path $mktDir) {
     [System.IO.File]::WriteAllText($mktDbPath, $json, $utf8NoBom)
 }
 
+# 4. Embed fresh database.json directly into index.html
+$indexHtmlPath = Join-Path $PSScriptRoot "index.html"
+if (Test-Path $indexHtmlPath) {
+    $htmlContent = [System.IO.File]::ReadAllText($indexHtmlPath, [System.Text.Encoding]::UTF8)
+    $startMarker = "    const DB = {"
+    $startPos = $htmlContent.IndexOf($startMarker)
+    if ($startPos -lt 0) {
+        $startMarker = "const DB = {"
+        $startPos = $htmlContent.IndexOf($startMarker)
+    }
+    $endMarker = "    let currentCategory = 'dashboard';"
+    $endPos = $htmlContent.IndexOf($endMarker)
+    if ($startPos -ge 0 -and $endPos -gt $startPos) {
+        $replacement = "    const DB = " + $json.Trim() + ";`n`n"
+        $newHtml = $htmlContent.Substring(0, $startPos) + $replacement + $htmlContent.Substring($endPos)
+        [System.IO.File]::WriteAllText($indexHtmlPath, $newHtml, $utf8NoBom)
+        Write-Host " - index.html: Updated embedded database (100% Real Live Google Sheets Data)"
+    }
+}
+
 Write-Host "✅ Database successfully updated and synchronized across all applications!" -ForegroundColor Green

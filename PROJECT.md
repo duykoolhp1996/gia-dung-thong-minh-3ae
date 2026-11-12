@@ -1,70 +1,127 @@
-# Project: 3AE Marcom Workspace / Marketing Hub Dashboard
+# Project: 3AE Operational Business Reporting Web Application (`business_report_app`)
 
 ## Architecture
-- **Single Page Application (SPA)**: Rich Vanilla JS + Tailwind CSS responsive dashboard.
-- **Triplicate Synchronization**:
-  - `index.html` (root workspace, served by `server.ps1` at `http://localhost:8080/`)
-  - `marcom_rust/static/index.html` (embedded within Rust desktop/web binary)
-  - `C:\Users\My_PC\.gemini\antigravity\brain\4ef40a1a-a442-478f-b807-4227f65a4ad6\website_preview.html` (Gemini Antigravity preview sandbox)
-  - Verified bit-for-bit SHA256 parity: `B6DBAB40288D17AD5424C653B94F4C4439CF56B527216762576B62A0B83BCF99`.
-- **Data Layer**:
-  - `database.json` & `lark_tables_data.js` synced from Google Sheets (ID: `1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac`).
-  - Runtime REST API endpoints on `http://localhost:8080/`: `/api/data`, `/api/sync`.
-  - Inlined DB fallback in frontend with dynamic fetch and localStorage persistence.
+The application employs a **Universal Dual-Runtime Architecture** tailored for high-speed local execution and zero-friction cloud deployment:
+1. **Frontend Presentation (Browser SPA)**: Modern HTML5, ES6 Modules, Tailwind CSS styling, and Chart.js visualizations. Operates reactively without requiring a Node build/bundling step.
+2. **Metric Engine (`public/js/engine.js`)**: Pure JavaScript calculation engine providing client-server calculation parity. Computes all departmental metrics (Ecom, Digital, MarCom, CSKH) and the Executive Division Overview (MER, Enterprise Health Score 0-100).
+3. **Dual REST Server Layer**:
+   - `server.js`: Zero-dependency Node.js standard-library HTTP server (`node:http`, `node:fs`) running in containerized environments (Docker/Cloud) and local Node environments.
+   - `server.ps1`: Zero-dependency Windows PowerShell 5.1 HTTP server (`System.Net.HttpListener`) running immediately on any Windows host without prerequisites.
+   - Both servers share identical REST API routes (`/api/health`, `/api/reports/overview`, `/api/reports/:dept`, `/api/records`, `/api/records/reset`) and serve static files from `public/`.
+4. **Data Persistence**: Atomic file I/O against `data/database.json`, with a clean immutable baseline in `data/seed.json` for factory resets.
+5. **Deployment & Infrastructure**: Multi-stage `Dockerfile` (`node:20-alpine`, non-root execution), `docker-compose.yml`, `.dockerignore`, and cloud descriptor (`render.yaml`).
+6. **Automated Testing Suite**: 4-tier test runner (Tiers 1-4) covering unit calculations, boundary conditions, cross-feature reactivity, and headless Chromium E2E automation (`tests/run_tests.ps1`, `tests/cdp_helper.psm1`, `tests/run_all_tests.js`).
+
+---
 
 ## Feature Inventory
-| # | Feature | Description | Milestone | Source | Status |
-|---|---------|-------------|-----------|--------|--------|
-| 1 | R1.1 KPI Summary Cards | 4 KPI cards: Tổng Task (92), Đã Hoàn Thành (42), Đang Xử Lý/Review (29: 20 làm, 9 duyệt), Ưu Tiên Khẩn P1 (34) | M1 | Survey | DONE |
-| 2 | R1.2 Department Progress Bars | Department progress bars reflecting accurate completion rates across Master (21%), Content (33%), Designer (76%), Editor (65%) | M1 | Survey | DONE |
-| 3 | R1.3 Pipeline Distribution | Accurate status pipeline bars across Todo (21), Doing (20), Review (9), Done (42) | M1 | Survey | DONE |
-| 4 | R1.4 Urgent Tasks Widget | Top 5 urgent P1 tasks, strictly filtering out completed tasks (`status !== 'done'`) | M1 | Survey | DONE |
-| 5 | R1.5 Status Mapping Logic | Fix `getTaskStatusKey`: classify `"3. Đang thiết kế"` as `'doing'`, not `'review'` | M1 | Survey | DONE |
-| 6 | R2.1 Kanban 4 Columns | Cần làm, Đang làm, Chờ duyệt, Đã hoàn thành columns with correct task routing | M1 | Survey | DONE |
-| 7 | R2.2 HTML5 Drag-and-Drop | Smooth drag and drop across columns with visual feedback | M1 | Survey | DONE |
-| 8 | R2.3 Column Counter Headers | Column counters update immediately when cards move | M1 | Survey | DONE |
-| 9 | R2.4 Kanban State Persistence | Kanban card status transitions persist in `localStorage` across reloads | M1 | Survey | DONE |
-| 10 | R3.1 Multiple View Modes | Seamless switching between Kanban, Grid Cards, Table, and Popup List modes | M1 | Survey | DONE |
-| 11 | R3.2 Task Viewing Modal | Opens from KPI cards, pipeline bars, department cards, Kanban cards, grid cards, table rows, personnel, channels | M1 | Survey | DONE |
-| 12 | R3.3 Modal Search & Filter | Working search query, sub-department tabs, and visual class synchronization | M1 | Survey | DONE |
-| 13 | R3.4 Accordions & Properties | Accordion expansion/collapse, brief display, supervisor feedback, properties table | M1 | Survey | DONE |
-| 14 | R3.5 Safe Hyperlink Handling | Valid URLs render as clickable external links; plain text values render as text tags (no 404 navigations) | M1 | Survey | DONE |
-| 15 | R4.1 Visual Styling & Contrast | High-contrast dark text `#0f172a`, clean bright background `#f1f3f7` | M1 | Survey | DONE |
-| 16 | R4.2 Priority Badges | Untruncated badges: `'P1 • Khẩn cấp'`, `'P2 • Cao'`, `'P3 • Trung bình'` with `whitespace-nowrap` | M1 | Survey | DONE |
-| 17 | R4.3 Multi-file Parity | All changes strictly mirrored across `index.html`, `marcom_rust/static/index.html`, and `website_preview.html` | M1 | Survey | DONE |
-| 18 | R5.1 Local Server Active | Ensure `server.ps1` runs on `http://localhost:8080/` with HTTP 200 responses | M2 | Survey | DONE |
-| 19 | R5.2 Data Sync API | `syncData()` connects to `/api/data` or `/api/sync` with graceful fallback | M1 | Survey | DONE |
-| 20 | R5.3 Final Verification & Report | Comprehensive verification of all acceptance criteria with structured final report | M2 | Survey | DONE |
+Every feature from the Survey phase is enumerated below with an assigned milestone.
+
+| # | Feature | Description | Milestone | Source |
+|---|---------|-------------|-----------|--------|
+| F01 | Division Overview Dashboard | Executive dashboard displaying consolidated KPIs across all 4 departments (Revenue, Ad Spend, ROAS, CSAT, Ticket Volume). | M2 | Survey (spec_miner F01) |
+| F02 | Enterprise Health Score | Weighted 0-100 composite index assessing overall business division operational health. | M2 | Survey (spec_miner F02) |
+| F03 | Department Comparison Cards | Comparative scorecard strip with progress bars, targets, and trend indicators across 4 departments. | M2 | Survey (spec_miner F03) |
+| F04 | Ecom Revenue Tracking | E-Commerce gross/net revenue tracking with daily/weekly rollups and channel breakdown. | M2 | Survey (spec_miner F04) |
+| F05 | Ecom Order Volume Monitoring | Total count of completed, pending, and cancelled orders. | M2 | Survey (spec_miner F05) |
+| F06 | Ecom Conversion Rate (CVR) | Weighted visitor-to-order conversion percentage with zero-traffic protection. | M2 | Survey (spec_miner F06) |
+| F07 | Ecom AOV & Channel Breakdown | Average Order Value and marketplace channel performance (Shopee, TikTok, Lazada, Web). | M2 | Survey (spec_miner F07, F08) |
+| F08 | Digital Ad Spend Monitoring | Digital marketing expenditure tracking across paid advertising channels. | M2 | Survey (spec_miner F09) |
+| F09 | Digital ROAS Calculation | Weighted Return on Ad Spend ($Attributed Revenue / Ad Spend$) with zero-spend protection. | M2 | Survey (spec_miner F10) |
+| F10 | Digital Traffic & CTR Analytics | Total ad impressions, clicks, Click-Through Rate (CTR %), and Cost Per Click (CPC). | M2 | Survey (spec_miner F11) |
+| F11 | Digital Cost Per Lead (CPL) | Ad spend efficiency per generated digital inquiry/lead. | M2 | Survey (spec_miner F12) |
+| F12 | MarCom Campaign Reach | Unique and cumulative audience reach across brand, PR, and social activations. | M2 | Survey (spec_miner F13) |
+| F13 | MarCom Lead Generation | Volume of qualified marketing leads generated via activations. | M2 | Survey (spec_miner F14) |
+| F14 | MarCom Campaign Performance | Active campaigns health, milestone completion percentage, on-time status, and brand sentiment. | M2 | Survey (spec_miner F15) |
+| F15 | CSKH Support Ticket Volume | Total customer support tickets across Hotline, Zalo OA, and Ecom chat. | M2 | Survey (spec_miner F16) |
+| F16 | CSKH Customer Satisfaction (CSAT) | Volume-weighted CSAT score (%) and 5-star rating distribution. | M2 | Survey (spec_miner F17) |
+| F17 | CSKH Average Resolution Time | Average handling and resolution time in minutes/hours for closed tickets. | M2 | Survey (spec_miner F18) |
+| F18 | Pre-Populated Realistic Sample Data | Domain-accurate seed dataset for 3AE Smart Home appliances covering all 4 departments. | M1 | Survey (spec_miner F19) |
+| F19 | Data Ledger View & Filter | Tabular interface displaying operational records with department filters and sorting. | M3 | Survey (spec_miner F20) |
+| F20 | Interactive Record Creation | Modal/form interface allowing users to input new operational metric records. | M3 | Survey (spec_miner F21) |
+| F21 | Interactive Record Update & Inline Edit | Interface to modify existing records with immediate KPI recalculation. | M3 | Survey (spec_miner F22) |
+| F22 | Data Reset to Baseline | One-click restore button returning database to original seed state. | M3 | Survey (spec_miner F23) |
+| F23 | Dual-Runtime REST Servers & Health API | Node.js and PowerShell servers with `/api/health`, `/api/reports`, and `/api/records`. | M1 | Survey (env_explorer, arch) |
+| F24 | Cloud Deployment Artifacts | Dockerfile (multi-stage, non-root), docker-compose.yml, .dockerignore, and cloud configs. | M4 | Survey (spec_miner F24) |
+| F25 | Comprehensive Automated Test Suite | Automated test harness covering Tiers 1-4 (calculations, boundaries, reactivity, E2E). | M5 | Survey (spec_miner F25, arch) |
+
+---
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| M1 | Dashboard Core Remediation & Multi-file Sync | Fix status mapping, badge truncation, urgent task filter, broken links, modal personnel/channels, modal subfilter desync, localStorage DnD persistence, dynamic data fetch, and mirror across all 3 files | None | DONE |
-| M2 | Full E2E Verification & Server Validation | Verify all R1-R5 acceptance criteria on running server, run multi-tier tests, reviewer verification, challenger stress-tests, forensic audit | M1 | DONE |
+| M1 | Core Backend & Data Persistence | Project setup, `data/seed.json`, `data/database.json`, dual servers (`server.js`, `server.ps1`), `/api/health`, CRUD endpoints | none | IN_PROGRESS |
+| M2 | Metric Engine & Department Dashboards | `public/index.html`, `public/js/engine.js`, `public/js/store.js`, department views (Ecom, Digital, MarCom, CSKH), Division Overview | M1 | PLANNED |
+| M3 | Interactive Data Management & Reactivity | Data ledger view, create/update modal, delete, reset-to-baseline, instant UI & division recalculation | M1, M2 | PLANNED |
+| M4 | Cloud Deployment Readiness | Multi-stage Dockerfile, docker-compose.yml, .dockerignore, render.yaml, README documentation | M1 | PLANNED |
+| M5 | Final Milestone: E2E Test Suite Pass & Adversarial Hardening | Phase 1: 100% pass on Tiers 1-4 E2E tests from Test Track. Phase 2: Tier 5 adversarial coverage hardening | M1, M2, M3, M4, TEST_READY | PLANNED |
 
-## Code Layout
-- `c:\Users\My_PC\Documents\Gia Dung Thông Minh 3AE\index.html` (Primary Dashboard UI)
-- `c:\Users\My_PC\Documents\Gia Dung Thông Minh 3AE\marcom_rust\static\index.html` (Rust static bundle)
-- `C:\Users\My_PC\.gemini\antigravity\brain\4ef40a1a-a442-478f-b807-4227f65a4ad6\website_preview.html` (Preview mirror)
-- `c:\Users\My_PC\Documents\Gia Dung Thông Minh 3AE\server.ps1` (Local HTTP server)
-- `c:\Users\My_PC\Documents\Gia Dung Thông Minh 3AE\database.json` (Database schema & records)
-- `c:\Users\My_PC\Documents\Gia Dung Thông Minh 3AE\tests\` (E2E and adversarial test suites)
+---
 
 ## Interface Contracts
-### Dashboard Data Pipeline
-- `DB`: Inlined JavaScript object fallback + dynamic reload from `/api/data` or `database.json`.
-- `getTaskStatusKey(r)`:
-  - If `r._overriddenStatusKey` exists -> returns `r._overriddenStatusKey`
-  - If includes 'hoàn thành', 'đã', 'xong', '4.' -> `'done'`
-  - If includes 'đang', '2.', 'tiến hành' -> `'doing'`
-  - If includes 'duyệt', 'review', 'feedback', '3.' -> `'review'`
-  - Otherwise -> `'todo'`
-- `formatPriorityBadge(p)`:
-  - 'p1' / 'khẩn' -> `'P1 • Khẩn cấp'` (badge styling `bg-red-50 text-red-700 border-red-200 whitespace-nowrap font-bold text-[10px]`)
-  - 'p2' / 'cao' -> `'P2 • Cao'` (badge styling `bg-amber-50 text-amber-700 border-amber-200 whitespace-nowrap font-bold text-[10px]`)
-  - 'p3' / 'trung bình' -> `'P3 • Trung bình'` (badge styling `bg-blue-50 text-blue-700 border-blue-200 whitespace-nowrap font-bold text-[10px]`)
-- Safe hyperlink rendering:
-  - If `val.startsWith('http://') || val.startsWith('https://')` -> clickable `<a>`
-  - Otherwise -> styled document tag `<span>` (no broken relative navigations)
-- `localStorage` key for Kanban:
-  - `marcom_kanban_state_v1`: `{ [taskId]: statusKey }`
+
+### 1. Metric Engine API (`public/js/engine.js`)
+- `calculateEcom(records: EcomRecord[]): EcomSummary`
+  - Input: Array of Ecom daily records.
+  - Output: `{ total_revenue: number, total_orders: number, cvr: number, aov: number, cancellation_rate: number, channel_breakdown: Record<string, number> }`
+- `calculateDigital(records: DigitalRecord[]): DigitalSummary`
+  - Input: Array of Digital campaign records.
+  - Output: `{ total_spend: number, total_attributed_revenue: number, roas: number, total_impressions: number, total_clicks: number, ctr: number, cpl: number, total_leads: number }`
+- `calculateMarCom(records: MarComRecord[]): MarComSummary`
+  - Input: Array of MarCom campaign records.
+  - Output: `{ total_reach: number, total_leads: number, avg_milestone: number, avg_sentiment: number, total_budget: number, total_spend: number }`
+- `calculateCSKH(records: CSKHRecord[]): CSKHSummary`
+  - Input: Array of CSKH records.
+  - Output: `{ total_tickets: number, resolved_tickets: number, csat_percentage: number, avg_resolution_time: number, fcr_rate: number, channel_breakdown: Record<string, number> }`
+- `calculateDivisionOverview(ecomSum, digSum, marcomSum, cskhSum): DivisionSummary`
+  - Output: `{ enterprise_health_score: number, total_revenue: number, total_marketing_spend: number, blended_mer: number, total_leads: number, division_csat: number, total_tickets: number }`
+
+### 2. REST API Endpoints (`server.js` & `server.ps1`)
+- `GET /api/health` -> `200 OK` `{ status: "ok", timestamp: ISOString, version: "1.0.0" }`
+- `GET /api/reports/overview` -> `200 OK` `{ overview: DivisionSummary, departments: { ecom, digital, marcom, cskh } }`
+- `GET /api/reports/:department` -> `200 OK` `{ summary: DeptSummary, records: DeptRecord[] }`
+- `GET /api/records` -> `200 OK` `{ ecom: [], digital: [], marcom: [], cskh: [] }`
+- `POST /api/records/:department` -> `201 Created` `{ success: true, record: DeptRecord }`
+- `PUT /api/records/:department/:id` -> `200 OK` `{ success: true, record: DeptRecord }`
+- `DELETE /api/records/:department/:id` -> `200 OK` `{ success: true, id: string }`
+- `POST /api/records/reset` -> `200 OK` `{ success: true, message: "Reset to seed data" }`
+
+---
+
+## Code Layout
+```
+c:\Users\My_PC\Documents\Gia Dung Thông Minh 3AE\business_report_app\
+├── package.json                   # NPM manifest and runner commands
+├── server.js                      # Production Node.js standard-library REST server
+├── server.ps1                     # Native PowerShell 5.1 HTTP server for Windows
+├── Dockerfile                     # Multi-stage production container build (node:20-alpine)
+├── docker-compose.yml             # Container orchestration
+├── .dockerignore                  # Container build ignore rules
+├── render.yaml                    # Cloud hosting configuration
+├── README.md                      # Comprehensive user & developer documentation
+├── data/
+│   ├── seed.json                  # Immutable baseline realistic sample data
+│   └── database.json              # Active operational data store
+├── public/
+│   ├── index.html                 # SPA entry point (Tailwind CDN, responsive layout)
+│   ├── css/
+│   │   └── style.css              # Custom 3AE theme styles and animations
+│   ├── js/
+│   │   ├── app.js                 # Frontend application router and view controller
+│   │   ├── store.js               # Reactive state manager and observer pattern
+│   │   ├── engine.js              # Pure JavaScript metric calculation engine
+│   │   ├── api.js                 # REST API client with local fallback
+│   │   ├── charts.js              # Chart.js visualization wrappers
+│   │   └── mockData.js            # Standalone fallback seed data
+│   └── assets/
+│       ├── logo-full.svg          # 3AE brand logo
+│       └── app-icon.ico           # Application icon
+└── tests/
+    ├── run_tests.ps1              # Master test runner (Tiers 1-4)
+    ├── cdp_helper.psm1            # Headless Chromium CDP automation module
+    ├── tier1_calculations.test.js # Tier 1: Metric formula tests
+    ├── tier2_boundaries.test.js   # Tier 2: Boundary, zero & edge case tests
+    ├── tier3_reactivity.test.js   # Tier 3: Interactive CRUD & reactivity tests
+    ├── tier4_e2e_scenarios.test.js# Tier 4: E2E workflows & cloud readiness tests
+    └── run_all_tests.js           # Node.js automated test runner
+```

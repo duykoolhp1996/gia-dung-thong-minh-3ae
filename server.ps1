@@ -1,4 +1,4 @@
-$port = 8080
+﻿$port = 8080
 $url = "http://localhost:$port/"
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add($url)
@@ -54,7 +54,10 @@ try {
             # API 1: /api/sync
             if ($path -eq "/api/sync") {
                 Write-Host "[API] Triggering Google Sheets sync..." -ForegroundColor Cyan
-                $syncScript = Join-Path $baseDir "sync_engine.ps1"
+                $syncScript = Join-Path $baseDir "sync_sheets_to_app.ps1"
+                if (-not (Test-Path $syncScript)) {
+                    $syncScript = Join-Path $baseDir "sync_engine.ps1"
+                }
                 if (Test-Path $syncScript) {
                     powershell -ExecutionPolicy Bypass -NoProfile -File $syncScript
                 }
@@ -79,6 +82,84 @@ try {
                     $response.StatusCode = 200
                 } else {
                     $response.StatusCode = 404
+                }
+                $response.Close()
+                continue
+            }
+
+            # API: /api/workspace/... (Agent Workspace Backend Engine)
+            if ($path.StartsWith("/api/workspace/")) {
+                $subAction = $path.Substring("/api/workspace/".Length).TrimEnd('/')
+                $body = ""
+                if ($request.HasEntityBody) {
+                    $reader = New-Object System.IO.StreamReader($request.InputStream, [System.Text.Encoding]::UTF8)
+                    $body = $reader.ReadToEnd()
+                }
+
+                if ($subAction -eq "get_init" -or $subAction -eq "get_data") {
+                    $wsDbPath = Join-Path $baseDir "agent_workspace\storage\db\agent_workspace.json"
+                    $data = if (Test-Path $wsDbPath) { [System.IO.File]::ReadAllBytes($wsDbPath) } else { [System.Text.Encoding]::UTF8.GetBytes('{"error":"No DB"}') }
+                } else {
+                    $apiScript = Join-Path $baseDir "agent_workspace_api.ps1"
+                    $tmpBodyFile = Join-Path $baseDir "tmp_body_$([System.Guid]::NewGuid().ToString('N')).json"
+                    $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+                    [System.IO.File]::WriteAllText($tmpBodyFile, $body, $utf8NoBom)
+                    $resultJson = powershell -ExecutionPolicy Bypass -NoProfile -File $apiScript -Action $subAction -Method $request.HttpMethod -BodyFile $tmpBodyFile -QueryString $request.Url.Query
+                    Remove-Item $tmpBodyFile -ErrorAction SilentlyContinue
+                    $resultJsonStr = if ($resultJson) { ($resultJson -join "`n") } else { '{"status":"ok"}' }
+                    $data = [System.Text.Encoding]::UTF8.GetBytes($resultJsonStr)
+                }
+
+                $response.ContentType = "application/json; charset=utf-8"
+                $response.ContentLength64 = $data.Length
+                $response.StatusCode = 200
+                if ($request.HttpMethod -ne "HEAD") {
+                    $response.OutputStream.Write($data, 0, $data.Length)
+                }
+                $response.Close()
+                continue
+            }
+
+            # API: /api/update-task (Cập nhật task vào database.json)
+            if ($path -eq "/api/update-task" -and $request.HttpMethod -eq "POST") {
+                try {
+                    $reader = New-Object System.IO.StreamReader($request.InputStream, [System.Text.Encoding]::UTF8)
+                    $body = $reader.ReadToEnd()
+                    $updateObj = $body | ConvertFrom-Json
+                    $tableKey = $updateObj.table
+                    $taskObj = $updateObj.task
+
+                    $dbPath = Join-Path $baseDir "database.json"
+                    if (Test-Path $dbPath) {
+                        $dbContent = Get-Content $dbPath -Raw -Encoding UTF8 | ConvertFrom-Json
+                        if ($dbContent.$tableKey -and $dbContent.$tableKey.records) {
+                            $idx = -1
+                            for ($i = 0; $i -lt $dbContent.$tableKey.records.Count; $i++) {
+                                if ($dbContent.$tableKey.records[$i].id -eq $taskObj.id) {
+                                    $idx = $i
+                                    break
+                                }
+                            }
+                            if ($idx -ge 0) {
+                                $dbContent.$tableKey.records[$idx] = $taskObj
+                                $updatedJson = $dbContent | ConvertTo-Json -Depth 10
+                                [System.IO.File]::WriteAllText($dbPath, $updatedJson, (New-Object System.Text.UTF8Encoding($false)))
+                                Write-Host "[API] Updated task '$($taskObj.id)' in table '$tableKey'" -ForegroundColor Green
+                            }
+                        }
+                    }
+
+                    $respBytes = [System.Text.Encoding]::UTF8.GetBytes('{"status":"ok","message":"Task updated successfully"}')
+                    $response.ContentType = "application/json; charset=utf-8"
+                    $response.ContentLength64 = $respBytes.Length
+                    $response.StatusCode = 200
+                    $response.OutputStream.Write($respBytes, 0, $respBytes.Length)
+                } catch {
+                    $errBytes = [System.Text.Encoding]::UTF8.GetBytes('{"status":"error","message":"' + $_.Exception.Message + '"}')
+                    $response.ContentType = "application/json; charset=utf-8"
+                    $response.ContentLength64 = $errBytes.Length
+                    $response.StatusCode = 500
+                    $response.OutputStream.Write($errBytes, 0, $errBytes.Length)
                 }
                 $response.Close()
                 continue
@@ -244,6 +325,8 @@ try {
             $localPath = $path.TrimStart('/')
             if ([string]::IsNullOrWhiteSpace($localPath) -or $localPath -eq "/") {
                 $localPath = "index.html"
+            } elseif ($localPath -eq "agent-workspace" -or $localPath -eq "agent-workspace/" -or $localPath -eq "agent_workspace" -or $localPath -eq "agent_workspace/") {
+                $localPath = "agent_workspace/index.html"
             }
             $localPath = [System.Uri]::UnescapeDataString($localPath)
             $filePath = Join-Path $baseDir $localPath
@@ -257,13 +340,17 @@ try {
 
                 $buffer = [System.IO.File]::ReadAllBytes($filePath)
                 $response.ContentLength64 = $buffer.Length
-                $response.OutputStream.Write($buffer, 0, $buffer.Length)
                 $response.StatusCode = 200
+                if ($request.HttpMethod -ne "HEAD") {
+                    $response.OutputStream.Write($buffer, 0, $buffer.Length)
+                }
             } else {
                 $response.StatusCode = 404
                 $buffer = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found")
                 $response.ContentLength64 = $buffer.Length
-                $response.OutputStream.Write($buffer, 0, $buffer.Length)
+                if ($request.HttpMethod -ne "HEAD") {
+                    $response.OutputStream.Write($buffer, 0, $buffer.Length)
+                }
             }
             $response.Close()
         } catch {

@@ -1,1613 +1,3606 @@
 // Auto-synced from Google Sheets Database: 1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac
-// Synced At: 12/11/2026 10:30:53
+// Synced At: 12/11/2026 17:15:59
 const LARK_BASE_ALL_TABLES = {
-    "syncedAt":  "2026-11-12 10:30:53",
+    "syncedAt":  "2026-11-12 17:15:59",
     "spreadsheetId":  "1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac",
     "spreadsheetUrl":  "https://docs.google.com/spreadsheets/d/1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac/edit",
     "personnel":  {
-                      "recordCount":  5,
+                      "recordCount":  33,
                       "key":  "personnel",
                       "name":  "👥 Quản Lý Tài Khoản Nhân Sự",
                       "id":  "1081356969",
                       "records":  [
                                       {
                                           "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_1",
-                                          "Mã Nhân Sự":  "NV-3AE-001",
-                                          "Họ Và Tên":  "Duy",
-                                          "Phòng Ban / Bộ Phận":  "Marketing Manager",
-                                          "Chức Danh \u0026 Vị Trí":  "Trưởng Phòng Marketing 3AE",
-                                          "Trạng Thái Làm Việc":  "Trưởng Phòng Marketing 3AE",
-                                          "Ngày Bắt Đầu":  "27/10/2026",
-                                          "Email \u0026 Tài Khoản Đăng Nhập":  "",
-                                          "Số Điện Thoại / Zalo":  ""
+                                          "M":  "H"
                                       },
                                       {
                                           "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_2",
-                                          "Mã Nhân Sự":  "NV-3AE-002",
-                                          "Họ Và Tên":  "Loan",
-                                          "Phòng Ban / Bộ Phận":  "Graphic Designer",
-                                          "Chức Danh \u0026 Vị Trí":  "Graphic Designer",
-                                          "Trạng Thái Làm Việc":  "Đang làm việc",
-                                          "Ngày Bắt Đầu":  "01/10/2026",
-                                          "Email \u0026 Tài Khoản Đăng Nhập":  "",
-                                          "Số Điện Thoại / Zalo":  ""
+                                          "M":  "P"
                                       },
                                       {
                                           "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_3",
-                                          "Mã Nhân Sự":  "NV-3AE-003",
-                                          "Họ Và Tên":  "Mỵ",
-                                          "Phòng Ban / Bộ Phận":  "Content Creator",
-                                          "Chức Danh \u0026 Vị Trí":  "Chuyên Viên Content \u0026 Kịch Bản",
-                                          "Trạng Thái Làm Việc":  "Đang làm việc",
-                                          "Ngày Bắt Đầu":  "05/10/2026",
-                                          "Email \u0026 Tài Khoản Đăng Nhập":  "",
-                                          "Số Điện Thoại / Zalo":  ""
+                                          "M":  "C"
                                       },
                                       {
                                           "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_4",
-                                          "Mã Nhân Sự":  "NV-3AE-004",
-                                          "Họ Và Tên":  "Phụng",
-                                          "Phòng Ban / Bộ Phận":  "Content Creator",
-                                          "Chức Danh \u0026 Vị Trí":  "Quản lý nền tảng \u0026 Seeding ",
-                                          "Trạng Thái Làm Việc":  "Đang làm việc",
-                                          "Ngày Bắt Đầu":  "",
-                                          "Email \u0026 Tài Khoản Đăng Nhập":  "",
-                                          "Số Điện Thoại / Zalo":  ""
+                                          "M":  "T"
                                       },
                                       {
                                           "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_5",
-                                          "Mã Nhân Sự":  "NV-3AE-005",
-                                          "Họ Và Tên":  "Toan",
-                                          "Phòng Ban / Bộ Phận":  "Editor",
-                                          "Chức Danh \u0026 Vị Trí":  "",
-                                          "Trạng Thái Làm Việc":  "",
-                                          "Ngày Bắt Đầu":  "09/11/2026",
-                                          "Email \u0026 Tài Khoản Đăng Nhập":  "",
-                                          "Số Điện Thoại / Zalo":  ""
+                                          "M":  "N"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_6",
+                                          "M":  "E"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_7",
+                                          "M":  "S"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_8",
+                                          "M":  "D"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_9",
+                                          "M":  "M"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_10",
+                                          "M":  "T"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_11",
+                                          "M":  "T"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_12",
+                                          "M":  "2"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_14",
+                                          "M":  " "
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_15",
+                                          "M":  "L"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_16",
+                                          "M":  "G"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_17",
+                                          "M":  "G"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_18",
+                                          "M":  "Đ"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_19",
+                                          "M":  "0"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_21",
+                                          "M":  " "
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_22",
+                                          "M":  "M"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_23",
+                                          "M":  "C"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_24",
+                                          "M":  "C"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_25",
+                                          "M":  "Đ"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_26",
+                                          "M":  "0"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_28",
+                                          "M":  " "
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_29",
+                                          "M":  "P"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_30",
+                                          "M":  "C"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_31",
+                                          "M":  "Q"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_32",
+                                          "M":  "Đ"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_35",
+                                          "M":  " "
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_36",
+                                          "M":  "T"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_37",
+                                          "M":  "E"
+                                      },
+                                      {
+                                          "id":  "rec____Quản_Lý_Tài_Khoản_Nhân_Sự_40",
+                                          "M":  "0"
                                       }
                                   ]
                   },
     "master_tasks":  {
-                         "recordCount":  33,
+                         "recordCount":  221,
                          "key":  "master_tasks",
                          "name":  "Quản Lý Task Tổng",
                          "id":  "429202796",
                          "records":  [
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_1",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Thu thập data KOL/ KOC",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ, Duy",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P3 - Trung bình",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "10/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "T"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_2",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Thu thập social media đối thủ",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ, Duy",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "1. Chờ Brief / Ý tưởng",
-                                             "Mức độ ưu tiên":  "P3 - Trung bình",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "14/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "M"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_3",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Thu thập thông tin KOL/KOC theo ngành SKU",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ, Duy",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "1. Chờ Brief / Ý tưởng",
-                                             "Mức độ ưu tiên":  "P3 - Trung bình",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "14/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "N"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_4",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Xây dựng Brand Guidelines 3AE",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Loan, Duy",
-                                             "Bộ phận":  "Graphic Design",
-                                             "Trạng thái":  "1. Chờ Brief / Ý tưởng",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "29/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "B"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_5",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Xây dựng chuẩn template hình ảnh sản phẩm",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Loan, Duy",
-                                             "Bộ phận":  "Graphic Design",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "14/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "T"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_6",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Thiết lập Kênh TikTok Thương hiệu Chính (Brand Master)",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "5. Đã duyệt hoàn thành",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "1/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "M"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_7",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Thiết lập 4 Kênh Nhân hiệu (Personal Brand: Smarthome, Bếp, Tiện ích, Cam Quý Smart) \u0026 Kích hoạt Affiliate",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "11/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "N"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_8",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Chuẩn hóa Fanpage Brand \"Gia Dụng Thông Minh\"",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "11/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "H"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_9",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Tạo \u0026 Kích hoạt Instagram \u0026 Threads Brand 3AE",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "1. Chờ Brief / Ý tưởng",
-                                             "Mức độ ưu tiên":  "P3 - Trung bình",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "T"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_10",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Chuẩn hóa Kênh YouTube Brand 3AE",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "1. Chờ Brief / Ý tưởng",
-                                             "Mức độ ưu tiên":  "P3 - Trung bình",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "L"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_11",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Xây dựng kho kịch bản Tình huống, Trend \u0026 Clip vui (Kênh Brand)",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ, Duy",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "F"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_12",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Xây dựng kho kịch bản cho 4 Kênh Nhân hiệu (bao gồm Chanh Quất Thông Minh) \u0026 Gắn giỏ hàng Affiliate",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ, Duy",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "G"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_13",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Kiểm tra và chuẩn hóa tư liệu in ấn",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Loan",
-                                             "Bộ phận":  "Graphic Design",
-                                             "Trạng thái":  "3. Chờ TP duyệt",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
-                                         },
-                                         {
-                                             "id":  "rec_Quản_Lý_Task_Tổng_14",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Kiểm tra và sàng lọc kho video hiện có",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P3 - Trung bình",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "T"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_15",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Thiết kế \u0026 Bổ sung hình ảnh SKU đợt 1 (8 SKU)",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Loan",
-                                             "Bộ phận":  "Graphic Design",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "M"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_16",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Sản xuất định mức Media Video Tháng 11",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "6/11/2026",
-                                             "Hạn chót (Deadline)":  "30/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "C"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_17",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Thiết kế ấn phẩm Social \u0026 Infographic SKU đợt 2",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Loan",
-                                             "Bộ phận":  "Graphic Design",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "2"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_18",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Bộ POSM Showroom \u0026 Hệ thống tem bảo hành QR",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Duy",
-                                             "Bộ phận":  "",
-                                             "Trạng thái":  "1. Chờ Brief / Ý tưởng",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
-                                         },
-                                         {
-                                             "id":  "rec_Quản_Lý_Task_Tổng_19",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Đóng gói Kho Digital Asset 24 SKU chủ lực",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Loan",
-                                             "Bộ phận":  "Graphic Design",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "P"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_20",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Content Ads Tháng 11 Order/ ",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ",
-                                             "Bộ phận":  "",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "6/11/2026",
-                                             "Hạn chót (Deadline)":  "30/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
-                                         },
-                                         {
-                                             "id":  "rec_Quản_Lý_Task_Tổng_21",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Design chạy quảng cáo cho bộ phần Digital ",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Loan",
-                                             "Bộ phận":  "Graphic Design",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "6/11/2026",
-                                             "Hạn chót (Deadline)":  "30/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
-                                         },
-                                         {
-                                             "id":  "rec_Quản_Lý_Task_Tổng_22",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Key Virual Tháng 12",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Duy, Mỵ",
-                                             "Bộ phận":  "",
-                                             "Trạng thái":  "1. Chờ Brief / Ý tưởng",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "23/11/2026",
-                                             "Hạn chót (Deadline)":  "27/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
-                                         },
-                                         {
-                                             "id":  "rec_Quản_Lý_Task_Tổng_23",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Key Message Tháng 12",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Duy, Mỵ",
-                                             "Bộ phận":  "",
-                                             "Trạng thái":  "1. Chờ Brief / Ý tưởng",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "23/11/2026",
-                                             "Hạn chót (Deadline)":  "27/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "1"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_24",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Đề xuát tạo thêm Tiktok ",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Duy, Phụng",
-                                             "Bộ phận":  "Nội bộ",
-                                             "Trạng thái":  "1. Chờ Brief / Ý tưởng",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "7/11/2026",
-                                             "Hạn chót (Deadline)":  "7/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  " "
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_25",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Seeding các bài Minigame Showmatch Chim Sẻ \u0026 Sự kiện AOE 10/11",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Phụng",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "5. Đã duyệt hoàn thành",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "07/11/2026",
-                                             "Hạn chót (Deadline)":  "10/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "20%",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  "Seeding các group AOE và group gia dụng, trực comment đẩy tương tác"
-                                         },
-                                         {
-                                             "id":  "rec_Quản_Lý_Task_Tổng_26",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Xây dựng và ban hành quy trình đề xuất khuyến mãi hàng tháng (Mốc 20-25-30)",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Duy",
-                                             "Bộ phận":  "Nội bộ",
-                                             "Trạng thái":  "5. Đã duyệt hoàn thành",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "07/11/2026",
-                                             "Hạn chót (Deadline)":  "20/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "10%",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  "Thiết lập form tiếp nhận đề xuất CTKM tháng 12 trước ngày 20/11"
+                                             "S":  "T"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_27",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Sản xuất 5 - 10 kịch bản video Bếp từ đơn GROPA G2-607 (Xả tồn 199 SP)",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Mỵ, Duy",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "07/11/2026",
-                                             "Hạn chót (Deadline)":  "12/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "10%",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  "Chia 2 đợt: Đợt 1 (5 video) trước 11.11, Đợt 2 (5 video) trước 15.11"
+                                             "S":  "M"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_28",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Phối hợp chuẩn bị và triển khai chiến dịch Black Friday",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Duy, Mỵ, Loan",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "2. Đang thực hiện",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "07/11/2026",
-                                             "Hạn chót (Deadline)":  "11/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "30%",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  "Phối hợp cùng E-commerce đồng bộ ấn phẩm, voucher, kịch bản live và ads sàn"
+                                             "S":  "C"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_29",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "viết content sản phẩm ",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Phụng",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "5. Đã duyệt hoàn thành",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "09/11/2026",
-                                             "Hạn chót (Deadline)":  "09/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "100%",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "1"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_30",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Mini Game Tăng Follow",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Duy",
-                                             "Bộ phận":  "Content",
-                                             "Trạng thái":  "5. Đã duyệt hoàn thành",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "09/11/2026",
-                                             "Hạn chót (Deadline)":  "09/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "100%",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
-                                         },
-                                         {
-                                             "id":  "rec_Quản_Lý_Task_Tổng_31",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Mini Game Tăng Follow",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Loan, Mỵ",
-                                             "Bộ phận":  "Graphic Design",
-                                             "Trạng thái":  "5. Đã duyệt hoàn thành",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "10/11/2026",
-                                             "Hạn chót (Deadline)":  "10/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "P"
                                          },
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_32",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "Key Virual Ngày 20/11 chương trình sale tháng 20/11",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Loan",
-                                             "Bộ phận":  "Graphic Design",
-                                             "Trạng thái":  "",
-                                             "Mức độ ưu tiên":  "P2 - Cao",
-                                             "Ngày bắt đầu":  "",
-                                             "Hạn chót (Deadline)":  "",
-                                             "Tiến độ hoàn thành (%)":  "",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "S":  "1"
                                          },
                                          {
-                                             "id":  "rec_Quản_Lý_Task_Tổng_33",
-                                             "STT":  "",
-                                             "Tên công việc / Task":  "viết đề xuất , tạm ứng kinh phí ",
-                                             "Mảng công việc":  "",
-                                             "Người phụ trách":  "Phụng",
-                                             "Bộ phận":  "Nội bộ",
-                                             "Trạng thái":  "5. Đã duyệt hoàn thành",
-                                             "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                             "Ngày bắt đầu":  "10/11/2026",
-                                             "Hạn chót (Deadline)":  "10/11/2026",
-                                             "Tiến độ hoàn thành (%)":  "100%",
-                                             "Link Brief \u0026 Tài nguyên":  "",
-                                             "Feedback":  "",
-                                             "Ghi chú \u0026 Blockers":  ""
+                                             "id":  "rec_Quản_Lý_Task_Tổng_36",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_37",
+                                             "S":  "T"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_39",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_40",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_41",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_42",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_44",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_48",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_49",
+                                             "S":  "X"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_51",
+                                             "S":  "L"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_52",
+                                             "S":  "G"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_53",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_54",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_56",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_60",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_61",
+                                             "S":  "T"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_63",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_64",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_65",
+                                             "S":  "5"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_66",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_68",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_72",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_73",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_75",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_76",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_77",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_78",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_80",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_84",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_85",
+                                             "S":  "T"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_87",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_88",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_89",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_90",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_96",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_97",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_99",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_100",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_101",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_102",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_108",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_109",
+                                             "S":  "X"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_111",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_112",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_113",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_114",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_120",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_121",
+                                             "S":  "K"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_123",
+                                             "S":  "L"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_124",
+                                             "S":  "G"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_125",
+                                             "S":  "3"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_126",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_132",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_133",
+                                             "S":  "T"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_135",
+                                             "S":  "L"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_136",
+                                             "S":  "G"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_137",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_138",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_144",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_145",
+                                             "S":  "S"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_147",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_148",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_149",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_150",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_151",
+                                             "S":  "6"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_152",
+                                             "S":  "3"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_156",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_157",
+                                             "S":  "T"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_159",
+                                             "S":  "L"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_160",
+                                             "S":  "G"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_161",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_162",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_168",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_169",
+                                             "S":  "B"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_171",
+                                             "S":  "D"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_173",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_174",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_180",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_181",
+                                             "S":  "Đ"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_183",
+                                             "S":  "L"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_184",
+                                             "S":  "G"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_185",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_186",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_192",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_193",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_195",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_197",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_198",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_199",
+                                             "S":  "6"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_200",
+                                             "S":  "3"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_204",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_205",
+                                             "S":  "D"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_207",
+                                             "S":  "L"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_208",
+                                             "S":  "G"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_209",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_210",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_211",
+                                             "S":  "6"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_212",
+                                             "S":  "3"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_216",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_217",
+                                             "S":  "K"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_219",
+                                             "S":  "D"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_221",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_222",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_223",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_224",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_228",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_229",
+                                             "S":  "K"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_231",
+                                             "S":  "D"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_233",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_234",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_235",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_236",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_240",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_241",
+                                             "S":  "Đ"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_243",
+                                             "S":  "D"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_244",
+                                             "S":  "N"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_245",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_246",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_247",
+                                             "S":  "7"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_248",
+                                             "S":  "7"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_252",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_253",
+                                             "S":  "S"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_255",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_256",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_257",
+                                             "S":  "5"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_258",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_259",
+                                             "S":  "0"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_260",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_261",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_264",
+                                             "S":  "S"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_265",
+                                             "S":  "X"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_267",
+                                             "S":  "D"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_268",
+                                             "S":  "N"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_269",
+                                             "S":  "5"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_270",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_271",
+                                             "S":  "0"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_272",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_273",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_276",
+                                             "S":  "T"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_277",
+                                             "S":  "S"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_279",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_280",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_281",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_282",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_283",
+                                             "S":  "0"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_284",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_285",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_288",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_289",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_291",
+                                             "S":  "D"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_292",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_293",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_294",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_295",
+                                             "S":  "0"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_296",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_297",
+                                             "S":  "3"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_300",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_301",
+                                             "S":  "v"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_303",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_304",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_305",
+                                             "S":  "5"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_306",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_307",
+                                             "S":  "0"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_308",
+                                             "S":  "0"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_309",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_312",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_313",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_315",
+                                             "S":  "D"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_316",
+                                             "S":  "C"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_317",
+                                             "S":  "5"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_318",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_319",
+                                             "S":  "0"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_320",
+                                             "S":  "0"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_321",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_324",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_325",
+                                             "S":  "M"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_327",
+                                             "S":  "L"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_328",
+                                             "S":  "G"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_329",
+                                             "S":  "5"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_330",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_331",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_332",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_336",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_337",
+                                             "S":  "K"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_339",
+                                             "S":  "L"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_340",
+                                             "S":  "G"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_342",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_348",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_349",
+                                             "S":  "v"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_351",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_352",
+                                             "S":  "N"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_353",
+                                             "S":  "5"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_354",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_355",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_356",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_357",
+                                             "S":  "1"
                                          }
                                      ]
                      },
     "content":  {
-                    "recordCount":  18,
+                    "recordCount":  194,
                     "key":  "content",
                     "name":  "✍️ Content Calendar",
                     "id":  "882471266",
                     "records":  [
                                     {
                                         "id":  "rec__️_Content_Calendar_1",
-                                        "STT":  "1",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Sạc dự phòng Energizer",
-                                        "Sản Phẩm / SKU Liên Quan":  "Sạc dự phòng Energizer",
-                                        "Lịch Đăng (Air Date)":  "05/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Brand Master",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "6. Đã đăng / Hoàn thành",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "T"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_2",
-                                        "STT":  "2",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Bếp lẩu nướng đa năng 2 trong 1",
-                                        "Sản Phẩm / SKU Liên Quan":  "Bếp lẩu nướng 2 in 1",
-                                        "Lịch Đăng (Air Date)":  "06/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Brand Master",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "6. Đã đăng / Hoàn thành",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "S"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_3",
-                                        "STT":  "3",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Cân điện tử",
-                                        "Sản Phẩm / SKU Liên Quan":  "Cân điện tử thông minh",
-                                        "Lịch Đăng (Air Date)":  "07/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Nhân hiệu 3 (Tiện Ích)",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "3. Chờ TP duyệt",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "L"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_4",
-                                        "STT":  "4",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Nồi đa năng điện tử GAABOR",
-                                        "Sản Phẩm / SKU Liên Quan":  "Nồi đa năng điện tử GAABOR",
-                                        "Lịch Đăng (Air Date)":  "08/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Nhân hiệu 2 (Bếp)",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "3. Chờ TP duyệt",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "N"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_5",
-                                        "STT":  "5",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Quạt cầm tay mini Energizer",
-                                        "Sản Phẩm / SKU Liên Quan":  "Quạt mini Energizer",
-                                        "Lịch Đăng (Air Date)":  "09/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Brand Master",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "5. Đã duyệt / Chờ đăng",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "K"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_6",
-                                        "STT":  "6",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Sạc dự phòng Energizer 3,85 V",
-                                        "Sản Phẩm / SKU Liên Quan":  "Sạc dự phòng Energizer",
-                                        "Lịch Đăng (Air Date)":  "10/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Brand Master",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "3. Chờ TP duyệt",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  " "
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_7",
-                                        "STT":  "7",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Thông báo kèo đấu sắp tới",
-                                        "Sản Phẩm / SKU Liên Quan":  "Livestream Kèo Đấu",
-                                        "Lịch Đăng (Air Date)":  "28/10/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "28/10/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Brand Master",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "8. Hoàn thành",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "C"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_8",
-                                        "STT":  "8",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Ấm siêu tốc 2 lớp chống bỏng Masuto",
-                                        "Sản Phẩm / SKU Liên Quan":  "Ấm siêu tốc Masuto",
-                                        "Lịch Đăng (Air Date)":  "11/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Nhân hiệu 2 (Bếp)",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "3. Chờ TP duyệt",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "Đ"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_9",
-                                        "STT":  "9",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Nồi chiên không dầu Masuto",
-                                        "Sản Phẩm / SKU Liên Quan":  "Nồi chiên không dầu Masuto",
-                                        "Lịch Đăng (Air Date)":  "12/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Nhân hiệu 2 (Bếp)",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "3. Chờ TP duyệt",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "N"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_10",
-                                        "STT":  "10",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Loa di động Energizer",
-                                        "Sản Phẩm / SKU Liên Quan":  "Loa di động Energizer",
-                                        "Lịch Đăng (Air Date)":  "13/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Brand Master",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "5. Đã duyệt / Chờ đăng",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "T"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_11",
-                                        "STT":  "11",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Máy hút chân không Masuto",
-                                        "Sản Phẩm / SKU Liên Quan":  "Máy hút chân không Masuto",
-                                        "Lịch Đăng (Air Date)":  "14/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Nhân hiệu 2 (Bếp)",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "3. Chờ TP duyệt",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "L"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_12",
-                                        "STT":  "12",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Review Máy hút bụi nệm giường GAABOR",
-                                        "Sản Phẩm / SKU Liên Quan":  "Nồi đa năng điện tử GAABOR",
-                                        "Lịch Đăng (Air Date)":  "15/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "03/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Nhân hiệu 2 (Bếp)",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "3. Chờ TP duyệt",
-                                        "Link Doc Kịch Bản":  "📄 Mở Kịch Bản",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "F"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_13",
-                                        "STT":  "13",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "CTKM 11/11",
-                                        "Sản Phẩm / SKU Liên Quan":  "",
-                                        "Lịch Đăng (Air Date)":  "11/11/2026 0:00:00",
-                                        "Ngày Gửi Duyệt":  "6/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Brand Master",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chương trình khuyến mãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "3. Chờ TP duyệt",
-                                        "Link Doc Kịch Bản":  "KB CTKM 11/11",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "R"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_14",
-                                        "STT":  "14",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Đề xuất tạo 3 kênh tiktok mới",
-                                        "Sản Phẩm / SKU Liên Quan":  "",
-                                        "Lịch Đăng (Air Date)":  "",
-                                        "Ngày Gửi Duyệt":  "",
-                                        "Kênh / Nền Tảng":  "TikTok Brand Master",
-                                        " bộ phận Hỗ trợ":  "Graphic Design",
-                                        "Content Pillar / Chủ Đề":  "Chương trình khuyến mãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "1. Lên ý tưởng",
-                                        "Link Doc Kịch Bản":  "",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "S"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_15",
-                                        "STT":  "15",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Content 20/11",
-                                        "Sản Phẩm / SKU Liên Quan":  "",
-                                        "Lịch Đăng (Air Date)":  "",
-                                        "Ngày Gửi Duyệt":  "",
-                                        "Kênh / Nền Tảng":  "Facebook Fanpage",
-                                        " bộ phận Hỗ trợ":  "Graphic Design",
-                                        "Content Pillar / Chủ Đề":  "Chương trình khuyến mãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "1. Lên ý tưởng",
-                                        "Link Doc Kịch Bản":  "",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "0"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_16",
-                                        "STT":  "16",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Bộ 5 kịch bản Video Bếp từ đơn GROPA G2-607 (Đợt 1)",
-                                        "Sản Phẩm / SKU Liên Quan":  "Bếp từ đơn GROPA G2-607",
-                                        "Lịch Đăng (Air Date)":  "11/11/2026",
-                                        "Ngày Gửi Duyệt":  "09/11/2026",
-                                        "Kênh / Nền Tảng":  "TikTok Nhân hiệu 2 (Bếp)",
-                                        " bộ phận Hỗ trợ":  "Media",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Kịch bản Video ngắn (TikTok/Reels)",
-                                        "Người Thực Hiện":  "Mỵ",
-                                        "Trạng Thái Duyệt":  "1. Lên ý tưởng",
-                                        "Link Doc Kịch Bản":  "",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "0"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_17",
-                                        "STT":  "17",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "Kế hoạch Seeding \u0026 Kéo tương tác Minigame Showmatch Chim Sẻ",
-                                        "Sản Phẩm / SKU Liên Quan":  "Showmatch GDTM x VEC",
-                                        "Lịch Đăng (Air Date)":  "7/11/2026",
-                                        "Ngày Gửi Duyệt":  "07/11/2026",
-                                        "Kênh / Nền Tảng":  "Facebook Fanpage",
-                                        " bộ phận Hỗ trợ":  "Graphic Design",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Bài viết Social / Seeding",
-                                        "Người Thực Hiện":  "Phụng",
-                                        "Trạng Thái Duyệt":  "2. Đang viết kịch bản",
-                                        "Link Doc Kịch Bản":  "",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "T"
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_18",
-                                        "STT":  "18",
-                                        "Tiêu Đề Bài Viết / Kịch Bản":  "MASUTO MSKINGAIR 6L – 2 TẦNG NHIỆT, CHIÊN NƯỚNG NHÀN HƠN!",
-                                        "Sản Phẩm / SKU Liên Quan":  "Nồi Chiên Không Dầu Masuto MSKingAir 6L",
-                                        "Lịch Đăng (Air Date)":  "10/11/2026",
-                                        "Ngày Gửi Duyệt":  "10/11/2026",
-                                        "Kênh / Nền Tảng":  "Facebook Fanpage",
-                                        " bộ phận Hỗ trợ":  "Graphic Design",
-                                        "Content Pillar / Chủ Đề":  "Chiến dịch Thương hiệu \u0026 Ưu đãi",
-                                        "Định Dạng Nội Dung":  "Bài viết Social / Seeding",
-                                        "Người Thực Hiện":  "Phụng",
-                                        "Trạng Thái Duyệt":  "6. Đã đăng / Hoàn thành",
-                                        "Link Doc Kịch Bản":  "",
-                                        "Feedback của Trưởng Phòng":  ""
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_19",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_20",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_21",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_22",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_23",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_24",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_25",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_26",
+                                        "S":  "B"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_27",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_28",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_29",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_30",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_31",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_32",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_33",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_34",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_35",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_36",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_37",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_38",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_39",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_40",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_41",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_42",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_43",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_44",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_45",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_46",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_47",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_48",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_49",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_50",
+                                        "S":  "N"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_51",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_52",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_53",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_54",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_55",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_56",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_57",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_58",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_59",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_60",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_61",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_62",
+                                        "S":  "Q"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_63",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_64",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_65",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_66",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_67",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_68",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_69",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_70",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_71",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_72",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_73",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_74",
+                                        "S":  "S"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_75",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_76",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_77",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_78",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_79",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_80",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_81",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_82",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_83",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_84",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_85",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_86",
+                                        "S":  "Ấ"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_87",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_88",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_89",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_90",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_91",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_92",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_93",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_94",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_95",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_96",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_97",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_98",
+                                        "S":  "N"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_99",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_100",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_101",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_102",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_103",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_104",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_105",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_106",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_107",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_108",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_109",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_110",
+                                        "S":  "L"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_111",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_112",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_113",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_114",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_115",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_116",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_117",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_118",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_119",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_120",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_121",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_122",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_123",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_124",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_125",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_126",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_127",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_128",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_129",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_130",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_131",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_132",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_133",
+                                        "S":  "R"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_134",
+                                        "S":  "N"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_135",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_136",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_137",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_138",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_139",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_140",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_141",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_142",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_143",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_144",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_145",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_147",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_148",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_149",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_150",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_151",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_152",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_153",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_154",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_155",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_156",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_157",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_161",
+                                        "S":  "F"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_162",
+                                        "S":  "G"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_164",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_165",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_166",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_168",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_169",
+                                        "S":  "B"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_170",
+                                        "S":  "B"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_171",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_172",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_173",
+                                        "S":  "T"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_174",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_175",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_176",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_177",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_178",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_180",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_181",
+                                        "S":  "K"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_182",
+                                        "S":  "S"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_183",
+                                        "S":  "7"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_184",
+                                        "S":  "0"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_185",
+                                        "S":  "F"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_186",
+                                        "S":  "G"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_187",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_188",
+                                        "S":  "B"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_189",
+                                        "S":  "P"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_190",
+                                        "S":  "2"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_192",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_193",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_194",
+                                        "S":  "N"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_195",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_196",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_197",
+                                        "S":  "F"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_198",
+                                        "S":  "G"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_199",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_200",
+                                        "S":  "B"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_201",
+                                        "S":  "P"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_202",
+                                        "S":  "6"
                                     }
                                 ]
                 },
     "designer":  {
-                     "recordCount":  21,
+                     "recordCount":  213,
                      "key":  "designer",
                      "name":  "Quản Lý Graphic Designer",
                      "id":  "742919504",
                      "records":  [
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_1",
-                                         "STT":  "1",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế icon danh mục nổi bật",
-                                         "Phân loại ấn phẩm":  "Icon \u0026 Graphic Element",
-                                         "Sản phẩm / SKU liên quan":  "Icon set Website 3AE",
-                                         "Kênh xuất bản":  "Website / Landing Page",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P3 - Trung bình",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "01/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "T"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_2",
-                                         "STT":  "2",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Tìm ảnh sản phẩm của Scrub Daddy, Mophie tách nền, làm nền trắng",
-                                         "Phân loại ấn phẩm":  "Banner Website / Landing Page",
-                                         "Sản phẩm / SKU liên quan":  "Scrub Daddy, Mophie",
-                                         "Kênh xuất bản":  "Website / Landing Page",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "05/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "P"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_3",
-                                         "STT":  "3",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế name card cho Sếp Thảo và Sếp Quỳnh (cũ)",
-                                         "Phân loại ấn phẩm":  "POSM \u0026 In ấn",
-                                         "Sản phẩm / SKU liên quan":  "Nội bộ Ban Lãnh Đạo",
-                                         "Kênh xuất bản":  "Nội bộ",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P3 - Trung bình",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "04/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "S"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_4",
-                                         "STT":  "4",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế banner SHOWMATCH Chim sẻ đi nắng",
-                                         "Phân loại ấn phẩm":  "Social Media / Fanpage",
-                                         "Sản phẩm / SKU liên quan":  "Showmatch GDTM x VEC",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "Banding",
-                                         "Trạng thái thiết kế":  "7. Tạm dừng / Hủy",
-                                         "Hạn chót (Deadline)":  "09/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "hủy",
-                                         "Link Brief \u0026 Tài nguyên":  "📄 Brief Showmatch Chim Sẻ",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "K"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_5",
-                                         "STT":  "5",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Banner Chương trình event",
-                                         "Phân loại ấn phẩm":  "Social Media / Fanpage",
-                                         "Sản phẩm / SKU liên quan":  "Toàn bộ thương hiệu 3AE",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "9/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "N"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_6",
-                                         "STT":  "6",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế visual \u0026 tư liệu hình ảnh Video Sự kiện AOE 10/11",
-                                         "Phân loại ấn phẩm":  "Social Media / Fanpage",
-                                         "Sản phẩm / SKU liên quan":  "Sự kiện Showmatch AOE",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "09/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "Đã có sẵn kịch bản",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "M"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_7",
-                                         "STT":  "7",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế bao thư cỡ A4 gấp 3 + cỡ A4 đứng cho hành chính",
-                                         "Phân loại ấn phẩm":  "POSM \u0026 In ấn",
-                                         "Sản phẩm / SKU liên quan":  "Văn phòng phẩm 3AE",
-                                         "Kênh xuất bản":  "Nội bộ",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P3 - Trung bình",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "03/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "T"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_8",
-                                         "STT":  "8",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế banner danh mục sản phẩm WEB + MOBI (mẫu cũ 2D)",
-                                         "Phân loại ấn phẩm":  "Banner Website / Landing Page",
-                                         "Sản phẩm / SKU liên quan":  "Danh mục sản phẩm Web",
-                                         "Kênh xuất bản":  "Website / Landing Page",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "02/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "H"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_9",
-                                         "STT":  "9",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế thank letter",
-                                         "Phân loại ấn phẩm":  "POSM \u0026 In ấn",
-                                         "Sản phẩm / SKU liên quan":  "Chăm sóc khách hàng 3AE",
-                                         "Kênh xuất bản":  "Nội bộ",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "08/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "T"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_10",
-                                         "STT":  "10",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế ảnh facebook đăng 06/11",
-                                         "Phân loại ấn phẩm":  "Social Media / Fanpage",
-                                         "Sản phẩm / SKU liên quan":  "Bài biết theo ngày - Content",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "06/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "L"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_11",
-                                         "STT":  "11",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế ảnh facebook đăng 09/11",
-                                         "Phân loại ấn phẩm":  "Social Media / Fanpage",
-                                         "Sản phẩm / SKU liên quan":  "Bài biết theo ngày - Content",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "09/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "L"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_12",
-                                         "STT":  "12",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế Key Visual \u0026 Banner facebook Mega Sale 11.11",
-                                         "Phân loại ấn phẩm":  "Social Media / Fanpage",
-                                         "Sản phẩm / SKU liên quan":  "Toàn bộ thương hiệu 3AE",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "10/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "F"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_13",
-                                         "STT":  "13",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế banner chương trình Mini game ",
-                                         "Phân loại ấn phẩm":  "Social Media / Fanpage",
-                                         "Sản phẩm / SKU liên quan":  "Showmatch GDTM x VEC",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "7/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "T"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_14",
-                                         "STT":  "14",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Cập nhật công bố thắng mini game mỗi ngày",
-                                         "Phân loại ấn phẩm":  "",
-                                         "Sản phẩm / SKU liên quan":  "Showmatch GDTM x VEC",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P3 - Trung bình",
-                                         "Trạng thái thiết kế":  "3. Đang thiết kế",
-                                         "Hạn chót (Deadline)":  "đến khi hết chương trình",
-                                         "Tiến độ hoàn thành (%)":  "80%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "I"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_15",
-                                         "STT":  "15",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế ấn phẩm truyền thông chiến dịch Black Friday",
-                                         "Phân loại ấn phẩm":  "Social Media / Fanpage",
-                                         "Sản phẩm / SKU liên quan":  "Toàn bộ thương hiệu 3AE",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "1. Chờ Brief / Ý tưởng",
-                                         "Hạn chót (Deadline)":  "20/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "0%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "I"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_16",
-                                         "STT":  "16",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế demo áo cho nhân viên dùng quay clip quảng cáo thương hiệu",
-                                         "Phân loại ấn phẩm":  "Brand Guidelines / Bộ nhận diện",
-                                         "Sản phẩm / SKU liên quan":  "Đồng phục \u0026 Brand 3AE",
-                                         "Kênh xuất bản":  "Nội bộ",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "10/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "W"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_17",
-                                         "STT":  "17",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Xây dựng Brand Guidelines 3AE (Bộ nhận diện chuẩn)",
-                                         "Phân loại ấn phẩm":  "Brand Guidelines / Bộ nhận diện",
-                                         "Sản phẩm / SKU liên quan":  "Toàn bộ thương hiệu 3AE",
-                                         "Kênh xuất bản":  "Nội bộ",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                         "Trạng thái thiết kế":  "3. Đang thiết kế",
-                                         "Hạn chót (Deadline)":  "29/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "30%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "L"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_18",
-                                         "STT":  "18",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế ảnh facebook đăng 10/11 (nồi chiên không dầu 6L)",
-                                         "Phân loại ấn phẩm":  "",
-                                         "Sản phẩm / SKU liên quan":  "Bài biết theo ngày - Content",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "10/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "P"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_19",
-                                         "STT":  "19",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế ảnh facebook đăng 11/11 (bếp từ đơn)",
-                                         "Phân loại ấn phẩm":  "",
-                                         "Sản phẩm / SKU liên quan":  "Bài biết theo ngày - Content",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "11/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
-                                     },
-                                     {
-                                         "id":  "rec_Quản_Lý_Graphic_Designer_20",
-                                         "STT":  "20",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế ảnh facebook đăng (nồi chiên không dầu 12L)",
-                                         "Phân loại ấn phẩm":  "",
-                                         "Sản phẩm / SKU liên quan":  "Bài biết theo ngày - Content",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P3 - Trung bình",
-                                         "Trạng thái thiết kế":  "6. Đã duyệt hoàn thành",
-                                         "Hạn chót (Deadline)":  "21/11/2026",
-                                         "Tiến độ hoàn thành (%)":  "100%",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "6"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_21",
-                                         "STT":  "21",
-                                         "Tên ấn phẩm / Task Thiết Kế":  "Thiết kế banner facebook cho 20/11 nhà giáo việt nam",
-                                         "Phân loại ấn phẩm":  "",
-                                         "Sản phẩm / SKU liên quan":  "",
-                                         "Kênh xuất bản":  "Facebook Fanpage",
-                                         "Người phụ trách":  "Loan",
-                                         "Mức độ ưu tiên":  "P2 - Cao",
-                                         "Trạng thái thiết kế":  "2. Đang lên Concept",
-                                         "Hạn chót (Deadline)":  "                         ",
-                                         "Tiến độ hoàn thành (%)":  "",
-                                         "Link Brief \u0026 Tài nguyên":  "",
-                                         "Link File Thiết Kế (Drive/Figma)":  "",
-                                         "Feedback của Trưởng phòng":  ""
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_24",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_25",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_26",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_27",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_28",
+                                         "S":  "W"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_29",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_30",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_31",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_33",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_36",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_37",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_38",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_39",
+                                         "S":  "N"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_40",
+                                         "S":  "N"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_41",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_42",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_43",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_45",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_48",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_49",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_50",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_51",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_52",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_53",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_54",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_55",
+                                         "S":  "7"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_58",
+                                         "S":  "�"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_60",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_61",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_62",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_63",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_64",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_65",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_66",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_67",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_68",
+                                         "S":  "9"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_69",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_72",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_73",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_74",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_75",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_76",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_77",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_78",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_79",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_80",
+                                         "S":  "0"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_81",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_82",
+                                         "S":  "Đ"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_84",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_85",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_86",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_87",
+                                         "S":  "V"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_88",
+                                         "S":  "N"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_89",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_90",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_91",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_93",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_96",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_97",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_98",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_99",
+                                         "S":  "D"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_100",
+                                         "S":  "W"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_101",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_102",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_103",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_105",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_108",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_109",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_110",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_111",
+                                         "S":  "C"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_112",
+                                         "S":  "N"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_113",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_114",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_115",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_117",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_120",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_121",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_122",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_123",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_124",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_125",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_126",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_127",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_128",
+                                         "S":  "0"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_129",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_132",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_133",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_134",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_135",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_136",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_137",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_138",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_139",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_140",
+                                         "S":  "0"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_141",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_144",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_145",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_146",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_147",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_148",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_149",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_150",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_151",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_152",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_153",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_156",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_157",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_158",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_159",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_160",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_161",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_162",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_163",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_164",
+                                         "S":  "7"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_165",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_168",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_169",
+                                         "S":  "C"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_171",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_172",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_173",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_174",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_175",
+                                         "S":  "3"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_177",
+                                         "S":  "8"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_180",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_181",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_182",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_183",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_184",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_185",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_186",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_187",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_188",
+                                         "S":  "2"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_189",
+                                         "S":  "0"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_192",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_193",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_194",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_195",
+                                         "S":  "Đ"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_196",
+                                         "S":  "N"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_197",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_198",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_199",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_201",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_204",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_205",
+                                         "S":  "X"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_206",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_207",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_208",
+                                         "S":  "N"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_209",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_210",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_211",
+                                         "S":  "3"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_213",
+                                         "S":  "3"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_216",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_217",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_219",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_220",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_221",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_222",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_223",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_224",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_225",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_228",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_229",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_231",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_232",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_233",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_234",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_235",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_236",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_237",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_240",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_241",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_243",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_244",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_245",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_246",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_247",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_248",
+                                         "S":  "2"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_249",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_252",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_253",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_256",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_257",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_258",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_259",
+                                         "S":  "2"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_264",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_265",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_267",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_268",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_269",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_270",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_271",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_272",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_273",
+                                         "S":  "1"
                                      }
                                  ]
                  },
     "editor":  {
-                   "recordCount":  20,
+                   "recordCount":  229,
                    "key":  "editor",
                    "name":  "Quản Lý Video Editor",
                    "id":  "946716817",
                    "records":  [
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_1",
-                                       "STT":  "1",
-                                       "Tên Video / Dự án dựng":  "Ấm Đun Siêu Tốc (Video Bán Hàng \u0026 Giới Thiệu Sản Phẩm)",
-                                       "Định dạng Video":  "Video Bán hàng / Giới thiệu sản phẩm",
-                                       "Sản phẩm / SKU liên quan":  "Ấm đun siêu tốc Gaabor",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "03/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "30s - 45s",
-                                       "Link Kịch bản":  "📄 Kịch Bản Ấm Đun",
-                                       "Link Footage (Source Drive)":  "📁 Source Quay Drive",
-                                       "Link Preview / Bản Render":  "🎬 Xem Bản Render",
-                                       "Feedback của Trưởng phòng":  "Cần chèn thêm đoạn test sôi thực tế và CTA giỏ hàng TikTok"
+                                       "S":  "T"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_2",
-                                       "STT":  "2",
-                                       "Tên Video / Dự án dựng":  "Nồi Đa Năng Gaabor (Video Unbox \u0026 Test Công Năng)",
-                                       "Định dạng Video":  "Video Bán hàng / Giới thiệu sản phẩm",
-                                       "Sản phẩm / SKU liên quan":  "Nồi đa năng Gaabor",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P2 - Cao",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "03/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "45s - 60s",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "📁 Source Quay Drive",
-                                       "Link Preview / Bản Render":  "🎬 Xem Bản Render",
-                                       "Feedback của Trưởng phòng":  "Đã hoàn thành bản cắt thô, chờ duyệt âm thanh nền"
+                                       "S":  "Đ"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_3",
-                                       "STT":  "3",
-                                       "Tên Video / Dự án dựng":  "Nồi Đa Năng Gaabor - Bản 2 (Video Nấu Ăn Thực Tế)",
-                                       "Định dạng Video":  "Video Bán hàng / Giới thiệu sản phẩm",
-                                       "Sản phẩm / SKU liên quan":  "Nồi đa năng Gaabor",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P2 - Cao",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "06/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "30s - 45s",
-                                       "Link Kịch bản":  "📄 Kịch Bản Nồi Đa Năng 2",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "🎬 Xem Bản Render",
-                                       "Feedback của Trưởng phòng":  "Chờ duyệt visual hook 3 giây đầu"
+                                       "S":  "S"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_4",
-                                       "STT":  "4",
-                                       "Tên Video / Dự án dựng":  "Ấm Đun Siêu Tốc - Bản 2 (Video Tình Huống Gia Đình)",
-                                       "Định dạng Video":  "Video Tình huống / Viral clip",
-                                       "Sản phẩm / SKU liên quan":  "Ấm đun siêu tốc Gaabor",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "08/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "45s - 60s",
-                                       "Link Kịch bản":  "📄 Kịch Bản Ấm Đun 2",
-                                       "Link Footage (Source Drive)":  "📁 Source Quay Drive",
-                                       "Link Preview / Bản Render":  "🎬 Xem Bản Cut Nháp",
-                                       "Feedback của Trưởng phòng":  "Đang ráp source và lồng voice AI"
+                                       "S":  "T"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_5",
-                                       "STT":  "5",
-                                       "Tên Video / Dự án dựng":  "CÂN ĐIỆN TỬ",
-                                       "Định dạng Video":  "Video Tình huống / Viral clip",
-                                       "Sản phẩm / SKU liên quan":  "CÂN ĐIỆN TỬ GAABOR",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "0/11/2027",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "Xem Bản Cut Nhap",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "M"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_6",
-                                       "STT":  "6",
-                                       "Tên Video / Dự án dựng":  "MÁY HÚT BỤI",
-                                       "Định dạng Video":  "Video Tình huống / Viral clip",
-                                       "Sản phẩm / SKU liên quan":  "máy hút bụi",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "08/11/2028",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "Video Máy hút bụi",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "E"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_7",
-                                       "STT":  "7",
-                                       "Tên Video / Dự án dựng":  "MÁY HÚT CHÂN KHÔNG",
-                                       "Định dạng Video":  "Video Tình huống / Viral clip",
-                                       "Sản phẩm / SKU liên quan":  "má́y hút chân không",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "Video máy hút chân k",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "K"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_8",
-                                       "STT":  "8",
-                                       "Tên Video / Dự án dựng":  "Nồi chiêng không dầu",
-                                       "Định dạng Video":  "Video Tình huống / Viral clip",
-                                       "Sản phẩm / SKU liên quan":  "nồi chiêng không dầu",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "08/11/2029",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "Video nồi chiêng k dầu",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "H"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_9",
-                                       "STT":  "9",
-                                       "Tên Video / Dự án dựng":  "Review Máy quạt",
-                                       "Định dạng Video":  "Video Tình huống / Viral clip",
-                                       "Sản phẩm / SKU liên quan":  "quạt energizer",
-                                       "Trạng thái dựng":  "",
-                                       "Mức độ ưu tiên":  "",
-                                       "Editor phụ trách":  "",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "",
-                                       "Tiến độ hoàn thành (%)":  "0%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "Video Máy quạt",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "T"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_10",
-                                       "STT":  "10",
-                                       "Tên Video / Dự án dựng":  "Dựng video truyền thông Sự kiện Quần Hùng AOE ngày 10/11",
-                                       "Định dạng Video":  "Video Tình huống / Viral clip",
-                                       "Sản phẩm / SKU liên quan":  "Sự kiện Showmatch AOE",
-                                       "Trạng thái dựng":  "2. Đang quay / Chờ Footage",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "09/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "0%",
-                                       "Thời lượng dự kiến":  "45s - 60s",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "",
-                                       "Feedback của Trưởng phòng":  "Kịch bản đã có sẵn, chờ visual từ Design để ráp video"
+                                       "S":  "T"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_11",
-                                       "STT":  "11",
-                                       "Tên Video / Dự án dựng":  "Gói 5 Video Bếp từ đơn GROPA G2-607 (Đợt 1)",
-                                       "Định dạng Video":  "Video Bán hàng / Giới thiệu sản phẩm",
-                                       "Sản phẩm / SKU liên quan":  "Bếp từ đơn GROPA G2-607",
-                                       "Trạng thái dựng":  "1. Chờ Kịch bản / Brief",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "12/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "0%",
-                                       "Thời lượng dự kiến":  "30s - 45s",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "L"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_12",
-                                       "STT":  "12",
-                                       "Tên Video / Dự án dựng":  "Gói 5 Video Bếp từ đơn GROPA G2-607 (Đợt 2 )",
-                                       "Định dạng Video":  "Video Tình huống / Viral clip",
-                                       "Sản phẩm / SKU liên quan":  "Bếp từ đơn GROPA G2-607",
-                                       "Trạng thái dựng":  "1. Chờ Kịch bản / Brief",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "16/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "0%",
-                                       "Thời lượng dự kiến":  "45s - 60s",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "L"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_13",
-                                       "STT":  "13",
-                                       "Tên Video / Dự án dựng":  "Gói 5 Video Bếp từ đơn GROPA G2-607 (Đợt 3)",
-                                       "Định dạng Video":  "",
-                                       "Sản phẩm / SKU liên quan":  "Bếp từ đơn GROPA G2-607",
-                                       "Trạng thái dựng":  "1. Chờ Kịch bản / Brief",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "14/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "0%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "L"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_14",
-                                       "STT":  "14",
-                                       "Tên Video / Dự án dựng":  "Gói 5 Video Bếp từ đơn GROPA G2-607 (Đợt 4 )",
-                                       "Định dạng Video":  "",
-                                       "Sản phẩm / SKU liên quan":  "Bếp từ đơn GROPA G2-607",
-                                       "Trạng thái dựng":  "1. Chờ Kịch bản / Brief",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "14/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "0%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "F"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_15",
-                                       "STT":  "15",
-                                       "Tên Video / Dự án dựng":  "Gói 5 Video Bếp từ đơn GROPA G2-607 (Đợt 5)",
-                                       "Định dạng Video":  "",
-                                       "Sản phẩm / SKU liên quan":  "Bếp từ đơn GROPA G2-607",
-                                       "Trạng thái dựng":  "1. Chờ Kịch bản / Brief",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "14/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "0%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "Ấ"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_16",
-                                       "STT":  "16",
-                                       "Tên Video / Dự án dựng":  "Edit videso cho ngày 11/11",
-                                       "Định dạng Video":  "Video Bán hàng / Giới thiệu sản phẩm",
-                                       "Sản phẩm / SKU liên quan":  "Toàn bộ sản phẩm",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "Facebook Reels",
-                                       "Hạn chót bàn giao (Deadline)":  "9/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "",
-                                       "Link Preview / Bản Render":  "9_11_2026",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "V"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_17",
-                                       "STT":  "17",
-                                       "Tên Video / Dự án dựng":  "Edit video Bếp Masuto",
-                                       "Định dạng Video":  "Video Bán hàng / Giới thiệu sản phẩm",
-                                       "Sản phẩm / SKU liên quan":  "Bếp đa năng",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P2 - Cao",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "10/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "SOURCE",
-                                       "Link Preview / Bản Render":  "EDIT",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "Ấ"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_18",
-                                       "STT":  "18",
-                                       "Tên Video / Dự án dựng":  "Edit Video Loa Energyzer ",
-                                       "Định dạng Video":  "Video Bán hàng / Giới thiệu sản phẩm",
-                                       "Sản phẩm / SKU liên quan":  "Loa Energizer ",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "10/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "SOURCE",
-                                       "Link Preview / Bản Render":  "10_11_2026_LOA",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "6"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_19",
-                                       "STT":  "19",
-                                       "Tên Video / Dự án dựng":  "Edit Video Sạc Dự Phòng Energyzer ",
-                                       "Định dạng Video":  "Video Bán hàng / Giới thiệu sản phẩm",
-                                       "Sản phẩm / SKU liên quan":  "Sạc dự phòng Energizer ",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "11/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "SOURCE",
-                                       "Link Preview / Bản Render":  "11_11_SẠC DỰ PHÒNG DRAFT 2.mp4",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "P"
                                    },
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_20",
-                                       "STT":  "20",
-                                       "Tên Video / Dự án dựng":  "Edit Video Sạc Dự Phòng Energyzer ",
-                                       "Định dạng Video":  "Video Bán hàng / Giới thiệu sản phẩm",
-                                       "Sản phẩm / SKU liên quan":  "Sạc dự phòng Energizer ",
-                                       "Trạng thái dựng":  "6. Đã duyệt hoàn thành",
-                                       "Mức độ ưu tiên":  "P1 - Khẩn cấp",
-                                       "Editor phụ trách":  "Video Editor Team",
-                                       "Kênh xuất bản":  "TikTok Shop",
-                                       "Hạn chót bàn giao (Deadline)":  "11/11/2026",
-                                       "Tiến độ hoàn thành (%)":  "100%",
-                                       "Thời lượng dự kiến":  "",
-                                       "Link Kịch bản":  "",
-                                       "Link Footage (Source Drive)":  "SOURCE",
-                                       "Link Preview / Bản Render":  "SẠC DỰ PHÒNG ",
-                                       "Feedback của Trưởng phòng":  ""
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_21",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_23",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_24",
+                                       "S":  "3"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_25",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_26",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_27",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_28",
+                                       "S":  "C"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_29",
+                                       "S":  "N"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_30",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_31",
+                                       "S":  "N"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_32",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_33",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_34",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_35",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_37",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_38",
+                                       "S":  "4"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_40",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_41",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_42",
+                                       "S":  "Đ"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_43",
+                                       "S":  "N"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_44",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_45",
+                                       "S":  "N"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_46",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_47",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_48",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_49",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_51",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_52",
+                                       "S":  "3"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_53",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_55",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_56",
+                                       "S":  "C"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_57",
+                                       "S":  "Ấ"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_58",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_59",
+                                       "S":  "Ấ"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_60",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_61",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_62",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_63",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_65",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_66",
+                                       "S":  "4"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_67",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_68",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_69",
+                                       "S":  "�"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_70",
+                                       "S":  "Đ"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_71",
+                                       "S":  "C"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_72",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_73",
+                                       "S":  "C"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_74",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_75",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_76",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_77",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_79",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_83",
+                                       "S":  "X"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_84",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_85",
+                                       "S":  "M"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_86",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_87",
+                                       "S":  "m"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_88",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_89",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_90",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_91",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_93",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_97",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_98",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_99",
+                                       "S":  "M"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_100",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_101",
+                                       "S":  "m"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_102",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_103",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_104",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_105",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_107",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_111",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_112",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_113",
+                                       "S":  "N"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_114",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_115",
+                                       "S":  "n"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_116",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_117",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_118",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_119",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_121",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_125",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_126",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_127",
+                                       "S":  "R"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_128",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_129",
+                                       "S":  "q"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_133",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_135",
+                                       "S":  "0"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_139",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_140",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_141",
+                                       "S":  "D"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_142",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_143",
+                                       "S":  "S"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_144",
+                                       "S":  "2"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_145",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_146",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_147",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_148",
+                                       "S":  "0"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_149",
+                                       "S":  "0"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_150",
+                                       "S":  "4"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_154",
+                                       "S":  "K"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_155",
+                                       "S":  "G"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_156",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_157",
+                                       "S":  "B"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_158",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_159",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_160",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_161",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_162",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_163",
+                                       "S":  "0"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_164",
+                                       "S":  "3"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_168",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_169",
+                                       "S":  "G"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_170",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_171",
+                                       "S":  "B"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_172",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_173",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_174",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_175",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_176",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_177",
+                                       "S":  "0"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_178",
+                                       "S":  "4"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_182",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_183",
+                                       "S":  "G"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_185",
+                                       "S":  "B"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_186",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_187",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_188",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_189",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_190",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_191",
+                                       "S":  "0"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_196",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_197",
+                                       "S":  "G"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_199",
+                                       "S":  "B"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_200",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_201",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_202",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_203",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_204",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_205",
+                                       "S":  "0"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_210",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_211",
+                                       "S":  "G"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_213",
+                                       "S":  "B"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_214",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_215",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_216",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_217",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_218",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_219",
+                                       "S":  "0"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_224",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_225",
+                                       "S":  "E"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_226",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_227",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_228",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_229",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_230",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_231",
+                                       "S":  "F"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_232",
+                                       "S":  "9"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_233",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_237",
+                                       "S":  "9"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_238",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_239",
+                                       "S":  "E"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_240",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_241",
+                                       "S":  "B"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_242",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_243",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_244",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_245",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_246",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_247",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_250",
+                                       "S":  "S"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_251",
+                                       "S":  "E"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_252",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_253",
+                                       "S":  "E"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_254",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_255",
+                                       "S":  "L"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_256",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_257",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_258",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_259",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_260",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_261",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_264",
+                                       "S":  "S"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_265",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_266",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_267",
+                                       "S":  "E"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_268",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_269",
+                                       "S":  "S"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_270",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_271",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_272",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_273",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_274",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_275",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_278",
+                                       "S":  "S"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_279",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_280",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_281",
+                                       "S":  "E"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_282",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_283",
+                                       "S":  "S"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_284",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_285",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_286",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_287",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_288",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_289",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_292",
+                                       "S":  "S"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_293",
+                                       "S":  "S"
                                    }
                                ]
                },
@@ -1621,65 +3614,162 @@ const LARK_BASE_ALL_TABLES = {
                                 ]
                 },
     "channels":  {
-                     "recordCount":  5,
+                     "recordCount":  38,
                      "key":  "channels",
                      "name":  "📱 Kênh Nền Tảng",
                      "id":  "109",
                      "records":  [
                                      {
                                          "id":  "rec____Kênh_Nền_Tảng_1",
-                                         "STT":  "1",
-                                         "Tên Kênh / Nền Tảng":  "Facebook Fanpage \"Gia Dụng Thông Minh 3AE\"",
-                                         "Phân Loại Kênh":  "Thương hiệu chính",
-                                         "Nền Tảng Trực Thuộc":  "Facebook",
-                                         "Người Phụ Trách":  "Phụng",
-                                         "Link Truy Cập Kênh":  "https://facebook.com/giadungthongminh3ae",
-                                         "Trạng Thái Kênh":  "Đang hoạt động",
-                                         "Mục Tiêu \u0026 Định Hướng Nội Dung":  "Đăng bài truyền thông, hình ảnh sản phẩm \u0026 chạy quảng cáo Ads"
+                                         "S":  "T"
                                      },
                                      {
                                          "id":  "rec____Kênh_Nền_Tảng_2",
-                                         "STT":  "2",
-                                         "Tên Kênh / Nền Tảng":  "Tik tok Gia Dụng Thông Minh 3AE Store\n",
-                                         "Phân Loại Kênh":  "",
-                                         "Nền Tảng Trực Thuộc":  "Tik tok ",
-                                         "Người Phụ Trách":  "Phụng",
-                                         "Link Truy Cập Kênh":  "https://www.tiktok.com/@giadungthongthongminh3ae",
-                                         "Trạng Thái Kênh":  "Đang hoạt động",
-                                         "Mục Tiêu \u0026 Định Hướng Nội Dung":  "Đăng bài Khám phá đồ gia dụng \u0026 Công nghệ tiện ích"
+                                         "S":  "P"
                                      },
                                      {
                                          "id":  "rec____Kênh_Nền_Tảng_3",
-                                         "STT":  "3",
-                                         "Tên Kênh / Nền Tảng":  "Shop Gia Dụng Thông Minh 3AE\r\n",
-                                         "Phân Loại Kênh":  "",
-                                         "Nền Tảng Trực Thuộc":  "Tik tok ",
-                                         "Người Phụ Trách":  "Mỵ",
-                                         "Link Truy Cập Kênh":  "https://www.tiktok.com/@giadungthongminh3ae",
-                                         "Trạng Thái Kênh":  "Đang hoạt động",
-                                         "Mục Tiêu \u0026 Định Hướng Nội Dung":  "-"
+                                         "S":  "N"
                                      },
                                      {
                                          "id":  "rec____Kênh_Nền_Tảng_4",
-                                         "STT":  "4",
-                                         "Tên Kênh / Nền Tảng":  "Gia Dụng Thông Minh 3AE",
-                                         "Phân Loại Kênh":  "",
-                                         "Nền Tảng Trực Thuộc":  "Instagram",
-                                         "Người Phụ Trách":  "Mỵ",
-                                         "Link Truy Cập Kênh":  "https://www.instagram.com/giadungthongminh3ae",
-                                         "Trạng Thái Kênh":  "Đang hoạt động",
-                                         "Mục Tiêu \u0026 Định Hướng Nội Dung":  ""
+                                         "S":  "N"
                                      },
                                      {
                                          "id":  "rec____Kênh_Nền_Tảng_5",
-                                         "STT":  "5",
-                                         "Tên Kênh / Nền Tảng":  "Mỵ Nương Cook - ing",
-                                         "Phân Loại Kênh":  "Gia dụng / Bếp",
-                                         "Nền Tảng Trực Thuộc":  "Facebook",
-                                         "Người Phụ Trách":  "Mỵ",
-                                         "Link Truy Cập Kênh":  "https://www.facebook.com/me/",
-                                         "Trạng Thái Kênh":  "Huỷ",
-                                         "Mục Tiêu \u0026 Định Hướng Nội Dung":  ""
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_6",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_7",
+                                         "S":  "M"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_8",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_9",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_10",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_11",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_12",
+                                         "S":  "h"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_13",
+                                         "S":  "Đ"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_14",
+                                         "S":  "Đ"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_15",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_17",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_18",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_19",
+                                         "S":  "h"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_20",
+                                         "S":  "Đ"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_21",
+                                         "S":  "Đ"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_22",
+                                         "S":  "S"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_24",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_25",
+                                         "S":  "M"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_26",
+                                         "S":  "h"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_27",
+                                         "S":  "Đ"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_28",
+                                         "S":  "-"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_29",
+                                         "S":  "G"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_31",
+                                         "S":  "I"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_32",
+                                         "S":  "M"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_33",
+                                         "S":  "h"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_34",
+                                         "S":  "Đ"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_35",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_36",
+                                         "S":  "M"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_37",
+                                         "S":  "G"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_38",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_39",
+                                         "S":  "M"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_40",
+                                         "S":  "h"
+                                     },
+                                     {
+                                         "id":  "rec____Kênh_Nền_Tảng_41",
+                                         "S":  "H"
                                      }
                                  ]
                  },
@@ -1711,730 +3801,2254 @@ const LARK_BASE_ALL_TABLES = {
                                 ]
                 },
     "sample_products":  {
-                            "recordCount":  30,
+                            "recordCount":  561,
                             "key":  "sample_products",
                             "name":  "📦 Quản Lý Sản Phẩm Mẫu (MKT)",
                             "id":  "387098588",
                             "records":  [
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__1",
-                                                "STT":  "1",
-                                                "Mã Mẫu / Mã SKU":  "MKT-ENERGIZER-EF3000",
-                                                "Tên Sản Phẩm Cụ Thể":  "Quạt mini Energizer EF3000 gập gọn kiêm sạc dự phòng",
-                                                "Thương Hiệu":  "Energizer",
-                                                "Nhóm Ngành Hàng":  "Quạt \u0026 Làm mát",
-                                                "Giá Niêm Yết (VND)":  "350.000 ₫",
-                                                "Số Lượng Bàn Giao":  "2",
-                                                "Ngày Bàn Giao":  "25/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox gồm dây sạc Type-C, dây đeo cổ, sách HDSD",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Nhỏ gọn lòng bàn tay, gập góc linh hoạt bỏ túi hoặc để bàn, pin trâu kiêm sạc dự phòng khẩn cấp",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Energizer_EF3000",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/quat-mini-energizer-ef3000-gap-gon-kiem-sac-du-phong",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đã quay xong video unboxing, lưu tủ phục vụ livestream hàng tuần"
+                                                "S":  "M"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__2",
-                                                "STT":  "2",
-                                                "Mã Mẫu / Mã SKU":  "MKT-ENERGIZER-EF5000",
-                                                "Tên Sản Phẩm Cụ Thể":  "Quạt mini Energizer EF5000 làm mát Ice Cooling gập gọn kiêm sạc dự phòng",
-                                                "Thương Hiệu":  "Energizer",
-                                                "Nhóm Ngành Hàng":  "Quạt \u0026 Làm mát",
-                                                "Giá Niêm Yết (VND)":  "550.000 ₫",
-                                                "Số Lượng Bàn Giao":  "2",
-                                                "Ngày Bàn Giao":  "25/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Đã qua sử dụng (Đang quay chụp)",
-                                                "Vị Trí Lưu Kho MKT":  "Kệ Studio Media (Góc quay)",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox đầy đủ phụ kiện + chân đế",
-                                                "Trạng Thái Mẫu":  "🟡 Đang mượn quay Video",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Huy (Media / Video Editor)",
-                                                "Mục Đích Sử Dụng":  "Làm video Ads chuyển đổi",
-                                                "Ngày Mượn / Xuất":  "08/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "15/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Thiết kế siêu mỏng thanh lịch, công nghệ làm mát lạnh Ice Cooling tức thì, pin dung lượng 5.000mAh",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Energizer_EF5000",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/quat-mini-energizer-ef5000-lam-mat-ice-cooling-gap-gon-kiem-sac-du-phong",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đang quay footage so sánh độ lạnh với quạt thường, cảnh quay ngoài trời"
+                                                "S":  "T"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__3",
-                                                "STT":  "3",
-                                                "Mã Mẫu / Mã SKU":  "MKT-ENERGIZER-EF6000",
-                                                "Tên Sản Phẩm Cụ Thể":  "Quạt mini Energizer EF6000 làm mát Ice Cooling kiêm sạc dự phòng",
-                                                "Thương Hiệu":  "Energizer",
-                                                "Nhóm Ngành Hàng":  "Quạt \u0026 Làm mát",
-                                                "Giá Niêm Yết (VND)":  "690.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "28/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Đã gửi bên ngoài",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox nguyên hộp gửi kèm túi chống sốc",
-                                                "Trạng Thái Mẫu":  "🟣 Đang gửi KOL / KOC",
-                                                "Người Giữ / KOL Nhận Mẫu":  "KOL Trinh Meow (Review TikTok)",
-                                                "Mục Đích Sử Dụng":  "Gửi KOL / KOC trải nghiệm",
-                                                "Ngày Mượn / Xuất":  "05/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "18/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Sò lạnh Semiconductor hạ nhiệt sâu tức thì, 6 cánh gió mát sâu, pin khủng 6.000mAh, màn hình LED hiển thị % pin",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Energizer_EF6000",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/quat-mini-energizer-ef6000-lam-mat-ice-cooling-kiem-sac-du-phong",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Gửi booking KOL làm clip review công nghệ sò lạnh làm mát mùa hè / du lịch"
+                                                "S":  "T"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__4",
-                                                "STT":  "4",
-                                                "Mã Mẫu / Mã SKU":  "MKT-MASUTO-MULTICOOK",
-                                                "Tên Sản Phẩm Cụ Thể":  "Bếp lẩu nướng đa năng 2 in 1 Masuto MSMultiCook",
-                                                "Thương Hiệu":  "Masuto",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "1.290.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "01/11/2026",
-                                                "Tình Trạng Hiện Vật":  "Đã qua sử dụng (Đang quay chụp)",
-                                                "Vị Trí Lưu Kho MKT":  "Kệ Studio Media (Góc quay)",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox gồm 2 khay lẩu \u0026 nướng, nắp kính, dây nguồn rời",
-                                                "Trạng Thái Mẫu":  "🟡 Đang mượn quay Video",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Huy (Media / Video Editor)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "09/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "14/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Tích hợp 2 khay lẩu và nướng độc lập, 2 núm chỉnh nhiệt độ riêng biệt, khay chống dính cao cấp dễ vệ sinh",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Masuto_MultiCook",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/bep-lau-nuong-da-nang-2-in-1-masuto-msmulticook",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đang quay series món ăn gia đình cuối tuần cho kênh TikTok Bếp Thông Minh"
+                                                "S":  "N"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__5",
-                                                "STT":  "5",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GROPA-G2607",
-                                                "Tên Sản Phẩm Cụ Thể":  "Bếp từ đơn GROPA G2-607",
-                                                "Thương Hiệu":  "GROPA",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "850.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "20/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox kèm nồi lẩu inox quà tặng, HDSD",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Chụp ảnh sản phẩm \u0026 Key Visual",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Mặt kính Ceramic siêu bền chịu sốc nhiệt, mỏng nhẹ sang trọng, công suất 2000W nấu siêu tốc",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gropa_G2607",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/bep-tu-don-gropa-g2-607",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đã chụp xong banner quảng cáo website, sẵn sàng trong tủ mẫu"
+                                                "S":  "G"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__6",
-                                                "STT":  "6",
-                                                "Mã Mẫu / Mã SKU":  "MKT-MASUTO-PRIMEAIR12",
-                                                "Tên Sản Phẩm Cụ Thể":  "Nồi chiên không dầu Masuto PrimeAir 12L",
-                                                "Thương Hiệu":  "Masuto",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "2.190.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "02/11/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Showroom Trưng Bày Tầng 1",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Đầy đủ 6 phụ kiện: khay lưới, xiên quay, lồng quay, khay hứng dầu, tay gắp",
-                                                "Trạng Thái Mẫu":  "🏢 Trưng bày Showroom",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Showroom 3AE (Quỳnh Sales phụ trách)",
-                                                "Mục Đích Sử Dụng":  "Trưng bày Showroom \u0026 Trải nghiệm khách",
-                                                "Ngày Mượn / Xuất":  "03/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "30/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Dung tích khủng 12L quay nướng gà nguyên con, cửa kính cường lực quan sát bên trong, giảm 85% chất béo",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Masuto_PrimeAir12L",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/noi-chien-khong-dau-masuto-primeair-12l",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đặt tại bàn trải nghiệm trung tâm Showroom để khách hàng test tính năng"
+                                                "S":  "S"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__7",
-                                                "STT":  "7",
-                                                "Mã Mẫu / Mã SKU":  "MKT-MASUTO-MSKINGAIR6",
-                                                "Tên Sản Phẩm Cụ Thể":  "Nồi chiên không dầu Masuto MSKingAir 6L",
-                                                "Thương Hiệu":  "Masuto",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "1.450.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "02/11/2026",
-                                                "Tình Trạng Hiện Vật":  "Đã qua sử dụng (Đang quay chụp)",
-                                                "Vị Trí Lưu Kho MKT":  "Bàn làm việc Designer / Editor",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox gồm nồi chiên, vỉ tách dầu, sách 50 công thức nấu ăn",
-                                                "Trạng Thái Mẫu":  "🎨 Đang chụp ảnh Design",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Loan (Graphic Designer)",
-                                                "Mục Đích Sử Dụng":  "Chụp ảnh sản phẩm \u0026 Key Visual",
-                                                "Ngày Mượn / Xuất":  "10/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "13/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Dung tích 6L chuẩn gia đình 4-6 người, màn hình cảm ứng điện tử 8 menu cài sẵn, lòng nồi chống dính Teflon cao cấp",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Masuto_MSKingAir6L",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/noi-chien-khong-dau-masuto-mskingair-6l",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đang chụp ảnh chi tiết các góc cạnh để làm bộ infographic tính năng Shopee/Lazada"
+                                                "S":  "N"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__8",
-                                                "STT":  "8",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-EK20M01A",
-                                                "Tên Sản Phẩm Cụ Thể":  "Ấm siêu tốc Gaabor EK-20M01A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "290.000 ₫",
-                                                "Số Lượng Bàn Giao":  "2",
-                                                "Ngày Bàn Giao":  "20/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 100% (Nguyên Seal)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox nguyên tem niêm phong, đế đun xoay 360 độ, phiếu bảo hành",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Lưu kho dự phòng",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Inox 304 tiêu chuẩn an toàn thực phẩm, công suất 1500W đun sôi nhanh chóng, rơ-le kép tự ngắt chống cạn nước",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_EK20M01A",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/am-sieu-toc-gaabor-ek-20m01a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "01 chiếc nguyên seal lưu tủ mẫu, 01 chiếc đã test sôi chuẩn bị cho phiên Live Sale"
+                                                "S":  "T"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__9",
-                                                "STT":  "9",
-                                                "Mã Mẫu / Mã SKU":  "MKT-MASUTO-MSNAMI17",
-                                                "Tên Sản Phẩm Cụ Thể":  "Ấm siêu tốc 2 lớp chống bỏng Masuto MSNami 1.7L",
-                                                "Thương Hiệu":  "Masuto",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "490.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "28/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox gồm thân ấm, đế sạc, nắp mở 2 nấc chống văng nước",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "08/11/2026",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Cấu tạo 2 lớp chống bỏng tuyệt đối, giữ ấm cực lâu, lòng ấm đúc liền khối inox 304 không lo rò rỉ nước",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Masuto_MSNami17L",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/am-sieu-toc-2-lop-chong-bong-masuto-msnami-1-7l",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đã hoàn trả kho mẫu sau khi quay xong video test rót nước sôi và chạm tay vào vỏ ấm"
+                                                "S":  "V"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__10",
-                                                "STT":  "10",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-EK25M01A",
-                                                "Tên Sản Phẩm Cụ Thể":  "Ấm đun siêu tốc Gaabor EK-25M01A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "350.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "22/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Đã qua sử dụng (Đang quay chụp)",
-                                                "Vị Trí Lưu Kho MKT":  "Showroom Trưng Bày Tầng 1",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox đầy đủ phụ kiện",
-                                                "Trạng Thái Mẫu":  "🏢 Trưng bày Showroom",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Showroom 3AE",
-                                                "Mục Đích Sử Dụng":  "Trưng bày Showroom \u0026 Trải nghiệm khách",
-                                                "Ngày Mượn / Xuất":  "25/10/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "30/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Dung tích lớn 2.5L thoải mái phục vụ gia đình đông người, thiết kế màu pastel trang nhã, đèn báo tự ngắt",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_EK25M01A",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/am-dun-sieu-toc-gaabor-ek-25m01a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Trưng bày tại kệ đồ gia dụng nhà bếp Tầng 1"
+                                                "S":  "P"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__11",
-                                                "STT":  "11",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-FP03T",
-                                                "Tên Sản Phẩm Cụ Thể":  "Máy xay cầm tay Gaabor FP03T-WH01A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "420.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "30/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Cối xay thịt inox 304, dao xay 4 cánh, nắp chống tràn, que đánh trứng",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Động cơ đồng 300W mạnh mẽ, dao xay 4 lưỡi inox 304 chống gỉ, xay nhuyễn thịt, cá, rau củ chỉ trong 10 giây",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_FP03T",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/may-xay-cam-tay-gaabor-fp03t-wh01a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Lên lịch quay video mẹ bỉm sữa làm đồ ăn dặm cho bé tuần tới"
+                                                "S":  "T"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__12",
-                                                "STT":  "12",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-JMM01A",
-                                                "Tên Sản Phẩm Cụ Thể":  "Máy xay sinh tố mini Gaabor JM-M01A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "380.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "30/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 100% (Nguyên Seal)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Cốc xay sinh tố cầm tay, nắp mang đi thể thao, cáp sạc USB",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Làm video Ads chuyển đổi",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Xay trực tiếp trong cốc uống mang đi tiện lợi, pin sạc không dây, lưỡi dao ẩn an toàn chống chạm tay",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_JMM01A",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/may-xay-cam-tay-gaabor-jm-m01a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Phù hợp kịch bản văn phòng / gym / yoga mang nước sinh tố đi làm"
+                                                "S":  "N"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__13",
-                                                "STT":  "13",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-CW18M",
-                                                "Tên Sản Phẩm Cụ Thể":  "Máy hút bụi cầm tay Gaabor CW-18M01A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Máy hút bụi \u0026 Vệ sinh",
-                                                "Giá Niêm Yết (VND)":  "620.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "26/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Đã qua sử dụng (Đang quay chụp)",
-                                                "Vị Trí Lưu Kho MKT":  "Kệ Studio Media (Góc quay)",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Thân máy, ống nối dài, 3 đầu hút (hút sàn, hút khe, chổi quét bụi), cáp sạc",
-                                                "Trạng Thái Mẫu":  "🟡 Đang mượn quay Video",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Huy (Media / Video Editor)",
-                                                "Mục Đích Sử Dụng":  "Làm video Ads chuyển đổi",
-                                                "Ngày Mượn / Xuất":  "07/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "14/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Trọng lượng siêu nhẹ chỉ 1.2kg hút linh hoạt trần nhà, sofa, ô tô; lực hút lốc xoáy 15.000Pa hút sạch bụi mịn",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_CW18M",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/may-hut-bui-cam-tay-gaabor-cw-18m01a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đang quay cảnh dọn dẹp nội thất ô tô và góc kẹp sofa gia đình"
+                                                "S":  "M"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__14",
-                                                "STT":  "14",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-CW10E",
-                                                "Tên Sản Phẩm Cụ Thể":  "Máy hút bụi nệm giường diệt khuẩn Gaabor CW-10E01A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Máy hút bụi \u0026 Vệ sinh",
-                                                "Giá Niêm Yết (VND)":  "750.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "26/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox nguyên hộp, chổi cọ màng lọc HEPA, phiếu bảo hành",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "06/11/2026",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Khí nóng 50 độ C khử ẩm chống nấm mốc, đập rung tần số cao hút sạch mạt bụi giường, màng lọc HEPA 3 lớp",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_CW10E",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/may-hut-bui-nem-giuong-gaabor-cw-10e01a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đã có video review và bài viết SEO, lưu tủ sẵn sàng cho các chiến dịch Flash Sale"
+                                                "S":  "N"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__15",
-                                                "STT":  "15",
-                                                "Mã Mẫu / Mã SKU":  "MKT-MASUTO-DREAMER",
-                                                "Tên Sản Phẩm Cụ Thể":  "Máy hút bụi giường nệm cầm tay Masuto Dreamer",
-                                                "Thương Hiệu":  "Masuto",
-                                                "Nhóm Ngành Hàng":  "Máy hút bụi \u0026 Vệ sinh",
-                                                "Giá Niêm Yết (VND)":  "990.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "03/11/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Đã gửi bên ngoài",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox gửi kèm túi đựng vải cao cấp",
-                                                "Trạng Thái Mẫu":  "🟣 Đang gửi KOL / KOC",
-                                                "Người Giữ / KOL Nhận Mẫu":  "KOC Hà My (Review mẹ và bé)",
-                                                "Mục Đích Sử Dụng":  "Gửi KOL / KOC trải nghiệm",
-                                                "Ngày Mượn / Xuất":  "06/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "16/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Đèn UV-C diệt khuẩn 99.9%, lực hút cực mạnh 12.000Pa, đập rung đệm đôi tách mạt bụi sâu dưới nệm",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Masuto_Dreamer",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/may-hut-bui-giuong-nem-cam-tay-masuto-dreamer",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Hà My lên clip review giường nệm trẻ nhỏ và diệt khuẩn mạt bụi ngày 13/11"
+                                                "S":  "H"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__16",
-                                                "STT":  "16",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-GFDN400",
-                                                "Tên Sản Phẩm Cụ Thể":  "Quạt đứng đối lưu không khí Gaabor GFD-N400A02",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Quạt \u0026 Làm mát",
-                                                "Giá Niêm Yết (VND)":  "890.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "24/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Đã qua sử dụng (Đang quay chụp)",
-                                                "Vị Trí Lưu Kho MKT":  "Showroom Trưng Bày Tầng 1",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Thân quạt, lồng quạt, chân đế, remote điều khiển từ xa",
-                                                "Trạng Thái Mẫu":  "🏢 Trưng bày Showroom",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Showroom 3AE",
-                                                "Mục Đích Sử Dụng":  "Trưng bày Showroom \u0026 Trải nghiệm khách",
-                                                "Ngày Mượn / Xuất":  "28/10/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "30/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Thiết kế lồng xoắn tạo luồng gió đối lưu xa 12 mét, hẹn giờ thông minh, cực kỳ êm ái thích hợp phòng điều hòa",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_GFDN400",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/quat-dung-doi-luu-gaabor-gfd-n400a02",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đặt tại sảnh Showroom để tạo không khí mát dịu cho khách tham quan"
+                                                "S":  "N"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__17",
-                                                "STT":  "17",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-EC15M",
-                                                "Tên Sản Phẩm Cụ Thể":  "Nồi điện đa năng Gaabor EC-15M01A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "320.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "20/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Thân nồi, nắp kính trong suốt, dây nguồn rời, xửng hấp nhựa PP",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Dung tích 1.5L mini cho 1-2 người, 2 nấc nhiệt nấu lẩu, xào, nấu mì siêu nhanh, chống dính ceramic an toàn",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_EC15M",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/noi-dien-da-nang-gaabor-ec-15m01a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Sản phẩm hot bán chạy cho học sinh sinh viên và người sống độc thân"
+                                                "S":  "K"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__18",
-                                                "STT":  "18",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-EC20M",
-                                                "Tên Sản Phẩm Cụ Thể":  "Nồi điện đa năng Gaabor EC-20M01A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "450.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "20/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 100% (Nguyên Seal)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Thân nồi, nắp kính có lỗ thoát hơi, xửng hấp inox cao cấp",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Lưu kho dự phòng",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Dung tích 2.0L tay cầm dài chống bỏng, tráng men gốm chống dính cao cấp không bám dầu mỡ",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_EC20M",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/noi-dien-da-nang-gaabor-ec-20m01a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Hàng mẫu nguyên hộp dự phòng livestream"
+                                                "S":  "L"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__19",
-                                                "STT":  "19",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-EC30T",
-                                                "Tên Sản Phẩm Cụ Thể":  "Nồi điện đa năng Gaabor EC-30T01A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "590.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "20/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Đã qua sử dụng (Đang quay chụp)",
-                                                "Vị Trí Lưu Kho MKT":  "Bàn làm việc Designer / Editor",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox gồm thân nồi, nắp kính cường lực, xửng hấp inox, sách HDSD",
-                                                "Trạng Thái Mẫu":  "🎨 Đang chụp ảnh Design",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Loan (Graphic Designer)",
-                                                "Mục Đích Sử Dụng":  "Chụp ảnh sản phẩm \u0026 Key Visual",
-                                                "Ngày Mượn / Xuất":  "10/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "13/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Dung tích lớn 3.0L gia đình 3-5 người, màn hình điện tử thông minh cảm ứng, nhiều chế độ nấu tự động",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_EC30T",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/noi-dien-da-nang-gaabor-ec-30t01a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đang làm concept ảnh ẩm thực mùa đông cho bộ sưu tập gia dụng cuối năm"
+                                                "S":  "L"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__20",
-                                                "STT":  "20",
-                                                "Mã Mẫu / Mã SKU":  "MKT-GAABOR-GWSM02A",
-                                                "Tên Sản Phẩm Cụ Thể":  "Cân điện tử Gaabor GWS-M02A",
-                                                "Thương Hiệu":  "Gaabor",
-                                                "Nhóm Ngành Hàng":  "Chăm sóc sức khỏe",
-                                                "Giá Niêm Yết (VND)":  "190.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "22/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Hộp đựng, mặt kính cường lực, pin đính kèm",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Cảm biến trọng lượng độ chính xác cao đến 50g, màn hình LED ẩn sắc nét, chịu lực tới 180kg",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Gaabor_GWSM02A",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/can-dien-tu-gaabor-gws-m02a",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Phục vụ quay các video thể thao, eat-clean, kiểm soát cân nặng"
+                                                "S":  "G"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__21",
-                                                "STT":  "21",
-                                                "Mã Mẫu / Mã SKU":  "MKT-KOSTCOR-K689",
-                                                "Tên Sản Phẩm Cụ Thể":  "Bộ nồi Kostcor inox trơn K689",
-                                                "Thương Hiệu":  "Kostcor",
-                                                "Nhóm Ngành Hàng":  "Gia dụng nhà bếp",
-                                                "Giá Niêm Yết (VND)":  "1.850.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "24/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Showroom Trưng Bày Tầng 1",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Bộ 3 nồi kích thước 16cm, 20cm, 24cm inox 304, nắp kính viền kim loại",
-                                                "Trạng Thái Mẫu":  "🏢 Trưng bày Showroom",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Showroom 3AE",
-                                                "Mục Đích Sử Dụng":  "Trưng bày Showroom \u0026 Trải nghiệm khách",
-                                                "Ngày Mượn / Xuất":  "28/10/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "30/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Inox 304 sáng bóng đáy 5 lớp truyền nhiệt đều, tương thích mọi loại bếp (bếp từ, hồng ngoại, gas)",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Kostcor_K689",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/bo-noi-kostcor-inox-tron-k689",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Trưng bày cùng combo bếp từ đơn GROPA tại Showroom"
+                                                "S":  "M"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__22",
-                                                "STT":  "22",
-                                                "Mã Mẫu / Mã SKU":  "MKT-OEM-FH680",
-                                                "Tên Sản Phẩm Cụ Thể":  "Máy massage cổ vai gáy FH-680",
-                                                "Thương Hiệu":  "OEM",
-                                                "Nhóm Ngành Hàng":  "Chăm sóc sức khỏe",
-                                                "Giá Niêm Yết (VND)":  "480.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "25/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Máy massage, dây sạc Type-C, đai cố định rảnh tay",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Làm video Ads chuyển đổi",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "05/11/2026",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Con lăn xoa bóp mô phỏng 6 ngón tay người, chức năng chườm nóng hồng ngoại giảm đau nhức cổ vai gáy",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_OEM_FH680",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/may-massage-co-vai-gay-fh-680",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Sản phẩm quà tặng sức khỏe rất được quan tâm dịp cuối năm"
+                                                "S":  "Q"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__23",
-                                                "STT":  "23",
-                                                "Mã Mẫu / Mã SKU":  "MKT-ENERGIZER-BTS164BK",
-                                                "Tên Sản Phẩm Cụ Thể":  "Loa di động Energizer BTS164BK",
-                                                "Thương Hiệu":  "Energizer",
-                                                "Nhóm Ngành Hàng":  "Âm thanh \u0026 Phụ kiện",
-                                                "Giá Niêm Yết (VND)":  "790.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "28/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Thân loa, cáp sạc USB, cáp âm thanh AUX 3.5mm, dây đeo",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Chuẩn chống nước IPX5, đèn LED RGB chuyển màu theo nhịp nhạc, tích hợp micro đàm thoại không dây",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Energizer_BTS164",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/loa-di-dong-energizer-bts164bk",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Thiết bị âm thanh chất lượng dùng làm đạo cụ quay video lifestyle dã ngoại"
+                                                "S":  "E"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__24",
-                                                "STT":  "24",
-                                                "Mã Mẫu / Mã SKU":  "MKT-ENERGIZER-PAC4000BK",
-                                                "Tên Sản Phẩm Cụ Thể":  "Bơm hơi di động kiêm pin sạc dự phòng Energizer PAC4000BK",
-                                                "Thương Hiệu":  "Energizer",
-                                                "Nhóm Ngành Hàng":  "Âm thanh \u0026 Phụ kiện",
-                                                "Giá Niêm Yết (VND)":  "1.150.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "28/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Thân bơm, ống dẫn khí, 4 đầu van bơm (ô tô, xe máy, bóng), túi đựng",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Làm video Ads chuyển đổi",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Thiết bị 2 trong 1: Bơm lốp tự ngắt khi đủ áp suất PSI cài đặt + tích hợp pin sạc dự phòng khẩn cấp",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Energizer_PAC4000",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/bom-hoi-di-dong-cam-tay-kiem-pin-sac-du-phong-energizer-pac4000bk",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Sản phẩm tiện ích xe hơi, chuẩn bị chạy chiến dịch quảng cáo TikTok Shop"
+                                                "S":  "Q"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__25",
-                                                "STT":  "25",
-                                                "Mã Mẫu / Mã SKU":  "MKT-ENERGIZER-UE10073",
-                                                "Tên Sản Phẩm Cụ Thể":  "Sạc dự phòng Energizer 10.000mAh 3.7V UE10073PQBK",
-                                                "Thương Hiệu":  "Energizer",
-                                                "Nhóm Ngành Hàng":  "Âm thanh \u0026 Phụ kiện",
-                                                "Giá Niêm Yết (VND)":  "420.000 ₫",
-                                                "Số Lượng Bàn Giao":  "2",
-                                                "Ngày Bàn Giao":  "28/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 100% (Nguyên Seal)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox hộp giấy thân thiện môi trường, cáp Type-C ngắn",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Lưu kho dự phòng",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Sạc nhanh Power Delivery 20W chuẩn iPhone, chứng nhận an toàn chống cháy nổ PowerSafe Management",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Energizer_UE10073",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/sac-du-phong-energizer-10-000mah-3-7v-li-polymer-ue10073pqbk",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Phụ kiện tiêu chuẩn chất lượng cao"
+                                                "S":  "3"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__26",
-                                                "STT":  "26",
-                                                "Mã Mẫu / Mã SKU":  "MKT-MASUTO-NEO-SONIC",
-                                                "Tên Sản Phẩm Cụ Thể":  "Bàn chải điện tác động kép Masuto Neo Ultrasonic",
-                                                "Thương Hiệu":  "Masuto",
-                                                "Nhóm Ngành Hàng":  "Chăm sóc sức khỏe",
-                                                "Giá Niêm Yết (VND)":  "520.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "02/11/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Thân máy chống nước IPX7, 2 đầu bàn chải lông Dupont, đế sạc không dây",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Rung sóng âm Sonic 42.000 nhịp/phút làm sạch mảng bám kẽ răng, nhắc nhở chuyển vùng 30 giây",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Masuto_Neo",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/ban-chai-dien-tac-dong-kep-masuto-neo-ultrasonic",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Sản phẩm thuộc trụ cột sức khỏe \u0026 gia đình"
+                                                "S":  "2"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__27",
-                                                "STT":  "27",
-                                                "Mã Mẫu / Mã SKU":  "MKT-MASUTO-HYPER-UV",
-                                                "Tên Sản Phẩm Cụ Thể":  "Bàn chải điện Masuto Hyper UVSonic (Hộp sạc UV)",
-                                                "Thương Hiệu":  "Masuto",
-                                                "Nhóm Ngành Hàng":  "Chăm sóc sức khỏe",
-                                                "Giá Niêm Yết (VND)":  "790.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "02/11/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Đã gửi bên ngoài",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Fullbox hộp sạc du lịch tích hợp đèn UV khử khuẩn, 3 đầu bàn chải",
-                                                "Trạng Thái Mẫu":  "🟣 Đang gửi KOL / KOC",
-                                                "Người Giữ / KOL Nhận Mẫu":  "KOL Lan Anh (Lifestyle)",
-                                                "Mục Đích Sử Dụng":  "Gửi KOL / KOC trải nghiệm",
-                                                "Ngày Mượn / Xuất":  "08/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "19/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Hộp sạc UV diệt 99.9% vi khuẩn sau mỗi lần sử dụng, pin 60 ngày, 5 chế độ làm sạch chuyên sâu",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Masuto_HyperUV",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/ban-chai-dien-masuto-hyper-uvsonic",
-                                                "Ghi Chú \u0026 Đánh Giá":  "KOL quay video review quy trình chăm sóc răng miệng du lịch"
+                                                "S":  "2"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__28",
-                                                "STT":  "28",
-                                                "Mã Mẫu / Mã SKU":  "MKT-HUNONIC-DOOR",
-                                                "Tên Sản Phẩm Cụ Thể":  "Công Tắc Cửa Cuốn Thông Minh Wifi Hunonic Door",
-                                                "Thương Hiệu":  "Hunonic",
-                                                "Nhóm Ngành Hàng":  "Thiết bị điện Smarthome",
-                                                "Giá Niêm Yết (VND)":  "1.490.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "20/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Đã qua sử dụng (Đang quay chụp)",
-                                                "Vị Trí Lưu Kho MKT":  "Kệ Studio Media (Góc quay)",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Hộp sản phẩm, công tắc mặt kính cường lực viền vàng, ốc vít và sơ đồ đấu nối",
-                                                "Trạng Thái Mẫu":  "🟡 Đang mượn quay Video",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Huy (Media / Video Editor)",
-                                                "Mục Đích Sử Dụng":  "Quay video review / Unboxing",
-                                                "Ngày Mượn / Xuất":  "09/11/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "15/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Điều khiển đóng mở cửa cuốn từ xa qua điện thoại, cảnh báo trạng thái cửa mở qua app, khóa an toàn trẻ em",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Hunonic_Door",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/cong-tac-cua-cuon-wifi-hunonic-door",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Quay video hướng dẫn cài đặt kỹ thuật và điều khiển qua smartphone trên mô hình thực tế"
+                                                "S":  "M"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__29",
-                                                "STT":  "29",
-                                                "Mã Mẫu / Mã SKU":  "MKT-HUNONIC-IRSP",
-                                                "Tên Sản Phẩm Cụ Thể":  "Bộ Điều Khiển Hồng Ngoại Qua Wifi Hunonic IR Smart Pro",
-                                                "Thương Hiệu":  "Hunonic",
-                                                "Nhóm Ngành Hàng":  "Thiết bị điện Smarthome",
-                                                "Giá Niêm Yết (VND)":  "370.000 ₫",
-                                                "Số Lượng Bàn Giao":  "2",
-                                                "Ngày Bàn Giao":  "20/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Tủ mẫu MKT Tầng 2",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Cục phát hồng ngoại, cáp micro USB, sách HDSD cài đặt app Hunonic",
-                                                "Trạng Thái Mẫu":  "🟢 Sẵn sàng tại kho MKT",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Tủ mẫu MKT (Mỵ quản lý)",
-                                                "Mục Đích Sử Dụng":  "Thử nghiệm tính năng \u0026 R\u0026D",
-                                                "Ngày Mượn / Xuất":  "",
-                                                "Hạn Hoàn Trả Dự Kiến":  "",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Biến mọi thiết bị có remote hồng ngoại (điều hòa, TV, quạt) thành thiết bị thông minh điều khiển qua điện thoại \u0026 giọng nói",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Hunonic_IR",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/bo-dieu-khien-hong-ngoai-qua-wifi-hunonic-ir-smart-ir-smart-pro",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Đã kết nối thử nghiệm giọng nói trợ lý ảo tiếng Việt, quay kịch bản bật điều hòa trước khi về nhà"
+                                                "S":  "T"
                                             },
                                             {
                                                 "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__30",
-                                                "STT":  "30",
-                                                "Mã Mẫu / Mã SKU":  "MKT-HUNONIC-HPR",
-                                                "Tên Sản Phẩm Cụ Thể":  "Cảm Biến Hiện Diện Qua Wifi Hunonic HPR Âm Trần",
-                                                "Thương Hiệu":  "Hunonic",
-                                                "Nhóm Ngành Hàng":  "Thiết bị điện Smarthome",
-                                                "Giá Niêm Yết (VND)":  "725.000 ₫",
-                                                "Số Lượng Bàn Giao":  "1",
-                                                "Ngày Bàn Giao":  "20/10/2026",
-                                                "Tình Trạng Hiện Vật":  "Mới 98% (Đã test mẫu)",
-                                                "Vị Trí Lưu Kho MKT":  "Showroom Trưng Bày Tầng 1",
-                                                "Phụ Kiện \u0026 Hộp Đi Kèm":  "Thân cảm biến radar mmWave âm trần, lò xo kẹp trần thạch cao, hộp đấu nối nguồn",
-                                                "Trạng Thái Mẫu":  "🏢 Trưng bày Showroom",
-                                                "Người Giữ / KOL Nhận Mẫu":  "Showroom 3AE",
-                                                "Mục Đích Sử Dụng":  "Trưng bày Showroom \u0026 Trải nghiệm khách",
-                                                "Ngày Mượn / Xuất":  "25/10/2026",
-                                                "Hạn Hoàn Trả Dự Kiến":  "30/11/2026",
-                                                "Ngày Thực Tế Hoàn Trả":  "",
-                                                "Key Selling Points \u0026 Tính Năng Nổi Bật":  "Công nghệ sóng Radar mmWave nhận diện người ngồi yên không cử động (không bị tắt đèn như cảm biến hồng ngoại thông thường)",
-                                                "Link Drive Tư Liệu MKT":  "https://drive.google.com/drive/folders/3AE_Media_Hunonic_HPR",
-                                                "Link Sản Phẩm (Website)":  "https://giadungthongminh.com/products/cam-bien-hien-dien-qua-wifi-hunonic-hpr-am-tran-op-tran",
-                                                "Ghi Chú \u0026 Đánh Giá":  "Lắp đặt thực tế tại trần Showroom Tầng 1 tự động bật đèn đón khách"
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__31",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__32",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__33",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__37",
+                                                "S":  "N"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__38",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__39",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__40",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__41",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__42",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__43",
+                                                "S":  "E"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__44",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__45",
+                                                "S":  "5"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__46",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__47",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__48",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__49",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__50",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__51",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__52",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__53",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__54",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__55",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__57",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__58",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__59",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__60",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__61",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__62",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__63",
+                                                "S":  "E"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__64",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__65",
+                                                "S":  "6"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__66",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__67",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__68",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__69",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__70",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__71",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__72",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__73",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__74",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__75",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__77",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__78",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__79",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__80",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__81",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__82",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__83",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__84",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__85",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__86",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__87",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__88",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__89",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__90",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__91",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__92",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__93",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__94",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__95",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__97",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__98",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__99",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__100",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__101",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__102",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__103",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__104",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__105",
+                                                "S":  "8"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__106",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__107",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__108",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__109",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__110",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__111",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__112",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__113",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__117",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__118",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__119",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__120",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__121",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__122",
+                                                "S":  "N"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__123",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__124",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__125",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__126",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__127",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__128",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__129",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__130",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__131",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__132",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__133",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__134",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__135",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__137",
+                                                "S":  "D"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__138",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__139",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__140",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__141",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__142",
+                                                "S":  "N"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__143",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__144",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__145",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__146",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__147",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__148",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__149",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__150",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__151",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__152",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__153",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__154",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__155",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__157",
+                                                "S":  "D"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__158",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__159",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__160",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__161",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__162",
+                                                "S":  "Ấ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__163",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__164",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__165",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__166",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__167",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__168",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__169",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__170",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__171",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__172",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__173",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__177",
+                                                "S":  "I"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__178",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__179",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__180",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__181",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__182",
+                                                "S":  "Ấ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__183",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__184",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__185",
+                                                "S":  "4"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__186",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__187",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__188",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__189",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__190",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__191",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__192",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__193",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__196",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__197",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__198",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__199",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__200",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__201",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__202",
+                                                "S":  "Ấ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__203",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__204",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__205",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__206",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__207",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__208",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__209",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__210",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__211",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__212",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__213",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__214",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__215",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__217",
+                                                "S":  "D"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__218",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__219",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__220",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__221",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__222",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__223",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__224",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__225",
+                                                "S":  "4"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__226",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__227",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__228",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__229",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__230",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__231",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__232",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__233",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__237",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__238",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__239",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__240",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__241",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__242",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__243",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__244",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__245",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__246",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__247",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__248",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__249",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__250",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__251",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__252",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__253",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__257",
+                                                "S":  "X"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__258",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__259",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__260",
+                                                "S":  "P"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__261",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__262",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__263",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__264",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__265",
+                                                "S":  "6"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__266",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__267",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__268",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__269",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__270",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__271",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__272",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__273",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__274",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__275",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__277",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__278",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__279",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__280",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__281",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__282",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__283",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__284",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__285",
+                                                "S":  "7"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__286",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__287",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__288",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__289",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__290",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__291",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__292",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__293",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__296",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__297",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__298",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__299",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__300",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__301",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__302",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__303",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__304",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__305",
+                                                "S":  "9"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__306",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__307",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__308",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__309",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__310",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__311",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__312",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__313",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__314",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__315",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__317",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__318",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__319",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__320",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__321",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__322",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__323",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__324",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__325",
+                                                "S":  "8"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__326",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__327",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__328",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__329",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__330",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__331",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__332",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__333",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__334",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__335",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__337",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__338",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__339",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__340",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__341",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__342",
+                                                "S":  "N"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__343",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__344",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__345",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__346",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__347",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__348",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__349",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__350",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__351",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__352",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__353",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__357",
+                                                "S":  "D"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__358",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__359",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__360",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__361",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__362",
+                                                "S":  "N"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__363",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__364",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__365",
+                                                "S":  "4"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__366",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__367",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__368",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__369",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__370",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__371",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__372",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__373",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__377",
+                                                "S":  "D"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__378",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__379",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__380",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__381",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__382",
+                                                "S":  "N"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__383",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__384",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__385",
+                                                "S":  "5"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__386",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__387",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__388",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__389",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__390",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__391",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__392",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__393",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__394",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__395",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__397",
+                                                "S":  "D"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__398",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__399",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__400",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__401",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__402",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__403",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__404",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__405",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__406",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__407",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__408",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__409",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__410",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__411",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__412",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__413",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__417",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__418",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__419",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__420",
+                                                "S":  "P"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__421",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__422",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__423",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__424",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__425",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__426",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__427",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__428",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__429",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__430",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__431",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__432",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__433",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__434",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__435",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__437",
+                                                "S":  "I"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__438",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__439",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__440",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__441",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__442",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__443",
+                                                "S":  "O"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__444",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__445",
+                                                "S":  "4"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__446",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__447",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__448",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__449",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__450",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__451",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__452",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__453",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__456",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__457",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__458",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__459",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__460",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__461",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__462",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__463",
+                                                "S":  "E"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__464",
+                                                "S":  "Â"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__465",
+                                                "S":  "7"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__466",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__467",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__468",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__469",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__470",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__471",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__472",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__473",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__477",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__478",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__479",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__480",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__481",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__482",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__483",
+                                                "S":  "E"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__484",
+                                                "S":  "Â"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__485",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__486",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__487",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__488",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__489",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__490",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__491",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__492",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__493",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__497",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__498",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__499",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__500",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__501",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__502",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__503",
+                                                "S":  "E"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__504",
+                                                "S":  "Â"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__505",
+                                                "S":  "4"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__506",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__507",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__508",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__509",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__510",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__511",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__512",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__513",
+                                                "S":  "L"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__517",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__518",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__519",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__520",
+                                                "S":  "P"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__521",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__522",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__523",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__524",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__525",
+                                                "S":  "5"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__526",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__527",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__528",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__529",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__530",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__531",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__532",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__533",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__537",
+                                                "S":  "R"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__538",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__539",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__540",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__541",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__542",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__543",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__544",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__545",
+                                                "S":  "7"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__546",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__547",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__548",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__549",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__550",
+                                                "S":  "F"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__551",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__552",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__553",
+                                                "S":  "G"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__554",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__555",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__557",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__558",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__559",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__560",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__561",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__562",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__563",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__564",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__565",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__566",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__567",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__568",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__569",
+                                                "S":  "K"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__570",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__571",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__572",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__573",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__574",
+                                                "S":  "0"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__575",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__577",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__578",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__579",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__580",
+                                                "S":  "Q"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__581",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__582",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__583",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__584",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__585",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__586",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__587",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__588",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__589",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__590",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__591",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__592",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__593",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__597",
+                                                "S":  "B"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__598",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__599",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__600",
+                                                "S":  "Đ"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__601",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__602",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__603",
+                                                "S":  "H"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__604",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__605",
+                                                "S":  "7"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__606",
+                                                "S":  "1"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__607",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__608",
+                                                "S":  "M"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__609",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__610",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__611",
+                                                "S":  "�"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__612",
+                                                "S":  "S"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__613",
+                                                "S":  "T"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__614",
+                                                "S":  "2"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__615",
+                                                "S":  "3"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__617",
+                                                "S":  "C"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__618",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__619",
+                                                "S":  "h"
+                                            },
+                                            {
+                                                "id":  "rec____Quản_Lý_Sản_Phẩm_Mẫu__MKT__620",
+                                                "S":  "L"
                                             }
                                         ]
                         }
