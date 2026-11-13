@@ -1,5 +1,5 @@
 {
-    "syncedAt":  "2026-11-12 17:20:38",
+    "syncedAt":  "2026-11-13 15:24:08",
     "spreadsheetId":  "1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac",
     "spreadsheetUrl":  "https://docs.google.com/spreadsheets/d/1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac/edit",
     "personnel":  {
@@ -1035,7 +1035,7 @@
                                      ]
                      },
     "content":  {
-                    "recordCount":  194,
+                    "recordCount":  216,
                     "key":  "content",
                     "name":  "✍️ Content Calendar",
                     "id":  "882471266",
@@ -1815,6 +1815,94 @@
                                     {
                                         "id":  "rec__️_Content_Calendar_202",
                                         "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_204",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_205",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_206",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_207",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_208",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_209",
+                                        "S":  "F"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_210",
+                                        "S":  "G"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_211",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_212",
+                                        "S":  "B"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_213",
+                                        "S":  "P"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_214",
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_216",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_217",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_218",
+                                        "S":  "M"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_219",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_220",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_221",
+                                        "S":  "F"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_222",
+                                        "S":  "G"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_223",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_224",
+                                        "S":  "B"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_225",
+                                        "S":  "P"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_226",
+                                        "S":  "3"
                                     }
                                 ]
                 },
