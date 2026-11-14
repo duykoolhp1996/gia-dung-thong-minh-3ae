@@ -1,7 +1,7 @@
 // Auto-synced from Google Sheets Database: 1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac
-// Synced At: 13/11/2026 15:24:09
+// Synced At: 14/11/2026 14:47:32
 const LARK_BASE_ALL_TABLES = {
-    "syncedAt":  "2026-11-13 15:24:08",
+    "syncedAt":  "2026-11-14 14:47:30",
     "spreadsheetId":  "1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac",
     "spreadsheetUrl":  "https://docs.google.com/spreadsheets/d/1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac/edit",
     "personnel":  {
@@ -145,7 +145,7 @@ const LARK_BASE_ALL_TABLES = {
                                   ]
                   },
     "master_tasks":  {
-                         "recordCount":  221,
+                         "recordCount":  230,
                          "key":  "master_tasks",
                          "name":  "Quản Lý Task Tổng",
                          "id":  "429202796",
@@ -1033,11 +1033,47 @@ const LARK_BASE_ALL_TABLES = {
                                          {
                                              "id":  "rec_Quản_Lý_Task_Tổng_357",
                                              "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_360",
+                                             "S":  " "
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_361",
+                                             "S":  "v"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_363",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_364",
+                                             "S":  "N"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_365",
+                                             "S":  "2"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_366",
+                                             "S":  "P"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_367",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_368",
+                                             "S":  "1"
+                                         },
+                                         {
+                                             "id":  "rec_Quản_Lý_Task_Tổng_369",
+                                             "S":  "6"
                                          }
                                      ]
                      },
     "content":  {
-                    "recordCount":  216,
+                    "recordCount":  227,
                     "key":  "content",
                     "name":  "✍️ Content Calendar",
                     "id":  "882471266",
@@ -1904,12 +1940,56 @@ const LARK_BASE_ALL_TABLES = {
                                     },
                                     {
                                         "id":  "rec__️_Content_Calendar_226",
-                                        "S":  "3"
+                                        "S":  "6"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_228",
+                                        "S":  " "
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_229",
+                                        "S":  "�"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_230",
+                                        "S":  "G"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_231",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_232",
+                                        "S":  "1"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_233",
+                                        "S":  "F"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_234",
+                                        "S":  "G"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_235",
+                                        "S":  "C"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_236",
+                                        "S":  "B"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_237",
+                                        "S":  "P"
+                                    },
+                                    {
+                                        "id":  "rec__️_Content_Calendar_238",
+                                        "S":  "2"
                                     }
                                 ]
                 },
     "designer":  {
-                     "recordCount":  213,
+                     "recordCount":  231,
                      "key":  "designer",
                      "name":  "Quản Lý Graphic Designer",
                      "id":  "742919504",
@@ -2480,11 +2560,11 @@ const LARK_BASE_ALL_TABLES = {
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_175",
-                                         "S":  "3"
+                                         "S":  "6"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_177",
-                                         "S":  "8"
+                                         "S":  "1"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_180",
@@ -2700,7 +2780,7 @@ const LARK_BASE_ALL_TABLES = {
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_248",
-                                         "S":  "2"
+                                         "S":  "1"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_249",
@@ -2765,11 +2845,83 @@ const LARK_BASE_ALL_TABLES = {
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_273",
                                          "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_276",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_277",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_279",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_280",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_281",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_282",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_283",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_284",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_285",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_288",
+                                         "S":  " "
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_289",
+                                         "S":  "T"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_291",
+                                         "S":  "B"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_292",
+                                         "S":  "F"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_293",
+                                         "S":  "L"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_294",
+                                         "S":  "P"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_295",
+                                         "S":  "6"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_296",
+                                         "S":  "1"
+                                     },
+                                     {
+                                         "id":  "rec_Quản_Lý_Graphic_Designer_297",
+                                         "S":  "1"
                                      }
                                  ]
                  },
     "editor":  {
-                   "recordCount":  229,
+                   "recordCount":  240,
                    "key":  "editor",
                    "name":  "Quản Lý Video Editor",
                    "id":  "946716817",
@@ -3689,6 +3841,50 @@ const LARK_BASE_ALL_TABLES = {
                                    {
                                        "id":  "rec_Quản_Lý_Video_Editor_293",
                                        "S":  "S"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_294",
+                                       "S":  " "
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_295",
+                                       "S":  "E"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_296",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_297",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_298",
+                                       "S":  "6"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_299",
+                                       "S":  "P"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_300",
+                                       "S":  "V"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_301",
+                                       "S":  "T"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_302",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_303",
+                                       "S":  "1"
+                                   },
+                                   {
+                                       "id":  "rec_Quản_Lý_Video_Editor_307",
+                                       "S":  "1"
                                    }
                                ]
                },
@@ -3702,7 +3898,7 @@ const LARK_BASE_ALL_TABLES = {
                                 ]
                 },
     "channels":  {
-                     "recordCount":  38,
+                     "recordCount":  33,
                      "key":  "channels",
                      "name":  "📱 Kênh Nền Tảng",
                      "id":  "109",
@@ -3834,26 +4030,6 @@ const LARK_BASE_ALL_TABLES = {
                                      {
                                          "id":  "rec____Kênh_Nền_Tảng_35",
                                          "S":  " "
-                                     },
-                                     {
-                                         "id":  "rec____Kênh_Nền_Tảng_36",
-                                         "S":  "M"
-                                     },
-                                     {
-                                         "id":  "rec____Kênh_Nền_Tảng_37",
-                                         "S":  "G"
-                                     },
-                                     {
-                                         "id":  "rec____Kênh_Nền_Tảng_38",
-                                         "S":  "F"
-                                     },
-                                     {
-                                         "id":  "rec____Kênh_Nền_Tảng_39",
-                                         "S":  "M"
-                                     },
-                                     {
-                                         "id":  "rec____Kênh_Nền_Tảng_40",
-                                         "S":  "h"
                                      },
                                      {
                                          "id":  "rec____Kênh_Nền_Tảng_41",
