@@ -1,7 +1,7 @@
 // Auto-synced from Google Sheets Database: 1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac
-// Synced At: 14/11/2026 14:47:32
+// Synced At: 16/11/2026 15:14:14
 const LARK_BASE_ALL_TABLES = {
-    "syncedAt":  "2026-11-14 14:47:30",
+    "syncedAt":  "2026-11-16 15:14:13",
     "spreadsheetId":  "1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac",
     "spreadsheetUrl":  "https://docs.google.com/spreadsheets/d/1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac/edit",
     "personnel":  {
@@ -2808,7 +2808,7 @@ const LARK_BASE_ALL_TABLES = {
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_259",
-                                         "S":  "2"
+                                         "S":  "1"
                                      },
                                      {
                                          "id":  "rec_Quản_Lý_Graphic_Designer_264",
