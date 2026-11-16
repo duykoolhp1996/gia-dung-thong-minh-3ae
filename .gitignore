@@ -18,6 +18,7 @@ zalo_bot_logs/
 ._*
 
 # Build artifacts & local cache
+Hinh_anh_nguon_hang/
 .v2c/
 .video_agent/
 scratch/
