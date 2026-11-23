@@ -49,74 +49,78 @@
 </head>
 <body class="min-h-full flex flex-col bg-slate-100/80 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
 
-  <!-- TOP STICKY APP BAR -->
+  <!-- TOP STICKY APP BAR (Responsive & No-Wrap) -->
   <header class="bg-white border-b border-slate-200/80 sticky top-0 z-30 shadow-xs no-print">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 gap-4">
-        <!-- Logo & Quick Switch -->
-        <div class="flex items-center space-x-3 shrink-0 cursor-pointer" onclick="switchView('catalog')">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center shadow-md shadow-emerald-500/20 font-extrabold text-white text-base tracking-tighter">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-2 sm:gap-4">
+        <!-- Logo & Brand Info -->
+        <div class="flex items-center space-x-2.5 shrink-0 cursor-pointer" onclick="switchView('catalog')">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center shadow-md shadow-emerald-500/20 font-extrabold text-white text-base tracking-tighter shrink-0">
             3AE
           </div>
-          <div>
-            <div class="flex items-center space-x-2">
-              <span class="font-extrabold text-base tracking-tight text-slate-900">GIA DỤNG 3AE</span>
-              <span class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full font-bold border border-emerald-200/60">TKK 2026</span>
+          <div class="flex flex-col">
+            <div class="flex items-center space-x-1.5">
+              <span class="font-black text-sm sm:text-base tracking-tight text-slate-900 whitespace-nowrap">GIA DỤNG 3AE</span>
+              <span class="bg-emerald-50 text-emerald-700 text-[10px] sm:text-[11px] px-1.5 py-0.2 rounded-full font-bold border border-emerald-200/60 whitespace-nowrap">TKK 2026</span>
             </div>
-            <p class="text-[11px] text-emerald-700 font-bold">Giá Nhập Tận Xưởng Nhà Máy (Tiết kiệm 25% - 80% so với 1688)</p>
+            <p class="hidden xl:block text-[11px] text-emerald-700 font-bold whitespace-nowrap">Giá Nhập Tận Xưởng (Tiết kiệm 25% - 80% so với 1688)</p>
           </div>
         </div>
 
-        <!-- Center View Navigation (3 Core Views) -->
-        <nav class="hidden md:flex items-center space-x-1 bg-slate-100 p-1 rounded-xl border border-slate-200/70 text-xs font-bold">
-          <button onclick="switchView('agent')" id="nav-agent" class="nav-tab px-3.5 py-1.5 rounded-lg transition text-violet-700 hover:text-violet-900 flex items-center space-x-1.5 bg-violet-50 hover:bg-violet-100 font-extrabold border border-violet-200">
+        <!-- Center View Navigation (Desktop lg+ with strict whitespace-nowrap) -->
+        <nav class="hidden lg:flex items-center space-x-1 bg-slate-100 p-1 rounded-xl border border-slate-200/70 text-xs font-bold shrink-0">
+          <button onclick="switchView('agent')" id="nav-agent" class="nav-tab px-2.5 xl:px-3.5 py-1.5 rounded-lg transition text-violet-700 hover:text-violet-900 flex items-center space-x-1.5 bg-violet-50 hover:bg-violet-100 font-extrabold border border-violet-200 whitespace-nowrap shrink-0">
             <span class="w-2 h-2 rounded-full bg-violet-600 animate-pulse"></span>
-            <span>🤖 AI Agent Định Giá</span>
+            <span class="hidden 2xl:inline">🤖 AI Agent Định Giá</span>
+            <span class="inline 2xl:hidden">🤖 AI Định Giá</span>
           </button>
-          <button onclick="switchView('catalog')" id="nav-catalog"  class="nav-tab px-3.5 py-1.5 rounded-lg transition text-slate-900 bg-white shadow-xs flex items-center space-x-1.5">
+          <button onclick="switchView('catalog')" id="nav-catalog" class="nav-tab px-2.5 xl:px-3.5 py-1.5 rounded-lg transition text-slate-900 bg-white shadow-xs flex items-center space-x-1.5 whitespace-nowrap shrink-0">
             <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-            <span>Sản Phẩm & Giá Tận Xưởng (61)</span>
+            <span class="hidden 2xl:inline">Sản Phẩm & Giá Tận Xưởng (61)</span>
+            <span class="inline 2xl:hidden">Sản Phẩm (61)</span>
           </button>
-          <button onclick="switchView('competitors')" id="nav-competitors" class="nav-tab px-3.5 py-1.5 rounded-lg transition text-slate-600 hover:text-slate-900 flex items-center space-x-1.5">
+          <button onclick="switchView('competitors')" id="nav-competitors" class="nav-tab px-2.5 xl:px-3.5 py-1.5 rounded-lg transition text-slate-600 hover:text-slate-900 flex items-center space-x-1.5 whitespace-nowrap shrink-0">
             <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            <span>So Sánh Đối Thủ Shopee</span>
+            <span class="hidden 2xl:inline">So Sánh Đối Thủ Shopee</span>
+            <span class="inline 2xl:hidden">Đối Thủ Shopee</span>
           </button>
-          <button onclick="switchView('analytics')" id="nav-analytics" class="nav-tab px-3.5 py-1.5 rounded-lg transition text-slate-600 hover:text-slate-900 flex items-center space-x-1.5">
+          <button onclick="switchView('analytics')" id="nav-analytics" class="nav-tab px-2.5 xl:px-3.5 py-1.5 rounded-lg transition text-slate-600 hover:text-slate-900 flex items-center space-x-1.5 whitespace-nowrap shrink-0">
             <svg class="w-4 h-4 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-            <span>Top USP & Chiến Lược</span>
+            <span class="hidden 2xl:inline">Top USP & Chiến Lược</span>
+            <span class="inline 2xl:hidden">Top Chiến Lược</span>
           </button>
         </nav>
 
         <!-- Right Quick Actions & Param Quick Controls -->
-        <div class="flex items-center space-x-2.5">
+        <div class="flex items-center space-x-1.5 sm:space-x-2.5 shrink-0">
           <!-- Quick Cost Toggle Button -->
-          <button onclick="toggleCostPanel()" id="btn-toggle-cost" class="inline-flex items-center px-3 py-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-700 transition" title="Mở bộ chỉnh giá vốn">
+          <button onclick="toggleCostPanel()" id="btn-toggle-cost" class="inline-flex items-center px-2.5 sm:px-3 py-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-700 transition whitespace-nowrap shrink-0" title="Mở bộ chỉnh giá vốn">
             <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
-            <span>Tỷ giá: <strong id="header-rate-val" class="text-emerald-700 font-bold">3.900</strong> đ</span>
-            <svg id="arrow-cost-panel" class="w-3.5 h-3.5 ml-1.5 text-slate-400 transition transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <span class="hidden sm:inline">Tỷ giá: </span><strong id="header-rate-val" class="text-emerald-700 font-bold">3.900</strong> <span class="text-[11px] text-slate-500">đ</span>
+            <svg id="arrow-cost-panel" class="w-3.5 h-3.5 ml-1 text-slate-400 transition transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
 
           <!-- Sheet Direct Link -->
-          <a href="https://docs.google.com/spreadsheets/d/1RB_gx_FfvRywaEJ4pFuWgLyHBNJAOYiYNMk6Z6Manz8/edit" target="_blank" class="hidden sm:inline-flex items-center px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium transition" title="Mở Google Sheet">
+          <a href="https://docs.google.com/spreadsheets/d/1RB_gx_FfvRywaEJ4pFuWgLyHBNJAOYiYNMk6Z6Manz8/edit" target="_blank" class="hidden md:inline-flex items-center px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium transition whitespace-nowrap shrink-0" title="Mở Google Sheet">
             <svg class="w-4 h-4 mr-1 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             <span>Sheet</span>
           </a>
 
           <!-- Quotation Button with Counter -->
-          <button onclick="openQuotationDrawer()" class="inline-flex items-center px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-xs transition">
-            <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            <span>Báo Giá</span>
+          <button onclick="openQuotationDrawer()" class="inline-flex items-center px-2.5 sm:px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-xs transition whitespace-nowrap shrink-0">
+            <svg class="w-4 h-4 mr-1 sm:mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span class="hidden xs:inline">Báo Giá</span>
             <span id="badge-cart-count" class="ml-1.5 bg-white text-emerald-700 text-[10px] px-1.5 py-0.2 rounded-full font-black">0</span>
           </button>
         </div>
       </div>
 
-      <!-- Mobile Navigation Bar -->
-      <div class="flex md:hidden border-t border-slate-100 py-2 space-x-1 overflow-x-auto text-xs font-bold">
-        <button onclick="switchView('agent')" id="mob-nav-agent" class="px-3 py-1 rounded-lg text-violet-800 bg-violet-50 font-bold whitespace-nowrap">🤖 AI Agent</button>
-        <button onclick="switchView('catalog')" id="mob-nav-catalog"  class="px-3 py-1 rounded-lg bg-emerald-50 text-emerald-800">Sản Phẩm (61)</button>
-        <button onclick="switchView('competitors')" id="mob-nav-competitors" class="px-3 py-1 rounded-lg text-slate-600">Đối Thủ Shopee</button>
-        <button onclick="switchView('analytics')" id="mob-nav-analytics" class="px-3 py-1 rounded-lg text-slate-600">Top Chiến Lược</button>
+      <!-- Mobile / Tablet Navigation Bar (< 1024px, scrollable no-scrollbar) -->
+      <div class="flex lg:hidden border-t border-slate-100 py-2 space-x-1.5 overflow-x-auto no-scrollbar text-xs font-bold">
+        <button onclick="switchView('agent')" id="mob-nav-agent" class="px-3 py-1.5 rounded-lg text-violet-800 bg-violet-50 font-bold whitespace-nowrap shrink-0">🤖 AI Agent</button>
+        <button onclick="switchView('catalog')" id="mob-nav-catalog" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 whitespace-nowrap shrink-0">Sản Phẩm (61)</button>
+        <button onclick="switchView('competitors')" id="mob-nav-competitors" class="px-3 py-1.5 rounded-lg text-slate-600 whitespace-nowrap shrink-0">Đối Thủ Shopee</button>
+        <button onclick="switchView('analytics')" id="mob-nav-analytics" class="px-3 py-1.5 rounded-lg text-slate-600 whitespace-nowrap shrink-0">Top Chiến Lược</button>
       </div>
     </div>
   </header>
@@ -1069,7 +1073,11 @@
       const profitB2B = giaB2B - landedCost;
       const marginB2B = giaB2B > 0 ? Math.round((profitB2B / giaB2B) * 100) : 0;
 
-      const giaB2C = Math.round((landedCost * (1 + pms.margin_b2c)) / 1000) * 1000;
+      // NGUYÊN TẮC QUAN TRỌNG: Giá niêm yết bán lẻ Shopee (B2C) PHẢI LUÔN CAO HƠN Giá bán sỉ B2B tối thiểu 15%
+      // để đại lý B2B có biên lợi nhuận bán lẻ và bù đắp chi phí sàn Shopee (17%) + Ads Marketing (11%).
+      const giaB2C_base = Math.round((landedCost * (1 + pms.margin_b2c)) / 1000) * 1000;
+      const minB2CFromB2B = Math.round((giaB2B * 1.15) / 1000) * 1000;
+      const giaB2C = Math.max(giaB2C_base, minB2CFromB2B);
       const profitB2C = giaB2C - landedCost;
 
       return {
@@ -2126,11 +2134,11 @@
         p1688Range: "¥15.8 - ¥39.0",
         partnerMinRmb: 16.6,
         partnerMaxRmb: 41.0,
-        shopeePrice: "119k - 139k",
-        grossProfit: "+59k - 73k",
-        grossMargin: "Biên gộp >100%",
-        netProfit: "+22.5k - 29.1k",
-        netMargin: "Ròng 16% - 17% DT"
+        shopeePrice: "129k - 189k", // Luôn cao hơn giá đối tác B2B (65k-160k)
+        grossProfit: "+69k - 108k",
+        grossMargin: "Biên gộp >115%",
+        netProfit: "+26.5k - 38.6k",
+        netMargin: "Ròng 18% - 20% DT"
       },
       {
         rank: "TOP 2",
@@ -2147,11 +2155,11 @@
         p1688Range: "¥76.0 - ¥159.0",
         partnerMinRmb: 79.8,
         partnerMaxRmb: 166.9,
-        shopeePrice: "229k - 249k",
-        grossProfit: "+98k - 110k",
-        grossMargin: "Biên gộp ~80%",
-        netProfit: "+32.0k - 52.1k",
-        netMargin: "Ròng 12% - 16% DT"
+        shopeePrice: "359k - 749k", // Luôn cao hơn giá đối tác B2B (311k-651k)
+        grossProfit: "+229k - 599k",
+        grossMargin: "Biên gộp 64% - 80%",
+        netProfit: "+58.0k - 152.0k",
+        netMargin: "Ròng 16% - 20% DT"
       },
       {
         rank: "TOP 3",
@@ -2168,11 +2176,11 @@
         p1688Range: "¥108.0",
         partnerMinRmb: 113.4,
         partnerMaxRmb: 113.4,
-        shopeePrice: "389k",
-        grossProfit: "+175.000đ",
-        grossMargin: "Biên gộp 45% DT",
-        netProfit: "+53.492đ",
-        netMargin: "Ròng 13.8% DT (ROI 27%)"
+        shopeePrice: "509k", // Cao hơn giá B2B đối tác (442k) +15%
+        grossProfit: "+291.000đ",
+        grossMargin: "Biên gộp 57% DT",
+        netProfit: "+82.500đ",
+        netMargin: "Ròng 16.2% DT (ROI 38%)"
       },
       {
         rank: "TOP 4",
@@ -2189,11 +2197,11 @@
         p1688Range: "¥169.0",
         partnerMinRmb: 177.5,
         partnerMaxRmb: 177.5,
-        shopeePrice: "369k",
-        grossProfit: "+167.000đ",
-        grossMargin: "Biên gộp 45% DT",
-        netProfit: "+55.485đ",
-        netMargin: "Ròng 15.0% DT (ROI 31%)"
+        shopeePrice: "795k", // Cao hơn giá B2B đối tác (692k) +15%
+        grossProfit: "+593.000đ",
+        grossMargin: "Biên gộp 74% DT",
+        netProfit: "+172.000đ",
+        netMargin: "Ròng 21.6% DT (ROI 85%)"
       },
       {
         rank: "TOP 5",
@@ -2210,11 +2218,11 @@
         p1688Range: "¥83.0",
         partnerMinRmb: 87.2,
         partnerMaxRmb: 87.2,
-        shopeePrice: "339k",
-        grossProfit: "+146.000đ",
-        grossMargin: "Biên gộp 43% DT",
-        netProfit: "+48.140đ",
-        netMargin: "Ròng 14.2% DT (ROI 25%)"
+        shopeePrice: "391k", // Cao hơn giá B2B đối tác (340k) +15%
+        grossProfit: "+183.000đ",
+        grossMargin: "Biên gộp 47% DT",
+        netProfit: "+55.200đ",
+        netMargin: "Ròng 14.1% DT (ROI 27%)"
       }
     ];
 
