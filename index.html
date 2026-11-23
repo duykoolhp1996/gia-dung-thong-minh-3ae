@@ -489,7 +489,7 @@
           </button>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           <!-- Shopee Fees Slider -->
           <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-2">
             <div class="flex justify-between items-center text-xs">
@@ -506,7 +506,7 @@
           <!-- Marketing / Ads Slider -->
           <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-2">
             <div class="flex justify-between items-center text-xs">
-              <span class="font-bold text-slate-700">📢 Chi Phí Ads / Marketing</span>
+              <span class="font-bold text-slate-700">📢 Chi Phí Ads / MKT</span>
               <span id="slider-val-ads-pct" class="font-black text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">11.0%</span>
             </div>
             <input type="range" id="agent-slider-ads-pct" min="5" max="25" step="0.5" value="11" oninput="onAgentParamChange()" class="w-full accent-amber-600 cursor-pointer">
@@ -519,7 +519,7 @@
           <!-- Packaging & Return Risk Slider -->
           <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-2">
             <div class="flex justify-between items-center text-xs">
-              <span class="font-bold text-slate-700">📦 Đóng Gói & Rủi Ro Hoàn</span>
+              <span class="font-bold text-slate-700">📦 Đóng Gói & Hoàn</span>
               <span id="slider-val-pack-pct" class="font-black text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded-md border border-cyan-200">4.0%</span>
             </div>
             <input type="range" id="agent-slider-pack-pct" min="2" max="10" step="0.5" value="4" oninput="onAgentParamChange()" class="w-full accent-cyan-600 cursor-pointer">
@@ -532,25 +532,43 @@
           <!-- Target Profit Margin Slider -->
           <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-2">
             <div class="flex justify-between items-center text-xs">
-              <span class="font-bold text-slate-700">🎯 Lợi Nhuận Ròng Mục Tiêu</span>
+              <span class="font-bold text-slate-700">🎯 Biên LN Trước Thuế</span>
               <span id="slider-val-target-margin" class="font-black text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">25.0%</span>
             </div>
             <input type="range" id="agent-slider-target-margin" min="10" max="35" step="1" value="25" oninput="onAgentParamChange()" class="w-full accent-emerald-600 cursor-pointer">
             <div class="flex justify-between text-[10px] text-slate-400">
-              <span>Net Profit Margin sau toàn bộ chi phí</span>
+              <span>Biên EBT trước thuế mục tiêu</span>
               <span>10% - 35%</span>
+            </div>
+          </div>
+
+          <!-- Vietnam Corporate Tax (CIT) Slider -->
+          <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <span class="font-bold text-slate-700">🏛️ Thuế TNDN VN (CIT)</span>
+              <span id="slider-val-tax-cit" class="font-black text-rose-600 bg-rose-50 px-2 py-0.5 rounded-md border border-rose-200">20.0%</span>
+            </div>
+            <input type="range" id="agent-slider-tax-cit" min="0" max="30" step="0.5" value="20" oninput="onAgentParamChange()" class="w-full accent-rose-600 cursor-pointer">
+            <div class="flex justify-between text-[10px] text-slate-400">
+              <span>20% trên LN trước thuế (EBT)</span>
+              <span>0% - 30%</span>
             </div>
           </div>
         </div>
 
         <div class="p-3.5 rounded-2xl bg-indigo-50/70 border border-indigo-100 flex flex-wrap items-center justify-between gap-3 text-xs">
           <div class="flex items-center space-x-2">
-            <span class="text-indigo-900 font-bold">Tổng chi phí bán hàng E-commerce hiện tại:</span>
+            <span class="text-indigo-900 font-bold">Chi phí bán hàng E-commerce:</span>
             <span id="agent-summary-total-fee" class="text-indigo-700 font-extrabold bg-white px-2.5 py-0.5 rounded-lg border border-indigo-200 shadow-xs">32.0%</span>
-            <span class="text-slate-500 text-[11px]">(Thực thu về ví: <strong id="agent-summary-retention" class="text-indigo-900 font-bold">68.0%</strong> Doanh thu)</span>
+            <span class="text-slate-500 text-[11px]">(Thực thu ví: <strong id="agent-summary-retention" class="text-indigo-900 font-bold">68.0%</strong> DT)</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-rose-900 font-bold">Thuế Doanh Nghiệp (CIT):</span>
+            <span id="agent-summary-tax-cit" class="text-rose-700 font-extrabold bg-white px-2.5 py-0.5 rounded-lg border border-rose-200 shadow-xs">20.0% EBT</span>
+            <span class="text-slate-500 text-[11px]">(Hoặc Hộ KD: <strong>1.5% DT</strong>)</span>
           </div>
           <div class="text-[11px] text-indigo-700 font-medium">
-            💡 Tỷ giá áp dụng: <strong>3.900 VND/RMB</strong> (đồng bộ với Bảng tham số gốc)
+            💡 Tỷ giá: <strong>3.900 VND/RMB</strong> (đồng bộ Bảng tham số)
           </div>
         </div>
       </div>
@@ -872,6 +890,7 @@
         ads_pct: 11.0,
         pack_pct: 4.0,
         target_margin: 25.0,
+        tax_cit: 20.0,
         activeTier: 'all'
       },
       simSku: 'TKK2033-500ML',
@@ -2048,10 +2067,13 @@
       // Giá Niêm Yết Mỏ Neo (Giảm -35%)
       const listingPrice = isDefault ? item.p_listing : Math.ceil((retailPrice / 0.65) / 10000) * 10000 - 1000;
 
-      // Lợi nhuận ròng & ROI tại giá bán lẻ
-      const netProfit = Math.round(retailPrice * (1 - totalFee) - landed);
-      const netMarginPct = (netProfit / retailPrice) * 100;
-      const roiPct = (netProfit / landed) * 100;
+      // Lợi nhuận trước thuế EBT & Lợi nhuận sau thuế (NPAT) sau Thuế TNDN 20%
+      const ebt = Math.round(retailPrice * (1 - totalFee) - landed);
+      const taxRate = (state.agentParams.tax_cit !== undefined ? state.agentParams.tax_cit : 20.0) / 100;
+      const taxCit = Math.round(Math.max(0, ebt) * taxRate);
+      const netProfit = ebt - taxCit; // Lãi ròng sau thuế bỏ túi
+      const netMarginPct = retailPrice > 0 ? (netProfit / retailPrice) * 100 : 0;
+      const roiPct = landed > 0 ? (netProfit / landed) * 100 : 0;
 
       // Chênh lệch đối thủ
       const diffPct = ((retailPrice - item.comp_price) / item.comp_price) * 100;
@@ -2062,6 +2084,8 @@
         flashPrice,
         retailPrice,
         listingPrice,
+        ebt,
+        taxCit,
         netProfit,
         netMarginPct,
         roiPct,
@@ -2075,11 +2099,19 @@
       state.agentParams.ads_pct = parseFloat(document.getElementById('agent-slider-ads-pct').value);
       state.agentParams.pack_pct = parseFloat(document.getElementById('agent-slider-pack-pct').value);
       state.agentParams.target_margin = parseFloat(document.getElementById('agent-slider-target-margin').value);
+      const taxEl = document.getElementById('agent-slider-tax-cit');
+      state.agentParams.tax_cit = taxEl ? parseFloat(taxEl.value) : 20.0;
 
       document.getElementById('slider-val-shopee-fee').textContent = state.agentParams.shopee_fee.toFixed(1) + '%';
       document.getElementById('slider-val-ads-pct').textContent = state.agentParams.ads_pct.toFixed(1) + '%';
       document.getElementById('slider-val-pack-pct').textContent = state.agentParams.pack_pct.toFixed(1) + '%';
       document.getElementById('slider-val-target-margin').textContent = state.agentParams.target_margin.toFixed(1) + '%';
+      if (document.getElementById('slider-val-tax-cit')) {
+        document.getElementById('slider-val-tax-cit').textContent = state.agentParams.tax_cit.toFixed(1) + '%';
+      }
+      if (document.getElementById('agent-summary-tax-cit')) {
+        document.getElementById('agent-summary-tax-cit').textContent = state.agentParams.tax_cit.toFixed(1) + '% EBT';
+      }
 
       const total = state.agentParams.shopee_fee + state.agentParams.ads_pct + state.agentParams.pack_pct;
       document.getElementById('agent-summary-total-fee').textContent = total.toFixed(1) + '%';
@@ -2094,8 +2126,11 @@
       document.getElementById('agent-slider-ads-pct').value = 11.0;
       document.getElementById('agent-slider-pack-pct').value = 4.0;
       document.getElementById('agent-slider-target-margin').value = 25.0;
+      if (document.getElementById('agent-slider-tax-cit')) {
+        document.getElementById('agent-slider-tax-cit').value = 20.0;
+      }
       onAgentParamChange();
-      showToast('Đã đưa tham số về cấu hình chuẩn Shopee');
+      showToast('Đã đưa tham số về cấu hình chuẩn Shopee & Thuế TNDN 20%');
     }
 
     function filterAgentTier(tier) {
@@ -2194,14 +2229,20 @@
 
             <!-- P&L Margin & Competitor Benchmark -->
             <div class="space-y-2.5 text-xs">
-              <div class="flex items-center justify-between p-2.5 bg-emerald-50/60 rounded-xl border border-emerald-100 text-emerald-900">
-                <div class="space-y-0.5">
-                  <div class="font-extrabold">Lợi nhuận ròng: +${calc.netProfit.toLocaleString()}đ / sp</div>
-                  <div class="text-[11px] text-emerald-700 font-semibold">Tỷ suất LN: ${calc.netMarginPct.toFixed(1)}% | ROI Vốn: ${calc.roiPct.toFixed(1)}%</div>
+              <div class="p-3 bg-emerald-50/70 rounded-2xl border border-emerald-200/80 text-emerald-950 space-y-2">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="font-black text-sm text-emerald-900">💰 Lãi ròng sau thuế: +${calc.netProfit.toLocaleString()}đ / sp</div>
+                    <div class="text-[11px] text-emerald-700 font-bold">Biên LN sau thuế: ${calc.netMarginPct.toFixed(1)}% | ROI Vốn: ${calc.roiPct.toFixed(1)}%</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-[10px] text-slate-400 line-through">Niêm yết ${calc.listingPrice.toLocaleString()}đ</div>
+                    <div class="text-[11px] font-bold text-rose-600 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200">-35% Voucher</div>
+                  </div>
                 </div>
-                <div class="text-right">
-                  <div class="text-[10px] text-slate-400 line-through">Niêm yết ${calc.listingPrice.toLocaleString()}đ</div>
-                  <div class="text-[11px] font-bold text-rose-600 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200">-35% Voucher</div>
+                <div class="flex items-center justify-between pt-1.5 border-t border-emerald-200/60 text-[11px] text-slate-600">
+                  <span>Trước thuế (EBT): <strong class="text-slate-800">+${calc.ebt.toLocaleString()}đ</strong></span>
+                  <span>Thuế TNDN (20%): <strong class="text-rose-600">-${calc.taxCit.toLocaleString()}đ</strong></span>
                 </div>
               </div>
 
@@ -2325,6 +2366,7 @@
       const shopeeFeePct = state.agentParams.shopee_fee;
       const adsPct = state.agentParams.ads_pct;
       const packPct = state.agentParams.pack_pct;
+      const taxCitPct = state.agentParams.tax_cit !== undefined ? state.agentParams.tax_cit : 20.0;
       const totalFeePct = shopeeFeePct + adsPct + packPct;
 
       const shopeeFeeVnd = Math.round(simPrice * (shopeeFeePct / 100));
@@ -2332,10 +2374,12 @@
       const packVnd = Math.round(simPrice * (packPct / 100));
       const landed = item.landed;
 
-      // Net profit = Price - ShopeeFee - Ads - Pack - Landed
-      const netProfit = Math.round(simPrice * (1 - totalFeePct / 100) - landed);
-      const netMarginPct = (netProfit / simPrice) * 100;
-      const roiPct = (netProfit / landed) * 100;
+      // EBT = Price - ShopeeFee - Ads - Pack - Landed
+      const ebt = Math.round(simPrice * (1 - totalFeePct / 100) - landed);
+      const taxCitVnd = Math.round(Math.max(0, ebt) * (taxCitPct / 100));
+      const netProfit = ebt - taxCitVnd; // Lãi sau thuế (NPAT)
+      const netMarginPct = simPrice > 0 ? (netProfit / simPrice) * 100 : 0;
+      const roiPct = landed > 0 ? (netProfit / landed) * 100 : 0;
       const isProfitable = netProfit > 0;
 
       // Competitor diff
@@ -2363,14 +2407,14 @@
           </div>
         </div>
 
-        <!-- Waterfall P&L Breakdown Table -->
-        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
+        <!-- Waterfall P&L Breakdown Table (6 steps including CIT Tax) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs">
           <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
-            <div class="text-[10px] text-slate-500 font-bold uppercase">1. Phí Sàn Shopee (${shopeeFeePct.toFixed(1)}%)</div>
+            <div class="text-[10px] text-slate-500 font-bold uppercase">1. Phí Shopee (${shopeeFeePct.toFixed(1)}%)</div>
             <div class="font-bold text-rose-600 mt-0.5">-${shopeeFeeVnd.toLocaleString()}đ</div>
           </div>
           <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
-            <div class="text-[10px] text-slate-500 font-bold uppercase">2. Phí Ads/MKT (${adsPct.toFixed(1)}%)</div>
+            <div class="text-[10px] text-slate-500 font-bold uppercase">2. Ads/MKT (${adsPct.toFixed(1)}%)</div>
             <div class="font-bold text-amber-600 mt-0.5">-${adsVnd.toLocaleString()}đ</div>
           </div>
           <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
@@ -2378,11 +2422,15 @@
             <div class="font-bold text-cyan-700 mt-0.5">-${packVnd.toLocaleString()}đ</div>
           </div>
           <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
-            <div class="text-[10px] text-slate-500 font-bold uppercase">4. Giá Vốn Landed</div>
+            <div class="text-[10px] text-slate-500 font-bold uppercase">4. Vốn Landed</div>
             <div class="font-bold text-slate-700 mt-0.5">-${landed.toLocaleString()}đ</div>
           </div>
-          <div class="col-span-2 sm:col-span-1 p-2.5 rounded-xl ${isProfitable ? 'bg-emerald-100/80 border border-emerald-300' : 'bg-rose-100/80 border border-rose-300'}">
-            <div class="text-[10px] ${isProfitable ? 'text-emerald-800' : 'text-rose-800'} font-bold uppercase">5. LỢI NHUẬN RÒNG</div>
+          <div class="p-2.5 rounded-xl bg-purple-50 border border-purple-200/70">
+            <div class="text-[10px] text-purple-700 font-bold uppercase">5. Thuế TNDN (${taxCitPct.toFixed(1)}%)</div>
+            <div class="font-bold text-purple-800 mt-0.5">-${taxCitVnd.toLocaleString()}đ</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1 p-2.5 rounded-xl ${isProfitable ? 'bg-emerald-100/90 border border-emerald-300' : 'bg-rose-100/90 border border-rose-300'}">
+            <div class="text-[10px] ${isProfitable ? 'text-emerald-800' : 'text-rose-800'} font-bold uppercase">6. LÃI SAU THUẾ</div>
             <div class="font-black ${isProfitable ? 'text-emerald-950' : 'text-rose-950'} text-sm mt-0.5">${isProfitable ? '+' : ''}${netProfit.toLocaleString()}đ</div>
           </div>
         </div>
