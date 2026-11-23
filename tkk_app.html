@@ -570,6 +570,15 @@
             💡 Tỷ giá: <strong>3.900 VND/RMB</strong> (đồng bộ Bảng tham số)
           </div>
         </div>
+
+        <!-- CALLOUT NGUYÊN TẮC THUẾ VAT -->
+        <div class="p-3.5 rounded-2xl bg-amber-50/90 border border-amber-200 text-xs text-amber-950 flex items-start space-x-2.5">
+          <span class="text-amber-600 font-black shrink-0 text-sm">💡</span>
+          <div class="leading-relaxed">
+            <strong class="text-amber-900 font-extrabold uppercase tracking-wide">Nguyên Tắc Thuế GTGT (VAT):</strong> 
+            Thuế VAT (8%) là thuế gián thu chỉ <strong>cộng vào giá bán ra</strong> cho khách hàng chi trả (thu hộ nộp ngân sách nhà nước), <strong>KHÔNG PHẢI LỢI NHUẬN</strong> của shop. Thuế VAT khâu nhập khẩu được khấu trừ trực tiếp khi bán hàng, toàn bộ Lợi Nhuận Ròng (Net Profit) và Thuế TNDN (20% CIT) được tính chuẩn xác trên Doanh thu và Chi phí thuần (đã bóc tách sạch VAT).
+          </div>
+        </div>
       </div>
 
       <!-- INTERACTIVE PRICE SIMULATOR (BỘ GIẢ LẬP GIÁ BÁN TÙY BIẾN) -->
@@ -836,13 +845,32 @@
         <div class="p-4 rounded-2xl bg-indigo-50/50 border border-indigo-100 space-y-3">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
-              <h4 class="font-extrabold text-indigo-950 text-xs uppercase tracking-wide">Mô Phỏng Lợi Nhuận Bán Trên Sàn Shopee</h4>
-              <p class="text-[11px] text-indigo-700/80">Khấu trừ tự động ~18% phí sàn Shopee, 15% Shopee Ads/Voucher và bao bì đóng gói.</p>
+              <div class="flex items-center space-x-2">
+                <h4 class="font-extrabold text-indigo-950 text-xs uppercase tracking-wide">Mô Phỏng Lợi Nhuận Bán Trên Sàn Shopee</h4>
+                <span class="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 text-[10px] font-black border border-amber-300">TÁCH BẠCH THUẾ VAT</span>
+              </div>
+              <p class="text-[11px] text-indigo-700/80">Khấu trừ tự động ~18% phí sàn Shopee, 15% Shopee Ads/Voucher, bao bì và thuế VAT.</p>
             </div>
             <div class="flex items-center space-x-2">
-              <span class="text-slate-600 font-semibold">Giá bán Shopee:</span>
+              <span class="text-slate-600 font-semibold">Giá niêm yết Shopee:</span>
               <input type="number" id="modal-sim-price" step="5000" oninput="runModalSimCalc()" class="w-28 py-1 px-2 rounded-lg border border-indigo-300 font-extrabold text-indigo-950 text-xs bg-white text-right focus:outline-none focus:ring-1 focus:ring-indigo-500">
               <span class="font-bold text-slate-700">đ</span>
+            </div>
+          </div>
+
+          <!-- Bóc tách Giá Bán Thuần vs VAT cộng thêm -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-white/80 p-2.5 rounded-xl border border-indigo-100 text-xs">
+            <div class="flex justify-between items-center px-2 py-1 bg-slate-50 rounded-lg">
+              <span class="text-slate-500 text-[11px] font-medium">Doanh thu thuần (chưa VAT):</span>
+              <strong id="modal-sim-net-rev" class="text-slate-800 font-bold">350.926 đ</strong>
+            </div>
+            <div class="flex justify-between items-center px-2 py-1 bg-amber-50/70 rounded-lg border border-amber-200/50">
+              <span class="text-amber-800 text-[11px] font-medium">+8% VAT cộng giá bán:</span>
+              <strong id="modal-sim-vat-out" class="text-amber-700 font-extrabold">+28.074 đ</strong>
+            </div>
+            <div class="flex justify-between items-center px-2 py-1 bg-cyan-50/70 rounded-lg border border-cyan-200/50">
+              <span class="text-cyan-800 text-[11px] font-medium">Khấu trừ VAT NK đầu vào:</span>
+              <strong id="modal-sim-vat-deduct" class="text-cyan-700 font-bold">-15.288 đ</strong>
             </div>
           </div>
 
@@ -856,14 +884,22 @@
               <p class="text-[10px] text-slate-400 font-bold uppercase">Ads & Đóng Gói</p>
               <p id="modal-sim-ads-fee" class="font-bold text-slate-700 mt-0.5">-55.850 đ</p>
             </div>
-            <div class="p-2.5 rounded-xl bg-emerald-600 text-white">
-              <p class="text-[10px] text-emerald-100 font-bold uppercase">Lợi Nhuận Ròng</p>
+            <div class="p-2.5 rounded-xl bg-emerald-600 text-white shadow-sm">
+              <p class="text-[10px] text-emerald-100 font-bold uppercase">Lợi Nhuận Ròng Thuần</p>
               <p id="modal-sim-net-profit" class="font-extrabold text-sm mt-0.5">+29.154 đ</p>
             </div>
             <div class="p-2.5 rounded-xl bg-white border border-indigo-100">
               <p class="text-[10px] text-slate-400 font-bold uppercase">Tỷ Suất Ròng (Margin)</p>
               <p id="modal-sim-net-margin" class="font-extrabold text-emerald-600 mt-0.5">8.6%</p>
             </div>
+          </div>
+
+          <!-- Callout giải thích nguyên tắc VAT -->
+          <div class="p-2.5 rounded-xl bg-amber-50/90 border border-amber-200 text-[11px] text-amber-900 flex items-start space-x-2">
+            <span class="text-amber-600 font-bold shrink-0">💡 Quy tắc Thuế GTGT (VAT):</span>
+            <p class="leading-relaxed">
+              Thuế VAT (8%) chỉ là khoản <strong>cộng thêm vào giá bán</strong> cho khách hàng chi trả (thu hộ nộp ngân sách nhà nước), <strong>KHÔNG PHẢI LỢI NHUẬN</strong> của shop. Thuế VAT khâu nhập khẩu được khấu trừ trực tiếp khi xuất bán, lợi nhuận ròng được tính trên doanh thu và chi phí thuần sạch.
+            </p>
           </div>
         </div>
 
@@ -1661,13 +1697,14 @@
       const partnerRmb = (p.price_1688 * 1.05).toFixed(1);
       const partnerVnd = Math.round(p.price_1688 * 1.05 * state.params.ty_gia);
 
+      const pureLanded = calcP.giaGocVND + calcP.cuocVC + calcP.thueNKVal + calcP.phiHq;
       const costItems = [
         { label: 'Giá Nhập Tận Xưởng', val: fmtRMB(p.price_rmb) + ` (${fmtVND(calcP.giaGocVND)})` },
         { label: 'Giá Sàn 1688 Gốc', val: fmtRMB(p.price_1688) },
         { label: 'Giá Đối Tác (1688 +5%)', val: `¥${partnerRmb} (~${fmtVND(partnerVnd)})` },
         { label: 'Cước VC QT', val: fmtVND(calcP.cuocVC) },
-        { label: 'Thuế VAT (8%)', val: fmtVND(calcP.thueVATVal) },
-        { label: 'Giá Vốn Landed', val: fmtVND(calcP.landedCost) }
+        { label: 'Thuế VAT NK (Khấu trừ)', val: fmtVND(calcP.thueVATVal) },
+        { label: 'Giá Vốn Thuần (Chưa VAT)', val: fmtVND(pureLanded) }
       ];
 
       document.getElementById('modal-cost-breakdown-grid').innerHTML = costItems.map(it => `
@@ -1711,14 +1748,30 @@
       const calcP = calcProduct(p);
 
       const price = parseFloat(document.getElementById('modal-sim-price').value) || 0;
-      const cost = calcP.landedCost;
+      
+      // Nguyên tắc VAT: VAT chỉ cộng vào giá bán cho khách trả, không phải lợi nhuận của shop.
+      // Doanh thu thuần chưa VAT = Giá niêm yết / (1 + 8% VAT)
+      const vatRate = state.params.thue_vat || 0.08;
+      const netRev = Math.round(price / (1 + vatRate));
+      const vatOutput = price - netRev; // VAT cộng vào giá bán (khách trả)
+      const vatInput = calcP.thueVATVal; // VAT NK đầu vào đã nộp được khấu trừ
+      const pureCost = calcP.giaGocVND + calcP.cuocVC + calcP.thueNKVal + calcP.phiHq; // Giá vốn thuần chưa VAT
 
       // Deductions: 18% Shopee fees, 15% Ads/Voucher, 5k packaging
-      const shopeeFees = price * 0.18;
-      const adsAndVoucher = price * 0.15;
+      const shopeeFees = Math.round(price * 0.18);
+      const adsAndVoucher = Math.round(price * 0.15);
       const packaging = 5000;
-      const netProfit = price - cost - shopeeFees - adsAndVoucher - packaging;
-      const netMargin = price > 0 ? (netProfit / price) * 100 : 0;
+      
+      // Lợi nhuận ròng thuần = Doanh thu thuần (chưa VAT) - Giá vốn thuần (chưa VAT) - Phí sàn - Ads - Đóng gói
+      // Tuyệt đối không tính tiền thuế VAT vào lợi nhuận!
+      const netProfit = netRev - pureCost - shopeeFees - adsAndVoucher - packaging;
+      const netMargin = netRev > 0 ? (netProfit / netRev) * 100 : 0;
+
+      if (document.getElementById('modal-sim-net-rev')) {
+        document.getElementById('modal-sim-net-rev').innerText = fmtVND(netRev);
+        document.getElementById('modal-sim-vat-out').innerText = '+' + fmtVND(vatOutput);
+        document.getElementById('modal-sim-vat-deduct').innerText = '-' + fmtVND(vatInput);
+      }
 
       document.getElementById('modal-sim-shopee-fee').innerText = '-' + fmtVND(shopeeFees);
       document.getElementById('modal-sim-ads-fee').innerText = '-' + fmtVND(adsAndVoucher + packaging);
