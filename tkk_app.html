@@ -1077,18 +1077,29 @@
       const phiHq = pms.phi_hq;
       const landedCost = giaGocVND + cuocVC + thueNKVal + thueVATVal + phiHq;
 
-      // GIÁ SỈ B2B = GIÁ BÁN TRÊN 1688 + 5%
-      const markup1688 = (pms.margin_b2b !== undefined) ? pms.margin_b2b : 0.05;
-      const partnerPriceRMB = p.price_1688 * (1 + markup1688);
-      const giaB2B = Math.round((partnerPriceRMB * pms.ty_gia) / 1000) * 1000;
+      // GIÁ SỈ B2B & GIÁ NIÊM YẾT SHOPEE (B2C)
+      let partnerPriceRMB;
+      let giaB2B;
+      let giaB2C;
+
+      // Kiểm tra sản phẩm có định giá cố định chuẩn từ Sheet (như Huoli TKK2036 giá 1688 bị thổi ảo ¥108)
+      if (p.id >= 31 && p.id <= 34) {
+        // Huoli TKK2036 chuẩn từ Sheet: Landed 210.388đ, Giá Sỉ B2B = 263.000đ, Giá Shopee = 379.000đ
+        giaB2B = 263000;
+        partnerPriceRMB = Math.round((giaB2B / pms.ty_gia) * 10) / 10;
+        giaB2C = 379000;
+      } else {
+        const markup1688 = (pms.margin_b2b !== undefined) ? pms.margin_b2b : 0.05;
+        partnerPriceRMB = p.price_1688 * (1 + markup1688);
+        giaB2B = Math.round((partnerPriceRMB * pms.ty_gia) / 1000) * 1000;
+
+        const giaB2C_base = Math.round((landedCost * (1 + pms.margin_b2c)) / 1000) * 1000;
+        const minB2CFromB2B = Math.round((giaB2B * 1.15) / 1000) * 1000;
+        giaB2C = Math.max(giaB2C_base, minB2CFromB2B);
+      }
+
       const profitB2B = giaB2B - landedCost;
       const marginB2B = giaB2B > 0 ? Math.round((profitB2B / giaB2B) * 100) : 0;
-
-      // NGUYÊN TẮC QUAN TRỌNG: Giá niêm yết bán lẻ Shopee (B2C) PHẢI LUÔN CAO HƠN Giá bán sỉ B2B tối thiểu 15%
-      // để đại lý B2B có biên lợi nhuận bán lẻ và bù đắp chi phí sàn Shopee (17%) + Ads Marketing (11%).
-      const giaB2C_base = Math.round((landedCost * (1 + pms.margin_b2c)) / 1000) * 1000;
-      const minB2CFromB2B = Math.round((giaB2B * 1.15) / 1000) * 1000;
-      const giaB2C = Math.max(giaB2C_base, minB2CFromB2B);
       const profitB2C = giaB2C - landedCost;
 
       return {
@@ -2214,9 +2225,13 @@
         comp: "Lock&Lock Energetic (420k-480k)<br>Tyeso Sport Vacuum (290k)",
         costRange: "~210k",
         p1688Range: "¥108.0",
-        partnerMinRmb: 113.4,
-        partnerMaxRmb: 113.4,
-        shopeePrice: "379k - 442k",
+        partnerMinRmb: 67.4,
+        partnerMaxRmb: 67.4,
+        shopeePrice: "379.000 đ",
+        grossProfit: "+168.612 đ",
+        grossMargin: "Biên gộp 44.5%",
+        netProfit: "+52.612 đ",
+        netMargin: "Lãi Sỉ B2B +52.6k" 
         grossProfit: "+169k - 232k",
         grossMargin: "Biên gộp 45% - 52%",
         netProfit: "+52.600đ - 72.000đ",
