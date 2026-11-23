@@ -370,15 +370,14 @@
             <thead class="bg-slate-50 font-bold uppercase text-[10px] text-slate-500 tracking-wider border-b border-slate-200">
               <tr>
                 <th class="p-3 text-center">Xếp Hạng</th>
-                <th class="p-3 text-center">Ảnh Sản Phẩm</th>
+                <th class="p-3 text-center">Ảnh Mẫu</th>
                 <th class="p-3">Dòng Sản Phẩm & Model</th>
                 <th class="p-3">Chất Liệu Cốt Lõi</th>
-                <th class="p-3">USP Vượt Trội Tại Thị Trường VN</th>
-                <th class="p-3">Đối Thủ Trực Tiếp</th>
                 <th class="p-3 text-right">Giá Vốn</th>
                 <th class="p-3 text-right text-indigo-700 font-extrabold bg-indigo-50/50">Giá Đối Tác<br><span class="text-[9px] text-indigo-500 font-bold">(1688 +5%)</span></th>
                 <th class="p-3 text-right text-amber-700 font-extrabold">Giá Bán Shopee</th>
-                <th class="p-3 text-right text-emerald-700 font-extrabold">Lãi Gộp vs Lãi Ròng Bỏ Túi<br><span class="text-[9px] text-slate-500 font-medium tracking-normal">(Trước vs Sau Sàn 17%, Ads 11%, Thuế 20%)</span></th>
+                <th class="p-3 text-right text-emerald-700 font-extrabold">Lãi Gộp & Lãi Ròng<br><span class="text-[9px] text-slate-500 font-medium tracking-normal">(Trước vs Sau Sàn/Ads/Thuế)</span></th>
+                <th class="p-3 text-center text-indigo-700 font-bold">Chi Tiết USP & Đối Thủ</th>
               </tr>
             </thead>
             <tbody id="top5-table-body" class="divide-y divide-slate-100 text-xs">
@@ -674,6 +673,102 @@
         <button onclick="openQuotationDrawer()" class="px-4 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-extrabold shadow-md flex items-center space-x-1.5 transition">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           <span>Xem & Copy Zalo</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: TOP 5 STRATEGIC USP & COMPETITOR DETAIL POP-UP    -->
+  <!-- ======================================================== -->
+  <div id="top5-detail-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs hidden items-center justify-center p-3 sm:p-5 no-print" onclick="closeTop5Detail()">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl border border-slate-200 flex flex-col" onclick="event.stopPropagation()">
+      <!-- Header -->
+      <div class="p-4 sm:p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+        <div class="flex items-center space-x-3">
+          <span id="top5-modal-rank" class="px-2.5 py-1 rounded-full bg-amber-200 text-amber-900 text-xs font-black">TOP 1</span>
+          <div>
+            <h3 id="top5-modal-title" class="font-extrabold text-base text-slate-900 leading-tight">Singer & Chaoran Tritan</h3>
+            <p id="top5-modal-skus" class="text-xs text-slate-500 font-medium">TKK1001 & TKK1012 (13 SKU)</p>
+          </div>
+        </div>
+        <button onclick="closeTop5Detail()" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 transition" title="Đóng">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="p-4 sm:p-6 overflow-y-auto custom-scroll space-y-4 flex-1 text-xs">
+        
+        <!-- USP Highlight Banner -->
+        <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 space-y-1.5">
+          <div class="flex items-center space-x-2">
+            <span class="px-2 py-0.5 rounded-md bg-amber-500 text-white font-black text-[10px]">⭐ TOP USP</span>
+            <strong class="text-amber-950 font-black text-xs uppercase tracking-wide">USP Vượt Trội Tại Thị Trường Việt Nam</strong>
+          </div>
+          <p id="top5-modal-usp" class="text-slate-800 font-semibold leading-relaxed text-xs sm:text-sm pl-1">
+            Chịu nhiệt 100°C không độc hại, rơi không vỡ, độ trong suốt pha lê, có lọc trà & chia ml.
+          </p>
+        </div>
+
+        <!-- Competitor Benchmark Banner -->
+        <div class="p-4 rounded-2xl bg-rose-50/70 border border-rose-200/80 space-y-1.5">
+          <div class="flex items-center space-x-2">
+            <span class="px-2 py-0.5 rounded-md bg-rose-600 text-white font-black text-[10px]">🥊 ĐỐI THỦ</span>
+            <strong class="text-rose-950 font-black text-xs uppercase tracking-wide">Đối Thủ Cạnh Tranh Trực Tiếp Trên Shopee</strong>
+          </div>
+          <div id="top5-modal-comp" class="text-slate-800 font-semibold leading-relaxed pl-1">
+            Tupperware (150k - 170k)<br>Lock&Lock Bisfree (130k)
+          </div>
+        </div>
+
+        <!-- Material & Financial Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+          <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/70">
+            <span class="text-[10px] text-slate-500 font-bold uppercase">Chất Liệu</span>
+            <div id="top5-modal-mat" class="font-extrabold text-slate-800 mt-1">Nhựa Tritan Mỹ 100% BPA-Free</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/70">
+            <span class="text-[10px] text-slate-500 font-bold uppercase">Giá Vốn Nhập Kho</span>
+            <div id="top5-modal-cost" class="font-extrabold text-slate-800 mt-1">60k - 81k</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-indigo-50/60 border border-indigo-200/60">
+            <span class="text-[10px] text-indigo-700 font-bold uppercase">Giá Đối Tác (1688+5%)</span>
+            <div id="top5-modal-partner" class="font-black text-indigo-900 mt-1">¥16.6 - ¥41.0</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-amber-50/60 border border-amber-200/60">
+            <span class="text-[10px] text-amber-800 font-bold uppercase">Giá Bán Shopee</span>
+            <div id="top5-modal-shopee" class="font-black text-amber-900 mt-1">119k - 139k</div>
+          </div>
+        </div>
+
+        <!-- Profit Summary Box -->
+        <div class="p-3.5 rounded-2xl bg-emerald-50/80 border border-emerald-200 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <div class="text-[10px] text-emerald-800 font-bold uppercase">Lãi Gộp (Doanh thu - Vốn)</div>
+            <div id="top5-modal-gross" class="font-black text-slate-800 text-sm mt-0.5">+59k - 73k</div>
+          </div>
+          <div class="text-right">
+            <div class="text-[10px] text-emerald-800 font-bold uppercase">💰 Lợi Nhuận Ròng Sau Sàn (17%), Ads (11%) & Thuế (20%)</div>
+            <div id="top5-modal-net" class="font-black text-emerald-900 text-base mt-0.5">+22.5k - 29.1k / sp</div>
+          </div>
+        </div>
+
+        <!-- Product Thumbnails Grid in Modal -->
+        <div class="space-y-2 pt-1">
+          <div class="text-xs font-bold text-slate-700">Các Mẫu SKU Đại Diện (Bấm vào mẫu để mở chi tiết Catalogue & Hóa Đơn 1688):</div>
+          <div id="top5-modal-thumbs" class="flex flex-wrap items-center gap-3">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+        <span class="text-[11px] text-slate-500 italic">💡 Bấm vào ảnh SKU bất kỳ để xem toàn bộ bóc tách chi phí & hóa đơn gốc</span>
+        <button onclick="closeTop5Detail()" class="px-4 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs transition">
+          Đóng
         </button>
       </div>
     </div>
@@ -1993,7 +2088,7 @@
       if (!tbody || !window.APP_DATA) return;
       const rate = state.params.ty_gia || 3900;
 
-      tbody.innerHTML = TOP5_DATA.map(t => {
+      tbody.innerHTML = TOP5_DATA.map((t, idx) => {
         // Find matching product images
         const imgsHtml = t.heroIds.map(id => {
           const p = window.APP_DATA.products.find(x => x.id === id);
@@ -2020,9 +2115,9 @@
         }
 
         return `
-          <tr class="${t.rowClass} transition">
+          <tr class="${t.rowClass} transition hover:bg-slate-50/70">
             <td class="p-3 text-center align-middle">
-              <span class="px-2 py-0.5 rounded-full ${t.rankClass} font-black text-[10px] shadow-2xs">${t.rank}</span>
+              <span class="px-2.5 py-1 rounded-full ${t.rankClass} font-black text-[10px] shadow-2xs">${t.rank}</span>
             </td>
             <td class="p-3 text-center align-middle">
               <div class="flex items-center justify-center space-x-1.5">
@@ -2030,12 +2125,10 @@
               </div>
             </td>
             <td class="p-3 font-extrabold text-slate-900 align-middle">
-              ${t.name}<br>
+              <span class="cursor-pointer hover:text-indigo-600 transition" onclick="openTop5Detail(${idx})" title="Bấm xem chi tiết USP & Đối thủ">${t.name}</span><br>
               <span class="text-[11px] font-normal text-slate-500">${t.skus}</span>
             </td>
             <td class="p-3 font-semibold ${t.matClass} align-middle">${t.mat}</td>
-            <td class="p-3 text-slate-600 align-middle leading-relaxed">${t.usp}</td>
-            <td class="p-3 text-slate-500 align-middle">${t.comp}</td>
             <td class="p-3 text-right font-medium align-middle">${t.costRange}</td>
             <td class="p-3 text-right bg-indigo-50/50 align-middle">
               ${partnerDisplay}
@@ -2052,9 +2145,70 @@
               </div>
               <div class="text-[9px] text-slate-500 font-medium mt-0.5">${t.netMargin}</div>
             </td>
+            <td class="p-3 text-center align-middle">
+              <button onclick="openTop5Detail(${idx})" class="px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 hover:text-indigo-900 font-extrabold text-xs border border-indigo-200/80 shadow-2xs hover:shadow transition flex items-center space-x-1 mx-auto" title="Mở pop-up xem USP vượt trội và đối thủ cạnh tranh">
+                <span>💡 USP & Đối Thủ</span>
+                <svg class="w-3 h-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </td>
           </tr>
         `;
       }).join('');
+    }
+
+    function openTop5Detail(index) {
+      const t = TOP5_DATA[index];
+      if (!t) return;
+      const rate = state.params.ty_gia || 3900;
+
+      document.getElementById('top5-modal-rank').innerText = t.rank;
+      document.getElementById('top5-modal-rank').className = `px-2.5 py-1 rounded-full ${t.rankClass} text-xs font-black`;
+      document.getElementById('top5-modal-title').innerText = t.name;
+      document.getElementById('top5-modal-skus').innerText = t.skus;
+      document.getElementById('top5-modal-usp').innerHTML = t.usp;
+      document.getElementById('top5-modal-comp').innerHTML = t.comp;
+      document.getElementById('top5-modal-mat').innerText = t.mat;
+      document.getElementById('top5-modal-cost').innerText = t.costRange;
+      
+      if (t.partnerMinRmb === t.partnerMaxRmb) {
+        const vnd = Math.round(t.partnerMinRmb * rate / 1000) * 1000;
+        document.getElementById('top5-modal-partner').innerHTML = `¥${t.partnerMinRmb.toFixed(1)} (~${vnd.toLocaleString()}đ)`;
+      } else {
+        const vndMin = Math.round(t.partnerMinRmb * rate / 1000) * 1000;
+        const vndMax = Math.round(t.partnerMaxRmb * rate / 1000) * 1000;
+        document.getElementById('top5-modal-partner').innerHTML = `¥${t.partnerMinRmb.toFixed(1)} - ¥${t.partnerMaxRmb.toFixed(1)} (~${(vndMin/1000).toFixed(0)}k - ${(vndMax/1000).toFixed(0)}k)`;
+      }
+      
+      document.getElementById('top5-modal-shopee').innerText = t.shopeePrice;
+      document.getElementById('top5-modal-gross').innerHTML = `${t.grossProfit} <span class="text-xs text-slate-500 font-semibold">(${t.grossMargin})</span>`;
+      document.getElementById('top5-modal-net').innerHTML = `${t.netProfit} <span class="text-xs text-emerald-700 font-bold block sm:inline">(${t.netMargin})</span>`;
+
+      // Render clickable thumbnails
+      const thumbsContainer = document.getElementById('top5-modal-thumbs');
+      thumbsContainer.innerHTML = t.heroIds.map(id => {
+        const p = window.APP_DATA.products.find(x => x.id === id);
+        if (!p) return '';
+        return `
+          <div onclick="closeTop5Detail(); openProductDetail(${p.id});" class="flex items-center space-x-2.5 p-2 rounded-2xl bg-white border border-slate-200 hover:border-indigo-400 hover:shadow-md cursor-pointer transition group">
+            <img src="${p.cat_img}" class="w-12 h-12 rounded-xl object-cover border border-slate-100 group-hover:scale-105 transition">
+            <div>
+              <div class="font-extrabold text-slate-800 text-xs">${p.model}</div>
+              <div class="text-[10px] text-slate-500">${p.capacity} • ${p.color_vi}</div>
+              <div class="text-[10px] text-indigo-600 font-bold">Xem bóc tách →</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const modal = document.getElementById('top5-detail-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeTop5Detail() {
+      const modal = document.getElementById('top5-detail-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
     }
 
     window.addEventListener('DOMContentLoaded', () => {
