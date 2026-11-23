@@ -1416,13 +1416,13 @@
         const cLower = (p.color_vi || '').toLowerCase();
         if (cLower.includes('đen') && cLower.includes('trắng')) swatchBg = 'linear-gradient(135deg, #ffffff 50%, #0f172a 50%)';
         else if (cLower.includes('đen')) swatchBg = '#0f172a';
-        else if (cLower.includes('trắng') || cLower.includes('kem')) swatchBg = '#f1f5f9';
+        else if (cLower.includes('trắng') || cLower.includes('kem')) swatchBg = '#f8fafc';
         else if (cLower.includes('xám') || cLower.includes('súng')) swatchBg = '#475569';
         else if (cLower.includes('tím')) swatchBg = '#9333ea';
         else if (cLower.includes('hồng')) swatchBg = '#ec4899';
-        else if (cLower.includes('xanh dương') || cLower.includes('lam')) swatchBg = '#0284c7';
-        else if (cLower.includes('xanh lá') || cLower.includes('rêu') || cLower.includes('lục')) swatchBg = '#16a34a';
-        else if (cLower.includes('bạc') || cLower.includes('inox')) swatchBg = '#cbd5e1';
+        else if (cLower.includes('xanh dương') || cLower.includes('lam') || cLower.includes('biển')) swatchBg = '#0284c7';
+        else if (cLower.includes('matcha') || cLower.includes('lá') || cLower.includes('rêu') || cLower.includes('lục') || cLower.includes('hành') || cLower.includes('bơ') || cLower.includes('xanh')) swatchBg = '#16a34a';
+        else if (cLower.includes('bạc') || cLower.includes('inox') || cLower.includes('băng hà')) swatchBg = '#cbd5e1';
         else if (cLower.includes('vàng') || cLower.includes('cam')) swatchBg = '#f59e0b';
 
         const roiVsCost = p.landedCost > 0 ? Math.round((p.profitB2C / p.landedCost) * 100) : 0;
@@ -1432,7 +1432,7 @@
           <article class="bg-white rounded-2xl border ${isSelected ? 'border-emerald-500 ring-2 ring-emerald-500/20' : p.is_top_usp ? 'border-amber-300 ring-1 ring-amber-300/40' : 'border-slate-200/90'} shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
             
             <!-- Card Media Header (Không dùng khung trắng thừa, ảnh tự nhiên thoáng đãng) -->
-            <header class="p-3 pb-2 bg-slate-50/70 border-b border-slate-100">
+            <header class="p-3 pb-2 bg-slate-50/50 border-b border-slate-100/80">
               <!-- Top metadata row: SKU rank & segmented source pill -->
               <div class="flex items-center justify-between gap-1.5 mb-2">
                 <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-extrabold tracking-wide bg-slate-900 text-white shadow-2xs">
@@ -1462,7 +1462,7 @@
 
               <!-- Product Image Stage (bỏ khung viền trắng bao quanh, ảnh thoáng tự nhiên) -->
               <div class="relative flex items-center justify-center h-44 cursor-pointer py-1" onclick="openProductDetail(${p.id})">
-                <img id="card-img-${p.id}" src="${displaySrc}" alt="${p.model}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-200">
+                <img id="card-img-${p.id}" src="${displaySrc}" alt="${p.model}" class="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-200">
                 
                 <!-- Material & capacity tags at bottom -->
                 <div class="absolute bottom-1 inset-x-1 flex items-center justify-between pointer-events-none">
