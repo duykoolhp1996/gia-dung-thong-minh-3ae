@@ -358,7 +358,7 @@
               <span class="text-lg">⭐</span>
               <span>Bảng Xếp Hạng TOP 5 Nhóm Sản Phẩm Có USP & Lợi Nhuận Tốt Nhất Tại Việt Nam</span>
             </h3>
-            <p class="text-xs text-slate-500 mt-0.5">Phân tích lợi thế cạnh tranh áp đảo đối thủ và biên lợi nhuận ròng.</p>
+            <p class="text-xs text-slate-500 mt-0.5">Phân tích lợi thế cạnh tranh, biên lãi gộp và lợi nhuận ròng thực nhận sau toàn bộ chi phí sàn (17%) + Ads (11%) + Thuế (20%).</p>
           </div>
           <button onclick="filterTopUSP()" class="px-3 py-1.5 rounded-xl bg-amber-500 text-white font-extrabold text-xs shadow-xs hover:bg-amber-600 transition shrink-0">
             Xem 36 SKU Này Trong Danh Mục →
@@ -378,7 +378,7 @@
                 <th class="p-3 text-right">Giá Vốn</th>
                 <th class="p-3 text-right text-indigo-700 font-extrabold bg-indigo-50/50">Giá Đối Tác<br><span class="text-[9px] text-indigo-500 font-bold">(1688 +5%)</span></th>
                 <th class="p-3 text-right text-amber-700 font-extrabold">Giá Bán Shopee</th>
-                <th class="p-3 text-right text-emerald-700 font-extrabold">Biên Lãi Gộp</th>
+                <th class="p-3 text-right text-emerald-700 font-extrabold">Lãi Gộp vs Lãi Ròng Bỏ Túi<br><span class="text-[9px] text-slate-500 font-medium tracking-normal">(Trước vs Sau Sàn 17%, Ads 11%, Thuế 20%)</span></th>
               </tr>
             </thead>
             <tbody id="top5-table-body" class="divide-y divide-slate-100 text-xs">
@@ -1897,7 +1897,10 @@
         partnerMinRmb: 16.6,
         partnerMaxRmb: 41.0,
         shopeePrice: "119k - 139k",
-        marginText: "> 100% (Siêu lãi)"
+        grossProfit: "+59k - 73k",
+        grossMargin: "Biên gộp >100%",
+        netProfit: "+22.5k - 29.1k",
+        netMargin: "Ròng 16% - 17% DT"
       },
       {
         rank: "TOP 2",
@@ -1915,7 +1918,10 @@
         partnerMinRmb: 79.8,
         partnerMaxRmb: 166.9,
         shopeePrice: "229k - 249k",
-        marginText: "~80% (Lãi +110k)"
+        grossProfit: "+98k - 110k",
+        grossMargin: "Biên gộp ~80%",
+        netProfit: "+32.0k - 52.1k",
+        netMargin: "Ròng 12% - 16% DT"
       },
       {
         rank: "TOP 3",
@@ -1933,7 +1939,10 @@
         partnerMinRmb: 113.4,
         partnerMaxRmb: 113.4,
         shopeePrice: "389k",
-        marginText: "+175.000đ / chiếc"
+        grossProfit: "+175.000đ",
+        grossMargin: "Biên gộp 45% DT",
+        netProfit: "+53.492đ",
+        netMargin: "Ròng 13.8% DT (ROI 27%)"
       },
       {
         rank: "TOP 4",
@@ -1951,7 +1960,10 @@
         partnerMinRmb: 177.5,
         partnerMaxRmb: 177.5,
         shopeePrice: "369k",
-        marginText: "+167.000đ / chiếc"
+        grossProfit: "+167.000đ",
+        grossMargin: "Biên gộp 45% DT",
+        netProfit: "+55.485đ",
+        netMargin: "Ròng 15.0% DT (ROI 31%)"
       },
       {
         rank: "TOP 5",
@@ -1969,7 +1981,10 @@
         partnerMinRmb: 87.2,
         partnerMaxRmb: 87.2,
         shopeePrice: "339k",
-        marginText: "+146.000đ / chiếc"
+        grossProfit: "+146.000đ",
+        grossMargin: "Biên gộp 43% DT",
+        netProfit: "+48.140đ",
+        netMargin: "Ròng 14.2% DT (ROI 25%)"
       }
     ];
 
@@ -2027,7 +2042,16 @@
               <span class="inline-block px-1.5 py-0.2 bg-indigo-100 text-indigo-800 text-[9px] font-extrabold rounded mt-0.5 border border-indigo-200">1688 +5%</span>
             </td>
             <td class="p-3 text-right font-bold text-amber-700 align-middle">${t.shopeePrice}</td>
-            <td class="p-3 text-right font-black text-emerald-700 text-sm align-middle">${t.marginText}</td>
+            <td class="p-3 text-right align-middle">
+              <div class="text-xs font-black text-slate-800">
+                Gộp: <span class="text-emerald-700">${t.grossProfit}</span>
+                <span class="text-[10px] text-slate-400 font-semibold block sm:inline">(${t.grossMargin})</span>
+              </div>
+              <div class="mt-1 inline-block px-2 py-0.5 rounded-lg bg-indigo-50 border border-indigo-200/70 text-indigo-900 font-extrabold text-[11px]">
+                💰 Ròng ví: <span class="text-indigo-700 font-black">${t.netProfit}</span>
+              </div>
+              <div class="text-[9px] text-slate-500 font-medium mt-0.5">${t.netMargin}</div>
+            </td>
           </tr>
         `;
       }).join('');
