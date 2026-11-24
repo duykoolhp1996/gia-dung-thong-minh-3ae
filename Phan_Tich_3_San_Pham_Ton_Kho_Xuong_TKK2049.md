@@ -39,7 +39,8 @@ Nhóm 3 sản phẩm này thuộc dòng **Cốc Giữ Nhiệt Chaoran (超燃保
 
 | Kênh phân phối | Mức giá đề xuất | Giá vốn nhập | Lợi nhuận ròng / chiếc | Tỷ suất lợi nhuận | Định vị chiến lược so với đối thủ |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Giá Bán Sỉ B2B (Đại lý / CTV)** | **169.000 đ** | 117.724 đ | **+51.276 đ / cái** | **30.3% Doanh thu sỉ** | Đơn từ 1 thùng (36 cái). Lãi **1.846.000 đ/thùng**. Đại lý bán 259k lời gần 90k/cái. |
+| **Giá Bán Sỉ B2B Cho Đối Tác (≥ 1 thùng)** | **169.000 đ** | 117.724 đ | **+51.276 đ / cái** | **30.3% Doanh thu sỉ** | Thùng 36 cái. Lãi **1.846.000 đ/thùng**. Đại lý bán lẻ 259k vẫn lời gần 90k/cái. |
+| **Giá Sỉ B2B Đối Tác Lớn (≥ 5 thùng)** | **159.000 đ** | 117.724 đ | **+41.276 đ / cái** | **26.0% Doanh thu sỉ** | Chiết khấu thêm 10k/cái cho đại lý lớn. Lãi **1.486.000 đ/thùng**, bao tiêu nhanh. |
 | **Flash Sale Mồi Sàn (Shopee/TikTok)** | **199.000 đ** | 117.724 đ | **+40.180 đ / cái** *(sau trừ 18% sàn)* | **20.2% Doanh thu lẻ** | Mốc "dưới 200k" hút khách. **Rẻ hơn Tyeso (229k) 30k, rẻ hơn Lock&Lock 90k**. |
 | **Giá Bán Lẻ Thường (Shopee/TikTok)** | **259.000 đ** | 117.724 đ | **+141.276 đ / cái** *(Lãi gộp)* | **54.5% (Biên gộp)** | **Vẫn rẻ hơn Lock&Lock (279k-310k) 20k-50k** nhưng sở hữu Inox 316L cao cấp! |
 | **Giá niêm yết gạch giá (Thị trường)** | **389.000 đ** | — | — | — | Hiển thị mức giảm sâu 36% - 49% kích cầu chuyển đổi. |
@@ -59,6 +60,7 @@ Nhóm 3 sản phẩm này thuộc dòng **Cốc Giữ Nhiệt Chaoran (超燃保
 | • Ruột Inox 316L y tế cao cấp | • Ruột Inox 304 thông thường  | • Ruột Inox 304 tiêu chuẩn    |
 | • Nắp bật 1 chạm có khóa cài  | • Nắp mở 1 chạm, đế silicone  | • Nắp bật có quai xách gập    |
 | • Giá vốn: 118.000 đ (¥27)    | • Niêm yết Mall: 350k - 460k  | • Niêm yết: 280k - 320k       |
+| • SỈ B2B: 169.000 đ (Lãi 51k) | • Không bán sỉ nhỏ lẻ         | • Sỉ xưởng: ~165k - 185k      |
 | • Giá bán: 199k - 259.000 đ   | • Giá bán: 279k - 310.000 đ   | • Giá bán: 219k - 249.000 đ   |
 | • LÃI GỘP: +141.000 đ (54.5%) | • TKK RẺ HƠN 20k - 50k        | • TKK VƯỢT TRỘI INOX 316L     |
 +-------------------------------+-------------------------------+-------------------------------+
@@ -76,6 +78,8 @@ Nhóm 3 sản phẩm này thuộc dòng **Cốc Giữ Nhiệt Chaoran (超燃保
 | Tiêu chí phân tích | TKK2049-450ML (Deal 3AE Giá ¥27) | Lock&Lock Basic (LHC3249) | Baol Tumbler 450ml (Top 1 giá rẻ) | Tyeso One-Touch TS-8804 |
 | :--- | :---: | :---: | :---: | :---: |
 | **Chất liệu ruột bình** | **Inox 316L y tế cao cấp** | Inox 304 thông thường | Inox 201 pha tạp (dễ gỉ sét) | Inox 304 tiêu chuẩn |
+| **Giá xuất sỉ B2B cho đối tác** | **169.000 đ / cái** *(Lãi sỉ +51k)* | Không bán sỉ nhỏ (Cam kết DS lớn) | 110.000 đ - 130.000 đ | 165.000 đ - 185.000 đ |
+| **Lợi nhuận sỉ B2B thu về** | **+51.276 đ/cái (1.846k/thùng 36)** | — | — | — |
 | **Kháng axit / Cà phê / Trà** | **Kháng tuyệt đối, không bám mùi** | Dễ ố vàng sau 6 tháng | Thôi nhiễm mùi kim loại độc hại | Trung bình, dễ bám cặn trà |
 | **Giá bán lẻ thực tế Shopee** | **199.000 đ - 259.000 đ** | **279.000 đ - 310.000 đ** | 140.000 đ - 180.000 đ | 219.000 đ - 249.000 đ |
 | **Giá niêm yết hãng** | **259.000 đ** | 350.000 đ - 460.000 đ | 180.000 đ - 220.000 đ | 280.000 đ - 320.000 đ |
