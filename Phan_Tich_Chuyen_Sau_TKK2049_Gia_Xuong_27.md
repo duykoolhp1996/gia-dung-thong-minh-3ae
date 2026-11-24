@@ -58,7 +58,7 @@ Nhóm 3 sản phẩm này thuộc dòng **Cốc Giữ Nhiệt Chaoran (超燃保
 | • Dung tích: 450ml            | • Dung tích: 450ml / 550ml    | • Dung tích: 500ml            |
 | • Ruột Inox 316L y tế cao cấp | • Ruột Inox 304 thông thường  | • Ruột Inox 304 tiêu chuẩn    |
 | • Nắp bật 1 chạm có khóa cài  | • Nắp mở 1 chạm, đế silicone  | • Nắp bật có quai xách gập    |
-| • Giá vốn: 118.000 đ (¥27)    | • Giá vốn sỉ: ~180k - 210k    | • Giá vốn: ~140k - 155k       |
+| • Giá vốn: 118.000 đ (¥27)    | • Niêm yết Mall: 350k - 460k  | • Niêm yết: 280k - 320k       |
 | • Giá bán: 199k - 259.000 đ   | • Giá bán: 279k - 310.000 đ   | • Giá bán: 219k - 249.000 đ   |
 | • LÃI GỘP: +141.000 đ (54.5%) | • TKK RẺ HƠN 20k - 50k        | • TKK VƯỢT TRỘI INOX 316L     |
 +-------------------------------+-------------------------------+-------------------------------+
@@ -78,7 +78,7 @@ Nhóm 3 sản phẩm này thuộc dòng **Cốc Giữ Nhiệt Chaoran (超燃保
 | **Chất liệu ruột bình** | **Inox 316L y tế cao cấp** | Inox 304 thông thường | Inox 201 pha tạp (dễ gỉ sét) | Inox 304 tiêu chuẩn |
 | **Kháng axit / Cà phê / Trà** | **Kháng tuyệt đối, không bám mùi** | Dễ ố vàng sau 6 tháng | Thôi nhiễm mùi kim loại độc hại | Trung bình, dễ bám cặn trà |
 | **Giá bán lẻ thực tế Shopee** | **199.000 đ - 259.000 đ** | **279.000 đ - 310.000 đ** | 140.000 đ - 180.000 đ | 219.000 đ - 249.000 đ |
-| **Giá vốn người bán** | **117.724 đ (~118k)** | ~180.000 đ - 210.000 đ | ~95.000 đ - 110.000 đ | ~140.000 đ - 155.000 đ |
+| **Giá niêm yết hãng** | **259.000 đ** | 350.000 đ - 460.000 đ | 180.000 đ - 220.000 đ | 280.000 đ - 320.000 đ |
 | **Lợi nhuận gộp thu về** | **+141.276 đ / cái (54.5%)** | ~60k - 80k/cái | ~30k - 45k/cái | ~60k - 75k/cái |
 | **Sức mua thị trường VN** | **Dư địa 5.000 - 10.000 cái/tháng** | ~3.500 cái/tháng | ~12.000 cái/tháng | ~15.000 cái/tháng |
 | **Độ hoàn thiện & Thiết kế** | **Nắp bật 1 chạm, miệng silicone mềm** | Nắp vặn hoặc bật cơ bản | Nắp nhựa ọp ẹp, gioăng mùi hôi | Nắp bật có quai to thể thao |

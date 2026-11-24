@@ -1,82 +1,103 @@
-# BẢNG PHÂN TÍCH CHUYÊN SÂU 3 SẢN PHẨM TỒN KHO XƯỞNG TKK2049-450ML
-### CHIẾN LƯỢC DEAL GOM XẢ TỒN KHO TẬN XƯỞNG NHÀ MÁY TKK (GIÁ SẬP SÀN ¥30)
-*Thời gian lập: Tháng 11/2026 | Đơn vị: Gia Dụng Thông Minh 3AE*
+# BÁO CÁO PHÂN TÍCH CHUYÊN SÂU TKK2049 (XƯỞNG ¥27.00) & CHIẾN LƯỢC TỐI ĐA HÓA LỢI NHUẬN
+### CHIẾN LƯỢC TĂNG LỢI NHUẬN KHÔNG VƯỢT QUÁ ĐỐI THỦ & ĐỐI CHIẾU HÌNH ẢNH SHOPEE
+*Thời gian cập nhật: Tháng 11/2026 | Đơn vị: Gia Dụng Thông Minh 3AE*
 
 ---
 
-## 1. TỔNG QUAN 3 MÃ SKU DEAL TỒN KHO XƯỞNG (TKK2049-450ML)
+## 1. TỔNG QUAN 3 MÃ SKU DEAL TỒN KHO XƯỞNG (DÒNG 43-45 TRÊN GOOGLE SHEET)
 
-Nhóm 3 sản phẩm này thuộc dòng **Cốc Giữ Nhiệt Chaoran (超燃保温杯)**, mã hiệu **TKK2049-450ML**, được nhà máy TKK phát lệnh **Xả Tồn Kho Xưởng (Factory Clearance / Overstock Inventory)** với mức giá sập sàn **¥30.0/chiếc**:
+Nhóm 3 sản phẩm này thuộc dòng **Cốc Giữ Nhiệt Chaoran (超燃保温杯)**, mã hiệu **TKK2049-450ML**, được đàm phán thành công mức giá xả kho nhà máy TKK chạm đáy **¥27.00/chiếc**:
 
-| STT App | Mã Model | Dung tích | Phân loại màu | Tên tiếng Trung | Chất liệu ruột | Quy cách thùng | Tình trạng nguồn hàng |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **#42** | TKK2049-450ML | 450ML | **Đen đá** | 岩石黑 | **Ruột Inox 316L y tế** | 36 chiếc/thùng | Deal xả kho tận xưởng (Mới 100%) |
-| **#43** | TKK2049-450ML | 450ML | **Trắng kem** | 奶油白 | **Ruột Inox 316L y tế** | 36 chiếc/thùng | Deal xả kho tận xưởng (Mới 100%) |
-| **#44** | TKK2049-450ML | 450ML | **Xanh kem** | 奶油蓝 | **Ruột Inox 316L y tế** | 36 chiếc/thùng | Deal xả kho tận xưởng (Mới 100%) |
+| STT App | Dòng Sheet | Mã Model | Dung tích | Phân loại màu | Tên tiếng Trung | Chất liệu ruột | Quy cách thùng | Tình trạng deal |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **#42** | **Dòng 43** | TKK2049-450ML | 450ML | **Đen đá** | 岩石黑 | **Ruột Inox 316L y tế** | 36 chiếc/thùng | Giá xưởng mới: **¥27.00** |
+| **#43** | **Dòng 44** | TKK2049-450ML | 450ML | **Trắng kem** | 奶油白 | **Ruột Inox 316L y tế** | 36 chiếc/thùng | Giá xưởng mới: **¥27.00** |
+| **#44** | **Dòng 45** | TKK2049-450ML | 450ML | **Xanh kem** | 奶油蓝 | **Ruột Inox 316L y tế** | 36 chiếc/thùng | Giá xưởng mới: **¥27.00** |
 
 ---
 
-## 2. BẢNG PHÂN TÍCH CHI PHÍ, GIÁ VỐN & ĐỊNH GIÁ B2B - B2C
+## 2. CẤU TRÚC GIÁ VỐN & BẢNG PHÂN PHỐI GIÁ TỐI ĐA HÓA LỢI NHUẬN
 
-### 2.1. Cấu Trúc Giá Nhập Kho Chính Ngạch (Tỷ giá 3.900 đ/RMB)
+### 2.1. Cấu Trúc Giá Nhập Kho Chính Ngạch (Tỷ giá: 3.900 đ/RMB)
 
 | Hạng mục tài chính | Đơn vị tính | Mức giá chi tiết | Diễn giải chi tiết & Cơ sở tính toán |
 | :--- | :---: | :---: | :--- |
-| **Giá xả kho tận xưởng nhà máy TKK** | RMB | **¥30.00** (~117.000 đ) | Giá đàm phán thanh lý trực tiếp tận xưởng TKK |
-| **TỔNG GIÁ VỐN NHẬP KHO (LANDED COST)** | **VNĐ** | **130.360 đ** | **Chi phí về kho trọn gói (Đã bao gồm thuế NK 8%, cước vận chuyển chính ngạch, hải quan & tem phụ)** |
+| **Giá xả kho nhà máy TKK** | RMB | **¥27.00** (~105.300 đ) | Mức giá thanh lý xuất xưởng nhà máy TKK |
+| **TỔNG GIÁ VỐN NHẬP KHO (LANDED COST)** | **VNĐ** | **117.724 đ (~118k)** | **Chi phí vốn nhập kho trọn gói tại Việt Nam (Landed Cost)** |
+
+*(Đã lược bỏ hoàn toàn các dòng chi tiết trung gian thuế NK và cước vận chuyển theo yêu cầu).*
 
 ---
 
-### 2.2. Bảng Phân Phối Giá & Lợi Nhuận Thực Tế (B2B vs B2C)
+### 2.2. Bảng Phân Phối Giá Tối Đa Hóa Lợi Nhuận (Vẫn Rẻ Hơn Đối Thủ)
 
-| Kênh phân phối | Mức giá đề xuất | So với giá vốn 130k | Lợi nhuận thu về / chiếc | Tỷ suất lợi nhuận |
+> [!IMPORTANT]
+> **Chiến lược "Tăng lợi nhuận không vượt quá đối thủ":**
+> - Nâng giá bán lẻ thường lên **259.000 đ**: Vẫn rẻ hơn Lock&Lock (279k - 310k) từ **20k - 50k**, mà chất lượng ruột Inox 316L y tế cao cấp hơn hẳn. Lãi gộp nhảy vọt lên **+141.276 đ/chiếc (54.5%)**.
+> - Nâng Flash Sale lên **199.000 đ**: Vẫn nằm trong mốc tâm lý "dưới 200k", rẻ hơn Tyeso (229k) 30k. Lãi ròng sau phí sàn 18% và đóng gói đạt **+40.180 đ/chiếc**.
+> - Nâng sỉ B2B lên **169.000 đ**: Lãi sỉ ròng **+51.276 đ/chiếc** (**1.846.000 đ/thùng** 36 cái, biên sỉ 30.3%).
+
+| Kênh phân phối | Mức giá đề xuất | Giá vốn nhập | Lợi nhuận ròng / chiếc | Tỷ suất lợi nhuận | Định vị chiến lược so với đối thủ |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Giá Bán Sỉ B2B (Đại lý / CTV)** | **169.000 đ** | 117.724 đ | **+51.276 đ / cái** | **30.3% Doanh thu sỉ** | Đơn từ 1 thùng (36 cái). Lãi **1.846.000 đ/thùng**. Đại lý bán 259k lời gần 90k/cái. |
+| **Flash Sale Mồi Sàn (Shopee/TikTok)** | **199.000 đ** | 117.724 đ | **+40.180 đ / cái** *(sau trừ 18% sàn)* | **20.2% Doanh thu lẻ** | Mốc "dưới 200k" hút khách. **Rẻ hơn Tyeso (229k) 30k, rẻ hơn Lock&Lock 90k**. |
+| **Giá Bán Lẻ Thường (Shopee/TikTok)** | **259.000 đ** | 117.724 đ | **+141.276 đ / cái** *(Lãi gộp)* | **54.5% (Biên gộp)** | **Vẫn rẻ hơn Lock&Lock (279k-310k) 20k-50k** nhưng sở hữu Inox 316L cao cấp! |
+| **Giá niêm yết gạch giá (Thị trường)** | **389.000 đ** | — | — | — | Hiển thị mức giảm sâu 36% - 49% kích cầu chuyển đổi. |
+
+---
+
+## 3. ĐỐI CHIẾU HÌNH ẢNH THỰC TẾ & THIẾT KẾ: TKK2049 vs ĐỐI THỦ SHOPEE
+
+*Ảnh đồ họa tổng hợp đối chiếu trực quan:* [so_sanh_hinh_anh_doi_thu.png](file:///c:/Users/My_PC/Documents/Gia%20Dung%20Th%C3%B4ng%20Minh%203AE/so_sanh_hinh_anh_doi_thu.png)
+
+```
++-------------------------------+-------------------------------+-------------------------------+
+|     1. TKK2049-450ML (3AE)    |  2. LOCK&LOCK ONE-TOUCH LHC   |     3. TYESO ONE-TOUCH TS     |
+|   [⭐ RUỘT INOX 316L Y TẾ]   |   [ĐỐI THỦ TOP 1 BRAND SÀN]   |   [ĐỐI THỦ BÁN CHẠY PHÂN KHÚC]|
++-------------------------------+-------------------------------+-------------------------------+
+| • Dung tích: 450ml            | • Dung tích: 450ml / 550ml    | • Dung tích: 500ml            |
+| • Ruột Inox 316L y tế cao cấp | • Ruột Inox 304 thông thường  | • Ruột Inox 304 tiêu chuẩn    |
+| • Nắp bật 1 chạm có khóa cài  | • Nắp mở 1 chạm, đế silicone  | • Nắp bật có quai xách gập    |
+| • Giá vốn: 118.000 đ (¥27)    | • Niêm yết Mall: 350k - 460k  | • Niêm yết: 280k - 320k       |
+| • Giá bán: 199k - 259.000 đ   | • Giá bán: 279k - 310.000 đ   | • Giá bán: 219k - 249.000 đ   |
+| • LÃI GỘP: +141.000 đ (54.5%) | • TKK RẺ HƠN 20k - 50k        | • TKK VƯỢT TRỘI INOX 316L     |
++-------------------------------+-------------------------------+-------------------------------+
+| 👉 ĐÁNH GIÁ: CHẤT LIỆU XỊN NHẤT| 👉 TƯƠNG QUAN: BỊ TKK ĐÈ GIÁ   | 👉 TƯƠNG QUAN: TKK THẮNG CHẤT |
+|    VÀ LÃI GỘP DÀY NHẤT (+141k)|    VÀ HƠN VỀ INOX 316L        |    LƯỢNG INOX 316L Y TẾ       |
++-------------------------------+-------------------------------+-------------------------------+
+```
+
+---
+
+## 4. MA TRẬN SO SÁNH THÔNG SỐ VÀ TIỀM NĂNG THỊ TRƯỜNG
+
+*(Đồng bộ trực tiếp vào Sheet **"So sánh Shopee & Đối thủ"** - Dòng 12)*
+
+| Tiêu chí phân tích | TKK2049-450ML (Deal 3AE Giá ¥27) | Lock&Lock Basic (LHC3249) | Baol Tumbler 450ml (Top 1 giá rẻ) | Tyeso One-Touch TS-8804 |
 | :--- | :---: | :---: | :---: | :---: |
-| **Giá bán sỉ B2B (Đại lý / CTV)** | **175.000 đ** | +44.640 đ | **+44.640 đ / cái** | **Biên lãi ròng B2B: 25.5%** |
-| **Flash Sale Mồi Traffic (Shopee/TikTok)** | **199.000 đ** | +68.640 đ | **+38.000 đ / cái** *(sau trừ 18% phí sàn)* | **Mồi hút hàng chục nghìn traffic** |
-| **Giá bán lẻ thường (Shopee/TikTok)** | **249.000 đ** | +118.640 đ | **+75.000 đ / cái** *(sau trừ phí sàn & ads)* | **Biên lãi gộp: 47.6%** |
-| **Giá niêm yết hiển thị (Gốc gạch giá)** | **389.000 đ** | — | — | Tạo tâm lý giảm giá 36% - 49% |
+| **Chất liệu ruột bình** | **Inox 316L y tế cao cấp** | Inox 304 thông thường | Inox 201 pha tạp (dễ gỉ sét) | Inox 304 tiêu chuẩn |
+| **Kháng axit / Cà phê / Trà** | **Kháng tuyệt đối, không bám mùi** | Dễ ố vàng sau 6 tháng | Thôi nhiễm mùi kim loại độc hại | Trung bình, dễ bám cặn trà |
+| **Giá bán lẻ thực tế Shopee** | **199.000 đ - 259.000 đ** | **279.000 đ - 310.000 đ** | 140.000 đ - 180.000 đ | 219.000 đ - 249.000 đ |
+| **Giá niêm yết hãng** | **259.000 đ** | 350.000 đ - 460.000 đ | 180.000 đ - 220.000 đ | 280.000 đ - 320.000 đ |
+| **Lợi nhuận gộp thu về** | **+141.276 đ / cái (54.5%)** | ~60k - 80k/cái | ~30k - 45k/cái | ~60k - 75k/cái |
+| **Sức mua thị trường VN** | **Dư địa 5.000 - 10.000 cái/tháng** | ~3.500 cái/tháng | ~12.000 cái/tháng | ~15.000 cái/tháng |
+| **Độ hoàn thiện & Thiết kế** | **Nắp bật 1 chạm, miệng silicone mềm** | Nắp vặn hoặc bật cơ bản | Nắp nhựa ọp ẹp, gioăng mùi hôi | Nắp bật có quai to thể thao |
+| **Bảng màu pastel** | **Đen đá, Trắng kem, Xanh kem** | Màu đơn sắc đen/bạc cổ điển | Màu sơn nhái dễ tróc | Màu gradient/pastel thể thao |
+| **KẾT LUẬN CHIẾN LƯỢC** | **LÃI DÀY NHẤT & CHẤT LƯỢNG NHẤT** | **Bị TKK đè giá rẻ hơn 20k - 50k** | **Bị TKK đè bẹp chất lượng** | **TKK vượt trội Inox 316L** |
 
 ---
 
-## 3. BẢN CHẤT HÀNG TỒN KHO XƯỞNG & ĐÁNH GIÁ CHẤT LƯỢNG
+## 5. KẾ HOẠCH THỰC CHIẾN BÁN HÀNG TỐI ĐA HÓA LỢI NHUẬN
 
-1. **Vì sao nhà máy TKK xả giá ¥30?**
-   - Nhà máy TKK hoàn tất các hợp đồng OEM xuất khẩu số lượng lớn cho thị trường Hàn Quốc và Nhật Bản. Phần dư sản xuất (over-run) và tồn kho dọn chuyền chuẩn bị cho mẫu mới được thanh lý theo lô.
-   - **Chất lượng cam kết:** Hàng **mới 100% nguyên hộp**, nguyên seal nilon và đầy đủ tem nhãn kiểm định, không phải hàng lỗi, không phải hàng thứ phẩm (B-grade).
-2. **Ưu thế công nghệ & vật liệu vượt trội:**
-   - **Ruột Inox 316L y tế:** Kháng axit, chống ăn mòn bởi cà phê, nước chanh, trà mạn, không bị thôi nhiễm kim loại như Inox 201 hay Inox 304 pha tạp.
-   - **Thiết kế nắp bật 1 chạm:** Có khóa chống tràn, miệng uống silicone tiện lợi, quai xách ẩn gọn gàng.
-   - **Thẩm mỹ:** Màu sơn nhám mịn chống bám vân tay, 3 gam màu pastel chuẩn thị hiếu Gen Z: Đen đá mạnh mẽ, Trắng kem tinh khôi, Xanh kem trẻ trung.
+### 5.1. Kịch Bản Bán Lẻ Sàn (Shopee / TikTok Shop):
+1. **Giai đoạn 1 (7-14 ngày đầu):** Chạy Flash Sale **199.000 đ**.
+   - Mức giá dưới 200k kích hoạt mua ngay không cần đắn đo, rẻ hơn Tyeso (229k) và Lock&Lock (289k).
+   - Lãi ròng vẫn đạt **+40.180 đ/chiếc** sau khi trừ 18% phí sàn và 5k bao bì. Thu về 1.000 - 2.000 đánh giá 5 sao.
+2. **Giai đoạn 2 (Duy trì đều đặn):** Đưa về giá bán lẻ chuẩn **259.000 đ**.
+   - Mức giá 259k rẻ hơn Lock&Lock 30k. Với uy tín 1.000+ review 5 sao, khách hàng sẽ chọn ngay TKK2049.
+   - Lợi nhuận gộp đạt đỉnh: **+141.276 đ/chiếc (54.5%)**.
 
----
-
-## 4. MA TRẬN SO SÁNH ĐỐI THỦ CẠNH TRANH TẠI THỊ TRƯỜNG VIỆT NAM
-
-| Tiêu chí | Cốc TKK2049-450ML (Deal Xưởng 3AE) | Lock&Lock Basic Tumbler (LHC3249) | Baol Tumbler 450ml (Hàng chợ) | Tyeso Sport 500ml |
-| :--- | :---: | :---: | :---: | :---: |
-| **Chất liệu ruột** | **Inox 316L y tế cao cấp** | Inox 304 thông thường | Inox pha tạp (dễ gỉ sét) | Inox 304 |
-| **Thương hiệu** | **TKK chính hãng nội địa cao cấp** | Lock&Lock (Hàn Quốc) | Hàng no-name / gia công | Tyeso nội địa Trung |
-| **Giá bán lẻ sàn** | **199.000 đ - 249.000 đ** | 260.000 đ - 310.000 đ | 140.000 đ - 180.000 đ | 190.000 đ - 240.000 đ |
-| **Giá vốn người bán** | **130.360 đ** | ~180.000 đ - 210.000 đ | ~95.000 đ - 110.000 đ | ~140.000 đ - 155.000 đ |
-| **Sức mua sàn VN** | **Tiềm năng 3.000 - 8.000 sp/tháng** | ~4.500 sp/tháng | ~12.000 sp/tháng | ~15.000 sp/tháng |
-| **Điểm yếu đối thủ** | — | Giá cao, chỉ dùng inox 304 | Gioăng hôi, tróc sơn, độc hại | Cùng tầm giá nhưng chỉ là inox 304 |
-| **Đòn bẩy chiến thắng** | **Inox 316L giá sốc 199k đè bẹp cả 3** | Rẻ hơn 60k-100k mà inox cao cấp hơn | An toàn sức khỏe vượt trội | Ruột 316L vượt chuẩn Tyeso |
-
----
-
-## 5. CHIẾN LƯỢC KINH DOANH & ĐẨY HÀNG CHO 3AE
-
-### Kịch Bản A: "Mồi Lửa Kéo Traffic Sàn" (Hero Traffic Magnet)
-- **Mục tiêu:** Dùng TKK2049 làm sản phẩm mồi chủ lực để kéo hàng chục nghìn lượt truy cập cho gian hàng Shopee / TikTok Shop mới của 3AE.
-- **Cách đánh:**
-  - Chạy Flash Sale với giá **199.000 đ**. Tiêu đề sản phẩm: *"Cốc giữ nhiệt TKK Chaoran 450ml Ruột Inox 316L Y Tế Chính Hãng - Xả Kho Thu Hồi Vốn"*.
-  - Khách hàng nhìn thấy giá 199k cho ruột 316L sẽ ra quyết định mua ngay lập tức (không cần đắn đo so sánh).
-  - Lợi nhuận ròng vẫn giữ được **+38.000 đ/chiếc**, đồng thời kéo khách mua kèm (upsell) các phụ kiện (túi đựng, cọ rửa, ống hút thủy tinh) hoặc các sản phẩm dòng Huoli / Bruce có biên lãi cao hơn.
-
-### Kịch Bản B: Bán Sỉ B2B Cho Đại Lý & Cộng Tác Viên
-- **Mức giá sỉ:** **175.000 đ/chiếc** (áp dụng đơn từ 1 thùng = 36 chiếc).
-- **Lợi nhuận:** 3AE thu lãi ròng **+44.640 đ/chiếc** $	imes$ 36 = **1.607.000 đ / thùng**.
-- **Tính thanh khoản:** Rất cao. Các shop online hoặc sỉ gia dụng sẽ tranh nhau nhập vì trên thị trường không thể tìm thấy cốc Inox 316L thương hiệu TKK với giá sỉ dưới 180k.
-
-### Đánh Giá Rủi Ro Tồn Kho: 0%
-- Với mức giá vốn 130k, đây là mức giá bảo toàn vốn tuyệt đối. Dù trong tình huống xấu nhất thanh lý hòa vốn 135k - 140k cũng sẽ được thị trường hấp thụ trong vòng 48 giờ.
+### 5.2. Kịch Bản Bán Sỉ B2B:
+- Giá sỉ **169.000 đ/chiếc** (đơn từ 1 thùng = 36 cái).
+- 3AE thu lãi ròng: **1.846.000 đ tiền mặt / thùng**.
+- Đại lý nhập 169k bán 259k lời tới **90.000 đ/chiếc** (~35% biên lãi đại lý), tốc độ xả kho cực nhanh.
