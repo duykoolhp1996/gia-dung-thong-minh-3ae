@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bảng Phân Tích 3 Sản Phẩm Tồn Kho Xưởng TKK2049 - 3AE</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+    .page {
+      page-break-after: always;
+      height: 275mm;
+      max-height: 275mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+    }
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-badge {
+      background: #0284c7;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 14px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .company-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+    }
+    .company-sub {
+      font-size: 9px;
+      color: #64748b;
+    }
+    .report-tag {
+      text-align: right;
+    }
+    .tag-deal {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      font-weight: 700;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-bottom: 2px;
+    }
+    .doc-date {
+      font-size: 9px;
+      color: #94a3b8;
+    }
+    /* Title Banner */
+    .banner {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%);
+      color: #ffffff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .banner h1 {
+      margin: 0 0 3px 0;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+    }
+    .banner p {
+      margin: 0;
+      font-size: 10px;
+      color: #e0f2fe;
+      font-weight: 500;
+    }
+    /* Cards Grid */
+    .sku-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .sku-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px;
+      background: #f8fafc;
+      text-align: center;
+      position: relative;
+    }
+    .sku-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: #0f172a;
+      color: white;
+      font-size: 8px;
+      font-weight: 800;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+    .sku-img {
+      height: 75px;
+      object-fit: contain;
+      margin: 4px 0;
+      mix-blend-mode: multiply;
+    }
+    .sku-name {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+    .sku-color {
+      font-size: 9px;
+      color: #0369a1;
+      font-weight: 700;
+      background: #e0f2fe;
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+    .sku-spec {
+      font-size: 8.5px;
+      color: #64748b;
+      margin-top: 3px;
+    }
+    /* Tables */
+    .section-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 10px 0 6px 0;
+      border-left: 3px solid #0284c7;
+      padding-left: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      font-size: 10px;
+    }
+    th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      text-align: left;
+      padding: 5px 8px;
+      border: 1px solid #cbd5e1;
+    }
+    td {
+      padding: 5px 8px;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+    }
+    tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+    .text-right { text-align: right; }
+    .text-center { text-align: center; }
+    .font-bold { font-weight: 700; }
+    .highlight-green {
+      background: #ecfdf5 !important;
+      color: #047857;
+      font-weight: 700;
+    }
+    .highlight-blue {
+      background: #eff6ff !important;
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+    .highlight-gold {
+      background: #fefce8 !important;
+      color: #a16207;
+      font-weight: 700;
+    }
+    /* Callout */
+    .callout {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 6px;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+      font-size: 9.5px;
+      color: #166534;
+      line-height: 1.4;
+    }
+    .callout-title {
+      font-weight: 800;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    /* Grid 2 cols for Page 2 */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .box-info {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 8px 10px;
+      background: #ffffff;
+    }
+    .box-info h3 {
+      margin: 0 0 4px 0;
+      font-size: 11px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .box-info p {
+      margin: 0;
+      font-size: 9.5px;
+      color: #475569;
+      line-height: 1.4;
+    }
+    .footer {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.5px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TRANG 1 ==================== -->
+  <div class="page">
+    <div>
+      <div class="header">
+        <div class="header-logo">
+          <span class="logo-badge">3AE</span>
+          <div>
+            <div class="company-title">Gia Dụng Thông Minh 3AE • TKK Drinkware 2026</div>
+            <div class="company-sub">Trung Tâm Phân Tích Chiến Lược Nhập Khẩu & Định Giá B2B - B2C</div>
+          </div>
+        </div>
+        <div class="report-tag">
+          <div class="tag-deal">⚡ DEAL TỒN KHO XƯỞNG -81%</div>
+          <div class="doc-date">Mã tài liệu: TKK-2049-CLEARANCE • 11/2026</div>
+        </div>
+      </div>
+
+      <div class="banner">
+        <h1>BẢNG PHÂN TÍCH CHUYÊN SÂU 3 SẢN PHẨM TỒN KHO XƯỞNG TKK2049-450ML</h1>
+        <p>Chiến Lược Gom Deal Xả Kho Tận Xưởng Nhà Máy TKK (Ruột Inox 316L Y Tế) • Giá Vốn 130k • Sản Phẩm Mồi Traffic Đè Bẹp Thị Trường</p>
+      </div>
+
+      <!-- Danh mục 3 SKU -->
+      <div class="section-title">1. DANH MỤC 3 MÃ SKU DEAL TỒN KHO XƯỞNG (450ML - RUỘT INOX 316L)</div>
+      <div class="sku-grid">
+        <div class="sku-card">
+          <span class="sku-badge">#42 • 450ML</span>
+          <img src="data:image/jpeg;base64,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" class="sku-img" alt="Đen đá">
+          <div class="sku-name">Cốc Chaoran 450ml</div>
+          <div class="sku-color">Màu: Đen đá (岩石黑)</div>
+          <div class="sku-spec">Ruột Inox 316L • 36 cái/thùng</div>
+        </div>
+        <div class="sku-card">
+          <span class="sku-badge">#43 • 450ML</span>
+          <img src="data:image/jpeg;base64,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" class="sku-img" alt="Trắng kem">
+          <div class="sku-name">Cốc Chaoran 450ml</div>
+          <div class="sku-color">Màu: Trắng kem (奶油白)</div>
+          <div class="sku-spec">Ruột Inox 316L • 36 cái/thùng</div>
+        </div>
+        <div class="sku-card">
+          <span class="sku-badge">#44 • 450ML</span>
+          <img src="data:image/jpeg;base64,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" class="sku-img" alt="Xanh kem">
+          <div class="sku-name">Cốc Chaoran 450ml</div>
+          <div class="sku-color">Màu: Xanh kem (奶油蓝)</div>
+          <div class="sku-spec">Ruột Inox 316L • 36 cái/thùng</div>
+        </div>
+      </div>
+
+      <!-- Bảng cấu trúc giá vốn -->
+      <div class="section-title">2. CẤU TRÚC GIÁ VỐN NHẬP KHO CHÍNH NGẠCH (TỶ GIÁ: 3.900 Đ)</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Hạng mục tài chính</th>
+            <th class="text-center">Đơn vị</th>
+            <th class="text-right">Mức giá</th>
+            <th>Diễn giải chi tiết & Cơ sở tính toán</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-blue">
+            <td class="font-bold">Giá xả kho tận xưởng nhà máy TKK</td>
+            <td class="text-center">RMB</td>
+            <td class="text-right font-bold">¥30.00</td>
+            <td>Giá đàm phán thanh lý trực tiếp tận xưởng (tương đương 117.000 đ)</td>
+          </tr>
+          <tr class="highlight-green">
+            <td class="font-bold">TỔNG GIÁ VỐN NHẬP KHO (LANDED COST)</td>
+            <td class="text-center font-bold">VNĐ</td>
+            <td class="text-right font-bold" style="font-size: 11px;">130.360 đ</td>
+            <td><strong>Chi phí về kho trọn gói (Đã bao gồm thuế NK 8%, cước vận chuyển chính ngạch, hải quan & tem phụ)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Bảng phân phối giá B2B vs B2C -->
+      <div class="section-title">3. CHUẨN HÓA BẢNG GIÁ PHÂN PHỐI SỈ B2B VÀ BÁN LẺ SÀN B2C</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Kênh phân phối</th>
+            <th class="text-right">Mức giá bán</th>
+            <th class="text-right">Giá vốn</th>
+            <th class="text-right">Lợi nhuận ròng</th>
+            <th class="text-center">Biên lãi</th>
+            <th>Mục tiêu chiến lược & Định vị</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-blue">
+            <td class="font-bold">Giá Bán Sỉ B2B (Đại lý / CTV)</td>
+            <td class="text-right font-bold">175.000 đ</td>
+            <td class="text-right">130.360 đ</td>
+            <td class="text-right font-bold text-green-700">+44.640 đ / cái</td>
+            <td class="text-center font-bold">25.5% DT</td>
+            <td>Bán theo thùng (36 cái). Lãi 1.607.000 đ/thùng. Đại lý ôm hàng ngay.</td>
+          </tr>
+          <tr class="highlight-gold">
+            <td class="font-bold">Flash Sale Mồi Traffic (Shopee/TikTok)</td>
+            <td class="text-right font-bold">199.000 đ</td>
+            <td class="text-right">130.360 đ</td>
+            <td class="text-right font-bold">+38.000 đ / cái</td>
+            <td class="text-center">19.1% DT</td>
+            <td>Dưới mốc 200k kích hoạt mua ngay. Đè bẹp Baol & Lock&Lock.</td>
+          </tr>
+          <tr class="highlight-green">
+            <td class="font-bold">Giá Bán Lẻ Thường (Shopee/TikTok)</td>
+            <td class="text-right font-bold">249.000 đ</td>
+            <td class="text-right">130.360 đ</td>
+            <td class="text-right font-bold">+118.640 đ / cái</td>
+            <td class="text-center font-bold">47.6% (Gộp)</td>
+            <td>Bán lẻ đều đặn sau khi đã gom đủ review 5 sao từ chiến dịch mồi.</td>
+          </tr>
+          <tr>
+            <td>Giá niêm yết gạch giá (Thị trường)</td>
+            <td class="text-right" style="text-decoration: line-through; color: #94a3b8;">389.000 đ</td>
+            <td class="text-right">—</td>
+            <td class="text-right">—</td>
+            <td class="text-center">—</td>
+            <td>Hiển thị mức giảm sâu 36% - 49% kích thích tỷ lệ chuyển đổi (CR).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <div class="callout-title">💡 Ghi chú cốt lõi về bản chất "Deal Tồn Kho Xưởng":</div>
+        Hàng tồn kho xưởng TKK là các lô dư sản xuất theo hợp đồng OEM xuất khẩu, mới 100% nguyên đai nguyên kiện. Giá xưởng ¥30 (130k vốn) tạo ra khoảng cách giá cực lớn so với giá 1688 (620k). Đây là cơ hội độc quyền để 3AE làm chủ phân khúc bình giữ nhiệt sinh viên & văn phòng giá dưới 250k.
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Gia Dụng Thông Minh 3AE • Hotline Sỉ & B2B: 09xx.xxx.xxx</span>
+      <span>Trang 1 / 2</span>
+    </div>
+  </div>
+
+  <!-- ==================== TRANG 2 ==================== -->
+  <div class="page">
+    <div>
+      <div class="header">
+        <div class="header-logo">
+          <span class="logo-badge">3AE</span>
+          <div>
+            <div class="company-title">Gia Dụng Thông Minh 3AE • TKK Drinkware 2026</div>
+            <div class="company-sub">Báo Cáo Đối Thủ Cạnh Tranh & Kế Hoạch Triển Khai Thực Chiến</div>
+          </div>
+        </div>
+        <div class="report-tag">
+          <div class="tag-deal">CHIẾN LƯỢC MỒI TRAFFIC</div>
+          <div class="doc-date">TKK2049-450ML • Ruột Inox 316L</div>
+        </div>
+      </div>
+
+      <!-- Ma trận so sánh đối thủ -->
+      <div class="section-title">4. MA TRẬN SO SÁNH ĐỐI THỦ CẠNH TRANH TRỰC TIẾP TRÊN SHOPEE / TIKTOK</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Tiêu chí so sánh</th>
+            <th class="highlight-blue text-center">TKK2049 (Deal 3AE)</th>
+            <th class="text-center">Lock&Lock LHC3249</th>
+            <th class="text-center">Baol Tumbler 450ml</th>
+            <th class="text-center">Tyeso Sport 500ml</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-bold">Chất liệu ruột bình</td>
+            <td class="highlight-blue text-center font-bold">Inox 316L y tế cao cấp</td>
+            <td class="text-center">Inox 304 thông thường</td>
+            <td class="text-center">Inox 201 pha tạp (dễ gỉ)</td>
+            <td class="text-center">Inox 304</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Giá bán lẻ thực tế</td>
+            <td class="highlight-blue text-center font-bold">199.000 đ - 249.000 đ</td>
+            <td class="text-center">260.000 đ - 310.000 đ</td>
+            <td class="text-center">140.000 đ - 180.000 đ</td>
+            <td class="text-center">190.000 đ - 240.000 đ</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Giá vốn người bán</td>
+            <td class="highlight-blue text-center font-bold">130.360 đ</td>
+            <td class="text-center">~185.000 đ - 210.000 đ</td>
+            <td class="text-center">~95.000 đ - 110.000 đ</td>
+            <td class="text-center">~140.000 đ - 155.000 đ</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Sức mua thị trường VN</td>
+            <td class="highlight-blue text-center"><strong>Dư địa 5k - 8k cái/tháng</strong></td>
+            <td class="text-center">~3.500 cái/tháng</td>
+            <td class="text-center">~12.000 cái/tháng</td>
+            <td class="text-center">~15.000 cái/tháng</td>
+          </tr>
+          <tr>
+            <td class="font-bold">Thiết kế & Độ hoàn thiện</td>
+            <td class="highlight-blue text-center">Sơn nhám pastel, nắp bật 1 chạm</td>
+            <td class="text-center">Nắp vặn basic, cổ điển</td>
+            <td class="text-center">Sơn dễ tróc, gioăng hôi</td>
+            <td class="text-center">Dáng thể thao có quai</td>
+          </tr>
+          <tr class="highlight-green">
+            <td class="font-bold">KẾT LUẬN ƯU THẾ</td>
+            <td class="text-center font-bold">Vượt trội chất liệu & giá</td>
+            <td class="text-center">Bị TKK đè giá rẻ hơn 60k-100k</td>
+            <td class="text-center">Bị TKK đè bẹp chất lượng</td>
+            <td class="text-center">TKK hơn hẳn Inox 316L</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 2 Kịch bản triển khai -->
+      <div class="section-title">5. KẾ HOẠCH TRIỂN KHAI & 2 KỊCH BẢN KINH DOANH CHO 3AE</div>
+      <div class="grid-2">
+        <div class="box-info" style="border-left: 3px solid #0284c7;">
+          <h3>🔥 KỊCH BẢN A: MỒI TRAFFIC SÀN SHOPEE / TIKTOK</h3>
+          <p>
+            • <strong>Chiến thuật:</strong> Set giá Flash Sale <strong>199.000 đ</strong> (lãi ròng ~38k/cái sau phí sàn 18%).<br>
+            • <strong>USP truyền thông:</strong> <em>"Cốc Inox 316L Y Tế Chính Hãng TKK Giá Xả Kho Dưới 200k"</em>.<br>
+            • <strong>Hiệu ứng kéo traffic:</strong> Khách mua không cần đắn đo, đẩy số lượng bán lên 1.000 - 3.000 đơn trong tháng đầu.<br>
+            • <strong>Bán kèm (Upsell):</strong> Mua kèm túi vải giữ nhiệt (+29k), set cọ rửa silicon (+19k) để tăng giá trị đơn hàng (AOV) và biên lãi.
+          </p>
+        </div>
+        <div class="box-info" style="border-left: 3px solid #16a34a;">
+          <h3>💼 KỊCH BẢN B: BÁN SỈ B2B CHO ĐẠI LÝ & CỘNG TÁC VIÊN</h3>
+          <p>
+            • <strong>Chính sách sỉ:</strong> <strong>175.000 đ/cái</strong> cho đơn từ 1 thùng (36 cái).<br>
+            • <strong>Lợi nhuận 3AE:</strong> Thu ngay <strong>1.607.000 đ tiền mặt / thùng</strong>.<br>
+            • <strong>Lợi thế chào khách:</strong> Thị trường hiện không có bất kỳ nguồn hàng nào cung cấp cốc ruột Inox 316L thương hiệu TKK dưới 180k.<br>
+            • <strong>Vòng quay vốn:</strong> Đẩy hết 100 - 300 thùng trong 2-3 tuần, thu hồi dòng tiền tức thì.
+          </p>
+        </div>
+      </div>
+
+      <!-- Đánh giá rủi ro tồn kho -->
+      <div class="section-title">6. ĐÁNH GIÁ RỦI RO ĐỌNG VỐN & TỒN KHO</div>
+      <div class="box-info" style="background: #f8fafc; margin-bottom: 12px;">
+        <p style="font-size: 10px; color: #334155;">
+          • <strong>Rủi ro đọng vốn: 0%</strong>. Với mức giá vốn <strong>130.360 đ</strong>, giá trị vật liệu ruột Inox 316L và vỏ sơn tĩnh điện cao cấp đã tương đương chi phí sản xuất phôi thô. Ngay cả trong kịch bản xả hòa vốn 135.000 đ - 140.000 đ, toàn bộ đại lý gia dụng và sàn thương mại điện tử sẽ hấp thụ sạch kho trong vòng 48 giờ.<br>
+          • <strong>Quy mô lô đề xuất nhập đợt 1:</strong> 500 - 1.000 chiếc (tương đương 14 - 28 thùng). Tổng vốn đầu tư: <strong>65 triệu - 130 triệu VNĐ</strong>.
+        </p>
+      </div>
+
+      <!-- Khung chữ ký -->
+      <div style="display: flex; justify-content: space-between; margin-top: 15px; padding: 0 20px;">
+        <div style="text-align: center;">
+          <div style="font-size: 9.5px; font-weight: 700; color: #475569;">BỘ PHẬN SOURCING & ĐỊNH GIÁ</div>
+          <div style="margin-top: 35px; font-size: 10px; font-weight: 800; color: #0f172a;">Gia Dụng Thông Minh 3AE</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 9.5px; font-weight: 700; color: #475569;">DUYỆT CHIẾN LƯỢC NHẬP HÀNG</div>
+          <div style="margin-top: 35px; font-size: 10px; font-weight: 800; color: #0f172a;">Ban Giám Đốc 3AE</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Gia Dụng Thông Minh 3AE • Báo Cáo Phân Tích Độc Quyền TKK2049</span>
+      <span>Trang 2 / 2</span>
+    </div>
+  </div>
+
+</body>
+</html>
