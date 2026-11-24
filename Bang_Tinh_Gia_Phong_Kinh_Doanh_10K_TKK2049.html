@@ -2,42 +2,46 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Phòng Kinh Doanh Tính Giá - Lô 10.000 SP TKK2049</title>
+<title>Phòng Kinh Doanh Tính Giá - TKK2049</title>
 <style>
   @page { size: A4 portrait; margin: 10mm 12mm 10mm 12mm; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; color: #0f172a; background: #fff; font-size: 11.5px; line-height: 1.5; }
-  .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2.5px solid #0f172a; padding-bottom: 10px; margin-bottom: 12px; }
-  .title { font-size: 19px; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.3px; }
-  .sub { font-size: 11px; color: #475569; margin-top: 2px; }
-  .badge { background: #0f172a; color: #fff; font-weight: 700; font-size: 11px; padding: 5px 12px; border-radius: 6px; }
-  .img-strip { display: flex; gap: 12px; margin-bottom: 14px; }
-  .img-card { flex: 1; border: 1px solid #cbd5e1; border-radius: 8px; padding: 8px; text-align: center; background: #fff; }
-  .img-card img { height: 92px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto 6px; }
-  .img-name { font-size: 11px; font-weight: 700; color: #0f172a; }
-  .img-sub { font-size: 9.5px; color: #64748b; }
-  .meta-bar { display: flex; gap: 12px; margin-bottom: 12px; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #0f172a; background: #fff; font-size: 11px; line-height: 1.45; }
+  .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2.5px solid #0f172a; padding-bottom: 8px; margin-bottom: 12px; }
+  .title { font-size: 18px; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.3px; }
+  .sub { font-size: 10.5px; color: #475569; margin-top: 2px; }
+  .badge { background: #0f172a; color: #fff; font-weight: 700; font-size: 10.5px; padding: 5px 11px; border-radius: 6px; }
+  .img-strip { display: flex; gap: 10px; margin-bottom: 12px; }
+  .img-card { flex: 1; border: 1px solid #cbd5e1; border-radius: 8px; padding: 7px; text-align: center; background: #fff; }
+  .img-card img { height: 86px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto 4px; }
+  .img-name { font-size: 10.5px; font-weight: 700; color: #0f172a; }
+  .img-sub { font-size: 9px; color: #64748b; }
+  .meta-bar { display: flex; gap: 10px; margin-bottom: 12px; }
   .meta-card { flex: 1; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 8px 10px; }
-  .meta-label { font-size: 10px; text-transform: uppercase; color: #64748b; font-weight: 700; }
-  .meta-val { font-size: 15px; font-weight: 800; color: #0f172a; margin-top: 2px; }
-  table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
-  th { background: #0f172a; color: #fff; font-weight: 700; padding: 8px 10px; text-align: left; font-size: 11.5px; border: 1px solid #0f172a; }
-  td { padding: 7px 10px; border: 1px solid #cbd5e1; vertical-align: middle; font-size: 11.5px; }
+  .meta-label { font-size: 9.5px; text-transform: uppercase; color: #64748b; font-weight: 700; }
+  .meta-val { font-size: 14px; font-weight: 800; color: #0f172a; margin-top: 2px; }
+  .meta-note { font-size: 8.8px; color: #475569; margin-top: 3px; line-height: 1.3; }
+  .sec-title { font-size: 11.5px; font-weight: 800; color: #0f172a; text-transform: uppercase; background: #f1f5f9; border-left: 4px solid #0f172a; padding: 5px 10px; margin: 10px 0 6px; border-radius: 0 4px 4px 0; }
+  .sec-title.green { background: #f0fdf4; border-left-color: #16a34a; color: #166534; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+  th { background: #0f172a; color: #fff; font-weight: 700; padding: 7px 10px; text-align: left; font-size: 11px; border: 1px solid #0f172a; }
+  th.green-th { background: #15803d; border-color: #15803d; }
+  td { padding: 7px 10px; border: 1px solid #cbd5e1; vertical-align: middle; font-size: 11px; }
   tr:nth-child(even) td { background: #f8fafc; }
   .num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
   .row-cost td { background: #eff6ff !important; font-weight: 700; color: #1e3a8a; border-top: 2px solid #93c5fd; }
-  .row-cod td { background: #f0fdf4 !important; font-weight: 800; color: #166534; border-top: 2px solid #16a34a; font-size: 13px; }
-  .row-profit td { background: #fefce8 !important; font-weight: 800; color: #854d0e; border-top: 2px solid #eab308; font-size: 13px; }
-  .note-box { background: #f8fafc; border-left: 4px solid #0284c7; padding: 12px 14px; border-radius: 0 8px 8px 0; font-size: 11.5px; color: #334155; }
+  .row-cod td { background: #f0fdf4 !important; font-weight: 800; color: #166534; border-top: 1.5px solid #16a34a; font-size: 12px; }
+  .row-profit td { background: #fefce8 !important; font-weight: 800; color: #854d0e; border-top: 2px solid #eab308; font-size: 12px; }
+  .note-box { background: #f8fafc; border-left: 4px solid #0284c7; padding: 9px 12px; border-radius: 0 8px 8px 0; font-size: 10.5px; color: #334155; margin-top: 8px; }
   .note-box strong { color: #0f172a; }
-  .footer { margin-top: 14px; padding-top: 8px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; font-size: 10px; color: #64748b; }
+  .footer { margin-top: 12px; padding-top: 6px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; font-size: 9.5px; color: #64748b; }
 </style>
 </head>
 <body>
 
   <div class="header">
     <div>
-      <div class="title">PHÒNG KINH DOANH TÍNH GIÁ — LÔ 10.000 SẢN PHẨM</div>
+      <div class="title">PHÒNG KINH DOANH TÍNH GIÁ — TKK2049-450ML</div>
       <div class="sub">Sản phẩm: Cốc giữ nhiệt Chaoran TKK2049-450ML (Ruột Inox 316L) • Tỷ giá quy đổi: 3.900 đ / RMB</div>
     </div>
     <div class="badge">GIA DỤNG THÔNG MINH 3AE</div>
@@ -63,44 +67,50 @@
 
   <div class="meta-bar">
     <div class="meta-card">
-      <div class="meta-label">Số lượng lô hàng</div>
-      <div class="meta-val">10.000 sản phẩm</div>
+      <div class="meta-label">Lô nhập xưởng</div>
+      <div class="meta-val">10.000 sp</div>
+      <div class="meta-note">Đóng thùng 36 cái/thùng</div>
     </div>
     <div class="meta-card">
       <div class="meta-label">Giá xuất xưởng</div>
-      <div class="meta-val">27 tệ / sp (105.300 đ)</div>
+      <div class="meta-val">27 tệ / sp</div>
+      <div class="meta-note">105.300 đ / sp (× 3.900 đ)</div>
     </div>
     <div class="meta-card">
       <div class="meta-label">Cước vận chuyển</div>
       <div class="meta-val">10.000 đ / sp</div>
+      <div class="meta-note">Báo giá trực tiếp xưởng TKK</div>
     </div>
-    <div class="meta-card">
-      <div class="meta-label">Giá gửi COD đối tác</div>
+    <div class="meta-card" style="border-color:#16a34a; background:#f0fdf4;">
+      <div class="meta-label" style="color:#166534;">Giá gửi COD đối tác</div>
       <div class="meta-val" style="color:#15803d;">169.000 đ / sp</div>
+      <div class="meta-note" style="color:#166534;"><strong>Ghi chú:</strong> Đã gom thêm chi phí vận chuyển nội địa + chi phí lưu kho</div>
     </div>
   </div>
 
+  <!-- BẢNG 1: CHI PHÍ NHẬP LÔ 10.000 SP TẠI XƯỞNG -->
+  <div class="sec-title">1. BẢNG GIÁ VỐN ĐẦU VÀO (LÔ 10.000 SẢN PHẨM)</div>
   <table>
     <thead>
       <tr>
-        <th style="width: 6%; text-align:center;">STT</th>
-        <th style="width: 34%;">Hạng mục tính giá</th>
-        <th style="width: 18%; text-align:right;">Đơn giá / 1 SP</th>
-        <th style="width: 22%; text-align:right;">Tổng lô 10.000 SP</th>
-        <th style="width: 20%;">Diễn giải / Công thức</th>
+        <th style="width: 7%; text-align:center;">STT</th>
+        <th style="width: 39%;">Hạng mục chi phí đầu vào</th>
+        <th style="width: 17%; text-align:right;">Đơn giá / 1 SP</th>
+        <th style="width: 19%; text-align:right;">Tổng lô 10.000 SP</th>
+        <th style="width: 18%;">Diễn giải</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td style="text-align:center; font-weight:700;">1</td>
-        <td><strong>Giá 10k sp × 27 tệ</strong><br><span style="font-size:10.5px; color:#64748b;">Tiền mua hàng trực tiếp tại xưởng TKK</span></td>
+        <td><strong>Giá 10k sp × 27 tệ</strong><br><span style="font-size:10px; color:#64748b;">Tiền mua hàng trực tiếp tại xưởng TKK</span></td>
         <td class="num">105.300 đ</td>
         <td class="num">1.053.000.000 đ</td>
-        <td>27 tệ × 3.900 đ/tệ<br>(Tổng: 270.000 RMB)</td>
+        <td>27 tệ × 3.900 đ/tệ<br>(270.000 RMB)</td>
       </tr>
       <tr>
         <td style="text-align:center; font-weight:700;">2</td>
-        <td><strong>Giá vận chuyển</strong><br><span style="font-size:10.5px; color:#64748b;">Cước vận chuyển TQ ➔ kho VN (Xưởng TKK)</span></td>
+        <td><strong>Giá vận chuyển</strong><br><span style="font-size:10px; color:#64748b;">Cước vận chuyển TQ ➔ kho VN (Xưởng TKK)</span></td>
         <td class="num">10.000 đ</td>
         <td class="num">100.000.000 đ</td>
         <td>10.000 đ × 10.000 sp</td>
@@ -112,44 +122,55 @@
         <td class="num">1.153.000.000 đ</td>
         <td>Mục (1) + Mục (2)</td>
       </tr>
+    </tbody>
+  </table>
+
+  <!-- BẢNG 2: TÁCH RIÊNG - GIÁ GỬI COD ĐỐI TÁC (CHỈ TÍNH ĐƠN GIÁ / 1 SP) -->
+  <div class="sec-title green">2. BẢNG GIÁ GỬI COD ĐỐI TÁC & VAT BÁN (TÍNH THEO ĐƠN GIÁ 1 SẢN PHẨM)</div>
+  <table>
+    <thead>
       <tr>
-        <td style="text-align:center; font-weight:700;">3</td>
-        <td><strong>Giá 8% VAT bán</strong><br><span style="font-size:10.5px; color:#64748b;">Thuế GTGT 8% tính trên giá xuất đối tác 169.000 đ</span></td>
+        <th class="green-th" style="width: 7%; text-align:center;">STT</th>
+        <th class="green-th" style="width: 47%;">Hạng mục giá bán đối tác</th>
+        <th class="green-th" style="width: 20%; text-align:right;">Đơn giá / 1 SP</th>
+        <th class="green-th" style="width: 26%;">Diễn giải / Ghi chú</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center; font-weight:700;">1</td>
+        <td><strong>Giá 8% VAT bán</strong><br><span style="font-size:10px; color:#64748b;">Thuế GTGT 8% tính trên giá xuất đối tác 169.000 đ</span></td>
         <td class="num">13.520 đ</td>
-        <td class="num">135.200.000 đ</td>
         <td>169.000 đ × 8% VAT</td>
       </tr>
       <tr class="row-cod">
-        <td style="text-align:center;">4</td>
-        <td><strong>Giá gửi COD đối tác (Chưa VAT)</strong></td>
+        <td style="text-align:center;">2</td>
+        <td><strong>Giá gửi COD đối tác (Chưa VAT)</strong><br><span style="font-size:9.8px; font-weight:500; color:#166534;">Đã gom thêm chi phí vận chuyển nội địa + chi phí lưu kho</span></td>
         <td class="num">169.000 đ</td>
-        <td class="num">1.690.000.000 đ</td>
         <td>Giá giao đối tác / đại lý</td>
       </tr>
       <tr class="row-cod">
-        <td style="text-align:center;">4b</td>
+        <td style="text-align:center;">2b</td>
         <td><strong>Giá gửi COD đối tác (Đã gồm 8% VAT bán)</strong></td>
         <td class="num">182.520 đ</td>
-        <td class="num">1.825.200.000 đ</td>
         <td>169.000 đ + 13.520 đ VAT</td>
       </tr>
       <tr class="row-profit">
         <td style="text-align:center;">★</td>
-        <td><strong>Chênh lệch / Lãi gộp Phòng Kinh Doanh</strong><br><span style="font-size:10.5px; font-weight:400; color:#713f12;">Giá gửi COD đối tác (chưa VAT) trừ Vốn hàng + Vận chuyển</span></td>
+        <td><strong>Chênh lệch / Lãi gộp Phòng Kinh Doanh</strong><br><span style="font-size:9.8px; font-weight:400; color:#713f12;">Giá gửi COD đối tác (chưa VAT) trừ Vốn hàng + Vận chuyển (115.300 đ)</span></td>
         <td class="num">+53.700 đ</td>
-        <td class="num">+537.000.000 đ</td>
-        <td>Biên lãi gộp: 31,8%</td>
+        <td>Biên lãi gộp: 31,8% / sp</td>
       </tr>
     </tbody>
   </table>
 
   <div class="note-box">
-    <strong>Dự trù phát sinh (nếu có):</strong><br>
-    • Thuế NK 8% (<strong>8.424 đ/sp</strong> = 84.240.000 đ/lô) và phí hải quan kiểm định (<strong>5.000 đ/sp</strong> = 50.000.000 đ/lô — <em>dự trù có thể có hoặc không</em>). Nếu cộng đủ cả 2 khoản dự trù này thì lãi ròng sạch lô 10.000 sp vẫn đạt <strong>+402.760.000 đ</strong> (+40.276 đ/sp).
+    <strong>Dự trù phát sinh (nếu có):</strong>
+    Thuế NK 8% (<strong>8.424 đ/sp</strong>) và phí hải quan kiểm định (<strong>5.000 đ/sp</strong> — <em>dự trù có thể có hoặc không</em>). Nếu cộng đủ cả 2 khoản dự trù này thì lãi ròng sạch vẫn đạt <strong>+40.276 đ/sp</strong>.
   </div>
 
   <div class="footer">
-    <span>Gia Dụng Thông Minh 3AE • Bảng Tính Giá Phòng Kinh Doanh (Lô 10.000 SP TKK2049)</span>
+    <span>Gia Dụng Thông Minh 3AE • Bảng Tính Giá Phòng Kinh Doanh (TKK2049-450ML)</span>
     <span>Trang 1 / 1</span>
   </div>
 
