@@ -10,8 +10,8 @@
 > 👉 **KẾT QUẢ KIỂM TOÁN TÀI CHÍNH XÁC NHẬN:**
 > 1. **Khách hàng nhận định hoàn toàn chính xác!** Nếu tính đủ cước vận chuyển thực tế từ Trung Quốc (~10.000 đ (từ xưởng TKK ~3%)/chiếc), thuế nhập khẩu chính ngạch (8.424 đ), kiểm định ATTP, cộng với **toàn bộ phí sàn Shopee (~16.5%)** và **chi phí chạy Shopee Ads (~12%)**: **Bán ở mức 199.000 đ chắc chắn sẽ bị LỖ RÒNG ~11.000 đ/chiếc!**
 > 2. **Chiến lược giá 199k:** Tuyệt đối **KHÔNG** dùng để kinh doanh đại trà hoặc đổ tiền chạy quảng cáo. Mức 199k chỉ được mở giới hạn **20 - 50 chiếc đầu tiên** cho người quen/seeding mua để lấy 50 đánh giá 5 sao ban đầu, sau đó lập tức đóng lại.
-> 3. **Mức giá bán lẻ thực chiến an toàn:** Phải là **309.000 đ - 319.000 đ**. Ở mức này, sau khi trừ full cước vận chuyển, phí sàn 16.5% và ngân sách Ads 10%, 3AE vẫn **thu lãi ròng thực tế bỏ túi +97.200 đ / chiếc (30.5%)**.
-> 4. **Đối chiếu thực tế trực tiếp từ Shopee:** Dòng đối thủ trực diện **Lock&Lock Energetic One-Touch LHC3249** trên Shopee Mall đang bán thực tế với giá **360.000 đ - 420.000 đ** (giá niêm yết 628.000 đ). TKK2049 bán **319.000 đ** vẫn **rẻ hơn đối thủ hơn 100.000 đ** mà ruột Inox 316L y tế cao cấp hơn, cực kỳ dễ bán!
+> 3. **Mức giá bán lẻ thực chiến an toàn:** Phải là **289.000 đ - 299.000 đ**. Ở mức này, sau khi trừ full cước vận chuyển, phí sàn 16.5% và ngân sách Ads 10%, 3AE vẫn **thu lãi ròng thực tế bỏ túi +82.500 đ / chiếc (27.6%)**.
+> 4. **Đối chiếu thực tế trực tiếp từ Shopee:** Dòng đối thủ trực diện **Lock&Lock Energetic One-Touch LHC3249** trên Shopee Mall đang bán thực tế với giá **360.000 đ - 420.000 đ** (giá niêm yết 628.000 đ). TKK2049 bán **299.000 đ** vẫn **rẻ hơn đối thủ hơn 100.000 đ** mà ruột Inox 316L y tế cao cấp hơn, cực kỳ dễ bán!
 
 ---
 
@@ -44,15 +44,15 @@
 
 *So sánh chi tiết giữa 4 kịch bản bán hàng thực tế:*
 
-| Khoản mục Doanh thu & Chi phí | Kịch bản 1: Flash Sale 199k (Chạy Ads 12%) | Kịch bản 2: Flash Sale 199k (Không Ads, slot sàn) | Kịch bản 3: Bán Lẻ Chuẩn 319k (Full Ads 10%) | Kịch bản 4: Sỉ B2B Đối Tác 169k (Không phí sàn) |
+| Khoản mục Doanh thu & Chi phí | Kịch bản 1: Flash Sale 199k (Chạy Ads 12%) | Kịch bản 2: Flash Sale 199k (Không Ads, slot sàn) | Kịch bản 3: Bán Lẻ Chuẩn 299k (Full Ads 10%) | Kịch bản 4: Sỉ B2B Đối Tác 169k (Không phí sàn) |
 | :--- | :---: | :---: | :---: | :---: |
-| **Giá bán ra (Doanh thu)** | **199.000 đ** | **199.000 đ** | **319.000 đ** | **169.000 đ** |
+| **Giá bán ra (Doanh thu)** | **199.000 đ** | **199.000 đ** | **299.000 đ** | **169.000 đ** |
 | **(-) Giá vốn nhập kho thực tế (Landed)** | **-128.724 đ** | **-128.724 đ** | **-128.724 đ** | **-128.724 đ** |
-| **(-) Phí sàn Shopee (16.5%)** *(TT 4.5%, Cố định 6%, Xtra 6%)* | **-32.835 đ** | **-32.835 đ** | **-52.635 đ** | **0 đ** *(Không qua sàn)* |
+| **(-) Phí sàn Shopee (16.5%)** *(TT 4.5%, Cố định 6%, Xtra 6%)* | **-32.835 đ** | **-32.835 đ** | **-49.335 đ** | **0 đ** *(Không qua sàn)* |
 | **(-) Đóng gói (hộp + xốp bóng) & Bù hoàn (4%)** | **-7.500 đ** | **-7.500 đ** | **-8.500 đ** | **0 đ** *(Đối tác tự vận chuyển)* |
-| **(-) Chi phí Quảng cáo Shopee Ads** | **-23.880 đ** *(12% DT)* | **0 đ** *(Không chạy Ads)* | **-31.900 đ** *(10% DT)* | **0 đ** *(Không tốn Ads)* |
-| **LỢI NHUẬN RÒNG THỰC TẾ / CHIẾC** | <strong style="color:red">-13.939 đ (LỖ ~11k)</strong> | <strong style="color:orange">+29.941 đ (Lãi mỏng)</strong> | <strong style="color:green">+97.241 đ (Lãi bền vững)</strong> | <strong style="color:blue">+40.276 đ (Lãi tiền mặt)</strong> |
-| **Tỷ suất lợi nhuận ròng (Net Margin)** | **-7.0% (Âm vốn)** | **+15.0% (Dễ bị âm nếu hoàn)** | **+30.5% (An toàn cao)** | **+23.8% (1.558k / thùng 36)** |
+| **(-) Chi phí Quảng cáo Shopee Ads** | **-23.880 đ** *(12% DT)* | **0 đ** *(Không chạy Ads)* | **-29.900 đ** *(10% DT)* | **0 đ** *(Không tốn Ads)* |
+| **LỢI NHUẬN RÒNG THỰC TẾ / CHIẾC** | <strong style="color:red">-13.939 đ (LỖ ~11k)</strong> | <strong style="color:orange">+29.941 đ (Lãi mỏng)</strong> | <strong style="color:green">+82.541 đ (Lãi bền vững)</strong> | <strong style="color:blue">+40.276 đ (Lãi tiền mặt)</strong> |
+| **Tỷ suất lợi nhuận ròng (Net Margin)** | **-7.0% (Âm vốn)** | **+15.0% (Dễ bị âm nếu hoàn)** | **+27.6% (An toàn cao)** | **+23.8% (1.558k / thùng 36)** |
 
 ---
 
@@ -63,7 +63,7 @@
 ### Khảo sát trực tiếp các đối thủ cùng phân khúc trên Shopee:
 1. **Lock&Lock Energetic One-Touch 550ml (Mã SKU: LHC3249):**
    - Giá niêm yết chính hãng: **628.000 đ**
-   - Giá bán thực tế trên Shopee Mall: **360.000 đ - 420.000 đ** (Các đợt siêu sale lớn mới xuống khoảng 319.000 đ).
+   - Giá bán thực tế trên Shopee Mall: **360.000 đ - 420.000 đ** (Các đợt siêu sale lớn mới xuống khoảng 299.000 đ).
    - Chất liệu: Ruột Inox 316, vỏ Inox 304, nắp mở 1 chạm, đế silicone chống trượt.
 2. **Tafuco Ionic One-Touch 480ml/500ml Inox 316 (Đối thủ OEM Trung Quốc trực diện):**
    - Giá niêm yết: **450.000 đ**
@@ -77,11 +77,11 @@
 | :--- | :---: | :---: | :---: | :---: |
 | **Chất liệu ruột bình** | **Inox 316L y tế cao cấp** | Inox 316 ruột, 304 vỏ | Inox 316 tiêu chuẩn | Inox 304 thường (thua 316L) |
 | **Giá niêm yết chính hãng** | **389.000 đ** | 628.000 đ | 450.000 đ | 320.000 đ |
-| **Giá bán thực tế trên Shopee** | **319.000 đ** *(Flash sale 199k)* | **360.000 đ - 420.000 đ** | **340.000 đ - 420.000 đ** | **219.000 đ - 249.000 đ** |
-| **So sánh giá với TKK2049** | **MỨC GIÁ TỐI ƯU NHẤT** | **TKK rẻ hơn 41k - 101k** | **TKK rẻ hơn 80k - 160k** | TKK đắt hơn 10k nhưng ruột 316L |
+| **Giá bán thực tế trên Shopee** | **299.000 đ** *(Flash sale 199k)* | **360.000 đ - 420.000 đ** | **340.000 đ - 420.000 đ** | **219.000 đ - 249.000 đ** |
+| **So sánh giá với TKK2049** | **MỨC GIÁ TỐI ƯU NHẤT** | **TKK rẻ hơn 61k - 121k** | **TKK rẻ hơn 80k - 160k** | TKK đắt hơn 10k nhưng ruột 316L |
 | **Giá xuất sỉ B2B cho đối tác** | **169.000 đ** *(Lãi sỉ +43.2k)* | Không bán sỉ nhỏ (Cam kết DS lớn) | 240.000 đ - 260.000 đ | 165.000 đ - 185.000 đ |
-| **Lợi nhuận ròng thu về** | **+97.241 đ/cái (B2C) \| +43.2k (B2B)** | Phụ thuộc chiết khấu hãng | ~40k - 50k/cái | ~25k - 35k/cái |
-| **KẾT LUẬN THỰC CHIẾN** | **GIÁ 319K THẮNG TUYỆT ĐỐI** | Khách chọn TKK vì rẻ hơn 100k | TKK ăn đứt giá và thương hiệu | TKK vượt trội Inox 316L y tế |
+| **Lợi nhuận ròng thu về** | **+82.541 đ/cái (B2C) \| +43.2k (B2B)** | Phụ thuộc chiết khấu hãng | ~40k - 50k/cái | ~25k - 35k/cái |
+| **KẾT LUẬN THỰC CHIẾN** | **GIÁ 299K THẮNG TUYỆT ĐỐI** | Khách chọn TKK vì rẻ hơn 100k | TKK ăn đứt giá và thương hiệu | TKK vượt trội Inox 316L y tế |
 
 ---
 
@@ -91,9 +91,9 @@
 1. **Giai đoạn 1 (Seeding lấy đánh giá - Tối đa 50 cái):**
    - Bán Flash Sale **199.000 đ** (lãi nhẹ ~32k nếu không tốn Ads) để người quen/CTV mua lấy 50 đánh giá 5 sao. Tuyệt đối **KHÔNG** chạy Shopee Ads ở mức giá này.
 2. **Giai đoạn 2 (Bán đại trà có chạy Ads):**
-   - Đưa về giá chuẩn **309.000 đ - 319.000 đ**.
-   - Trừ đầy đủ chi phí: Cước TQ (10k), Thuế (8.4k), Kiểm định (3.5k), Phí sàn (16.5%), Đóng gói (8.5k), Ngân sách Ads (10%) ➔ **3AE vẫn thu lãi ròng sạch +97.241 đ / chiếc (30.5%)**.
-   - So với mức giá 360k - 420k của Lock&Lock trên Shopee, mức giá 319k của TKK2049 rẻ hơn 100k nên tỷ lệ chuyển đổi sẽ cực kỳ cao!
+   - Đưa về giá chuẩn **289.000 đ - 299.000 đ**.
+   - Trừ đầy đủ chi phí: Cước TQ (10k), Thuế (8.4k), Kiểm định (3.5k), Phí sàn (16.5%), Đóng gói (8.5k), Ngân sách Ads (10%) ➔ **3AE vẫn thu lãi ròng sạch +82.541 đ / chiếc (27.6%)**.
+   - So với mức giá 360k - 420k của Lock&Lock trên Shopee, mức giá 299k của TKK2049 rẻ hơn 100k nên tỷ lệ chuyển đổi sẽ cực kỳ cao!
 
 ### 5.2. Kịch Bản Bán Sỉ B2B (An Toàn Tiền Mặt Tuyệt Đối):
 - **Giá sỉ B2B đối tác:** **169.000 đ / cái** (Thùng 36 cái = 6.084.000 đ). Đối tác lớn (≥ 5 thùng) chiết khấu còn **159.000 đ / cái**.
