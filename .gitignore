@@ -95,24 +95,25 @@ Sản phẩm/
 Wiki_*
 
 # Core Marcom & Zalo Bot Automation (REQUIRED FOR GITHUB ACTIONS & WEB DASHBOARD)
-!Danh_Sach_24_San_Pham_Nguon_Hang_1688.xlsx
+!03_Nguon_Hang_1688/Danh_Sach_24_San_Pham_Nguon_Hang_1688.xlsx
+!03_Nguon_Hang_1688/catalog_data.json
 !index.html
 !dashboard_marketing.html
 !database.json
 !lark_tables_data.js
 !assets/
 !assets/**
-!sync_sheets_to_app.ps1
-!generate_daily_tasks_img.ps1
-!generate_weekly_report_img.ps1
-!generate_personal_reports_img.ps1
-!TaskFilterRules.ps1
-!UploadImageHelper.ps1
-!zalo_bot_config.json
-!Ket_Noi_GitHub_Tu_Dong.bat
-!Gui_Bao_Cao_Zalo.bat
-!Quan_Ly_Cloud_24_7.bat
-!Mo_App_Marcom_3AE.bat
-!chay_zalo_gateway.bat
-!server.ps1
+!automation/sync_sheets_to_app.ps1
+!automation/generate_daily_tasks_img.ps1
+!automation/generate_weekly_report_img.ps1
+!automation/generate_personal_reports_img.ps1
+!automation/TaskFilterRules.ps1
+!automation/UploadImageHelper.ps1
+!automation/zalo_bot_config.json
+!automation/Ket_Noi_GitHub_Tu_Dong.bat
+!automation/Gui_Bao_Cao_Zalo.bat
+!automation/Quan_Ly_Cloud_24_7.bat
+!automation/Mo_App_Marcom_3AE.bat
+!automation/chay_zalo_gateway.bat
+!automation/server.ps1
 

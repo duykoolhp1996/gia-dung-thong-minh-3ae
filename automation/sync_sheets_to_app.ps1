@@ -1,7 +1,8 @@
 ﻿[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $spreadsheetId = "1dI_z3TzLBmMgPmRICya6aVyqyw18qdgPitmsw2in5ac"
-$dbPath = Join-Path $PSScriptRoot "marcom_rust\static\database.json"
+$rootDir = Split-Path -Parent $PSScriptRoot
+$dbPath = Join-Path $rootDir "marcom_rust\static\database.json"
 
 Write-Host "Syncing Google Sheets data for 3AE Marcom System..."
 
@@ -219,25 +220,25 @@ $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $rustStaticDir = Split-Path -Parent $dbPath
 if (-not (Test-Path $rustStaticDir)) { New-Item -ItemType Directory -Path $rustStaticDir -Force | Out-Null }
 [System.IO.File]::WriteAllText($dbPath, $json, $utf8NoBom)
-$rustJsPath = Join-Path $PSScriptRoot "marcom_rust\static\lark_tables_data.js"
+$rustJsPath = Join-Path $rootDir "marcom_rust\static\lark_tables_data.js"
 $jsContent = "// Auto-synced from Google Sheets Database: $spreadsheetId`n// Synced At: " + (Get-Date).ToString("dd/MM/yyyy HH:mm:ss") + "`nconst LARK_BASE_ALL_TABLES = " + $json + ";`n"
 [System.IO.File]::WriteAllText($rustJsPath, $jsContent, $utf8NoBom)
 
 # 2. Update root database.json & lark_tables_data.js
-$rootDbPath = Join-Path $PSScriptRoot "database.json"
+$rootDbPath = Join-Path $rootDir "database.json"
 [System.IO.File]::WriteAllText($rootDbPath, $json, $utf8NoBom)
-$rootJsPath = Join-Path $PSScriptRoot "lark_tables_data.js"
+$rootJsPath = Join-Path $rootDir "lark_tables_data.js"
 [System.IO.File]::WriteAllText($rootJsPath, $jsContent, $utf8NoBom)
 
 # 3. Update marketing-dashboard-webapp/database.json
-$mktDbPath = Join-Path $PSScriptRoot "marketing-dashboard-webapp\database.json"
+$mktDbPath = Join-Path $rootDir "marketing-dashboard-webapp\database.json"
 $mktDir = Split-Path -Parent $mktDbPath
 if (Test-Path $mktDir) {
     [System.IO.File]::WriteAllText($mktDbPath, $json, $utf8NoBom)
 }
 
 # 4. Embed fresh database.json directly into index.html
-$indexHtmlPath = Join-Path $PSScriptRoot "index.html"
+$indexHtmlPath = Join-Path $rootDir "index.html"
 if (Test-Path $indexHtmlPath) {
     $htmlContent = [System.IO.File]::ReadAllText($indexHtmlPath, [System.Text.Encoding]::UTF8)
     $startMarker = "    const DB = {"

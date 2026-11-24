@@ -29,7 +29,7 @@ $mimeTypes = @{
     ".ico"  = "image/x-icon"
 }
 
-$baseDir = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
+$baseDir = if ($PSScriptRoot) { Split-Path -Parent $PSScriptRoot } else { (Get-Location).Path }
 
 try {
     while ($listener.IsListening) {
@@ -54,9 +54,9 @@ try {
             # API 1: /api/sync
             if ($path -eq "/api/sync") {
                 Write-Host "[API] Triggering Google Sheets sync..." -ForegroundColor Cyan
-                $syncScript = Join-Path $baseDir "sync_sheets_to_app.ps1"
+                $syncScript = Join-Path $PSScriptRoot "sync_sheets_to_app.ps1"
                 if (-not (Test-Path $syncScript)) {
-                    $syncScript = Join-Path $baseDir "sync_engine.ps1"
+                    $syncScript = Join-Path $PSScriptRoot "sync_engine.ps1"
                 }
                 if (Test-Path $syncScript) {
                     powershell -ExecutionPolicy Bypass -NoProfile -File $syncScript

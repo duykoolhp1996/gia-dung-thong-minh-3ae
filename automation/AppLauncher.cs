@@ -35,7 +35,7 @@ namespace MarketingHub3AE
             // 2. Start server in background if not running
             if (!isServerRunning)
             {
-                string serverScript = Path.Combine(appDir, "server.ps1");
+                string serverScript = Path.Combine(appDir, "automation", "server.ps1");
                 if (File.Exists(serverScript))
                 {
                     ProcessStartInfo psi = new ProcessStartInfo();

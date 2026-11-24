@@ -27,8 +27,10 @@ if (Test-Path $configPath) {
         }
     } catch {}
 }
-$dbPath = Join-Path $PSScriptRoot "marcom_rust\static\database.json"
-$assetsDir = Join-Path $PSScriptRoot "assets"
+$rootDir = Split-Path -Parent $PSScriptRoot
+$dbPath = Join-Path $rootDir "marcom_rust\static\database.json"
+if (-not (Test-Path $dbPath)) { $dbPath = Join-Path $rootDir "database.json" }
+$assetsDir = Join-Path $rootDir "assets"
 
 if (-not (Test-Path $dbPath)) {
     Write-Error "Không tìm thấy cơ sở dữ liệu tại: $dbPath"

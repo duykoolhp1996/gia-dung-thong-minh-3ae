@@ -28,7 +28,9 @@ if (Test-Path $configPath) {
         }
     } catch {}
 }
-$dbPath = Join-Path $PSScriptRoot "marcom_rust\static\database.json"
+$rootDir = Split-Path -Parent $PSScriptRoot
+$dbPath = Join-Path $rootDir "marcom_rust\static\database.json"
+if (-not (Test-Path $dbPath)) { $dbPath = Join-Path $rootDir "database.json" }
 $filterRulesPath = Join-Path $PSScriptRoot "TaskFilterRules.ps1"
 
 if (-not (Test-Path $dbPath)) {

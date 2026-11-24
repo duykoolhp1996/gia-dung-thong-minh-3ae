@@ -9,9 +9,9 @@
 
 | Hạng mục | Tài liệu / File liên quan | Mô tả |
 | :--- | :--- | :--- |
-| **Brand Guidelines Master** | [`BRAND_GUIDELINES.md`](./BRAND_GUIDELINES.md) | Bộ quy chuẩn cốt lõi: Sứ mệnh, Tính cách thương hiệu, Logo rules, Bảng màu, Typography & Tone of Voice |
-| **Interactive Design System Portal** | [`design-system.html`](./design-system.html) | Cổng thông tin tương tác: Tokens, Foundation Cards, Components, UI Kit Storefront |
-| **Brand Guide Web Specimen** | [`brand.html`](./brand.html) | Bản mẫu hiển thị nhận diện trực quan cho web và in ấn |
+| **Brand Guidelines Master** | [`01_Brand_Design/BRAND_GUIDELINES.md`](./01_Brand_Design/BRAND_GUIDELINES.md) | Bộ quy chuẩn cốt lõi: Sứ mệnh, Tính cách thương hiệu, Logo rules, Bảng màu, Typography & Tone of Voice |
+| **Interactive Design System Portal** | [`01_Brand_Design/design-system.html`](./01_Brand_Design/design-system.html) | Cổng thông tin tương tác: Tokens, Foundation Cards, Components, UI Kit Storefront |
+| **Brand Guide Web Specimen** | [`01_Brand_Design/brand.html`](./01_Brand_Design/brand.html) | Bản mẫu hiển thị nhận diện trực quan cho web và in ấn |
 | **Design System Core** | [`designs/giadungthongminh-design-system/`](./designs/giadungthongminh-design-system/) | CSS Tokens, Component JSX/TypeScript, Specimen Cards, Storefront UI Kit |
 | **Graphic Design Workspace** | [`Graphic Design/`](./Graphic%20Design/) | Thư mục phân chia không gian làm việc cho Graphic Designer (Logo, Banners, Social, POSM) |
 
@@ -46,8 +46,8 @@ Các thành phần được đóng gói đầy đủ code, định kiểu và t�
 
 ### Cách 1: Mở trực tiếp trên trình duyệt
 Click đúp chuột hoặc kéo thả các file sau vào trình duyệt:
-- [`design-system.html`](./design-system.html)
-- [`brand.html`](./brand.html)
+- [`01_Brand_Design/design-system.html`](./01_Brand_Design/design-system.html)
+- [`01_Brand_Design/brand.html`](./01_Brand_Design/brand.html)
 
 ### Cách 2: Chạy Local HTTP Server
 Trong thư mục dự án, chạy lệnh PowerShell:
