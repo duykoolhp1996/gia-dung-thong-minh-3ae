@@ -50,8 +50,8 @@ Every feature from the Survey phase is enumerated below with an assigned milesto
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| M1 | Core Backend & Data Persistence | Project setup, `data/seed.json`, `data/database.json`, dual servers (`server.js`, `server.ps1`), `/api/health`, CRUD endpoints | none | IN_PROGRESS |
-| M2 | Metric Engine & Department Dashboards | `public/index.html`, `public/js/engine.js`, `public/js/store.js`, department views (Ecom, Digital, MarCom, CSKH), Division Overview | M1 | PLANNED |
+| M1 | Core Backend & Data Persistence | Project setup, `data/seed.json`, `data/database.json`, dual servers (`server.js`, `server.ps1`), `/api/health`, CRUD endpoints | none | DONE |
+| M2 | Metric Engine & Department Dashboards | `public/index.html`, `public/js/engine.js`, `public/js/store.js`, department views (Ecom, Digital, MarCom, CSKH), Division Overview | M1 | IN_PROGRESS |
 | M3 | Interactive Data Management & Reactivity | Data ledger view, create/update modal, delete, reset-to-baseline, instant UI & division recalculation | M1, M2 | PLANNED |
 | M4 | Cloud Deployment Readiness | Multi-stage Dockerfile, docker-compose.yml, .dockerignore, render.yaml, README documentation | M1 | PLANNED |
 | M5 | Final Milestone: E2E Test Suite Pass & Adversarial Hardening | Phase 1: 100% pass on Tiers 1-4 E2E tests from Test Track. Phase 2: Tier 5 adversarial coverage hardening | M1, M2, M3, M4, TEST_READY | PLANNED |
