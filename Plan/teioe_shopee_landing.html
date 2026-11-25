@@ -111,12 +111,47 @@
     .section-head h2 { font-size: 24px; font-weight: 800; }
     .section-head p { color: var(--muted); font-size: 14px; }
 
-    /* Filter Tabs */
+    /* Filter Tabs & Search */
+    .filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
     .tabs {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 24px;
+      margin-bottom: 0;
+    }
+    .search-box {
+      position: relative;
+      min-width: 260px;
+      flex: 0 1 320px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 9px 14px 9px 36px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 13px;
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .search-box input:focus { border-color: var(--primary); }
+    .search-box::before {
+      content: "🔍";
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 13px;
+      opacity: 0.6;
+      pointer-events: none;
     }
     .tab-btn {
       border: 1px solid var(--border);
@@ -541,14 +576,19 @@
       </div>
     </div>
 
-    <div class="tabs" id="filterTabs">
-      <button class="tab-btn active" data-cat="all">Tất cả (57 mã TEIOE)</button>
-      <button class="tab-btn" data-cat="turbo">Quạt Turbo 100 cấp (5)</button>
-      <button class="tab-btn" data-cat="mist">Quạt Phun Sương (5)</button>
-      <button class="tab-btn" data-cat="multi">Kẹp Ô Dù / Đeo Cổ (4)</button>
-      <button class="tab-btn" data-cat="handheld">Cầm Tay / Bỏ Túi (27)</button>
-      <button class="tab-btn" data-cat="desktop">Quạt Để Bàn (7)</button>
-      <button class="tab-btn" data-cat="winter">Sưởi &amp; Tạo Ẩm (9)</button>
+    <div class="filter-bar">
+      <div class="tabs" id="filterTabs">
+        <button class="tab-btn active" data-cat="all">Tất cả (57 mã TEIOE)</button>
+        <button class="tab-btn" data-cat="turbo">Quạt Turbo 100 cấp (5)</button>
+        <button class="tab-btn" data-cat="mist">Quạt Phun Sương (5)</button>
+        <button class="tab-btn" data-cat="multi">Kẹp Ô Dù / Đeo Cổ (4)</button>
+        <button class="tab-btn" data-cat="handheld">Cầm Tay / Bỏ Túi (27)</button>
+        <button class="tab-btn" data-cat="desktop">Quạt Để Bàn (7)</button>
+        <button class="tab-btn" data-cat="winter">Sưởi &amp; Tạo Ẩm (9)</button>
+      </div>
+      <div class="search-box">
+        <input type="search" id="searchInput" placeholder="Tìm mã (H42, M9...), pin, tính năng..." />
+      </div>
     </div>
 
     <div class="grid" id="productGrid"></div>
@@ -696,8 +736,22 @@
     ];
 
     const grid = document.getElementById("productGrid");
-    function render(cat) {
-      const list = cat === "all" ? products : products.filter(p => p.cat === cat);
+    let activeCat = "all";
+    let searchQuery = "";
+
+    function render() {
+      const q = searchQuery.trim().toLowerCase();
+      const list = products.filter(p => {
+        const matchCat = activeCat === "all" || p.cat === activeCat;
+        if (!matchCat) return false;
+        if (!q) return true;
+        const hay = `${p.sku} ${p.name} ${p.specs.join(" ")} ${p.tier[0]}`.toLowerCase();
+        return hay.includes(q);
+      });
+      if (!list.length) {
+        grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);">Không tìm thấy mã sản phẩm nào khớp với "<strong>${searchQuery}</strong>".</div>`;
+        return;
+      }
       grid.innerHTML = list.map(p => `
         <article class="card" onclick="openCompare('${p.sku.replace(/'/g, "\\'")}')">
           <div>
@@ -728,13 +782,19 @@
         </article>
       `).join("");
     }
-    render("all");
+    render();
 
     document.getElementById("filterTabs").addEventListener("click", e => {
       if (!e.target.classList.contains("tab-btn")) return;
       document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
       e.target.classList.add("active");
-      render(e.target.dataset.cat);
+      activeCat = e.target.dataset.cat;
+      render();
+    });
+
+    document.getElementById("searchInput").addEventListener("input", e => {
+      searchQuery = e.target.value;
+      render();
     });
 
     function calc() {
