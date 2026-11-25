@@ -514,8 +514,8 @@
       </div>
       <div class="hero-stats">
         <div class="stat-box">
-          <div class="num">17+ Mã</div>
-          <div class="lbl">Bộ sưu tập 2027 New Arrivals</div>
+          <div class="num">57 Mã</div>
+          <div class="lbl">Đầy đủ 2 Catalog TEIOE</div>
         </div>
         <div class="stat-box">
           <div class="num">6.000 m²</div>
@@ -542,13 +542,13 @@
     </div>
 
     <div class="tabs" id="filterTabs">
-      <button class="tab-btn active" data-cat="all">Tất cả (19 mã tiêu biểu)</button>
-      <button class="tab-btn" data-cat="turbo">Quạt Turbo 100 cấp</button>
-      <button class="tab-btn" data-cat="mist">Quạt Phun Sương</button>
-      <button class="tab-btn" data-cat="multi">Kẹp Ô Dù / Đeo Cổ</button>
-      <button class="tab-btn" data-cat="handheld">Cầm Tay / Bỏ Túi</button>
-      <button class="tab-btn" data-cat="desktop">Quạt Để Bàn</button>
-      <button class="tab-btn" data-cat="winter">Sưởi &amp; Tạo Ẩm</button>
+      <button class="tab-btn active" data-cat="all">Tất cả (57 mã TEIOE)</button>
+      <button class="tab-btn" data-cat="turbo">Quạt Turbo 100 cấp (5)</button>
+      <button class="tab-btn" data-cat="mist">Quạt Phun Sương (5)</button>
+      <button class="tab-btn" data-cat="multi">Kẹp Ô Dù / Đeo Cổ (4)</button>
+      <button class="tab-btn" data-cat="handheld">Cầm Tay / Bỏ Túi (27)</button>
+      <button class="tab-btn" data-cat="desktop">Quạt Để Bàn (7)</button>
+      <button class="tab-btn" data-cat="winter">Sưởi &amp; Tạo Ẩm (9)</button>
     </div>
 
     <div class="grid" id="productGrid"></div>
@@ -625,31 +625,74 @@
 
   <script>
     const products = [
+      // 1. Quạt Turbo tốc độ cao (5 mã)
       { sku: "H42", cat: "turbo", name: "High Speed Turbo Fan H42", img: "teioe_images/H42.jpg", tier: ["Hot Trend", "tier-hot"], specs: ["100 cấp gió | Màn LED", "Pin 4500mAh (3h50m–11h)", "89×45.3×77mm | Kẹp thắt lưng"], market: "224.000 – 329.000 đ (Shopee)", maxCost: "—" },
-      { sku: "H41", cat: "turbo", name: "High Speed Turbo Fan H41", img: "teioe_images/H41.jpg", tier: ["Hot Trend", "tier-hot"], specs: ["5/100 cấp gió | Type-C 5V/1.5A", "Pin 3000mAh (3–9h)", "56×38×142mm | 154g"], market: "224.000 – 269.000 đ (Shopee)", maxCost: "—" },
-      { sku: "H32", cat: "turbo", name: "High Speed Fan H32", img: "teioe_images/H32.jpg", tier: ["Hot Trend", "tier-hot"], specs: ["100 cấp gió | Màn LED", "Pin 3000 / 4500mAh | 5V/1.5A", "78×55×180mm"], market: "230.000 – 329.000 đ (Shopee)", maxCost: "—" },
-      { sku: "H30 / H33", cat: "turbo", name: "High Speed Fan H30 & H33", img: "teioe_images/H30.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["100 cấp gió | Màn LED", "Pin 2000mAh (H30) / 3000mAh (H33)", "Nhỏ gọn cầm tay"], market: "65.000 – 160.000 đ", maxCost: "—" },
+      { sku: "H41", cat: "turbo", name: "High Speed Turbo Fan H41", img: "teioe_images/H41.jpg", tier: ["Hot Trend", "tier-hot"], specs: ["5 / 100 cấp gió | Type-C 5V/1.5A", "Pin 3000mAh (3–9h)", "56×38×142mm | 154g/198g"], market: "224.000 – 269.000 đ (Shopee)", maxCost: "—" },
+      { sku: "H32", cat: "turbo", name: "High Speed Fan H32", img: "teioe_images/H32.jpg", tier: ["Hot Trend", "tier-hot"], specs: ["100 cấp gió | Màn LED", "Pin 3000 / 4500mAh | 5V-1.5A", "78×55×180mm"], market: "230.000 – 329.000 đ (Shopee)", maxCost: "—" },
+      { sku: "H33", cat: "turbo", name: "High Speed Fan H33", img: "teioe_images/H33.jpg", tier: ["Turbo 100 cấp", "tier-hot"], specs: ["100 cấp gió | Màn LED", "Pin 3000mAh | DC5V-1.5A", "58×52×154mm"], market: "224.000 – 269.000 đ (Shopee)", maxCost: "—" },
+      { sku: "H30", cat: "turbo", name: "High Speed Fan H30", img: "teioe_images/H30.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["100 cấp gió | Màn LED", "Pin 2000mAh | DC5V-1A", "62×54×176mm"], market: "65.000 – 160.000 đ", maxCost: "—" },
 
-      { sku: "H49", cat: "mist", name: "Mist Fan + Mirror & LED H49", img: "teioe_images/H49.jpg", tier: ["Ngách Quà Tặng", "tier-niche"], specs: ["Phun sương 20ml + Gương + Đèn LED", "Pin 4000mAh | 5V/1.5A", "165×66×60mm"], market: "134.000 – 237.120 đ (Shopee)", maxCost: "—" },
-      { sku: "H36", cat: "mist", name: "Handheld Mist Fan H36", img: "teioe_images/H36.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["Phun sương 30ml | 5 cấp gió", "Pin 2000mAh (2–7h) | Type-C", "62×55×153.5mm | 165g"], market: "94.613 – 134.000 đ (Shopee)", maxCost: "—" },
+      // 2. Quạt Phun Sương (5 mã)
+      { sku: "H49", cat: "mist", name: "Mist Fan + Mirror & LED H49", img: "teioe_images/H49.jpg", tier: ["Ngách Quà Tặng", "tier-niche"], specs: ["Phun sương 20ml + Gương + Đèn LED", "Pin 4000mAh | 5V/1.5A | Sạc 5h", "165×66×60mm"], market: "134.000 – 237.120 đ (Shopee)", maxCost: "—" },
+      { sku: "H36", cat: "mist", name: "Handheld Mist Fan H36", img: "teioe_images/H36.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["Phun sương 30ml | 5 cấp gió", "Pin 2000mAh (2–7h) | Type-C", "62×55×153.5mm | 165g/205g"], market: "94.613 – 134.000 đ (Shopee)", maxCost: "—" },
       { sku: "H46", cat: "mist", name: "Pocket Mist Fan H46", img: "teioe_images/H46.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["Phun sương 20ml | ABS+PC", "Pin 1200mAh | Sạc 1.5h", "104×28×58mm | 95g"], market: "94.613 – 127.000 đ (Shopee)", maxCost: "—" },
+      { sku: "H21", cat: "mist", name: "Misting Fan H21", img: "teioe_images/H21.jpg", tier: ["Bình lớn 60ml", "tier-niche"], specs: ["Phun sương 60ml | 4 cấp gió", "Pin 1000mAh | DC5V-1A", "70×70×120mm"], market: "94.613 – 150.000 đ", maxCost: "—" },
+      { sku: "H20", cat: "mist", name: "Misting Fan H20", img: "teioe_images/H20.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["Phun sương 10ml | 3 cấp gió", "Pin 1000mAh | DC5V-1A", "77×33×160mm"], market: "80.000 – 134.000 đ", maxCost: "—" },
 
-      { sku: "H35", cat: "multi", name: "Umbrella Clip Fan H35", img: "teioe_images/H35.jpg", tier: ["USP Độc Đáo", "tier-niche"], specs: ["Kẹp thân ô dù / Cầm tay", "Pin 1200mAh | 5 cấp gió", "164×62×45mm"], market: "80.000 – 180.000 đ", maxCost: "—" },
-      { sku: "HP1", cat: "multi", name: "Handheld / Neck Fan HP1", img: "teioe_images/HP1.jpg", tier: ["Đa năng 2in1", "tier-niche"], specs: ["Cầm tay + Uốn cong đeo cổ", "Pin 2000mAh (2–7h) | Type-C", "203×92×48mm | 250g"], market: "90.000 – 314.400 đ (Shopee)", maxCost: "—" },
-      { sku: "H9 / H17", cat: "multi", name: "Neck Fan H9 & H17", img: "teioe_images/H9.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["Quạt đeo cổ rảnh tay", "Pin 1200mAh | 3–4 cấp gió", "5V-1A"], market: "70.000 – 160.000 đ", maxCost: "—" },
+      // 3. Kẹp Ô Dù / Đeo Cổ (4 mã)
+      { sku: "H35", cat: "multi", name: "Umbrella Clip Fan H35", img: "teioe_images/H35.jpg", tier: ["USP Độc Đáo", "tier-niche"], specs: ["Kẹp thân ô dù / Cầm tay", "Pin 1200mAh | 5 cấp gió | Sạc 2h", "164×62×45mm"], market: "80.000 – 180.000 đ", maxCost: "—" },
+      { sku: "HP1", cat: "multi", name: "Handheld / Neck Fan HP1", img: "teioe_images/HP1.jpg", tier: ["Đa năng 2in1", "tier-niche"], specs: ["Cầm tay + Uốn cong đeo cổ", "Pin 2000mAh (2–7h) | Type-C", "203×92×48mm | 250g/310g"], market: "90.000 – 314.400 đ (Shopee)", maxCost: "—" },
+      { sku: "H17", cat: "multi", name: "Neck Fan H17", img: "teioe_images/H17.jpg", tier: ["Đeo cổ", "tier-basic"], specs: ["Quạt đeo cổ 4 cấp gió", "Pin 1200mAh | DC5V-1A", "255×235×43mm"], market: "80.000 – 180.000 đ", maxCost: "—" },
+      { sku: "H9", cat: "multi", name: "Neck Fan H9", img: "teioe_images/H9.jpg", tier: ["Đeo cổ", "tier-basic"], specs: ["Quạt đeo cổ 3 cấp gió", "Pin 1200mAh | DC5V-1A", "180×160×32mm"], market: "70.000 – 160.000 đ", maxCost: "—" },
 
+      // 4. Quạt Cầm Tay / Bỏ Túi / Cooler Fan (26 mã)
       { sku: "H56", cat: "handheld", name: "Handheld Fan H56", img: "teioe_images/H56.jpg", tier: ["Pin Trâu", "tier-hot"], specs: ["5 cấp gió | 5V/1.5A", "Pin 4000mAh | Sạc 4h", "163.5×42.6×74mm | 189g"], market: "120.000 – 220.000 đ", maxCost: "—" },
+      { sku: "H26", cat: "handheld", name: "Handheld Fan H26", img: "teioe_images/H26.jpg", tier: ["Pin 3600mAh", "tier-hot"], specs: ["5 cấp gió | DC5V-1.5A", "Pin 3600mAh", "183×84×44mm"], market: "110.000 – 210.000 đ", maxCost: "—" },
       { sku: "H51", cat: "handheld", name: "Handheld Fan H51", img: "teioe_images/H51.jpg", tier: ["Pin Khá", "tier-niche"], specs: ["5 cấp gió | 5V/1.5A", "Pin 3000mAh | Sạc 4h", "61×135×47mm | 150g"], market: "90.000 – 180.000 đ", maxCost: "—" },
-      { sku: "H53", cat: "handheld", name: "Handheld Fan H53", img: "teioe_images/H53.jpg", tier: ["100 Cấp Gió", "tier-niche"], specs: ["100 cấp gió | Kèm dây đeo", "Pin 2000mAh", "162.5×38×89mm | 170g"], market: "90.000 – 170.000 đ", maxCost: "—" },
-      { sku: "H48 / H50", cat: "handheld", name: "Pocket Fan H48 (DIY) & H50", img: "teioe_images/H48.jpg", tier: ["Giá Rẻ / Phễu", "tier-basic"], specs: ["H48: Mặt DIY Display, 500/1000mAh", "H50: 120×35×55mm, 2000mAh", "Siêu mỏng bỏ túi"], market: "36.000 – 130.000 đ (Shopee)", maxCost: "—" },
+      { sku: "H53", cat: "handheld", name: "Handheld Fan H53", img: "teioe_images/H53.jpg", tier: ["100 Cấp Gió", "tier-niche"], specs: ["100 cấp gió | Kèm dây đeo", "Pin 2000mAh | Sạc 4h", "162.5×38×89mm | 170g"], market: "90.000 – 170.000 đ", maxCost: "—" },
+      { sku: "H43", cat: "handheld", name: "Cooler Fan H43", img: "teioe_images/H43.jpg", tier: ["100 Cấp Gió", "tier-niche"], specs: ["100 cấp gió | Sạc 2h", "Pin 1200mAh | 5V/1A", "162.5×46×55mm | 125g"], market: "80.000 – 160.000 đ", maxCost: "—" },
+      { sku: "H50", cat: "handheld", name: "Pocket Fan H50", img: "teioe_images/H50.jpg", tier: ["Bỏ túi 2000mAh", "tier-niche"], specs: ["5 cấp gió | 5V/1A", "Pin 2000mAh | Sạc 4h", "120×35×55mm"], market: "70.000 – 140.000 đ", maxCost: "—" },
+      { sku: "H48", cat: "handheld", name: "Pocket Fan H48 (DIY Display)", img: "teioe_images/H48.jpg", tier: ["DIY Quà Tặng", "tier-niche"], specs: ["Mặt DIY Display | 5 cấp gió", "Pin 500mAh / 1000mAh | Sạc 1–2h", "95×25×68mm | 92g"], market: "36.000 – 120.000 đ (Shopee)", maxCost: "—" },
+      { sku: "H31", cat: "handheld", name: "Cooler Fan H31", img: "teioe_images/H31.jpg", tier: ["Màn LED", "tier-niche"], specs: ["5 cấp gió | Màn LED", "Pin 2000mAh | DC5V-1A", "62×58×150mm"], market: "80.000 – 160.000 đ", maxCost: "—" },
+      { sku: "H40", cat: "handheld", name: "Cooler Fan H40", img: "teioe_images/H40.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 2000mAh", "76×40×200mm"], market: "70.000 – 140.000 đ", maxCost: "—" },
+      { sku: "i8", cat: "handheld", name: "Cooler Fan i8", img: "teioe_images/i8.jpg", tier: ["Gập gọn", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 1600mAh", "63×49×126mm"], market: "65.000 – 130.000 đ", maxCost: "—" },
+      { sku: "H34", cat: "handheld", name: "Cooler Fan H34", img: "teioe_images/H34.jpg", tier: ["Móc treo", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 1600mAh", "78×36×166.5mm"], market: "65.000 – 130.000 đ", maxCost: "—" },
+      { sku: "H38", cat: "handheld", name: "Handheld Fan H38", img: "teioe_images/H38.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["5 cấp gió | DC5V-1A", "Pin 1200mAh", "61×39×165mm"], market: "55.000 – 110.000 đ", maxCost: "—" },
+      { sku: "H28", cat: "handheld", name: "Handheld Fan H28", img: "teioe_images/H28.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["5 cấp gió | DC5V-1A", "Pin 1200mAh", "58×52×154mm"], market: "55.000 – 110.000 đ", maxCost: "—" },
+      { sku: "H25", cat: "handheld", name: "Handheld Fan H25", img: "teioe_images/H25.jpg", tier: ["Màn LED", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 1200mAh", "159×73×36mm"], market: "60.000 – 120.000 đ", maxCost: "—" },
+      { sku: "H18", cat: "handheld", name: "Handheld Fan H18", img: "teioe_images/H18.jpg", tier: ["Màn LED", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 1200mAh", "73×35×158.2mm"], market: "60.000 – 120.000 đ", maxCost: "—" },
+      { sku: "H1", cat: "handheld", name: "Handheld Fan H1", img: "teioe_images/H1.jpg", tier: ["Kèm đế", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 1200mAh", "185×85×31mm"], market: "50.000 – 100.000 đ", maxCost: "—" },
+      { sku: "H15", cat: "handheld", name: "Handheld Fan H15", img: "teioe_images/H15.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 1200mAh", "75×40×140mm"], market: "50.000 – 100.000 đ", maxCost: "—" },
+      { sku: "H24", cat: "handheld", name: "Handheld Fan H24", img: "teioe_images/H24.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 1200mAh", "138×66×49mm"], market: "50.000 – 100.000 đ", maxCost: "—" },
+      { sku: "H3", cat: "handheld", name: "Handheld Fan H3", img: "teioe_images/H3.jpg", tier: ["Đeo dây", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 1000mAh", "93×37×110mm"], market: "45.000 – 90.000 đ", maxCost: "—" },
+      { sku: "H2", cat: "handheld", name: "Handheld Fan H2", img: "teioe_images/H2.jpg", tier: ["Giá Rẻ / Phễu", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 500mAh", "115×61×32mm"], market: "36.000 – 75.000 đ", maxCost: "—" },
+      { sku: "H2-pro", cat: "handheld", name: "Handheld Fan H2-pro", img: "teioe_images/H2-pro.jpg", tier: ["Giá Rẻ / Phễu", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 500mAh", "150×61×32mm"], market: "36.000 – 75.000 đ", maxCost: "—" },
+      { sku: "H10", cat: "handheld", name: "Handheld Fan H10", img: "teioe_images/H10.jpg", tier: ["Giá Rẻ / Phễu", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 500mAh", "60×60×150mm"], market: "36.000 – 75.000 đ", maxCost: "—" },
+      { sku: "H22", cat: "handheld", name: "Handheld Fan H22", img: "teioe_images/H22.jpg", tier: ["Giá Rẻ / Phễu", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 500mAh", "137×60×32mm"], market: "36.000 – 75.000 đ", maxCost: "—" },
+      { sku: "H16", cat: "handheld", name: "Handheld Fan H16", img: "teioe_images/H16.jpg", tier: ["Giá Rẻ / Phễu", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 500mAh", "122×55×55mm"], market: "36.000 – 75.000 đ", maxCost: "—" },
+      { sku: "H186", cat: "handheld", name: "Handheld Fan H186", img: "teioe_images/H186.jpg", tier: ["Giá Rẻ / Phễu", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 500mAh", "58×45.5×117mm"], market: "36.000 – 75.000 đ", maxCost: "—" },
+      { sku: "H39", cat: "handheld", name: "Handheld Fan H39", img: "teioe_images/H39.jpg", tier: ["Giá Rẻ / Phễu", "tier-basic"], specs: ["3 cấp gió | DC5V-0.5A", "Pin 500mAh", "45×47×107mm"], market: "36.000 – 75.000 đ", maxCost: "—" },
+      { sku: "H189", cat: "handheld", name: "Handheld Fan H189", img: "teioe_images/H189.jpg", tier: ["Giá Rẻ / Phễu", "tier-basic"], specs: ["3 cấp gió | DC5V-0.5A", "Pin 500mAh", "47.5×43×107mm"], market: "36.000 – 75.000 đ", maxCost: "—" },
 
-      { sku: "F7", cat: "desktop", name: "Desktop Fan F7", img: "teioe_images/F7.jpg", tier: ["Văn Phòng", "tier-niche"], specs: ["Gập gọn để bàn | 5V/2A", "Pin 4500mAh | 5 cấp gió", "233×46.5×182mm | 350g"], market: "126.999 – 297.000 đ (Shopee)", maxCost: "—" },
-      { sku: "H12", cat: "desktop", name: "Desktop Fan H12", img: "teioe_images/H12.jpg", tier: ["Pin 8000mAh", "tier-hot"], specs: ["Chân đế gập | 5V-2A", "Pin 8000mAh | 3 cấp gió", "234×210×138mm"], market: "180.000 – 350.000 đ", maxCost: "—" },
-      { sku: "H45 / H27", cat: "desktop", name: "Mini Desktop Fan H45 & H27", img: "teioe_images/H45.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["Màn hình % pin | Quai xách", "Pin 1200mAh | 5–100 cấp gió", "Nhỏ gọn đặt bàn làm việc"], market: "50.000 – 126.999 đ (Shopee)", maxCost: "—" },
+      // 5. Quạt Để Bàn (7 mã)
+      { sku: "F7", cat: "desktop", name: "Desktop Fan F7", img: "teioe_images/F7.jpg", tier: ["Văn Phòng", "tier-niche"], specs: ["Gập gọn để bàn | 5V/2A", "Pin 4500mAh | 5 cấp gió | Sạc 4h", "233×46.5×182mm | 350g"], market: "126.999 – 297.000 đ (Shopee)", maxCost: "—" },
+      { sku: "H12", cat: "desktop", name: "Desktop Fan H12", img: "teioe_images/H12.jpg", tier: ["Pin 8000mAh", "tier-hot"], specs: ["Chân đế gập | DC5V-2A", "Pin 8000mAh | 3 cấp gió", "234×210×138mm"], market: "180.000 – 350.000 đ", maxCost: "—" },
+      { sku: "H45", cat: "desktop", name: "Desktop Fan H45", img: "teioe_images/H45.jpg", tier: ["Màn % Pin", "tier-niche"], specs: ["5 cấp gió | Màn % pin | Quai xách", "Pin 1200mAh | 5V/1A | Sạc 2h", "106×80×37.2mm"], market: "80.000 – 150.000 đ", maxCost: "—" },
+      { sku: "H27", cat: "desktop", name: "Desktop Fan H27", img: "teioe_images/H27.jpg", tier: ["100 Cấp Gió", "tier-niche"], specs: ["100 cấp gió | Màn LED", "Pin 1200mAh | DC5V-1A", "165×140×32.5mm"], market: "80.000 – 150.000 đ", maxCost: "—" },
+      { sku: "H37", cat: "desktop", name: "Desktop Fan H37", img: "teioe_images/H37.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["5 cấp gió | DC5V-1A", "Pin 1200mAh", "108×51×123mm"], market: "65.000 – 126.999 đ", maxCost: "—" },
+      { sku: "H29", cat: "desktop", name: "Desktop Fan H29", img: "teioe_images/H29.jpg", tier: ["Màn LED", "tier-basic"], specs: ["4 cấp gió | DC5V-1A", "Pin 1200mAh", "146×105×180mm"], market: "70.000 – 140.000 đ", maxCost: "—" },
+      { sku: "H14", cat: "desktop", name: "Desktop Fan H14", img: "teioe_images/H14.jpg", tier: ["Phổ thông", "tier-basic"], specs: ["3 cấp gió | DC5V-1A", "Pin 1200mAh", "147×70×160mm"], market: "50.000 – 126.999 đ", maxCost: "—" },
 
-      { sku: "M9 / M7", cat: "winter", name: "Desktop Heater M9 & M7", img: "teioe_images/M9.jpg", tier: ["Mùa Đông", "tier-winter"], specs: ["220V | 400W / 800W + Quạt gió", "M9: Dáng thanh ngang 320×80×75mm", "Đặt bàn / Gắn gầm bàn"], market: "195.000 – 539.000 đ (Shopee)", maxCost: "—" },
-      { sku: "L5", cat: "winter", name: "2-in-1 Hand Warmer L5", img: "teioe_images/L5.jpg", tier: ["Mùa Đông", "tier-winter"], specs: ["Tách đôi 2 bên | 40–55°C", "Pin 4000mAh (2000mAh×2)", "101.3×36×68mm | 157g"], market: "49.000 – 150.000 đ (Shopee)", maxCost: "—" },
-      { sku: "Q7 / Hm101–104", cat: "winter", name: "Mini Humidifier Series", img: "teioe_images/Q7.jpg", tier: ["Sản Phẩm Phễu", "tier-basic"], specs: ["Dung tích 125ml – 540ml (Q7)", "Cổng Type-C | Một số mã có pin", "Phun sương tạo ẩm phòng máy lạnh"], market: "53.100 – 79.000 đ (Shopee)", maxCost: "—" }
+      // 6. Máy Sưởi, Sưởi Tay & Tạo Ẩm (9 mã)
+      { sku: "M9", cat: "winter", name: "New Heater M9", img: "teioe_images/M9.jpg", tier: ["Mùa Đông", "tier-winter"], specs: ["220V/210V/110V | Wind/500W/800W", "Dáng thanh ngang đặt bàn/gầm bàn", "320×80×75mm | 680g"], market: "195.000 – 539.000 đ (Shopee)", maxCost: "—" },
+      { sku: "M7", cat: "winter", name: "Desktop Heater M7", img: "teioe_images/M7.jpg", tier: ["Mùa Đông", "tier-winter"], specs: ["110V/210V/220V | 400W / 800W", "Có quai xách da thời trang", "200×100×138mm"], market: "195.000 – 539.000 đ (Shopee)", maxCost: "—" },
+      { sku: "L5", cat: "winter", name: "2-in-1 Hand Warmer L5", img: "teioe_images/L5.jpg", tier: ["Mùa Đông", "tier-winter"], specs: ["Tách đôi 2 bên | 40–55°C", "Pin 4000mAh (2000mAh×2) | Sạc 4h", "101.3×36×68mm | 157g"], market: "49.000 – 150.000 đ (Shopee)", maxCost: "—" },
+      { sku: "Q7", cat: "winter", name: "Humidifier Q7 (540ml)", img: "teioe_images/Q7.jpg", tier: ["Tạo Ẩm Lớn", "tier-niche"], specs: ["Dung tích 540ml | Type-C", "Input DC5V-2A", "164×164×95mm"], market: "65.100 – 180.000 đ", maxCost: "—" },
+      { sku: "Hm102", cat: "winter", name: "Humidifier Hm102 (450ml)", img: "teioe_images/Hm102.jpg", tier: ["Có Pin 1200mAh", "tier-basic"], specs: ["Dung tích 450ml | DC5V-1A", "Pin: no / 1200mAh", "130×100×92mm"], market: "53.100 – 120.000 đ", maxCost: "—" },
+      { sku: "Hm103", cat: "winter", name: "Humidifier Hm103 (280ml)", img: "teioe_images/Hm103.jpg", tier: ["Có Pin 1000mAh", "tier-basic"], specs: ["Dung tích 280ml | DC5V-1A", "Pin: no / 1000mAh", "76×76×134mm"], market: "53.100 – 100.000 đ", maxCost: "—" },
+      { sku: "Hm104", cat: "winter", name: "Humidifier Hm104 (250ml)", img: "teioe_images/Hm104.jpg", tier: ["Sản Phẩm Phễu", "tier-basic"], specs: ["Dung tích 250ml | Type-C", "Input DC5V-1A", "132×66×66mm"], market: "53.100 – 79.000 đ", maxCost: "—" },
+      { sku: "Hm101", cat: "winter", name: "Humidifier Hm101 (180ml)", img: "teioe_images/Hm101.jpg", tier: ["Sản Phẩm Phễu", "tier-basic"], specs: ["Dung tích 180ml | Type-C", "Input DC5V-1A", "58×58×110mm"], market: "53.100 – 79.000 đ", maxCost: "—" },
+      { sku: "Q1", cat: "winter", name: "Humidifier Q1 (125ml)", img: "teioe_images/Q1.jpg", tier: ["Decor Bàn", "tier-basic"], specs: ["Dung tích 125ml | Type-C", "Input DC5V-2A", "136×136×88mm"], market: "53.100 – 110.000 đ", maxCost: "—" }
     ];
 
     const grid = document.getElementById("productGrid");
@@ -854,9 +897,9 @@
       const p = products.find(x => x.sku === sku);
       if (!p) return;
       let key = p.cat;
-      if (p.sku.includes("M9")) key = "winter_heater";
+      if (p.sku === "M9" || p.sku === "M7") key = "winter_heater";
       else if (p.sku === "L5") key = "winter_warmer";
-      else if (p.sku.includes("Q7")) key = "winter_humidifier";
+      else if (p.sku === "Q7" || p.sku === "Q1" || p.sku.startsWith("Hm")) key = "winter_humidifier";
       const list = compareMap[key] || compareMap.turbo;
       const dSpecs = detailSpecsMap[p.sku] || p.specs.map((s, i) => [`Thông số ${i+1}`, s]);
 
