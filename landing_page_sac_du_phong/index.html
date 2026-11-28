@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chọn Sạc dự phòng</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Crect width='28' height='28' rx='6' fill='%230F172A'/%3E%3Cpath d='M4 11.5L14 4L24 11.5' stroke='%23FCD10C' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='6.5' y='11.5' width='15' height='12.5' rx='3' fill='%23FCD10C'/%3E%3Cpath d='M14.8 14L11.8 18.2H14.3L13.2 21.5L16.4 17.2H13.9L14.8 14Z' fill='%230F172A'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand" aria-label="Chọn Sạc dự phòng">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+            <path d="M4 11.5L14 4L24 11.5" stroke="#FCD10C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20.5 6.2V9" stroke="#FCD10C" stroke-width="2.2" stroke-linecap="round"/>
+            <rect x="6.5" y="11.5" width="15" height="12.5" rx="3" fill="#FCD10C"/>
+            <path d="M14.8 14L11.8 18.2H14.3L13.2 21.5L16.4 17.2H13.9L14.8 14Z" fill="#0F172A"/>
+          </svg>
+        </span>
+        <span class="brand-title">Chọn Sạc dự phòng</span>
+      </a>
+
+      <nav class="section-nav" aria-label="Mục lục A–H">
+        <button type="button" class="nav-pill is-active" data-filter="all" aria-pressed="true">A–H</button>
+        <button type="button" class="nav-pill" data-filter="A" aria-pressed="false">A</button>
+        <button type="button" class="nav-pill" data-filter="B" aria-pressed="false">B</button>
+        <button type="button" class="nav-pill" data-filter="C" aria-pressed="false">C</button>
+        <button type="button" class="nav-pill" data-filter="D" aria-pressed="false">D</button>
+        <button type="button" class="nav-pill" data-filter="E" aria-pressed="false">E</button>
+        <button type="button" class="nav-pill" data-filter="F" aria-pressed="false">F</button>
+        <button type="button" class="nav-pill" data-filter="G" aria-pressed="false">G</button>
+        <button type="button" class="nav-pill" data-filter="H" aria-pressed="false">H</button>
+      </nav>
+
+      <div class="search-wrap">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input id="searchInput" type="search" class="search-input" aria-label="Tìm kiếm" placeholder="Tìm..." autocomplete="off" />
+        <button id="searchClear" type="button" class="search-clear" aria-label="Xóa tìm kiếm" hidden>&times;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <div class="hero-kicker" aria-hidden="true">
+            <span class="dot"></span>
+            <span>3AE</span>
+            <span class="sep">/</span>
+            <span>OEM · ODM · 3C · UN3480</span>
+          </div>
+          <h1 id="hero-title" class="hero-title">Chọn Sạc dự phòng</h1>
+
+          <div class="cost-callout">
+            <div class="cost-visual" aria-hidden="true">
+              <span class="cost-num">40–60%</span>
+              <div class="cost-bar">
+                <div class="cost-bar-fill"></div>
+              </div>
+            </div>
+            <p class="cost-text" data-cell="A2"></p>
+          </div>
+
+          <div class="kpi-strip" role="navigation" aria-label="Truy cập nhanh">
+            <a href="#sec-A" class="kpi-chip" data-jump="A">
+              <span class="kpi-code">A</span>
+              <span class="kpi-val">Li-Po · 21700</span>
+            </a>
+            <a href="#sec-B" class="kpi-chip" data-jump="B">
+              <span class="kpi-code">B</span>
+              <span class="kpi-val">PCBA · NTC</span>
+            </a>
+            <a href="#sec-C" class="kpi-chip" data-jump="C">
+              <span class="kpi-code">C</span>
+              <span class="kpi-val">UL94 V-0</span>
+            </a>
+            <a href="#sec-D" class="kpi-chip" data-jump="D">
+              <span class="kpi-code">D</span>
+              <span class="kpi-val">80%+</span>
+            </a>
+            <a href="#sec-E" class="kpi-chip kpi-chip--accent" data-jump="E">
+              <span class="kpi-code">E</span>
+              <span class="kpi-val">3C (CCC)</span>
+            </a>
+            <a href="#sec-F" class="kpi-chip" data-jump="F">
+              <span class="kpi-code">F</span>
+              <span class="kpi-val">5 Bước</span>
+            </a>
+            <a href="#sec-G" class="kpi-chip" data-jump="G">
+              <span class="kpi-code">G</span>
+              <span class="kpi-val">UN 3480</span>
+            </a>
+            <a href="#sec-H" class="kpi-chip" data-jump="H">
+              <span class="kpi-code">H</span>
+              <span class="kpi-val">0% · 10%</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-diagram" aria-hidden="true">
+          <svg viewBox="0 0 320 260" fill="none" class="pb-svg">
+            <defs>
+              <linearGradient id="pbShell" x1="40" y1="20" x2="280" y2="240" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1E293B"/>
+                <stop offset="1" stop-color="#0B1220"/>
+              </linearGradient>
+              <linearGradient id="pbCell" x1="88" y1="74" x2="232" y2="206" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FCD10C" stop-opacity="0.24"/>
+                <stop offset="1" stop-color="#FCD10C" stop-opacity="0.06"/>
+              </linearGradient>
+            </defs>
+            <!-- Outer V0 Shell -->
+            <rect x="64" y="18" width="192" height="224" rx="26" fill="url(#pbShell)" stroke="#334155" stroke-width="2"/>
+            <!-- Top USB Ports -->
+            <rect x="110" y="12" width="28" height="8" rx="3" fill="#475569"/>
+            <rect x="150" y="12" width="18" height="8" rx="3" fill="#FCD10C"/>
+            <rect x="180" y="12" width="28" height="8" rx="3" fill="#475569"/>
+            <!-- PCBA Board -->
+            <rect x="82" y="34" width="156" height="36" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="1.5"/>
+            <rect x="136" y="42" width="48" height="20" rx="4" fill="#0284C7" fill-opacity="0.22" stroke="#38BDF8" stroke-width="1.4"/>
+            <text x="160" y="55" text-anchor="middle" fill="#E0F2FE" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700">PCBA IC</text>
+            <!-- NTC Wire -->
+            <path d="M184 52 H214 V96" stroke="#10B981" stroke-width="1.8" stroke-dasharray="3 2"/>
+            <circle cx="214" cy="96" r="4.5" fill="#10B981"/>
+            <text x="214" y="112" text-anchor="middle" fill="#6EE7B7" font-family="Inter, sans-serif" font-size="8" font-weight="600">NTC</text>
+            <!-- Battery Cell Cutaway -->
+            <rect x="82" y="80" width="156" height="128" rx="14" fill="url(#pbCell)" stroke="#FCD10C" stroke-width="1.8"/>
+            <path d="M163 114L145 144H160L153 172L175 138H160L163 114Z" fill="#FCD10C"/>
+            <text x="160" y="196" text-anchor="middle" fill="#FEF08A" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800">40–60% · A品</text>
+            <!-- 3C Mark -->
+            <ellipse cx="104" cy="224" rx="16" ry="9" stroke="#FCD10C" stroke-width="1.5"/>
+            <text x="104" y="227" text-anchor="middle" fill="#FCD10C" font-family="Plus Jakarta Sans, sans-serif" font-size="8" font-weight="800">CCC</text>
+            <text x="216" y="227" text-anchor="middle" fill="#94A3B8" font-family="Inter, sans-serif" font-size="8" font-weight="600">UL94 V-0</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <div id="contentRoot" class="container sections-stack"></div>
+
+    <div id="emptyState" class="container empty-state" role="status" hidden>
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+      </svg>
+      <p>0</p>
+      <button type="button" id="resetFiltersBtn" class="btn-reset">A–H</button>
+    </div>
+  </main>
+
+  <button type="button" id="backToTop" class="back-top" aria-label="Lên đầu trang" hidden>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
