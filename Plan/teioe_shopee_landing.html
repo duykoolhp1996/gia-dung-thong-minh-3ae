@@ -197,6 +197,7 @@
       border-bottom: 1px solid var(--border);
       border-radius: var(--radius) var(--radius) 0 0;
       overflow: hidden;
+      cursor: zoom-in;
     }
     .card-img {
       width: 100%;
@@ -455,7 +456,54 @@
       border-radius: 10px;
       object-fit: cover;
       flex-shrink: 0;
+      cursor: zoom-in;
     }
+    .cmp-item img {
+      cursor: zoom-in;
+    }
+    /* Image Lightbox */
+    .lightbox-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 15, 28, 0.86);
+      backdrop-filter: blur(6px);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 10050;
+    }
+    .lightbox-backdrop.open { display: flex; }
+    .lightbox-img {
+      max-width: 92vw;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+    }
+    .lightbox-cap {
+      color: #f8fafc;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 12px;
+      text-align: center;
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 18px;
+      right: 22px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.16);
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.28); }
     .detail-specs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
@@ -755,9 +803,9 @@
       grid.innerHTML = list.map(p => `
         <article class="card" onclick="openCompare('${p.sku.replace(/'/g, "\\'")}')">
           <div>
-            <div class="card-img-wrap">
+            <div class="card-img-wrap" onclick="event.stopPropagation(); openLightbox('${p.img}', '${p.sku.replace(/'/g, "\\'")} — ${p.name.replace(/'/g, "\\'")}')">
               <img class="card-img" src="${p.img}" alt="${p.name}" loading="lazy" />
-              <span class="card-img-badge">Ảnh Catalog TEIOE</span>
+              <span class="card-img-badge">🔍 Ảnh Catalog TEIOE</span>
             </div>
             <div class="card-top">
               <span class="sku">${p.sku}</span>
@@ -966,7 +1014,7 @@
       document.getElementById("mTitle").textContent = `Chi tiết & So sánh giá: ${p.sku} — ${p.name}`;
       document.getElementById("mBody").innerHTML = `
         <div class="modal-teioe">
-          <img src="${p.img}" alt="${p.name}" referrerpolicy="no-referrer" />
+          <img src="${p.img}" alt="${p.name}" onclick="openLightbox('${p.img}', '${p.sku.replace(/'/g, "\\'")} — ${p.name.replace(/'/g, "\\'")}')" title="Bấm để phóng to" />
           <div>
             <div style="font-weight:800;font-size:16px;margin-bottom:4px;">${p.sku} • ${p.name}</div>
             <div style="font-size:13px;color:var(--muted);margin-bottom:6px;">${p.specs.join(" • ")}</div>
@@ -981,7 +1029,7 @@
         <div class="cmp-list">
           ${list.map(it => `
             <div class="cmp-item">
-              <img src="${it.img}" alt="${it.title}" referrerpolicy="no-referrer" />
+              <img src="${it.img}" alt="${it.title}" referrerpolicy="no-referrer" onclick="openLightbox('${it.img}', '${it.title.replace(/'/g, "\\'")}')" title="Bấm để phóng to" />
               <div class="cmp-info">
                 <div class="cmp-title">${it.title}</div>
                 <div class="cmp-sub"><strong>${it.price.toLocaleString("vi-VN")}₫</strong> • ${it.sold}</div>
@@ -1006,7 +1054,31 @@
 
     document.getElementById("mClose").addEventListener("click", () => modalEl.classList.remove("open"));
     modalEl.addEventListener("click", e => { if (e.target === modalEl) modalEl.classList.remove("open"); });
-    document.addEventListener("keydown", e => { if (e.key === "Escape") modalEl.classList.remove("open"); });
+
+    const lbEl = document.createElement("div");
+    lbEl.className = "lightbox-backdrop";
+    lbEl.id = "imgLightbox";
+    lbEl.innerHTML = `
+      <button class="lightbox-close" id="lbClose" aria-label="Đóng ảnh">&times;</button>
+      <img class="lightbox-img" id="lbImg" src="" alt="" referrerpolicy="no-referrer" />
+      <div class="lightbox-cap" id="lbCap"></div>
+    `;
+    document.body.appendChild(lbEl);
+
+    function openLightbox(src, caption) {
+      document.getElementById("lbImg").src = src;
+      document.getElementById("lbCap").textContent = caption || "";
+      lbEl.classList.add("open");
+    }
+    document.getElementById("lbClose").addEventListener("click", () => lbEl.classList.remove("open"));
+    lbEl.addEventListener("click", e => { if (e.target === lbEl) lbEl.classList.remove("open"); });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        if (lbEl.classList.contains("open")) lbEl.classList.remove("open");
+        else modalEl.classList.remove("open");
+      }
+    });
   </script>
 </body>
 </html>
