@@ -928,8 +928,8 @@
           🏭 100% Giá Xuất Xưởng TKK 2026
         </span>
         <div class="flex items-center space-x-2">
-          <button id="modal-btn-select" onclick="toggleSelectFromModal()" class="px-4 py-2 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-500 transition">
-            + Thêm Vào Báo Giá
+          <button onclick="closeProductDetail()" class="px-4 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs transition">
+            Đóng
           </button>
         </div>
       </div>
@@ -1830,13 +1830,15 @@
         ${linksHtml ? `<div class="flex flex-wrap items-center gap-1.5 mt-2 pt-2 border-t border-rose-200/70"><span class="text-[11px] font-bold text-slate-500">Tham khảo thêm:</span>${linksHtml}</div>` : ''}
       `;
 
-      // Select button label
+      // Select button label (if present)
       const isSelected = state.selectedSkus.has(p.id);
       const btnSelect = document.getElementById('modal-btn-select');
-      btnSelect.innerText = isSelected ? '✓ Đã Có Trong Báo Giá' : '+ Thêm Vào Báo Giá';
-      btnSelect.className = isSelected 
-        ? 'px-4 py-2 rounded-xl bg-slate-200 text-slate-700 font-bold text-xs hover:bg-slate-300 transition'
-        : 'px-4 py-2 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-500 transition';
+      if (btnSelect) {
+        btnSelect.innerText = isSelected ? '✓ Đã Có Trong Báo Giá' : '+ Thêm Vào Báo Giá';
+        btnSelect.className = isSelected 
+          ? 'px-4 py-2 rounded-xl bg-slate-200 text-slate-700 font-bold text-xs hover:bg-slate-300 transition'
+          : 'px-4 py-2 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-500 transition';
+      }
     }
 
     function runModalSimCalc() {
