@@ -651,8 +651,9 @@
       if (clean === "1") {
         const tb = document.querySelector(".toolbar");
         if (tb) tb.style.display = "none";
-        document.body.style.padding = "12px";
+        document.body.style.padding = "14px";
         document.body.style.background = "#ffffff";
+        document.documentElement.style.overflow = "hidden";
       }
       if (sku) {
         document.querySelectorAll(".sheet").forEach(s => {
