@@ -346,11 +346,11 @@
   <script>
     const EXCHANGE_RMB = 3933;
     const EXCHANGE_USD = 25990;
+    const TOTAL_LOT_QTY = 2303;
+    const SHIPPING_TOTAL_USD = 2000; // Tạm tính 2.000 USD cho cả lô 2.303 sp
+    const SHIPPING_TOTAL_VND = SHIPPING_TOTAL_USD * EXCHANGE_USD; // 51.980.000 đ
+    const SHIPPING_PER_UNIT = Math.round(SHIPPING_TOTAL_VND / TOTAL_LOT_QTY); // 22.571 đ/sp
     const CBM_PER_UNIT = 0.05412;
-    const FREIGHT_CIF_PER_CBM = 100280; // Ocean freight ~12.5tr / 124.65 CBM
-    const INTL_LOG_PER_UNIT = Math.round(353000 * CBM_PER_UNIT); // 19.104 đ/sp (2x40HC + Local + HQ)
-    const LOCAL_WH_PER_UNIT = Math.round(225000 * CBM_PER_UNIT); // 12.177 đ/sp (VC nội bộ + Lưu kho 1.5 tháng)
-    const QCVN_LABEL_PER_UNIT = 19540 + 3000; // 22.540 đ/sp (45tr hợp quy / 2.303 sp + 3k tem CR/nhãn phụ)
     const B2C_PRICE = 999000;
 
     const PRODUCTS = [
@@ -406,9 +406,8 @@
       const container = document.getElementById("sheetsContainer");
       container.innerHTML = PRODUCTS.map(p => {
         const fobVnd = p.fobRmb * EXCHANGE_RMB;
-        const cifFreight = Math.round(FREIGHT_CIF_PER_CBM * CBM_PER_UNIT);
-        const vatImport = Math.round((fobVnd + cifFreight) * 0.08);
-        const costExVat = fobVnd + INTL_LOG_PER_UNIT + LOCAL_WH_PER_UNIT + QCVN_LABEL_PER_UNIT;
+        const costExVat = fobVnd + SHIPPING_PER_UNIT;
+        const vatImport = Math.round(costExVat * 0.08);
         const costWithVat = costExVat + vatImport;
 
         // Giá gửi COD đối tác = Giá về kho (+VAT) + 30% (làm tròn nghìn đồng)
@@ -423,13 +422,12 @@
 
         const totalFobRmb = p.qty * p.fobRmb;
         const totalFobVnd = p.qty * fobVnd;
-        const totalIntl = p.qty * INTL_LOG_PER_UNIT;
-        const totalLocal = p.qty * LOCAL_WH_PER_UNIT;
-        const totalQcvn = p.qty * QCVN_LABEL_PER_UNIT;
+        const totalShip = p.qty * SHIPPING_PER_UNIT;
         const totalVatIn = p.qty * vatImport;
         const totalCostWithVat = p.qty * costWithVat;
         const totalCostExVat = p.qty * costExVat;
         const totalCbm = (p.qty * CBM_PER_UNIT).toFixed(2);
+        const allocUsd = ((p.qty / TOTAL_LOT_QTY) * SHIPPING_TOTAL_USD).toFixed(0);
 
         const res3Unit = Math.round(costExVat * 0.03);
         const res5Unit = Math.round(costExVat * 0.05);
@@ -479,14 +477,14 @@
                 <div class="kpi-note">${fmt(fobVnd)} / sp (× ${EXCHANGE_RMB.toLocaleString("vi-VN")} đ)</div>
               </div>
               <div class="kpi-box">
-                <div class="kpi-lbl">Cước VC &amp; Hợp quy</div>
-                <div class="kpi-val">${fmt(INTL_LOG_PER_UNIT + LOCAL_WH_PER_UNIT + QCVN_LABEL_PER_UNIT)}</div>
-                <div class="kpi-note">QT + Nội bộ + Lưu kho + QCVN (${fmt(totalIntl + totalLocal + totalQcvn)}/lô)</div>
+                <div class="kpi-lbl">Cước VC tạm tính (2.000 USD)</div>
+                <div class="kpi-val">${fmt(SHIPPING_PER_UNIT)} / sp</div>
+                <div class="kpi-note">Phân bổ ~${allocUsd} USD (${fmt(totalShip)}/lô ${p.qty} sp)</div>
               </div>
               <div class="kpi-box green">
                 <div class="kpi-lbl">Giá gửi COD đối tác (Đã gồm VAT)</div>
                 <div class="kpi-val">${fmt(codPrice)} / sp</div>
-                <div class="kpi-note"><strong>Ghi chú:</strong> = Giá về kho + 30% (Đã gồm VAT 8% + VC về kho + Hợp quy)</div>
+                <div class="kpi-note"><strong>Ghi chú:</strong> = Giá về kho + 30% (Đã gồm VAT 8% + Cước VC về kho)</div>
               </div>
               <div class="kpi-box amber">
                 <div class="kpi-lbl">Giá bán lẻ &amp; TMĐT (+10%)</div>
@@ -520,42 +518,22 @@
                 <tr>
                   <td class="tc"><strong>2</strong></td>
                   <td>
-                    <div class="item-main">Cước vận chuyển quốc tế &amp; Local (2×40HC)</div>
-                    <div class="item-sub">Cước biển Ningbo → Cảng VN + THC, D/O, Thủ tục Hải quan</div>
+                    <div class="item-main">Chi phí vận chuyển tạm tính (2.000 USD / lô 2.303 sp)</div>
+                    <div class="item-sub">Cước vận chuyển quốc tế Ningbo → Cảng VN &amp; trung chuyển về kho 3AE</div>
                   </td>
-                  <td class="tr"><strong>${fmt(INTL_LOG_PER_UNIT)}</strong></td>
-                  <td class="tr"><strong>${fmt(totalIntl)}</strong></td>
-                  <td>353.000 đ/CBM × 0,05412 CBM/sp (${totalCbm} CBM)</td>
+                  <td class="tr"><strong>${fmt(SHIPPING_PER_UNIT)}</strong></td>
+                  <td class="tr"><strong>${fmt(totalShip)}</strong></td>
+                  <td>2.000 USD × ${EXCHANGE_USD.toLocaleString("vi-VN")} đ ÷ 2.303 sp (~${allocUsd} USD cho mã này)</td>
                 </tr>
                 <tr>
                   <td class="tc"><strong>3</strong></td>
                   <td>
-                    <div class="item-main">Vận chuyển nội bộ (Cảng → Kho) &amp; Lưu kho</div>
-                    <div class="item-sub">Xe tải trung chuyển về kho 3AE + bốc xếp &amp; lưu kho 1,5 tháng</div>
-                  </td>
-                  <td class="tr"><strong>${fmt(LOCAL_WH_PER_UNIT)}</strong></td>
-                  <td class="tr"><strong>${fmt(totalLocal)}</strong></td>
-                  <td>225.000 đ/CBM × 0,05412 CBM/sp</td>
-                </tr>
-                <tr>
-                  <td class="tc"><strong>4</strong></td>
-                  <td>
-                    <div class="item-main">Hợp quy QCVN 4/9 &amp; Tem nhãn phụ CR</div>
-                    <div class="item-sub">Thử nghiệm, chứng nhận hợp quy nhóm 1700W + tem CR &amp; nhãn phụ</div>
-                  </td>
-                  <td class="tr"><strong>${fmt(QCVN_LABEL_PER_UNIT)}</strong></td>
-                  <td class="tr"><strong>${fmt(totalQcvn)}</strong></td>
-                  <td>45tr / 2.303 sp (19.540 đ) + 3.000 đ tem nhãn</td>
-                </tr>
-                <tr>
-                  <td class="tc"><strong>5</strong></td>
-                  <td>
                     <div class="item-main">Thuế VAT nhập khẩu 8% (Thuế NK 0% Form E)</div>
-                    <div class="item-sub">Tính 8% trên giá CIF (Tiền hàng + Cước biển) — được khấu trừ đầu vào</div>
+                    <div class="item-sub">Tính 8% trên giá CIF (Tiền hàng + Cước VC) — được khấu trừ đầu vào</div>
                   </td>
                   <td class="tr"><strong>${fmt(vatImport)}</strong></td>
                   <td class="tr"><strong>${fmt(totalVatIn)}</strong></td>
-                  <td>(${fmt(fobVnd).replace(" đ","")} + ${fmt(cifFreight).replace(" đ","")}) × 8%</td>
+                  <td>(${fmt(fobVnd).replace(" đ","")} + ${fmt(SHIPPING_PER_UNIT).replace(" đ","")}) × 8%</td>
                 </tr>
                 <tr class="row-total">
                   <td class="tc">—</td>
@@ -565,7 +543,7 @@
                   </td>
                   <td class="tr">${fmt(costWithVat)}</td>
                   <td class="tr">${fmt(totalCostWithVat)}</td>
-                  <td style="font-weight:600">Mục (1) + (2) + (3) + (4) + (5)</td>
+                  <td style="font-weight:600">Mục (1) + (2) + (3)</td>
                 </tr>
               </tbody>
             </table>
@@ -585,7 +563,7 @@
                   <td class="tc"><strong>1</strong></td>
                   <td>
                     <div class="item-main">Giá gửi COD đối tác (ĐÃ GỒM 8% VAT)</div>
-                    <div class="item-sub">Đã gồm VC quốc tế, VC nội bộ về kho, lưu kho &amp; hợp quy CR</div>
+                    <div class="item-sub">Đã gồm cước vận chuyển trọn gói về kho 3AE (tạm tính 2.000 USD/lô)</div>
                   </td>
                   <td class="tr"><strong>${fmt(codPrice)}</strong></td>
                   <td><strong>Giá giao đối tác trọn gói (≈ Về kho + 30%)</strong></td>
