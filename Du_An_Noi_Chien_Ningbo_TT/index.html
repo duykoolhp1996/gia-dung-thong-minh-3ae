@@ -1232,7 +1232,8 @@
               <th class="num">Giá Đối Tác (+30%)</th>
               <th class="num">Giá Hòa Vốn</th>
               <th class="num">Giá Niêm Yết</th>
-              <th class="num">Giá Đề Xuất</th>
+              <th class="num">Giá Bán lẻ</th>
+              <th class="num">Giá TMĐT (+10%)</th>
               <th class="num">Giá Bán Tốt TT</th>
               <th class="num">Lãi Ròng / Cái</th>
               <th>Đánh giá Khả thi</th>
@@ -1492,7 +1493,7 @@
           `VAT 8% (${fmtVND(suggestedPrice * VAT_OUT_RATIO)}) + Phí sàn ${(platform.feePct*100).toFixed(1)}% + MKT ${(mktPct*100).toFixed(1)}%`;
       }
       document.getElementById("tableScenarioNote").textContent =
-        `Giá đề xuất ${fmtVND(suggestedPrice)} (gồm VAT 8%) • ${platform.name} • FOB gốc • MKT ${(mktPct*100).toFixed(1)}%`;
+        `Giá Bán lẻ ${fmtVND(suggestedPrice)} • Giá TMĐT (+10%): ${fmtVND(Math.round((suggestedPrice * 1.10)/1000)*1000)} • ${platform.name} • FOB gốc`;
 
       let totalCost = 0;
       let totalBaseCost = 0;
@@ -1518,7 +1519,8 @@
         const cFixTotal = platform.fixedFee + opsFix;
         const breakEven = (landedExVat + cFixTotal) / (1 - totalVarPct);
 
-        const targetPrice = suggestedPrice;
+        const retailPrice = suggestedPrice;
+        const targetPrice = Math.round((retailPrice * 1.10) / 1000) * 1000; // Giá TMĐT cao hơn giá bán lẻ 10%
         const vatOutVnd = targetPrice * VAT_OUT_RATIO;
         const vatNetPay = Math.max(0, vatOutVnd - vatImport);
         const platformFeeVnd = targetPrice * platform.feePct + platform.fixedFee;
@@ -1540,7 +1542,7 @@
           statusClass = "badge-success";
           feasibleCount++;
         } else {
-          statusText = `Lãi mỏng (${(marginPct*100).toFixed(1)}%)`;
+          statusText = `Có lãi (${(marginPct*100).toFixed(1)}%)`;
           statusClass = "badge-warning";
           alertSkus.push(sku.code);
         }
@@ -1567,6 +1569,7 @@
           partnerPrice,
           partnerProfit,
           breakEven,
+          retailPrice,
           targetPrice,
           profitPerUnit,
           marginPct,
@@ -1582,7 +1585,7 @@
 
         const tr = document.createElement("tr");
         tr.className = "clickable-row";
-        tr.title = `Bấm để xem giá nhập, giá đối tác & giá bán lẻ của ${sku.code}`;
+        tr.title = `Bấm để xem giá nhập, giá đối tác & giá bán lẻ/TMĐT của ${sku.code}`;
         tr.onclick = () => openLightbox(sku.code);
         tr.innerHTML = `
           <td>
@@ -1598,9 +1601,10 @@
           <td class="num"><strong style="color:#047857">${fmtVND(partnerPrice)}</strong></td>
           <td class="num">${fmtVND(breakEven)}</td>
           <td class="num"><span class="list-price">${isFinite(listPrice) ? fmtVND(listPrice) : "—"}</span></td>
-          <td class="num"><strong style="color:var(--primary)">${isFinite(targetPrice) ? fmtVND(targetPrice) : "N/A"}</strong></td>
+          <td class="num"><strong>${fmtVND(retailPrice)}</strong></td>
+          <td class="num"><strong style="color:var(--primary)">${fmtVND(targetPrice)}</strong></td>
           <td class="num">${(sku.marketMin/1000).toFixed(0)}k – ${(sku.marketMax/1000).toFixed(0)}k</td>
-          <td class="num" style="color:var(--success);font-weight:700">${isFinite(profitPerUnit) ? fmtVND(profitPerUnit) : "—"}</td>
+          <td class="num" style="color:${profitPerUnit >= 0 ? 'var(--success)' : 'var(--danger)'};font-weight:700">${profitPerUnit >= 0 ? '+' : ''}${fmtVND(profitPerUnit)}</td>
           <td>${statusBadge}</td>
           <td><button class="btn-detail" onclick="event.stopPropagation(); openLightbox('${sku.code}')">Xem chi tiết</button></td>
         `;
@@ -1630,21 +1634,27 @@
                 <div class="gallery-metric-val">${fmtVND(landedWithVat)}</div>
               </div>
               <div>
-                <div class="gallery-metric-label">Giá hòa vốn</div>
-                <div class="gallery-metric-val">${fmtVND(breakEven)}</div>
+                <div class="gallery-metric-label">Giá Đối tác (+30%)</div>
+                <div class="gallery-metric-val" style="color:#047857">${fmtVND(partnerPrice)}</div>
               </div>
               <div>
-                <div class="gallery-metric-label">Lãi ròng / cái</div>
-                <div class="gallery-metric-val" style="color:var(--success)">${isFinite(profitPerUnit) ? "+" + fmtVND(profitPerUnit) : "—"}</div>
+                <div class="gallery-metric-label">Lãi ròng TMĐT / cái</div>
+                <div class="gallery-metric-val" style="color:${profitPerUnit >= 0 ? 'var(--success)' : 'var(--danger)'}">${profitPerUnit >= 0 ? '+' : ''}${fmtVND(profitPerUnit)}</div>
               </div>
               <div>
                 <div class="gallery-metric-label">Giá bán tốt TT</div>
                 <div class="gallery-metric-val">${(sku.marketMin/1000).toFixed(0)}k–${(sku.marketMax/1000).toFixed(0)}k</div>
               </div>
             </div>
-            <div class="gallery-price-row">
-              <span style="color:var(--muted);font-weight:600">Giá đề xuất:</span>
-              <span class="gallery-price">${isFinite(targetPrice) ? fmtVND(targetPrice) : "N/A"}</span>
+            <div class="gallery-price-row" style="flex-direction:column;align-items:stretch;gap:4px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="color:var(--muted);font-weight:600;font-size:0.8rem">Giá Bán lẻ:</span>
+                <span style="font-weight:800;font-size:0.95rem;color:var(--text)">${fmtVND(retailPrice)}</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="color:var(--primary);font-weight:700;font-size:0.8rem">Giá TMĐT (+10%):</span>
+                <span class="gallery-price">${fmtVND(targetPrice)}</span>
+              </div>
             </div>
           </div>
         `;
@@ -1739,14 +1749,15 @@
         `Lãi gộp bán đối tác: <strong style="color:#047857">+${fmtVND(data.partnerProfit)}/cái</strong><br>` +
         `Thấp hơn giá bán lẻ đề xuất: <strong>${fmtVND(data.targetPrice - data.partnerPrice)}</strong>`;
 
-      // 2. Giá bán đề xuất (tách rõ VAT 8% và Phí sàn)
+      // 2. Giá Bán lẻ & Giá TMĐT (+10%)
       document.getElementById("lbPrice").textContent = fmtVND(data.targetPrice);
       document.getElementById("lbSellDetail").innerHTML =
-        `• Giá trước VAT: <strong>${fmtVND(data.targetPrice - data.vatOutVnd)}</strong><br>` +
+        `• Giá Bán lẻ trực tiếp: <strong>${fmtVND(data.retailPrice)}</strong><br>` +
+        `• Giá TMĐT (+10%): <strong style="color:var(--primary)">${fmtVND(data.targetPrice)}</strong> <i>(trước VAT: ${fmtVND(data.targetPrice - data.vatOutVnd)})</i><br>` +
         `• Thuế VAT (8%): <strong style="color:#b91c1c">${fmtVND(data.vatOutVnd)}</strong> <i>(khấu trừ VAT NK ${fmtVND(data.vatImport)})</i><br>` +
         `• Phí sàn (${(data.platformFeePct*100).toFixed(1)}% + ${(data.platformFixedFee/1000).toFixed(1)}k): <strong>${fmtVND(data.platformFeeVnd)}</strong><br>` +
         `• MKT (${(data.mktPct*100).toFixed(0)}%) + Hoàn + Đóng gói: <strong>${fmtVND(data.mktVnd + data.returnVnd + data.opsFix)}</strong><br>` +
-        `• Giá hòa vốn: <strong>${fmtVND(data.breakEven)}</strong> • Biên lãi: <strong style="color:${data.profitPerUnit >= 0 ? '#047857' : '#b91c1c'}">${(data.marginPct * 100).toFixed(1)}%</strong>`;
+        `• Giá hòa vốn TMĐT: <strong>${fmtVND(data.breakEven)}</strong> • Biên lãi: <strong style="color:${data.profitPerUnit >= 0 ? '#047857' : '#b91c1c'}">${(data.marginPct * 100).toFixed(1)}%</strong>`;
 
       // 3. Giá trên Shopee / TT VN
       document.getElementById("lbShopeeRange").textContent = `${(sku.marketMin/1000).toFixed(0)}k – ${(sku.marketMax/1000).toFixed(0)}k`;
@@ -1992,11 +2003,12 @@
       const discountPct = parseFloat(document.getElementById("discountFob").value);
       const hasFormE = document.getElementById("hasFormE").checked;
       const mktPct = parseFloat(document.getElementById("mktPct").value) / 100;
-      const suggestedPrice = parseFloat(document.getElementById("suggestedPrice").value) || 999000;
+      const retailPrice = parseFloat(document.getElementById("suggestedPrice").value) || 999000;
+      const suggestedPrice = Math.round((retailPrice * 1.10) / 1000) * 1000;
       const rate = parseFloat(document.getElementById("exchangeRate").value) || 3933;
       const VAT_OUT_RATIO = 0.08 / 1.08;
 
-      banner.textContent = `Giá bán lẻ đề xuất: ${fmtVND(suggestedPrice)} (gồm VAT 8% = ${fmtVND(suggestedPrice * VAT_OUT_RATIO)}) • Giá Đối tác = Về kho + 30% • FOB gốc • ${hasFormE ? "Có Form E (0% NK)" : "Không Form E (20% NK)"} • MKT ${(mktPct*100).toFixed(1)}%`;
+      banner.textContent = `Giá Bán lẻ: ${fmtVND(retailPrice)} • Giá TMĐT (+10%): ${fmtVND(suggestedPrice)} (gồm VAT 8% = ${fmtVND(suggestedPrice * VAT_OUT_RATIO)}) • Giá Đối tác = Về kho + 30% • FOB gốc`;
 
       const list = currentDetailFilter === "ALL" ? SKUS : SKUS.filter(s => s.code === currentDetailFilter);
       container.innerHTML = list.map(sku => {

@@ -485,9 +485,9 @@
                 <div class="kpi-note"><strong>Ghi chú:</strong> = Giá về kho + 30% (Đã gồm VAT 8% + VC về kho + Hợp quy)</div>
               </div>
               <div class="kpi-box amber">
-                <div class="kpi-lbl">Giá bán lẻ sản phẩm (B2C)</div>
+                <div class="kpi-lbl">Giá bán lẻ &amp; TMĐT (+10%)</div>
                 <div class="kpi-val">${fmt(B2C_PRICE)} / sp</div>
-                <div class="kpi-note"><strong>Biên đối tác:</strong> Chênh +${fmt(b2cSpread)}/sp so với giá COD ${(codPrice/1000).toFixed(0)}k</div>
+                <div class="kpi-note"><strong>Giá TMĐT (+10%):</strong> ${fmt(Math.round((B2C_PRICE * 1.10)/1000)*1000)}/sp • Chênh lẻ +${fmt(b2cSpread)} vs COD</div>
               </div>
             </div>
 
