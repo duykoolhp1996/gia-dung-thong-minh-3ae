@@ -1181,141 +1181,27 @@
         <p>Nguồn: Ningbo TT Smart Technology (FOB Ningbo) • 3 mã chốt: 2.303 cái • 2.303 thùng • 124,65 CBM (2×40HC) • 15,65 tấn GW</p>
       </div>
       <div class="header-actions">
-        <button class="btn btn-light" onclick="resetDefaults()">Khôi phục mặc định</button>
         <button class="btn btn-white" onclick="window.print()">In / Xuất PDF</button>
       </div>
     </div>
 
     <!-- Navigation Tabs -->
     <div class="tab-nav">
-      <button class="tab-btn active" id="btnTabOverview" onclick="switchMainTab('overview')">Tổng quan & Giả lập Giá</button>
-      <button class="tab-btn" id="btnTabDetail" onclick="switchMainTab('detail')">Chi tiết Mã hàng & Đối thủ (3 mã)</button>
+      <button class="tab-btn active" id="btnTabOverview" onclick="switchMainTab('overview')">Bảng Giá &amp; Sản phẩm (3 mã)</button>
+      <button class="tab-btn" id="btnTabDetail" onclick="switchMainTab('detail')">Chi tiết Mã hàng &amp; Đối thủ (3 mã)</button>
     </div>
 
     <div id="tabOverview" class="tab-panel active">
-    <!-- Main Simulator + KPIs -->
-    <div class="grid-sim">
-      <!-- Left: Controls -->
-      <div class="card sidebar-sticky">
-        <div class="card-title">
-          <span>Tham số Giả lập Kịch bản</span>
-          <span class="badge badge-primary">Live</span>
-        </div>
-
-        <div class="strategy-box">
-          <div class="strategy-title">Kịch bản chiến lược nhanh</div>
-          <div class="strategy-pills">
-            <button class="strategy-btn" onclick="applyStrategy('shopee_std')">Shopee 999k</button>
-            <button class="strategy-btn" onclick="applyStrategy('tiktok_live')">TikTok Live 10%</button>
-            <button class="strategy-btn" onclick="applyStrategy('press_40')">Bán lẻ 1.099k</button>
-          </div>
-        </div>
-
-        <div class="control-group" style="display:none">
-          <input type="range" id="discountFob" min="0" max="50" step="1" value="0" oninput="recalculate()">
-          <span id="valDiscount">0%</span>
-        </div>
-
-        <div class="toggle-row">
-          <span>Có C/O Form E (Thuế NK 0% vs 20%)</span>
-          <label class="switch">
-            <input type="checkbox" id="hasFormE" checked onchange="recalculate()">
-            <span class="slider"></span>
-          </label>
-        </div>
-
-        <div class="control-group">
-          <div class="control-label">
-            <span>Sàn TMĐT chủ lực</span>
-          </div>
-          <select id="platformSelect" onchange="recalculate()">
-            <option value="shopee">Shopee Thường (Phí 14% + 5.700đ)</option>
-            <option value="shopee_vx">Shopee + Voucher Xtra (Phí 19.5% + 5.700đ)</option>
-            <option value="tiktok">TikTok Shop Thường (Phí 17% + 6.000đ)</option>
-          </select>
-        </div>
-
-        <div class="control-group">
-          <div class="control-label">
-            <span>Ngân sách MKT (Ads + KOL/KOC)</span>
-            <span class="control-val" id="valMkt">13%</span>
-          </div>
-          <input type="range" id="mktPct" min="5" max="25" step="0.5" value="13" oninput="recalculate()">
-          <div class="preset-pills">
-            <button class="pill" onclick="setPreset('mktPct', 10)">Tự nhiên 10%</button>
-            <button class="pill" onclick="setPreset('mktPct', 13)">Tối ưu 13%</button>
-            <button class="pill" onclick="setPreset('mktPct', 18)">Đẩy mạnh 18%</button>
-          </div>
-        </div>
-
-        <div class="control-group">
-          <div class="control-label">
-            <span>Giá bán đề xuất (đã gồm VAT 8%)</span>
-            <span class="control-val" id="valSuggestedPrice">999.000đ</span>
-          </div>
-          <input type="number" id="suggestedPrice" value="999000" step="10000" oninput="recalculate()">
-          <div class="preset-pills">
-            <button class="pill" onclick="setPreset('suggestedPrice', 899000)">899k</button>
-            <button class="pill" onclick="setPreset('suggestedPrice', 999000)">999k</button>
-            <button class="pill" onclick="setPreset('suggestedPrice', 1099000)">1.099k</button>
-            <button class="pill" onclick="setPreset('suggestedPrice', 1190000)">1.190k</button>
-          </div>
-        </div>
-
-        <div class="control-group" style="display:none">
-          <input type="range" id="targetMargin" min="0" max="25" step="1" value="10" oninput="recalculate()">
-          <span id="valMargin">10%</span>
-        </div>
-
-        <div class="control-group" style="margin-bottom:0">
-          <div class="control-label">
-            <span>Tỷ giá quy đổi (VND / RMB)</span>
-          </div>
-          <input type="number" id="exchangeRate" value="3933" step="10" oninput="recalculate()">
-        </div>
-      </div>
-
-      <!-- Right: KPIs & Cost Structure -->
-      <div>
-        <div class="kpi-grid">
-          <div class="kpi-card">
-            <div class="kpi-label">Tổng Vốn Nhập Lô (Landed + VAT)</div>
-            <div class="kpi-value" id="kpiTotalCost">—</div>
-            <div class="kpi-sub" id="kpiCostSaved">—</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Tổng Doanh Thu Dự Kiến</div>
-            <div class="kpi-value" id="kpiTotalRev">—</div>
-            <div class="kpi-sub">Bán hết 2.303 sản phẩm</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Lợi Nhuận Ròng Dự Kiến</div>
-            <div class="kpi-value" id="kpiTotalProfit" style="color: var(--success)">—</div>
-            <div class="kpi-sub" id="kpiRoi">—</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Độ Khả Thi Thị Trường</div>
-            <div class="kpi-value" id="kpiFeasible">—</div>
-            <div class="kpi-sub" id="kpiFeasibleSub">—</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">
-            <span>Cơ cấu Giá Bán Mục Tiêu trên mỗi sản phẩm (%)</span>
-            <span class="badge badge-primary" id="badgeTotalVar">—</span>
-          </div>
-          <div class="breakdown-list" id="breakdownList"></div>
-          <div class="legend">
-            <div class="legend-item"><span class="dot" style="background:#3b82f6"></span>Giá vốn chưa VAT</div>
-            <div class="legend-item"><span class="dot" style="background:#ef4444"></span>VAT 8% (đầu ra)</div>
-            <div class="legend-item"><span class="dot" style="background:#8b5cf6"></span>Phí sàn + Hoàn 2.5%</div>
-            <div class="legend-item"><span class="dot" style="background:#f59e0b"></span>Ads & KOL/KOC</div>
-            <div class="legend-item"><span class="dot" style="background:#64748b"></span>Đóng gói & KOC mẫu</div>
-            <div class="legend-item"><span class="dot" style="background:#10b981"></span>Lãi ròng</div>
-          </div>
-        </div>
-      </div>
+    <div style="display:none" aria-hidden="true">
+      <input type="range" id="discountFob" value="0">
+      <span id="valDiscount">0%</span>
+      <input type="checkbox" id="hasFormE" checked>
+      <select id="platformSelect"><option value="shopee" selected>Shopee</option></select>
+      <input type="range" id="mktPct" value="13">
+      <span id="valMkt">13%</span>
+      <input type="number" id="suggestedPrice" value="999000">
+      <span id="valSuggestedPrice">999.000đ</span>
+      <input type="number" id="exchangeRate" value="3933">
     </div>
 
     <!-- Detailed Table -->
@@ -1599,8 +1485,11 @@
       const VAT_OUT_RATIO = 0.08 / 1.08; // ~7.407% trên giá bán đã gồm VAT 8%
       const totalVarPct = VAT_OUT_RATIO + platform.feePct + RETURN_LOSS_PCT + mktPct;
 
-      document.getElementById("badgeTotalVar").textContent =
-        `VAT 8% (${fmtVND(suggestedPrice * VAT_OUT_RATIO)}) + Phí sàn ${(platform.feePct*100).toFixed(1)}% + MKT ${(mktPct*100).toFixed(1)}%`;
+      const badgeTotalVarEl = document.getElementById("badgeTotalVar");
+      if (badgeTotalVarEl) {
+        badgeTotalVarEl.textContent =
+          `VAT 8% (${fmtVND(suggestedPrice * VAT_OUT_RATIO)}) + Phí sàn ${(platform.feePct*100).toFixed(1)}% + MKT ${(mktPct*100).toFixed(1)}%`;
+      }
       document.getElementById("tableScenarioNote").textContent =
         `Giá đề xuất ${fmtVND(suggestedPrice)} (gồm VAT 8%) • ${platform.name} • FOB gốc • MKT ${(mktPct*100).toFixed(1)}%`;
 
@@ -1615,7 +1504,7 @@
       const bdList = document.getElementById("breakdownList");
       const galleryGrid = document.getElementById("productGalleryGrid");
       tbody.innerHTML = "";
-      bdList.innerHTML = "";
+      if (bdList) bdList.innerHTML = "";
       galleryGrid.innerHTML = "";
       window.latestPrices = {};
       window.latestSkuData = {};
@@ -1761,7 +1650,7 @@
         galleryGrid.appendChild(gItem);
 
         // Breakdown bar
-        if (targetPrice > 0) {
+        if (bdList && targetPrice > 0) {
           const pLanded = (landedExVat / targetPrice) * 100;
           const pVat = (vatOutVnd / targetPrice) * 100;
           const pPlat = ((platformFeeVnd + returnVnd) / targetPrice) * 100;
@@ -1787,19 +1676,20 @@
         }
       });
 
-      document.getElementById("kpiTotalCost").textContent = fmtTrieu(totalCost);
-      const saved = totalBaseCost - totalCost;
-      document.getElementById("kpiCostSaved").textContent =
-        saved > 0 ? `Tiết kiệm ${fmtTrieu(saved)} so với giá bảng ko Form E` : "Mức vốn tối đa (không giảm / không Form E)";
-
-      document.getElementById("kpiTotalRev").textContent = fmtTrieu(totalRev);
-      document.getElementById("kpiTotalProfit").textContent = fmtTrieu(totalProfit);
-      const roi = totalCost > 0 ? (totalProfit / totalCost) * 100 : 0;
-      document.getElementById("kpiRoi").textContent = `ROI trên vốn nhập: ${roi.toFixed(1)}%`;
-
-      document.getElementById("kpiFeasible").textContent = `${feasibleCount} / ${SKUS.length} mã`;
-      document.getElementById("kpiFeasibleSub").textContent =
-        feasibleCount === SKUS.length ? `Cả 3 mã đều lãi ròng ≥ 10% tại giá ${fmtVND(suggestedPrice)}` : "Một số mã lãi mỏng hoặc lỗ ở mức giá này";
+      const elCost = document.getElementById("kpiTotalCost");
+      if (elCost) {
+        elCost.textContent = fmtTrieu(totalCost);
+        const saved = totalBaseCost - totalCost;
+        document.getElementById("kpiCostSaved").textContent =
+          saved > 0 ? `Tiết kiệm ${fmtTrieu(saved)} so với giá bảng ko Form E` : "Mức vốn tối đa (không giảm / không Form E)";
+        document.getElementById("kpiTotalRev").textContent = fmtTrieu(totalRev);
+        document.getElementById("kpiTotalProfit").textContent = fmtTrieu(totalProfit);
+        const roi = totalCost > 0 ? (totalProfit / totalCost) * 100 : 0;
+        document.getElementById("kpiRoi").textContent = `ROI trên vốn nhập: ${roi.toFixed(1)}%`;
+        document.getElementById("kpiFeasible").textContent = `${feasibleCount} / ${SKUS.length} mã`;
+        document.getElementById("kpiFeasibleSub").textContent =
+          feasibleCount === SKUS.length ? `Cả 3 mã đều lãi ròng ≥ 10% tại giá ${fmtVND(suggestedPrice)}` : "Một số mã lãi mỏng hoặc lỗ ở mức giá này";
+      }
 
       const alertBox = document.getElementById("dynamicAlert");
       if (alertSkus.length === 0) {
