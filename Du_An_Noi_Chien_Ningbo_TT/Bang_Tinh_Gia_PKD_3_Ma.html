@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phòng Kinh Doanh Tính Giá — Lô 3 Mã Nồi Chiên Không Dầu | Gia Dụng Thông Minh 3AE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #64748b;
+      --border: #cbd5e1;
+      --border-soft: #e2e8f0;
+      --navy: #0f172a;
+      --green: #15803d;
+      --green-dark: #166534;
+      --green-bg: #f0fdf4;
+      --amber: #b45309;
+      --amber-bg: #fffbeb;
+      --blue-bg: #eff6ff;
+      --blue-accent: #2563eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #e2e8f0;
+      color: var(--ink);
+      line-height: 1.45;
+      padding: 20px 14px 48px;
+    }
+
+    /* Toolbar (hidden on print) */
+    .toolbar {
+      max-width: 920px;
+      margin: 0 auto 18px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background: #0f172a;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
+    }
+    .toolbar-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tb-btn {
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.1);
+      color: #e2e8f0;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 7px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .tb-btn:hover { background: rgba(255,255,255,0.22); color: #fff; }
+    .tb-btn.active { background: #2563eb; border-color: #3b82f6; color: #fff; }
+    .tb-print {
+      background: #fff;
+      color: #0f172a;
+      border: none;
+    }
+    .tb-print:hover { background: #f1f5f9; color: #0f172a; }
+
+    /* A4 Sheet */
+    .sheet {
+      max-width: 920px;
+      margin: 0 auto 28px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 32px 22px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+    }
+    .sheet.hidden { display: none; }
+
+    /* Header */
+    .sheet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--navy);
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .sheet-title {
+      font-size: 1.32rem;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .sheet-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .brand-pill {
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      padding: 7px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+
+    /* Product Showcase Row */
+    .showcase-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+      align-items: stretch;
+    }
+    @media (max-width: 680px) {
+      .showcase-row { grid-template-columns: 1fr; }
+    }
+    .photo-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #fff;
+    }
+    .photo-card img {
+      height: 112px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      margin: 0 auto 6px;
+      display: block;
+    }
+    .photo-code {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+    .photo-spec {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+    .spec-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: #334155;
+    }
+    .spec-box-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 16px;
+    }
+    @media (max-width: 520px) {
+      .spec-box-grid { grid-template-columns: 1fr; }
+    }
+
+    /* 5 KPI Summary Cards */
+    .kpi-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 820px) {
+      .kpi-5 { grid-template-columns: repeat(2, 1fr); }
+    }
+    .kpi-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 11px;
+      background: #f8fafc;
+    }
+    .kpi-box.green {
+      background: var(--green-bg);
+      border: 1.5px solid #86efac;
+    }
+    .kpi-box.amber {
+      background: var(--amber-bg);
+      border: 1.5px solid #fcd34d;
+    }
+    .kpi-lbl {
+      font-size: 0.64rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+    .kpi-box.green .kpi-lbl { color: var(--green-dark); }
+    .kpi-box.amber .kpi-lbl { color: var(--amber); }
+    .kpi-val {
+      font-size: 0.98rem;
+      font-weight: 900;
+      color: var(--ink);
+      margin-bottom: 3px;
+      font-variant-numeric: tabular-nums;
+    }
+    .kpi-box.green .kpi-val { color: var(--green); }
+    .kpi-box.amber .kpi-val { color: var(--amber); }
+    .kpi-note {
+      font-size: 0.66rem;
+      color: #475569;
+      line-height: 1.35;
+    }
+    .kpi-box.green .kpi-note { color: #166534; }
+    .kpi-box.amber .kpi-note { color: #92400e; }
+
+    /* Section Headers */
+    .sec-title {
+      font-size: 0.86rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      padding-left: 10px;
+      border-left: 4px solid var(--navy);
+      margin: 16px 0 8px;
+      color: var(--ink);
+    }
+    .sec-title.green {
+      border-left-color: var(--green);
+      color: var(--green-dark);
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+      border: 1px solid var(--border);
+    }
+    th, td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border-soft);
+      border-right: 1px solid var(--border-soft);
+      vertical-align: middle;
+    }
+    th:last-child, td:last-child { border-right: none; }
+    tr:last-child td { border-bottom: none; }
+    thead.navy-head th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      text-align: left;
+      font-size: 0.74rem;
+    }
+    thead.green-head th {
+      background: var(--green-dark);
+      color: #fff;
+      font-weight: 700;
+      text-align: left;
+      font-size: 0.74rem;
+    }
+    .tc { text-align: center; }
+    .tr { text-align: right; font-variant-numeric: tabular-nums; }
+    .item-main { font-weight: 700; color: var(--ink); }
+    .item-sub { font-size: 0.69rem; color: var(--muted); margin-top: 1px; }
+    .row-total td {
+      background: var(--blue-bg);
+      font-weight: 800;
+      border-top: 1.5px solid #93c5fd;
+    }
+    .row-profit td {
+      background: #fefce8;
+      font-weight: 800;
+      border-top: 2px solid #eab308;
+    }
+
+    /* Reserve Note */
+    .reserve-note {
+      margin-top: 14px;
+      padding: 9px 13px;
+      background: #f8fafc;
+      border: 1px solid var(--border-soft);
+      border-left: 4px solid var(--blue-accent);
+      border-radius: 6px;
+      font-size: 0.72rem;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    /* Footer */
+    .sheet-footer {
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.69rem;
+      color: var(--muted);
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .toolbar { display: none !important; }
+      .sheet {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 10mm 12mm;
+        margin: 0;
+        max-width: none;
+        page-break-after: always;
+      }
+      .sheet:last-child { page-break-after: auto; }
+      .sheet.hidden { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="toolbar-tabs">
+      <a class="tb-btn" href="index.html">← Dashboard</a>
+      <button class="tb-btn active" onclick="filterSheet('ALL', this)">Tất cả 3 sản phẩm (3 trang A4)</button>
+      <button class="tb-btn" onclick="filterSheet('503A', this)">503A (6.5L Cơ)</button>
+      <button class="tb-btn" onclick="filterSheet('503A-D', this)">503A-D (6.5L Điện tử)</button>
+      <button class="tb-btn" onclick="filterSheet('850AST', this)">850AST (8.0L 2 ngăn)</button>
+    </div>
+    <button class="tb-btn tb-print" onclick="window.print()">In / Xuất PDF A4</button>
+  </div>
+
+  <div id="sheetsContainer"></div>
+
+  <script>
+    const EXCHANGE_RMB = 3933;
+    const EXCHANGE_USD = 25990;
+    const CBM_PER_UNIT = 0.05412;
+    const FREIGHT_CIF_PER_CBM = 100280; // Ocean freight ~12.5tr / 124.65 CBM
+    const INTL_LOG_PER_UNIT = Math.round(353000 * CBM_PER_UNIT); // 19.104 đ/sp (2x40HC + Local + HQ)
+    const LOCAL_WH_PER_UNIT = Math.round(225000 * CBM_PER_UNIT); // 12.177 đ/sp (VC nội bộ + Lưu kho 1.5 tháng)
+    const QCVN_LABEL_PER_UNIT = 19540 + 3000; // 22.540 đ/sp (45tr hợp quy / 2.303 sp + 3k tem CR/nhãn phụ)
+    const B2C_PRICE = 999000;
+
+    const PRODUCTS = [
+      {
+        code: "503A",
+        title: "Nồi chiên không dầu 6.5L Cơ — Ningbo TT 503A",
+        shortSpec: "6.5L • 1700W • 2 núm xoay cơ + Cửa sổ kính",
+        img: "images/503A.jpg",
+        qty: 890,
+        fobRmb: 126,
+        nwGw: "5.6 / 6.6 kg",
+        sizeMm: "368 × 288 × 332 mm",
+        ctnMm: "403 × 340 × 395 mm",
+        material: "PP + Metal (Inox)",
+        page: "Trang 1 / 3"
+      },
+      {
+        code: "503A-D",
+        title: "Nồi chiên không dầu 6.5L Điện tử — Ningbo TT 503A-D",
+        shortSpec: "6.5L • 1700W • Bảng LED cảm ứng nghiêng",
+        img: "images/503A-D.jpg",
+        qty: 850,
+        fobRmb: 139,
+        nwGw: "6.2 / 7.2 kg",
+        sizeMm: "368 × 288 × 332 mm",
+        ctnMm: "403 × 340 × 395 mm",
+        material: "PP + Metal (Inox)",
+        page: "Trang 2 / 3"
+      },
+      {
+        code: "850AST",
+        title: "Nồi chiên không dầu 8.0L 2 Ngăn — Ningbo TT 850AST",
+        shortSpec: "8.0L • 1700W • 2 ngăn kéo song song độc lập",
+        img: "images/850AST.jpg",
+        qty: 563,
+        fobRmb: 145,
+        nwGw: "5.5 / 6.5 kg",
+        sizeMm: "368 × 294 × 352 mm",
+        ctnMm: "403 × 340 × 395 mm",
+        material: "PP + Metal (Inox)",
+        page: "Trang 3 / 3"
+      }
+    ];
+
+    function fmt(n) {
+      return Math.round(n).toLocaleString("vi-VN") + " đ";
+    }
+
+    function renderSheets() {
+      const container = document.getElementById("sheetsContainer");
+      container.innerHTML = PRODUCTS.map(p => {
+        const fobVnd = p.fobRmb * EXCHANGE_RMB;
+        const cifFreight = Math.round(FREIGHT_CIF_PER_CBM * CBM_PER_UNIT);
+        const vatImport = Math.round((fobVnd + cifFreight) * 0.08);
+        const costExVat = fobVnd + INTL_LOG_PER_UNIT + LOCAL_WH_PER_UNIT + QCVN_LABEL_PER_UNIT;
+        const costWithVat = costExVat + vatImport;
+
+        // Giá gửi COD đối tác = Giá về kho (+VAT) + 30% (làm tròn nghìn đồng)
+        const codPrice = Math.round((costWithVat * 1.30) / 1000) * 1000;
+        const vatOut = Math.round(codPrice - (codPrice / 1.08));
+        const netRev = codPrice - vatOut;
+        const grossProfit = netRev - costExVat;
+        const marginOnRev = (grossProfit / netRev) * 100;
+        const marginOnCost = (grossProfit / costExVat) * 100;
+        const b2cSpread = B2C_PRICE - codPrice;
+
+        const totalFobRmb = p.qty * p.fobRmb;
+        const totalFobVnd = p.qty * fobVnd;
+        const totalIntl = p.qty * INTL_LOG_PER_UNIT;
+        const totalLocal = p.qty * LOCAL_WH_PER_UNIT;
+        const totalQcvn = p.qty * QCVN_LABEL_PER_UNIT;
+        const totalVatIn = p.qty * vatImport;
+        const totalCostWithVat = p.qty * costWithVat;
+        const totalCostExVat = p.qty * costExVat;
+        const totalCbm = (p.qty * CBM_PER_UNIT).toFixed(2);
+
+        const res3Unit = Math.round(costExVat * 0.03);
+        const res5Unit = Math.round(costExVat * 0.05);
+        const res3Lot = res3Unit * p.qty;
+        const res5Lot = res5Unit * p.qty;
+
+        return `
+          <div class="sheet" data-sku="${p.code}">
+            <div class="sheet-header">
+              <div>
+                <div class="sheet-title">PHÒNG KINH DOANH TÍNH GIÁ — ${p.code}</div>
+                <div class="sheet-sub">Sản phẩm: ${p.title} (${p.material}) • Tỷ giá: ${EXCHANGE_RMB.toLocaleString("vi-VN")} đ/RMB | ${EXCHANGE_USD.toLocaleString("vi-VN")} đ/USD</div>
+              </div>
+              <div class="brand-pill">GIA DỤNG THÔNG MINH 3AE</div>
+            </div>
+
+            <div class="showcase-row">
+              <div class="photo-card">
+                <img src="${p.img}" alt="${p.code}" />
+                <div class="photo-code">#${p.code} • ${p.material}</div>
+                <div class="photo-spec">${p.shortSpec}</div>
+              </div>
+              <div class="spec-box">
+                <div style="font-weight:800;color:var(--ink);font-size:0.82rem;margin-bottom:2px">Thông số kỹ thuật &amp; Quy cách lô hàng (${p.code})</div>
+                <div class="spec-box-grid">
+                  <div>• <strong>Công suất / Điện áp:</strong> 220–240V / 1700W</div>
+                  <div>• <strong>Nhiệt độ / Hẹn giờ:</strong> 80–200°C • 0–60 phút</div>
+                  <div>• <strong>Kích thước máy:</strong> ${p.sizeMm}</div>
+                  <div>• <strong>Kích thước thùng:</strong> ${p.ctnMm} (1 cái/thùng)</div>
+                  <div>• <strong>Trọng lượng NW / GW:</strong> ${p.nwGw}</div>
+                  <div>• <strong>Thể tích lô (${p.qty} thùng):</strong> ${totalCbm} CBM (FOB Ningbo)</div>
+                  <div>• <strong>Chứng từ sẵn:</strong> CE, EMC, LVD, RoHS (ITS)</div>
+                  <div>• <strong>Thuế NK áp dụng:</strong> 0% (C/O Form E — ACFTA)</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="kpi-5">
+              <div class="kpi-box">
+                <div class="kpi-lbl">Lô nhập xưởng</div>
+                <div class="kpi-val">${p.qty.toLocaleString("vi-VN")} sp</div>
+                <div class="kpi-note">Đóng thùng 1 cái/thùng (${totalCbm} CBM)</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-lbl">Giá xuất xưởng (FOB)</div>
+                <div class="kpi-val">${p.fobRmb} tệ / sp</div>
+                <div class="kpi-note">${fmt(fobVnd)} / sp (× ${EXCHANGE_RMB.toLocaleString("vi-VN")} đ)</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-lbl">Cước VC &amp; Hợp quy</div>
+                <div class="kpi-val">${fmt(INTL_LOG_PER_UNIT + LOCAL_WH_PER_UNIT + QCVN_LABEL_PER_UNIT)}</div>
+                <div class="kpi-note">QT + Nội bộ + Lưu kho + QCVN (${fmt(totalIntl + totalLocal + totalQcvn)}/lô)</div>
+              </div>
+              <div class="kpi-box green">
+                <div class="kpi-lbl">Giá gửi COD đối tác (Đã gồm VAT)</div>
+                <div class="kpi-val">${fmt(codPrice)} / sp</div>
+                <div class="kpi-note"><strong>Ghi chú:</strong> = Giá về kho + 30% (Đã gồm VAT 8% + VC về kho + Hợp quy)</div>
+              </div>
+              <div class="kpi-box amber">
+                <div class="kpi-lbl">Giá bán lẻ sản phẩm (B2C)</div>
+                <div class="kpi-val">${fmt(B2C_PRICE)} / sp</div>
+                <div class="kpi-note"><strong>Biên đối tác:</strong> Chênh +${fmt(b2cSpread)}/sp so với giá COD ${(codPrice/1000).toFixed(0)}k</div>
+              </div>
+            </div>
+
+            <div class="sec-title">1. Bảng giá vốn đầu vào (Lô ${p.qty.toLocaleString("vi-VN")} sản phẩm — Mã ${p.code})</div>
+            <table>
+              <thead class="navy-head">
+                <tr>
+                  <th class="tc" style="width:48px">STT</th>
+                  <th>Hạng mục chi phí đầu vào</th>
+                  <th class="tr" style="width:130px">Đơn giá / 1 SP</th>
+                  <th class="tr" style="width:155px">Tổng lô ${p.qty.toLocaleString("vi-VN")} SP</th>
+                  <th style="width:225px">Diễn giải</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tc"><strong>1</strong></td>
+                  <td>
+                    <div class="item-main">Giá ${p.qty.toLocaleString("vi-VN")} sp × ${p.fobRmb} tệ</div>
+                    <div class="item-sub">Tiền mua hàng trực tiếp tại xưởng Ningbo TT (FOB Ningbo)</div>
+                  </td>
+                  <td class="tr"><strong>${fmt(fobVnd)}</strong></td>
+                  <td class="tr"><strong>${fmt(totalFobVnd)}</strong></td>
+                  <td>${p.fobRmb} tệ × ${EXCHANGE_RMB.toLocaleString("vi-VN")} đ/tệ (${totalFobRmb.toLocaleString("vi-VN")} RMB)</td>
+                </tr>
+                <tr>
+                  <td class="tc"><strong>2</strong></td>
+                  <td>
+                    <div class="item-main">Cước vận chuyển quốc tế &amp; Local (2×40HC)</div>
+                    <div class="item-sub">Cước biển Ningbo → Cảng VN + THC, D/O, Thủ tục Hải quan</div>
+                  </td>
+                  <td class="tr"><strong>${fmt(INTL_LOG_PER_UNIT)}</strong></td>
+                  <td class="tr"><strong>${fmt(totalIntl)}</strong></td>
+                  <td>353.000 đ/CBM × 0,05412 CBM/sp (${totalCbm} CBM)</td>
+                </tr>
+                <tr>
+                  <td class="tc"><strong>3</strong></td>
+                  <td>
+                    <div class="item-main">Vận chuyển nội bộ (Cảng → Kho) &amp; Lưu kho</div>
+                    <div class="item-sub">Xe tải trung chuyển về kho 3AE + bốc xếp &amp; lưu kho 1,5 tháng</div>
+                  </td>
+                  <td class="tr"><strong>${fmt(LOCAL_WH_PER_UNIT)}</strong></td>
+                  <td class="tr"><strong>${fmt(totalLocal)}</strong></td>
+                  <td>225.000 đ/CBM × 0,05412 CBM/sp</td>
+                </tr>
+                <tr>
+                  <td class="tc"><strong>4</strong></td>
+                  <td>
+                    <div class="item-main">Hợp quy QCVN 4/9 &amp; Tem nhãn phụ CR</div>
+                    <div class="item-sub">Thử nghiệm, chứng nhận hợp quy nhóm 1700W + tem CR &amp; nhãn phụ</div>
+                  </td>
+                  <td class="tr"><strong>${fmt(QCVN_LABEL_PER_UNIT)}</strong></td>
+                  <td class="tr"><strong>${fmt(totalQcvn)}</strong></td>
+                  <td>45tr / 2.303 sp (19.540 đ) + 3.000 đ tem nhãn</td>
+                </tr>
+                <tr>
+                  <td class="tc"><strong>5</strong></td>
+                  <td>
+                    <div class="item-main">Thuế VAT nhập khẩu 8% (Thuế NK 0% Form E)</div>
+                    <div class="item-sub">Tính 8% trên giá CIF (Tiền hàng + Cước biển) — được khấu trừ đầu vào</div>
+                  </td>
+                  <td class="tr"><strong>${fmt(vatImport)}</strong></td>
+                  <td class="tr"><strong>${fmt(totalVatIn)}</strong></td>
+                  <td>(${fmt(fobVnd).replace(" đ","")} + ${fmt(cifFreight).replace(" đ","")}) × 8%</td>
+                </tr>
+                <tr class="row-total">
+                  <td class="tc">—</td>
+                  <td>
+                    <div>Tổng vốn đầu vào đưa về kho (Đã gồm 8% VAT NK)</div>
+                    <div class="item-sub" style="font-weight:500">Vốn thuần chưa VAT: ${fmt(costExVat)}/sp (${fmt(totalCostExVat)})</div>
+                  </td>
+                  <td class="tr">${fmt(costWithVat)}</td>
+                  <td class="tr">${fmt(totalCostWithVat)}</td>
+                  <td style="font-weight:600">Mục (1) + (2) + (3) + (4) + (5)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="sec-title green">2. Bảng giá gửi COD đối tác &amp; VAT bán (Tính theo đơn giá 1 sản phẩm — Giá về kho + 30%)</div>
+            <table>
+              <thead class="green-head">
+                <tr>
+                  <th class="tc" style="width:48px">STT</th>
+                  <th>Hạng mục giá bán đối tác</th>
+                  <th class="tr" style="width:150px">Đơn giá / 1 SP</th>
+                  <th style="width:270px">Diễn giải / Ghi chú</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tc"><strong>1</strong></td>
+                  <td>
+                    <div class="item-main">Giá gửi COD đối tác (ĐÃ GỒM 8% VAT)</div>
+                    <div class="item-sub">Đã gồm VC quốc tế, VC nội bộ về kho, lưu kho &amp; hợp quy CR</div>
+                  </td>
+                  <td class="tr"><strong>${fmt(codPrice)}</strong></td>
+                  <td><strong>Giá giao đối tác trọn gói (≈ Về kho + 30%)</strong></td>
+                </tr>
+                <tr>
+                  <td class="tc"><strong>2</strong></td>
+                  <td>
+                    <div class="item-main">Giá 8% VAT bán (đã nằm trong ${fmt(codPrice)})</div>
+                    <div class="item-sub">Tách thuế GTGT 8% từ giá bán đã gồm VAT</div>
+                  </td>
+                  <td class="tr"><strong>${fmt(vatOut)}</strong></td>
+                  <td>${fmt(codPrice).replace(" đ","")} − (${fmt(codPrice).replace(" đ","")} ÷ 1,08)</td>
+                </tr>
+                <tr>
+                  <td class="tc"><strong>3</strong></td>
+                  <td>
+                    <div class="item-main">Doanh thu thuần chưa VAT / 1 SP</div>
+                    <div class="item-sub">Giá bán sau khi tách 8% VAT bán ra</div>
+                  </td>
+                  <td class="tr"><strong>${fmt(netRev)}</strong></td>
+                  <td>${fmt(codPrice).replace(" đ","")} ÷ 1,08</td>
+                </tr>
+                <tr class="row-profit">
+                  <td class="tc" style="color:#ca8a04;font-size:0.95rem">★</td>
+                  <td>
+                    <div>Chênh lệch / Lãi gộp Phòng Kinh Doanh</div>
+                    <div class="item-sub" style="font-weight:500">Doanh thu thuần (${fmt(netRev)}) trừ Vốn chưa VAT (${fmt(costExVat)}) — VAT NK ${fmt(vatImport)} được khấu trừ</div>
+                  </td>
+                  <td class="tr" style="color:#92400e;font-size:0.92rem">+${fmt(grossProfit)}</td>
+                  <td style="color:#92400e">Biên lãi gộp: ${marginOnRev.toFixed(1)}% DT (${marginOnCost.toFixed(1)}% vốn)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="reserve-note">
+              <strong>Ghi chú dự trù phát sinh:</strong> Dự trù chênh lệch chi phí phát sinh từ <strong>3% – 5%</strong> (tương đương <strong>${fmt(res3Unit)} – ${fmt(res5Unit)}/sp</strong> | <strong>${fmt(res3Lot)} – ${fmt(res5Lot)}/lô ${p.qty} sp</strong>) cho các khoản biến động tỷ giá, lưu bãi/phụ phí cảng, bảo hành hàng stock 120 ngày hoặc chi phí phát sinh ngoài dự kiến.
+            </div>
+
+            <div class="sheet-footer">
+              <span>Gia Dụng Thông Minh 3AE • Bảng Tính Giá Phòng Kinh Doanh (${p.code})</span>
+              <span>${p.page}</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function filterSheet(code, btn) {
+      document.querySelectorAll(".toolbar-tabs .tb-btn").forEach(b => b.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+      document.querySelectorAll(".sheet").forEach(s => {
+        if (code === "ALL" || s.dataset.sku === code) s.classList.remove("hidden");
+        else s.classList.add("hidden");
+      });
+    }
+
+    renderSheets();
+  </script>
+</body>
+</html>
