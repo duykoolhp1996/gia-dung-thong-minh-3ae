@@ -643,6 +643,28 @@
     }
 
     renderSheets();
+
+    (function applyQueryFilter() {
+      const params = new URLSearchParams(window.location.search);
+      const sku = params.get("sku");
+      const clean = params.get("clean");
+      if (clean === "1") {
+        const tb = document.querySelector(".toolbar");
+        if (tb) tb.style.display = "none";
+        document.body.style.padding = "12px";
+        document.body.style.background = "#ffffff";
+      }
+      if (sku) {
+        document.querySelectorAll(".sheet").forEach(s => {
+          if (s.dataset.sku === sku) {
+            s.classList.remove("hidden");
+            s.style.marginBottom = "0";
+          } else {
+            s.classList.add("hidden");
+          }
+        });
+      }
+    })();
   </script>
 </body>
 </html>
