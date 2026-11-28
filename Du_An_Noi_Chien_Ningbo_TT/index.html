@@ -1362,12 +1362,12 @@
         isOfficialImage: true,
         qty: 890,
         fobRmb: 126,
-        retailPrice: 999000,
+        retailPrice: 1500000,
         cbmPerUnit: 0.05412,
         packCost: 15000,
         kocSampleAlloc: 8000,
         marketMin: 1050000,
-        marketMax: 1520000,
+        marketMax: 1650000,
         shopeePeers: "Cùng form 6.5L 1700W cơ + cửa sổ kính: Sunhouse SHD4030 (999k–1.4tr) • Kangaroo KGAF65M1G (1.167k) • Sunhouse SHD4032 (1.218k)."
       },
       {
@@ -1496,7 +1496,7 @@
           `VAT 8% (${fmtVND(suggestedPrice * VAT_OUT_RATIO)}) + Phí sàn ${(platform.feePct*100).toFixed(1)}% + MKT ${(mktPct*100).toFixed(1)}%`;
       }
       document.getElementById("tableScenarioNote").textContent =
-        `Giá Bán lẻ ${fmtVND(suggestedPrice)} • Giá TMĐT (+10%): ${fmtVND(Math.round((suggestedPrice * 1.10)/1000)*1000)} • ${platform.name} • FOB gốc`;
+        `Giá Bán lẻ chốt theo mã • Giá TMĐT = Bán lẻ + 10% • ${platform.name} • FOB gốc`;
 
       let totalCost = 0;
       let totalBaseCost = 0;
