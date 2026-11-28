@@ -374,6 +374,7 @@
         img: "images/503A-D.jpg",
         qty: 850,
         fobRmb: 139,
+        b2cPrice: 1600000,
         nwGw: "6.2 / 7.2 kg",
         sizeMm: "368 × 288 × 332 mm",
         ctnMm: "403 × 340 × 395 mm",
@@ -415,7 +416,8 @@
         const grossProfit = netRev - costExVat;
         const marginOnRev = (grossProfit / netRev) * 100;
         const marginOnCost = (grossProfit / costExVat) * 100;
-        const b2cSpread = B2C_PRICE - codPrice;
+        const b2cPrice = p.b2cPrice || B2C_PRICE;
+        const b2cSpread = b2cPrice - codPrice;
 
         const totalFobRmb = p.qty * p.fobRmb;
         const totalFobVnd = p.qty * fobVnd;
@@ -486,8 +488,8 @@
               </div>
               <div class="kpi-box amber">
                 <div class="kpi-lbl">Giá bán lẻ &amp; TMĐT (+10%)</div>
-                <div class="kpi-val">${fmt(B2C_PRICE)} / sp</div>
-                <div class="kpi-note"><strong>Giá TMĐT (+10%):</strong> ${fmt(Math.round((B2C_PRICE * 1.10)/1000)*1000)}/sp • Chênh lẻ +${fmt(b2cSpread)} vs COD</div>
+                <div class="kpi-val">${fmt(b2cPrice)} / sp</div>
+                <div class="kpi-note"><strong>Giá TMĐT (+10%):</strong> ${fmt(Math.round((b2cPrice * 1.10)/1000)*1000)}/sp • Chênh lẻ +${fmt(b2cSpread)} vs COD</div>
               </div>
             </div>
 

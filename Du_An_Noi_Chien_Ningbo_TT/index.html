@@ -1362,6 +1362,7 @@
         isOfficialImage: true,
         qty: 890,
         fobRmb: 126,
+        retailPrice: 999000,
         cbmPerUnit: 0.05412,
         packCost: 15000,
         kocSampleAlloc: 8000,
@@ -1376,11 +1377,12 @@
         isOfficialImage: true,
         qty: 850,
         fobRmb: 139,
+        retailPrice: 1600000,
         cbmPerUnit: 0.05412,
         packCost: 15000,
         kocSampleAlloc: 8000,
-        marketMin: 1150000,
-        marketMax: 1650000,
+        marketMin: 1500000,
+        marketMax: 2300000,
         shopeePeers: "Cùng form 6.5L LED nghiêng, thân inox: Sunhouse SHD4092 (1.503k) • Kalite Q6 (1.8–2.3tr) • TB khảo sát: 1.48–1.54tr."
       },
       {
@@ -1390,6 +1392,7 @@
         isOfficialImage: true,
         qty: 563,
         fobRmb: 145,
+        retailPrice: 999000,
         cbmPerUnit: 0.05412,
         packCost: 15000,
         kocSampleAlloc: 8000,
@@ -1519,7 +1522,7 @@
         const cFixTotal = platform.fixedFee + opsFix;
         const breakEven = (landedExVat + cFixTotal) / (1 - totalVarPct);
 
-        const retailPrice = suggestedPrice;
+        const retailPrice = sku.retailPrice || suggestedPrice;
         const targetPrice = Math.round((retailPrice * 1.10) / 1000) * 1000; // Giá TMĐT cao hơn giá bán lẻ 10%
         const vatOutVnd = targetPrice * VAT_OUT_RATIO;
         const vatNetPay = Math.max(0, vatOutVnd - vatImport);
@@ -2012,6 +2015,8 @@
 
       const list = currentDetailFilter === "ALL" ? SKUS : SKUS.filter(s => s.code === currentDetailFilter);
       container.innerHTML = list.map(sku => {
+        const skuRetail = sku.retailPrice || retailPrice;
+        const skuEcom = Math.round((skuRetail * 1.10) / 1000) * 1000;
         const fobVndOrig = sku.fobRmb * rate;
         const fobRmbDisc = sku.fobRmb * (1 - discountPct / 100);
         const fobVnd = fobRmbDisc * rate;
@@ -2026,15 +2031,15 @@
 
         const calcChannel = (platKey) => {
           const p = PLATFORMS[platKey];
-          const vatOut = suggestedPrice * VAT_OUT_RATIO;
-          const platFee = suggestedPrice * p.feePct + p.fixedFee;
-          const mktCost = suggestedPrice * mktPct;
-          const retCost = suggestedPrice * RETURN_LOSS_PCT;
+          const vatOut = skuEcom * VAT_OUT_RATIO;
+          const platFee = skuEcom * p.feePct + p.fixedFee;
+          const mktCost = skuEcom * mktPct;
+          const retCost = skuEcom * RETURN_LOSS_PCT;
           const opsFix = sku.packCost + sku.kocSampleAlloc;
           const varPct = VAT_OUT_RATIO + p.feePct + RETURN_LOSS_PCT + mktPct;
           const be = (landedExVat + p.fixedFee + opsFix) / (1 - varPct);
-          const profit = suggestedPrice - landedExVat - vatOut - platFee - mktCost - retCost - opsFix;
-          const margin = suggestedPrice > 0 ? (profit / suggestedPrice) * 100 : 0;
+          const profit = skuEcom - landedExVat - vatOut - platFee - mktCost - retCost - opsFix;
+          const margin = skuEcom > 0 ? (profit / skuEcom) * 100 : 0;
           return { be, vatOut, platFee, profit, margin, totalProfit: profit * sku.qty };
         };
 
@@ -2094,9 +2099,10 @@
               </div>
 
               <div class="detail-sub-box">
-                <div class="detail-sub-title">Cơ cấu Giá Đề Xuất ${fmtVND(suggestedPrice)} Theo Kênh</div>
+                <div class="detail-sub-title">Cơ cấu Giá Bán lẻ ${fmtVND(skuRetail)} &amp; TMĐT ${fmtVND(skuEcom)}</div>
                 <table class="kv-table">
-                  <tr><td><strong>Giá bán đề xuất (đã gồm VAT 8%)</strong></td><td style="color:var(--primary)">${fmtVND(suggestedPrice)}</td></tr>
+                  <tr><td><strong>Giá Bán lẻ trực tiếp</strong></td><td>${fmtVND(skuRetail)}</td></tr>
+                  <tr><td><strong>Giá TMĐT (+10%, đã gồm VAT 8%)</strong></td><td style="color:var(--primary)">${fmtVND(skuEcom)}</td></tr>
                   <tr><td>↳ Trong đó Thuế VAT (8%) đầu ra</td><td style="color:#b91c1c">${fmtVND(chShopee.vatOut)}</td></tr>
                   <tr><td><strong>Shopee Thường (14% + 5,7k)</strong> — Phí sàn</td><td>${fmtVND(chShopee.platFee)}</td></tr>
                   <tr><td>↳ Lãi ròng / cái (Hòa vốn ${fmtVND(chShopee.be)})</td><td style="color:var(--success)">+${fmtVND(chShopee.profit)} (${chShopee.margin.toFixed(1)}%)</td></tr>
